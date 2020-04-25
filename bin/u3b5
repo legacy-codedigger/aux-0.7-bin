@@ -1,0 +1,4 @@
+
+#	leave top line blank for shell
+#	@(#)u3b5.sh	UniPlus V.2.1.1	(UniSoft 1.1)
+exit 255

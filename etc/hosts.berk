@@ -1,0 +1,2818 @@
+89.33	ginsu           # VAX 750
+89.34	ronco 		# Phil's machine
+89.35	slices		# System machine #1
+89.36	dices		# System machine #2
+89.50	what		# Eryk's Beck's
+89.51	why		# Marianne's Beck's
+89.52	when		# Johan's Beck's
+89.53	magic		# Vicki's Beck's
+89.54	stupid		# Ron's Beck's
+89.55	sycamore	# Holly's Beck's
+89.56	crowbar		# Rick's Beck's
+89.57	salmon		# Gene's Beck's
+89.99	ucbseed
+# start of ucbhosts current as of 5-2-86
+127.0.0.1 loop
+127.1 loghost localhost localhost.berkeley.edu 
+128.32.136.1 ucbagate agate agate.berkeley.edu 
+128.32.136.10 ucbjasper jasper jasper.berkeley.edu 
+128.32.136.11 ucblapis lapis lapis.berkeley.edu 
+128.32.136.12 ucblilac lilac lilac.berkeley.edu 
+128.32.136.13 ucbopal opal opal.berkeley.edu 
+128.32.136.14 ucbpearl pearl pearl.berkeley.edu 
+128.32.136.15 ucbpopuli populi populi.berkeley.edu 
+128.32.136.16 ucbrose rose rose.berkeley.edu 
+128.32.136.17 ucbruby ruby ruby.berkeley.edu 
+128.32.136.18 ucbtopaz topaz topaz.berkeley.edu 
+128.32.136.19 ucbtulip tulip tulip.berkeley.edu 
+128.32.136.2 ucbamber amber amber.berkeley.edu 
+128.32.136.20 ucbzircon zircon zircon.berkeley.edu 
+128.32.136.22 ucbviolet violet violet.berkeley.edu 
+128.32.136.3 ucbberyl beryl beryl.berkeley.edu 
+128.32.136.4 ucbcmsa cmsa cmsa.berkeley.edu 
+128.32.136.5 ucbcoral coral coral.berkeley.edu 
+128.32.136.6 ucbgarnet garnet garnet.berkeley.edu 
+128.32.136.7 ucbiris iris iris.berkeley.edu 
+128.32.136.8 ucbivory ivory ivory.berkeley.edu 
+128.32.136.9 ucbjade jade jade.berkeley.edu 
+128.32.137.1 ucbcory-ec cory-ec ucbcory cory cory.berkeley.edu 
+128.32.137.11 jade-spine jade-spine.berkeley.edu 
+128.32.137.13 ucbernie ernie ernie.berkeley.edu 
+128.32.137.2 ucbesvax esvax esvax.berkeley.edu 
+128.32.137.3 ucbvax-il ucbvax-il.berkeley.edu 
+128.32.137.4 ucbcartan cartan cartan.berkeley.edu 
+128.32.137.5 ucberos-de1 eros-de1 eros-de1.berkeley.edu 
+10.0.0.78 arpa ucbarpa ucbarpa.berkeley.edu 
+10.2.0.78 berkeley vax ucbvax ucbvax.berkeley.edu 
+128.32.0.10 berkeley vax ucbvax ucbvax.berkeley.edu 
+128.32.10 ucbvax-en ucbvax-en.berkeley.edu 
+128.32.11 ucbkim kim kim.berkeley.edu 
+128.32.12 ucbcalder calder calder.berkeley.edu 
+128.32.129.1 matisse-10 matisse-10.berkeley.edu 
+128.32.129.2 monet-10 monet-10.berkeley.edu 
+128.32.129.3 calder-10 calder-10.berkeley.edu 
+128.32.13 ucbdali dali dali.berkeley.edu 
+128.32.130.1 ucbcalder-cs calder-cs calder-cs.berkeley.edu 
+128.32.130.10 ucbazalea azalea azalea.berkeley.edu 
+128.32.130.11 ucbarpa-il ucbarpa-il.berkeley.edu 
+128.32.130.2 ucbvangogh vangogh vangogh.berkeley.edu 
+128.32.130.3 ucbokeeffe okeeffe okeeffe.berkeley.edu 
+128.32.130.4 ucbmatisse-cs matisse-cs matisse-cs.berkeley.edu 
+128.32.130.5 ucbcogsci cogsci cogsci.berkeley.edu 
+128.32.130.6 ucbmonet-cs monet-cs monet-cs.berkeley.edu 
+128.32.130.7 ucbkim-cg kim-cg kim-cs kim-cs.berkeley.edu 
+128.32.130.8 ucbgardenia gardenia gardenia.berkeley.edu 
+128.32.130.9 ucbmagnolia magnolia magnolia.berkeley.edu 
+128.32.131.1 ucbxcssun xcssun xcssun.berkeley.edu 
+128.32.131.10 ucbmercury mercury mercury.berkeley.edu 
+128.32.131.100 ucbfezzik fezzik fezzik.berkeley.edu 
+128.32.131.101 ucbmarigold marigold marigold.berkeley.edu 
+128.32.131.102 ucbsunflower sunflower sunflower.berkeley.edu 
+128.32.131.103 ucbcolumbine columbine columbine.berkeley.edu 
+128.32.131.104 ucbginko ginko ginko.berkeley.edu 
+128.32.131.105 ucbgeranium geranium geranium.berkeley.edu 
+128.32.131.106 ucbcopihue copihue copihue.berkeley.edu 
+128.32.131.107 ucbdaisy daisy daisy.berkeley.edu 
+128.32.131.108 ucbdandelion dandelion dandelion.berkeley.edu 
+128.32.131.109 ucblotus lotus lotus.berkeley.edu 
+128.32.131.11 dali-xcs dali-xcs.berkeley.edu 
+128.32.131.110 ucbmimosa mimosa mimosa.berkeley.edu 
+128.32.131.111 ucbgenziana genziana genziana.berkeley.edu 
+128.32.131.114 ucbchrysanthemum chrysanthemum ucbmum mum mum.berkeley.edu 
+128.32.131.115 ucbpawlonia pawlonia pawlonia.berkeley.edu 
+128.32.131.116 ucbsequoia sequoia sequoia.berkeley.edu 
+128.32.131.117 ucblassen lassen lassen.berkeley.edu 
+128.32.131.119 leeb leeb.berkeley.edu 
+128.32.131.12 ucbdisney disney disney.berkeley.edu 
+128.32.131.120 ucbshangri-la shangri-la shangri-la.berkeley.edu 
+128.32.131.121 ucblewis lewis lewis.berkeley.edu 
+128.32.131.122 ucbclark clark clark.berkeley.edu 
+128.32.131.123 ucbyaakov yaakov yaakov.berkeley.edu 
+128.32.131.124 ucbjulia julia julia.berkeley.edu 
+128.32.131.125 ucbplato plato plato.berkeley.edu 
+128.32.131.126 ucbmustapha mustapha mustapha.berkeley.edu 
+128.32.131.127 ucbwarthog warthog warthog.berkeley.edu 
+128.32.131.128 ucbbison bison bison.berkeley.edu 
+128.32.131.129 ucbdikdik dikdik dikdik.berkeley.edu 
+128.32.131.13 ucbsnow snow snow.berkeley.edu 
+128.32.131.130 ucbaristotle aristotle aristotle.berkeley.edu 
+128.32.131.14 ucbbashful bashful bashful.berkeley.edu 
+128.32.131.15 ucbgrumpy grumpy grumpy.berkeley.edu 
+128.32.131.16 ucbsleepy sleepy sleepy.berkeley.edu 
+128.32.131.17 ucbdoc doc doc.berkeley.edu 
+128.32.131.18 ucbdopey dopey dopey.berkeley.edu 
+128.32.131.19 ucbhappy happy happy.berkeley.edu 
+128.32.131.2 ucbxearth xearth xearth.berkeley.edu 
+128.32.131.20 ucbsneezy sneezy sneezy.berkeley.edu 
+128.32.131.21 ucbcharming charming charming.berkeley.edu 
+128.32.131.22 ucbrip rip rip.berkeley.edu 
+128.32.131.23 ucbphoenix phoenix phoenix.berkeley.edu 
+128.32.131.24 spur-gw spur-gw.berkeley.edu 
+128.32.131.25 ucbbirch birch birch.berkeley.edu 
+128.32.131.253 ucbvangogh vangogh vangogh.berkeley.edu 
+128.32.131.26 ucbash ash ash.berkeley.edu 
+128.32.131.27 ucbteak teak teak.berkeley.edu 
+128.32.131.28 ucbpalm palm palm.berkeley.edu 
+128.32.131.29 ucbfir fir fir.berkeley.edu 
+128.32.131.3 ucbpluto pluto pluto.berkeley.edu 
+128.32.131.30 ucbyew yew yew.berkeley.edu 
+128.32.131.31 panic dont_panic ucbgeppetto geppetto geppetto.berkeley.edu 
+128.32.131.32 ucbpinocchio pinocchio pinocchio.berkeley.edu 
+128.32.131.33 ucbmike mike mike.berkeley.edu 
+128.32.131.34 ucbrob rob rob.berkeley.edu 
+128.32.131.35 ucbchip chip chip.berkeley.edu 
+128.32.131.36 ucbdim dim dim.berkeley.edu 
+128.32.131.37 ucbstun stun stun.berkeley.edu 
+128.32.131.39 ucbharry harry harry.berkeley.edu 
+128.32.131.4 ucburanus uranus uranus.berkeley.edu 
+128.32.131.40 ucbcraig craig craig.berkeley.edu 
+128.32.131.41 ucbtigger tigger tigger.berkeley.edu 
+128.32.131.42 ucbfritz fritz fritz.berkeley.edu 
+128.32.131.43 ucbgerry gerry gerry.berkeley.edu 
+128.32.131.44 ucbpine pine pine.berkeley.edu 
+128.32.131.45 ucbfleur-de-lis fleur-de-lis fleur-de-lis.berkeley.edu 
+128.32.131.46 ucbpiglet piglet piglet.berkeley.edu 
+128.32.131.47 ucbachilles achilles achilles.berkeley.edu 
+128.32.131.48 ucbhector hector hector.berkeley.edu 
+128.32.131.49 ucbji ji ji.berkeley.edu 
+128.32.131.5 ucbneptune neptune neptune.berkeley.edu 
+128.32.131.50 ucbmadrone madrone madrone.berkeley.edu 
+128.32.131.51 ucbtanoak tanoak tanoak.berkeley.edu 
+128.32.131.52 ucbcypress cypress cypress.berkeley.edu 
+128.32.131.53 ucbmanzanita manzanita manzanita.berkeley.edu 
+128.32.131.54 douglasfir ucbdouglasfir ucbdougfir dougfir dougfir.berkeley.edu 
+128.32.131.55 ucbbansai bansai bansai.berkeley.edu 
+128.32.131.56 eucalyptus ucbeucalyptus ucbeuca euca euca.berkeley.edu 
+128.32.131.6 ucbsaturn saturn saturn.berkeley.edu 
+128.32.131.64 ucbviking viking viking.berkeley.edu 
+128.32.131.65 ucbapollo apollo apollo.berkeley.edu 
+128.32.131.66 ucbmariner mariner mariner.berkeley.edu 
+128.32.131.67 ucbvoyager voyager voyager.berkeley.edu 
+128.32.131.68 ucbpioneer pioneer pioneer.berkeley.edu 
+128.32.131.69 ucbcalder-xcs calder-xcs calder-xcs.berkeley.edu 
+128.32.131.7 ucbjupiter jupiter jupiter.berkeley.edu 
+128.32.131.70 ucbchallenger challenger challenger.berkeley.edu 
+128.32.131.71 ucbdiscovery discovery discovery.berkeley.edu 
+128.32.131.72 ucbcolumbia columbia columbia.berkeley.edu 
+128.32.131.73 ucbenterprise enterprise enterprise.berkeley.edu 
+128.32.131.74 ucbatlantis atlantis atlantis.berkeley.edu 
+128.32.131.75 ucbexplorer explorer explorer.berkeley.edu 
+128.32.131.76 ucbranger ranger ranger.berkeley.edu 
+128.32.131.78 ucbmahogany mahogany mahogany.berkeley.edu 
+128.32.131.79 ucbelm elm elm.berkeley.edu 
+128.32.131.8 ucbmars mars mars.berkeley.edu 
+128.32.131.80 ucboak oak oak.berkeley.edu 
+128.32.131.81 ucbwalnut walnut walnut.berkeley.edu 
+128.32.131.82 ucbredwood redwood redwood.berkeley.edu 
+128.32.131.83 ucbliveoak liveoak liveoak.berkeley.edu 
+128.32.131.84 ucblarch larch larch.berkeley.edu 
+128.32.131.85 ucbmaple maple maple.berkeley.edu 
+128.32.131.86 ucbbaobab baobab baobab.berkeley.edu 
+128.32.131.87 ucbprimrose primrose primrose.berkeley.edu 
+128.32.131.88 ucbpoppy poppy poppy.berkeley.edu 
+128.32.131.89 ucblupine lupine lupine.berkeley.edu 
+128.32.131.9 ucbvenus venus venus.berkeley.edu 
+128.32.131.90 ucbfuchsia fuchsia fuchsia.berkeley.edu 
+128.32.131.91 ucbfreesia freesia freesia.berkeley.edu 
+128.32.131.92 ucblilly lilly lilly.berkeley.edu 
+128.32.131.93 ucborchid orchid orchid.berkeley.edu 
+128.32.131.94 ucbbromeliad bromeliad bromeliad.berkeley.edu 
+128.32.131.95 ucbsnapdragon snapdragon snapdragon.berkeley.edu 
+128.32.131.99 ucbwisteria wisteria wisteria.berkeley.edu 
+128.32.132.1 ucbic ic ic.berkeley.edu 
+128.32.132.10 ucbdecadence decadence decadence.berkeley.edu 
+128.32.132.11 fox ucbsamantha samantha samantha.berkeley.edu 
+128.32.132.12 hart ucbveronica veronica veronica.berkeley.edu 
+128.32.132.122 sonja sonja.berkeley.edu 
+128.32.132.123 vogon vogon.berkeley.edu 
+128.32.132.13 nichols kelly kelly.berkeley.edu 
+128.32.132.14 zap zaphod beeblebrox beeblebrox.berkeley.edu 
+128.32.132.15 bfly bfly.berkeley.edu 
+128.32.132.16 squish squish.berkeley.edu 
+128.32.132.17 twolf twolf.berkeley.edu 
+128.32.132.18 washoe washoe.berkeley.edu 
+128.32.132.19 rich rich.berkeley.edu 
+128.32.132.2 ucbicw icw icw.berkeley.edu 
+128.32.132.20 scruffy ucbscruff scruff scruff.berkeley.edu 
+128.32.132.21 alberto alberto.berkeley.edu 
+128.32.132.22 trillian trillian.berkeley.edu 
+128.32.132.23 genie genie.berkeley.edu 
+128.32.132.24 zero zero.berkeley.edu 
+128.32.132.25 ucbunny bunny bunny.berkeley.edu 
+128.32.132.26 athos athos.berkeley.edu 
+128.32.132.27 porthos porthos.berkeley.edu 
+128.32.132.28 aramis aramis.berkeley.edu 
+128.32.132.29 dart dartagnan dartagnan.berkeley.edu 
+128.32.132.3 ucbcad-ec cad-ec cad-ec.berkeley.edu 
+128.32.132.30 nat nat.berkeley.edu 
+128.32.132.32 hopper hopper.berkeley.edu 
+128.32.132.33 fourier fourier.berkeley.edu 
+128.32.132.34 chambers marilyn marilyn.berkeley.edu 
+128.32.132.35 thought deep deep.berkeley.edu 
+128.32.132.36 canova canova.berkeley.edu 
+128.32.132.37 slartibartfast slarti fjord fjord.berkeley.edu 
+128.32.132.38 baloss baloss.berkeley.edu 
+128.32.132.39 logos logos.berkeley.edu 
+128.32.132.4 ucbsim sim sim.berkeley.edu 
+128.32.132.40 hogan hogan.berkeley.edu 
+128.32.132.41 ucbbugs ucbugs ucbbugs bugs pavepaws pavepaws.berkeley.edu 
+128.32.132.42 sequent sequent.berkeley.edu 
+128.32.132.43 wooz woozle woozle.berkeley.edu 
+128.32.132.44 moose moose.berkeley.edu 
+128.32.132.45 elk elk.berkeley.edu 
+128.32.132.46 vectra vectra.berkeley.edu 
+128.32.132.47 squirrel squirrel.berkeley.edu 
+128.32.132.5 ucberos eros eros.berkeley.edu 
+128.32.132.54 shambhala shambhala.berkeley.edu 
+128.32.132.55 susie susie.berkeley.edu 
+128.32.132.6 hyper hyper.berkeley.edu 
+128.32.132.8 arthur dent dent.berkeley.edu 
+128.32.132.9 ford prefect prefect.berkeley.edu 
+128.32.133.25 ucbingres-en ingres-en ingres-en.berkeley.edu 
+128.32.133.26 ucbiiris iiris iiris.berkeley.edu 
+128.32.133.3 ucbmedea-ec medea-ec medea-ec.berkeley.edu 
+128.32.133.4 ucbmerlin merlin merlin.berkeley.edu 
+128.32.133.5 ucboz oz oz.berkeley.edu 
+128.32.133.6 ucbdavinci davinci davinci.berkeley.edu 
+128.32.133.7 ucbzeus ucbzeus-139 ucbzeus-133 zeus-139 zeus-133 zeus zeus.berkeley.edu 
+128.32.133.8 ucbjason jason jason.berkeley.edu 
+128.32.133.9 ucbzworykin zworykin zworykin.berkeley.edu 
+128.32.134.1 ucbshadow-de shadow-de shadowvax shadow shadow.berkeley.edu 
+128.32.134.10 ucbbuddy buddy buddy.berkeley.edu 
+128.32.134.11 ucbfranny franny franny.berkeley.edu 
+128.32.134.12 ucbmorgan morgan morgan.berkeley.edu 
+128.32.134.13 ucbfern fern fern.berkeley.edu 
+128.32.134.14 ucbcarol carol carol.berkeley.edu 
+128.32.134.15 ucbdorothy dorothy dorothy.berkeley.edu 
+128.32.134.16 ucbernie-il1 ernie-il1 ernie-il1.berkeley.edu 
+128.32.134.2 ucbear ear ear.berkeley.edu 
+128.32.134.3 ucbeast east east.berkeley.edu 
+128.32.134.4 ucbsilvia ucbsylvia sylvia silvia silvia.berkeley.edu 
+128.32.134.5 ucbdean dean dean.berkeley.edu 
+128.32.134.6 ucbcory-il cory-il cory-il.berkeley.edu 
+128.32.134.7 ucbzooey zooey zooey.berkeley.edu 
+128.32.134.8 ucbseymour seymour seymour.berkeley.edu 
+128.32.134.9 ucbholden-de holden-de ucbholden holden holden.berkeley.edu 
+128.32.135.1 ucbbach bach bach.berkeley.edu 
+128.32.135.10 ucbcrow crow crow.berkeley.edu 
+128.32.135.11 ucbglinda glinda glinda.berkeley.edu 
+128.32.135.12 ucblion lion lion.berkeley.edu 
+128.32.135.13 ucbtinman tinman tinman.berkeley.edu 
+128.32.135.14 ucbtoto toto toto.berkeley.edu 
+128.32.135.15 ucbwitch witch witch.berkeley.edu 
+128.32.135.16 ucbwizard wizard wizard.berkeley.edu 
+128.32.135.17 ucbbadger badger badger.berkeley.edu 
+128.32.135.18 ucbmole mole mole.berkeley.edu 
+128.32.135.19 ucbtoad toad toad.berkeley.edu 
+128.32.135.3 ucbbizet bizet bizet.berkeley.edu 
+128.32.135.4 ucbbrahms brahms brahms.berkeley.edu 
+128.32.135.5 ucbcartan-ec cartan-ec cartan-ec.berkeley.edu 
+128.32.135.6 ucbweyl weyl weyl.berkeley.edu 
+128.32.135.9 ucbdvorak dvorak dvorak.berkeley.edu 
+128.32.138.1 ugs ugs.berkeley.edu 
+128.32.139.10 ucbcorona corona corona.berkeley.edu 
+128.32.139.11 ucbmolson molson molson.berkeley.edu 
+128.32.139.12 ucbdab dab dab.berkeley.edu 
+128.32.139.13 ucbtuborg tuborg tuborg.berkeley.edu 
+128.32.139.14 ucbasahi asahi asahi.berkeley.edu 
+128.32.139.15 ucbsuntory suntory suntory.berkeley.edu 
+128.32.139.2 zeus zeus.berkeley.edu 
+128.32.139.3 ucbimage image image.berkeley.edu 
+128.32.139.4 ucbrobert robert robert.berkeley.edu 
+128.32.139.5 ucbbass bass bass.berkeley.edu 
+128.32.139.50 ucbcoors coors coors.berkeley.edu 
+128.32.139.6 ucbbob bob bob.berkeley.edu 
+128.32.139.7 ucbjan jan jan.berkeley.edu 
+128.32.139.8 ucbbud bud bud.berkeley.edu 
+128.32.139.9 ucbheine heine heine.berkeley.edu 
+128.32.14 ucbmatisse matisse matisse.berkeley.edu 
+128.32.140.1 cgl-dmc cgl-dmc.berkeley.edu 
+128.32.140.2 ucb-dmc arpa-dmc arpa-dmc.berkeley.edu 
+128.32.140.3 ucbvax-dmc ucbvax-dmc.berkeley.edu 
+128.32.140.4 ucbcartan-dmc cartan-dmc cartan-dmc.berkeley.edu 
+128.32.141.1 jade-eng jade-eng.berkeley.edu 
+128.32.141.2 ucbcevax cevax ucbcevax-eng cevax-eng cevax-eng.berkeley.edu 
+128.32.141.3 ucbetch-gw etch-gw etch-gw.berkeley.edu 
+128.32.141.4 ucbetch-gw2 etch-gw2 etch-gw2.berkeley.edu 
+128.32.142.1 ucbeuler euler euler.berkeley.edu 
+128.32.142.2 ucbnewton newton newton.berkeley.edu 
+128.32.142.25 ucbmote mote mote.berkeley.edu 
+128.32.142.3 ucbkepler kepler kepler.berkeley.edu 
+128.32.142.5 ucbmaxwell maxwell maxwell.berkeley.edu 
+128.32.142.6 ucbjoule joule joule.berkeley.edu 
+128.32.142.7 ucbmistletoe mistletoe mistletoe.berkeley.edu 
+128.32.144.1 hydrogen hydrogen.berkeley.edu 
+128.32.144.10 sodium sodium.berkeley.edu 
+128.32.144.2 lithium lithium.berkeley.edu 
+128.32.144.254 jade-chem jade-chem.berkeley.edu 
+128.32.144.3 beryllium beryllium.berkeley.edu 
+128.32.144.4 boron boron.berkeley.edu 
+128.32.144.5 carbon carbon.berkeley.edu 
+128.32.144.6 nitrogen nitrogen.berkeley.edu 
+128.32.144.7 oxygen oxygen.berkeley.edu 
+128.32.144.8 flourine flourine.berkeley.edu 
+128.32.144.9 neon neon.berkeley.edu 
+128.32.15 ucbmedea medea medea.berkeley.edu 
+128.32.150.1 envy ucbenvy envy-150 envy-150.berkeley.edu 
+128.32.150.10 ucbearth earth earth.berkeley.edu 
+128.32.150.11 ucblust lust lust.berkeley.edu 
+128.32.150.12 ucblust20 lust20 lust20.berkeley.edu 
+128.32.150.13 ucbpride pride pride.berkeley.edu 
+128.32.150.14 ucbsloth sloth sloth.berkeley.edu 
+128.32.150.15 ucbdill dill dill.berkeley.edu 
+128.32.150.16 ucbbasil basil basil.berkeley.edu 
+128.32.150.17 ucbthyme thyme thyme.berkeley.edu 
+128.32.150.18 ucbbay bay bay.berkeley.edu 
+128.32.150.19 ucbparsley parsley parsley.berkeley.edu 
+128.32.150.2 ucbclove clove clove.berkeley.edu 
+128.32.150.20 ucbpepper pepper pepper.berkeley.edu 
+128.32.150.21 ucbanger anger anger.berkeley.edu 
+128.32.150.22 ucbgreed greed greed.berkeley.edu 
+128.32.150.25 ucbcayenne cayenne cayenne.berkeley.edu 
+128.32.150.26 ucbchilli chilli chilli.berkeley.edu 
+128.32.150.27 ucballspice allspice allspice.berkeley.edu 
+128.32.150.28 ucbginger ginger ginger.berkeley.edu 
+128.32.150.29 ucboregano oregano oregano.berkeley.edu 
+128.32.150.3 ucbsalt salt salt.berkeley.edu 
+128.32.150.30 ucbrosemary rosemary rosemary.berkeley.edu 
+128.32.150.31 ucbfennel fennel fennel.berkeley.edu 
+128.32.150.32 ucbcinnamon cinnamon cinnamon.berkeley.edu 
+128.32.150.33 ucbtarragon tarragon tarragon.berkeley.edu 
+128.32.150.34 ucbanise anise anise.berkeley.edu 
+128.32.150.35 ucbcoriander coriander coriander.berkeley.edu 
+128.32.150.37 ucbtumeric tumeric tumeric.berkeley.edu 
+128.32.150.38 ucbmustard mustard mustard.berkeley.edu 
+128.32.150.39 ucbcardamom cardamom cardamom.berkeley.edu 
+128.32.150.4 ucbsaffron saffron saffron.berkeley.edu 
+128.32.150.40 ucbsarsaparilla sarsaparilla sarsaparilla.berkeley.edu 
+128.32.150.41 ucbsassafrass sassafrass sassafrass.berkeley.edu 
+128.32.150.42 ucbhecuba hecuba hecuba.berkeley.edu 
+128.32.150.43 ucbpriam priam priam.berkeley.edu 
+128.32.150.44 ucbtully tully tully.berkeley.edu 
+128.32.150.45 ucbhelen helen helen.berkeley.edu 
+128.32.150.46 ucbparis paris paris.berkeley.edu 
+128.32.150.47 ucbmenelaus menelaus menelaus.berkeley.edu 
+128.32.150.48 ucbodysseus odysseus odysseus.berkeley.edu 
+128.32.150.49 ucbagamemnon agamemnon agamemnon.berkeley.edu 
+128.32.150.5 ucbgarlic garlic garlic.berkeley.edu 
+128.32.150.50 ucbborage ucbhomer homer homer.berkeley.edu 
+128.32.150.51 ucbcumin cumin cumin.berkeley.edu 
+128.32.150.52 ucbmint mint mint.berkeley.edu 
+128.32.150.53 ucbmarjoram marjoram marjoram.berkeley.edu 
+128.32.150.54 ucbmace mace mace.berkeley.edu 
+128.32.150.55 ucbfenugreek fenugreek fenugreek.berkeley.edu 
+128.32.150.56 ucbsavory savory savory.berkeley.edu 
+128.32.150.57 ucbcaraway caraway caraway.berkeley.edu 
+128.32.150.58 ucbshallot shallot shallot.berkeley.edu 
+128.32.150.59 borage borage.berkeley.edu 
+128.32.150.6 ucbsage sage sage.berkeley.edu 
+128.32.150.7 ucbnutmeg nutmeg nutmeg.berkeley.edu 
+128.32.150.8 ucbpaprika paprika paprika.berkeley.edu 
+128.32.150.9 ucbmurder murder murder.berkeley.edu 
+128.32.152.1 ucbheart heart heart.berkeley.edu 
+128.32.152.10 jade-stf jade-stf.berkeley.edu 
+128.32.152.11 ucberis eris eris.berkeley.edu 
+128.32.152.12 ucbjaws jaws jaws.berkeley.edu 
+128.32.152.13 xorxx ucbacis acis acis.berkeley.edu 
+128.32.152.14 ucbrt1 rt1 rt1.berkeley.edu 
+128.32.152.15 ucbrt2 mind rt2 rt2.berkeley.edu 
+128.32.152.16 ucbrt3 rt3 rt3.berkeley.edu 
+128.32.152.17 ucbsun1 speedy sun1 sun1.berkeley.edu 
+128.32.152.18 ucbentropy entropy entropy.berkeley.edu 
+128.32.152.19 ucbhoser hoser hoser.berkeley.edu 
+128.32.152.2 ucbiko biko biko.berkeley.edu 
+128.32.152.20 ucblily lily lily.berkeley.edu 
+128.32.152.21 ucbbarbm barbm barbm.berkeley.edu 
+128.32.152.22 ucbdunsel dunsel dunsel.berkeley.edu 
+128.32.152.23 ucbdot dot dot.berkeley.edu 
+128.32.152.24 ucbfog fog fog.berkeley.edu 
+128.32.152.25 ucbbleachers bleachers bleachers.berkeley.edu 
+128.32.152.3 ucbquark quark quark.berkeley.edu 
+128.32.152.4 ucbrkneff1 rkneff1 rkneff1.berkeley.edu 
+128.32.152.42 ucbio io io.berkeley.edu 
+128.32.152.43 ucbmica mica mica.berkeley.edu 
+128.32.152.45 ucbarisia arisia arisia.berkeley.edu 
+128.32.152.5 ucbrkneff2 rkneff2 rkneff2.berkeley.edu 
+128.32.152.50 ucbweb web web.berkeley.edu 
+128.32.152.55 ucbhelianthus helianthus helianthus.berkeley.edu 
+128.32.152.56 ucbratsoup ratsoup ratsoup.berkeley.edu 
+128.32.152.57 ucbpegasus pegasus pegasus.berkeley.edu 
+128.32.152.58 ucbripple ripple ripple.berkeley.edu 
+128.32.152.6 ucbmisc misc misc.berkeley.edu 
+128.32.152.7 ucbgrendel grendel grendel.berkeley.edu 
+128.32.152.8 ucbtemp temp temp.berkeley.edu 
+128.32.152.9 ucbtern tern tern.berkeley.edu 
+128.32.156.1 ucbesvax-156 esvax-156 esvax-156.berkeley.edu 
+128.32.156.10 ucbfranklin franklin franklin.berkeley.edu 
+128.32.156.12 ucbtesla tesla tesla.berkeley.edu 
+128.32.156.13 ucbhodges hodges hodges.berkeley.edu 
+128.32.156.14 ucblight light light.berkeley.edu 
+128.32.156.2 ucbzworykin-156 zworykin-156 zworykin-156.berkeley.edu 
+128.32.156.23 ucbkuhimagen kuhimagen kuhimagen.berkeley.edu 
+128.32.156.3 ucbnyquist nyquist nyquist.berkeley.edu 
+128.32.156.4 ucbmarconi marconi marconi.berkeley.edu 
+128.32.156.40 ucbkuhn kuhn kuhn.berkeley.edu 
+128.32.156.41 ucbtucker tucker tucker.berkeley.edu 
+128.32.156.5 ucbedison edison edison.berkeley.edu 
+128.32.156.50 ucbhuffman huffman huffman.berkeley.edu 
+128.32.156.51 ucbsesame sesame sesame.berkeley.edu 
+128.32.156.52 ucbbooze booze booze.berkeley.edu 
+128.32.156.53 ucbgin gin gin.berkeley.edu 
+128.32.156.54 tequila tequila.berkeley.edu 
+128.32.156.55 layout layout.berkeley.edu 
+128.32.156.56 lagrange lagrange.berkeley.edu 
+128.32.156.57 mouton mouton.berkeley.edu 
+128.32.156.58 latour latour.berkeley.edu 
+128.32.156.59 lambert lambert.berkeley.edu 
+128.32.156.6 ucbdeforest deforest deforest.berkeley.edu 
+128.32.156.7 ucbarmstrong armstrong armstrong.berkeley.edu 
+128.32.156.8 ucbbell bell bell.berkeley.edu 
+128.32.156.9 ucbshannon shannon shannon.berkeley.edu 
+128.32.157.1 ucbgalton galton galton.berkeley.edu 
+128.32.157.2 ucbpearson pearson pearson.berkeley.edu 
+128.32.19 ucbingres ingres ingres.berkeley.edu 
+128.32.20 ucboz-en oz-en oz-en.berkeley.edu 
+128.32.22 ucbdegas degas degas.berkeley.edu 
+128.32.24 ucbmiro miro miro.berkeley.edu 
+128.32.25 ucblapis-en lapis-en lapis-en.berkeley.edu 
+128.32.26 ucbbizet-en bizet-en bizet-en.berkeley.edu 
+128.32.29 ucbcartan-en cartan-en cartan-en.berkeley.edu 
+128.32.31 ucbrenoir renoir renoir.berkeley.edu 
+128.32.4 arpa-en arpa-en.berkeley.edu 
+128.32.5 ucbcad cad cad.berkeley.edu 
+128.32.6 ucbernie ernie ernie.berkeley.edu 
+128.32.7 ucbmonet monet monet.berkeley.edu 
+# end of ucbhosts current as of 5-2-86
+# Berkeley Class A Private Net -- 3Mb/s Ethernet
+#
+126.1		ucbmatisse-a matisse-a
+126.2		ucbcalder-a calder-a
+126.3		ucbmonet-a monet-a
+#
+# Berkeley Class C Private Net -- 3Mb/s Ethernet
+#
+192.0.46.1		ucbmatisse-c matisse-c
+192.0.46.2		ucbcalder-c calder-c
+192.0.46.3		ucbmonet-c monet-c
+192.0.46.4		ucbokeefe-c okeefe-c
+192.0.46.5		ucbvangogh-c vangogh-c
+#
+# UCSF Class C net
+#
+192.5.49.1		ucsfcgl cgl ucsf-cgl
+192.5.49.2		ucsfigv  igv
+192.5.49.3		ucsfmeta meta ucsf-meta fuzzy
+192.5.49.4		cgliris
+192.5.49.10		ucsfmis mis
+192.5.49.11		ucsfbcl bcl
+192.5.49.12		ucsfcca cca ucsfvaxa vaxa
+192.5.49.13		ucsfccb ccb
+192.5.49.14		ucsfmsg msg
+192.5.49.15		bcliris
+192.5.49.16		ucsfnmr nmr
+192.5.49.17		ucsfvivo vivo nmrvivo
+#
+# Off Campus Hosts and Networks (from SRI-NIC hostname server)
+#
+36.10.0.171		su-playfair.arpa su-playfair playfair
+128.39.1.2		nta-vax
+#
+192.5.10.127	usc-cse uscvax cse usccse csea usc-csea usccsea csenet-gw
+192.5.10.254	usc-cseb cseb usccseb
+192.5.10.64	dworkin
+# DoD Internet Host Table
+#  19-Dec-85 
+#  Version number 505
+10.2.0.2        sri-csl-gw.arpa sri-csl-gw	# gateway
+10.6.0.2        sri-mcon-gw.arpa sri-mcon-gw	# gateway
+10.1.0.3        sac-rpgw-1.arpa sac-rpgw-1	# gateway
+10.2.0.3        sac-rpgw-2.arpa sac-rpgw-2	# gateway
+10.0.0.4        utah-gateway.arpa utah-gateway	# gateway
+10.1.0.5        bbn-cronus-gw.arpa bbn-cronus-gw cgtwy cronus cronus-gw.bbn.com	# gateway
+10.2.0.5        bbn-fibera-gw.arpa bbn-fibera-gw fibera-gw.bbn.com	# gateway
+10.4.0.5        csnet-pdn-gw.arpa csnet-pdn-gw	# gateway
+10.5.0.5        bbn-milnet-gw.arpa bbn-milnet-gw milbbn bbn-milnet-gwy	# gateway
+10.6.0.5        bbn-pr-gw.arpa bbn-pr-gw pr-gw.bbn.com	# gateway
+10.3.0.6        mit-ai-gw.arpa mit-ai-gw ai-gw mit-kludge kludge	# gateway
+10.0.0.9        harvard-gw.arpa harvard-gw	# gateway
+10.2.0.9        yale-gw.arpa yale-gw	# gateway
+10.3.0.10       ll-psat-ig.arpa ll-psat-ig ll-11	# gateway
+10.5.0.10       ll-gw.arpa ll-gw	# gateway
+10.1.0.11       stanford-gateway.arpa stanford-gateway	# gateway
+10.0.0.12       sri-rpgw-1.arpa sri-rpgw-1	# gateway
+10.1.0.12       sri-rpgw-2.arpa sri-rpgw-2	# gateway
+10.2.0.14       cmu-gateway.arpa cmu-gateway	# gateway
+10.0.0.15       ur-cs-gw.arpa ur-cs-gw	# gateway
+10.1.0.15       crc-gw.arpa crc-gw arpa-canada intl	# gateway
+10.1.0.20       dcec-gateway.arpa dcec-gateway edn-gateway	# gateway
+10.5.0.20       dcec-psat-ig.arpa dcec-psat-ig	# gateway
+10.7.0.20       dcec-milnet-gw.arpa dcec-milnet-gw mildcec dcec-milnet-gwy	# gateway
+10.1.0.22       isi-mcon-gw.arpa isi-mcon-gw	# gateway
+10.2.0.22       isi-milnet-gw.arpa isi-milnet-gw milisi isi-milnet-gwy	# gateway
+10.3.0.22       isi-psat-ig.arpa isi-psat-ig	# gateway
+10.0.0.25       css-ring-gw.arpa css-ring-gw	# gateway
+10.2.0.25       css-gateway.arpa css-gateway	# gateway
+10.3.0.27       isi-gateway.arpa isi-gateway isi-gw	# gateway
+10.1.0.28       ipto-gw.arpa ipto-gw	# gateway
+10.2.0.28       arpa-milnet-gw.arpa arpa-milnet-gw milarpa arpa-milnet-gwy	# gateway
+10.2.0.37       purdue-cs-gw.arpa purdue-cs-gw	# gateway
+10.0.0.38       bragg-pr-gw1.arpa bragg-pr-gw1	# gateway
+10.3.0.38       bragg-pr-gw2.arpa bragg-pr-gw2	# gateway
+10.1.0.51       sri-prm-gw.arpa sri-prm-gw	# gateway
+10.3.0.51       sri-psat-ig.arpa sri-psat-ig	# gateway
+10.4.0.51       sri-milnet-gw.arpa sri-milnet-gw milsri sri-milnet-gwy	# gateway
+10.5.0.51       sri-gw.arpa sri-gw	# gateway
+10.1.0.54       cit-cs-gw.arpa cit-cs-gw	# gateway
+10.5.0.63       bbn-van-gw.arpa bbn-van-gw	# gateway
+10.7.0.63       bbnnet2-arpanet-gw.arpa bbnnet2-arpanet-gw bbn2 bbnnet2-arpanet-gw.bbn.com	# gateway
+10.0.0.68       lbl-milnet-gw.arpa lbl-milnet-gw millbl	# gateway
+10.0.0.77       mit-gw.arpa mit-gw mit-gateway gw.mit.edu gw.lcs.mit.edu	# gateway
+10.0.0.79       dec-mr-gw.arpa dec-mr-gw	# gateway
+10.2.0.80       sac-milnet-gw.arpa sac-milnet-gw milsac sac-milnet-gwy	# gateway
+10.3.0.80       sac-gateway.arpa sac-gateway sac-gw sac-gw1	# gateway
+10.5.0.80       sac-gw-2.arpa sac-gw-2	# gateway
+10.4.0.82       bbn-net-gateway.arpa bbn-net-gateway bbn-rcc-gateway bbn-net-gateway.bbn.com	# gateway
+10.1.0.89       rutgers-gw.arpa rutgers-gw arpa-gw.rutgers.edu	# gateway
+10.3.0.89       columbia-gw.arpa columbia-gw	# gateway
+10.4.0.89       hazeltine-gw.arpa hazeltine-gw	# gateway
+10.3.0.91       uw-vlsi-gw.arpa uw-vlsi-gw	# gateway
+10.0.0.94       wisc-gateway.wisc.edu wisc-gateway.arpa wisc-gateway	# gateway
+10.0.0.96       udel-gw.arpa udel-gw	# gateway
+10.3.0.96       cornell-gw.arpa cornell-gw	# gateway
+10.0.0.99       bbn-x25-gw.arpa bbn-x25-gw bbnx25	# gateway
+10.0.0.107      sri-pr-gw3.arpa sri-pr-gw3	# gateway
+10.1.0.107      sri-c3ether-gw.arpa sri-c3ether-gw	# gateway
+10.0.0.111      dcn-gateway.arpa dcn-gateway	# gateway
+10.3.0.111      louie-gw.arpa louie-gw	# gateway
+10.4.0.111      mica-aleph-gw.arpa mica-aleph-gw	# gateway
+10.5.0.111      mica-beth-gw.arpa mica-beth-gw	# gateway
+10.6.0.111      mica-gimel-gw.arpa mica-gimel-gw	# gateway
+10.7.0.111      mica-daleth-gw.arpa mica-daleth-gw	# gateway
+10.1.0.119      radc-psat-ig.arpa radc-psat-ig	# gateway
+10.5.0.4        fsnap-gw.arpa fsnap-gw	# gateway
+4.0.0.0         satnet.arpa satnet
+4.0.0.1         etam-expak.arpa etam-expak
+4.0.0.2         goonhilly-expak.arpa goonhilly-expak
+4.0.0.3         tanum-expak.arpa tanum-expak
+4.0.0.37        satnet-sink.arpa satnet-sink
+4.0.0.40        satnet-echo.arpa satnet-echo
+4.0.0.41        etam-monitor.arpa etam-monitor
+4.0.0.42        goonhilly-monitor.arpa goonhilly-monitor
+4.0.0.43        tanum-monitor.arpa tanum-monitor
+4.0.0.62        etam-echo.arpa etam-echo
+4.0.0.63        goonhilly-echo.arpa goonhilly-echo
+4.0.0.64        tanum-echo.arpa tanum-echo
+4.0.0.77        raisting-echo.arpa raisting-echo
+4.0.0.78        raisting-monitor.arpa raisting-monitor
+4.0.0.79        raisting-expak.arpa raisting-expak
+4.0.0.88        fucino.arpa fucino
+4.0.0.93        fucino-echo.arpa fucino-echo
+4.0.0.94        fucino-monitor.arpa fucino-monitor
+4.0.0.95        fucino-expak.arpa fucino-expak
+6.1.0.1         yuma.arpa yuma
+7.0.0.3         edn-vax.arpa edn-vax
+8.0.0.2         bbncca.arpa bbncca cca.bbn.com
+8.1.0.2         bbnccb.arpa bbnccb ccb.bbn.com
+8.3.0.2         bbnccd.arpa bbnccd ccd.bbn.com
+8.5.0.2         bbncck.arpa bbncck cck.bbn.com
+8.7.0.2         bbn-labs-b.arpa bbn-labs-b bbnlb labs-b labs-b.bbn.com
+128.11.1.2      bbn-labs-b.arpa bbn-labs-b bbnlb labs-b labs-b.bbn.com
+8.0.0.3         bbnccg.arpa bbnccg ccg.bbn.com
+8.3.0.3         bbnccr.arpa bbnccr ccr.bbn.com
+8.0.0.4         bbnccf.arpa bbnccf ccf.bbn.com
+8.2.0.4         bbnccp.arpa bbnccp
+8.3.0.4         bbncci.arpa bbncci cci.bbn.com
+8.4.0.4         bbnh.arpa bbnh h.bbn.com
+128.11.0.4      bbnh.arpa bbnh h.bbn.com
+8.0.0.5         bbncd2.arpa bbncd2 cdnoc bbn-cd2 cd2.bbn.com
+8.2.0.5         bbncc1-tac.arpa bbncc1-tac cc1-tac.bbn.com
+8.3.0.5         bbncc3.arpa bbncc3 cc3.bbn.com
+8.1.0.6         bbn-admin.arpa bbn-admin admin admin.bbn.com
+8.2.0.6         bbn-inoc.arpa bbn-inoc inoc inoc.bbn.com
+8.3.0.6         bbnccw.arpa bbnccw ccw.bbn.com
+8.0.0.7         bbnccs.arpa bbnccs ccs.bbn.com
+8.1.0.7         bbnz.arpa bbnz z.bbn.com
+8.2.0.7         bbnccq.arpa bbnccq ccq.bbn.com
+8.3.0.7         bbncct.arpa bbncct cct.bbn.com
+8.4.0.8         bbncch.arpa bbncch cch.bbn.com
+8.7.0.8         bbn-ucc.arpa bbn-ucc ucc ucc.bbn.com
+8.0.0.10        bbncc4-tac.arpa bbncc4-tac div-5-tac2 d5tac-tac2 d5tac2 cc4-tac.bbn.com
+8.3.0.10        jsnach.arpa jsnach jsnach.bbn.com
+8.2.0.11        bbncc5-tac.arpa bbncc5-tac bbncc5tac wash-tac cc5-tac.bbn.com
+8.5.0.11        bbn-wash-vax.arpa bbn-wash-vax wash-vax wash-tub washvax washvax.bbn.com wash-vax.bbn.com
+8.0.0.12        bbn-noc3.arpa bbn-noc3 noc3 noc3.bbn.com
+8.1.0.12        bbn-noc3.arpa bbn-noc3 noc3 noc3.bbn.com
+8.3.0.12        bbnccn.arpa bbnccn ccn.bbn.com
+8.1.0.13        bbnccy.arpa bbnccy ccy.bbn.com
+8.2.0.13        bbnccv.arpa bbnccv bbncc-vax ccv.bbn.com
+192.1.7.15      bbnccv.arpa bbnccv bbncc-vax ccv.bbn.com
+8.0.0.14        bbnj.arpa bbnj csnet4 j.bbn.com
+192.1.7.34      bbnj.arpa bbnj csnet4 j.bbn.com
+8.1.0.14        bbn-noc.arpa bbn-noc bbn-nu noc noc.bbn.com
+8.2.0.14        div6-tac.arpa div6-tac d6tac div6tac div6-tac.bbn.com
+8.4.0.14        bbn-noc2.arpa bbn-noc2 noc2 noc2.bbn.com
+8.5.0.14        csnet-dev.arpa csnet-dev dev.cs.net
+192.1.7.33      csnet-dev.arpa csnet-dev dev.cs.net
+8.6.0.14        div1-tac.arpa div1-tac div-1-tac div1-tac.bbn.com
+8.7.0.14        bbnccm.arpa bbnccm ccm.bbn.com
+8.0.0.15        bbncc-demo.arpa bbncc-demo ccdemo cc-demo.bbn.com
+8.2.0.15        bbn-ednoc.arpa bbn-ednoc ednoc ednoc.bbn.com
+8.1.0.16        bbn-rvax.arpa bbn-rvax rvax rvax.bbn.com
+8.2.0.16        bbn-spca.arpa bbn-spca spca spca.bbn.com
+8.3.0.16        bbn-xvax.arpa bbn-xvax xvax xvax.bbn.com
+8.0.0.17        bbnccc.arpa bbnccc ccc.bbn.com
+8.1.0.17        bbnccx.arpa bbnccx ccx.bbn.com
+8.2.0.17        bbnccj.arpa bbnccj ccj.bbn.com
+8.3.0.17        bbn-labs-admin.arpa bbn-labs-admin bbn-labs bbnl labs-admin.bbn.com
+8.0.0.18        bbncco.arpa bbncco cco.bbn.com
+8.1.0.18        bbncc2.arpa bbncc2 cc2.bbn.com
+8.0.0.19        bbncc-imp-dev-noc.arpa bbncc-imp-dev-noc idnoc
+8.6.0.19        bbncc3-tac.arpa bbncc3-tac div-5-tac div5-tac d5tac cc3-tac.bbn.com
+8.9.0.19        bbnccny.arpa bbnccny nsales ccny.bbn.com
+8.0.0.21        ibmfsd-vm1.arpa ibmfsd-vm1 fsdvm1
+8.1.0.21        ibmfsd-s1.arpa ibmfsd-s1 fsds1
+8.2.0.21        ibmfsd-mvs.arpa ibmfsd-mvs fsdmvs
+8.3.0.21        ibmfsdvm2.arpa ibmfsdvm2 fsdvm2
+8.4.0.21        ibmfsdmvsx.arpa ibmfsdmvsx fsdmvsx
+8.0.0.22        bbncc-washington.arpa bbncc-washington bbncc-wash bbn-wash cc-washington.bbn.com
+8.1.0.31        bbnccla.arpa bbnccla bbncc-la ccla.bbn.com
+8.16.0.33       bbncce.arpa bbncce cce.bbn.com
+8.0.0.37        bbncc7.arpa bbncc7 bbn-csc cc7.bbn.com
+8.2.0.37        bbncc-vm.arpa bbncc-vm cc-vm.bbn.com
+10.0.0.1        test.ucla.edu ucla-test.arpa ucla-test
+10.1.0.1        ucla-ccn.arpa ucla-ccn ccn oac.ucla.edu
+10.2.0.1        locus.ucla.edu ucla-locus.arpa ucla-locus ucla-cs ucla-cs.arpa cs.ucla.edu
+192.5.55.4      locus.ucla.edu ucla-locus.arpa ucla-locus ucla-cs ucla-cs.arpa cs.ucla.edu
+10.3.0.1        ats.ucla.edu ucla-ats.arpa ucla-ats
+10.0.0.2        sri-sprm.arpa sri-sprm sri-snv snv
+10.1.0.2        sri-kl.arpa sri-kl sri kl
+10.3.0.2        sri-tsc.arpa sri-tsc sri-tsca tsca
+128.18.0.201    sri-tsc.arpa sri-tsc sri-tsca tsca
+10.4.0.2        sri-ai.arpa sri-ai aic
+10.5.0.2        sri-iu.arpa sri-iu iuv
+192.12.5.10     sri-iu.arpa sri-iu iuv
+10.0.0.3        sac-rpvax.arpa sac-rpvax
+10.0.0.4        utah-cs.arpa utah-cs
+192.5.12.21     utah-cs.arpa utah-cs
+10.2.0.4        utah-tac.arpa utah-tac
+10.3.0.4        utah-20.arpa utah-20 utah-general
+192.5.12.20     utah-20.arpa utah-20 utah-general
+10.3.0.5        bbna.arpa bbna bbn a.bbn.com
+192.1.2.68      bbna.arpa bbna bbn a.bbn.com
+8.5.0.4         bbna.arpa bbna bbn a.bbn.com
+10.4.0.5        csnet-relay.arpa csnet-relay relay.cs.net
+192.5.58.1      csnet-relay.arpa csnet-relay relay.cs.net
+192.1.7.32      csnet-relay.arpa csnet-relay relay.cs.net
+10.7.0.5        bbn-pr-station-1.arpa bbn-pr-station-1
+10.0.0.6        mit-multics.arpa mit-multics multics
+10.2.0.6        mit-ai.arpa mit-ai ai mitai
+10.4.0.6        think.com think.arpa think think-gw tmc tm godot
+192.5.104.192   think.com think.arpa think think-gw tmc tm godot
+10.5.0.6        bf-gw.lcs.mit.edu bf-gw.arpa bf-gw
+18.26.0.59      bf-gw.lcs.mit.edu bf-gw.arpa bf-gw
+10.2.0.7        rand-arpa-tac.arpa rand-arpa-tac
+10.3.0.7        rand-unix.arpa rand-unix randvax randvax.arpa
+192.5.14.33     rand-unix.arpa rand-unix randvax randvax.arpa
+10.0.0.9        harvard.harvard.edu harvard.arpa harvard harv-10 acl
+192.5.66.1      harvard.harvard.edu harvard.arpa harvard harv-10 acl
+192.5.90.1      harvard.harvard.edu harvard.arpa harvard harv-10 acl
+10.0.0.10       ll.arpa ll
+10.1.0.10       ll-vlsi.arpa ll-vlsi
+10.2.0.10       ll-xn.arpa ll-xn
+10.4.0.10       ll-en.arpa ll-en
+10.6.0.10       ll-sst.arpa ll-sst sst
+10.0.0.11       su-ai.arpa su-ai sail suai su-ai.stanford.edu sail.stanford.edu
+36.36.0.194     su-ai.arpa su-ai sail suai su-ai.stanford.edu sail.stanford.edu
+10.2.0.11       su-tac.arpa su-tac
+10.3.0.11       su-score.arpa su-score score su-score.stanford.edu score.stanford.edu
+36.36.0.195     su-score.arpa su-score score su-score.stanford.edu score.stanford.edu
+36.8.0.46       su-score.arpa su-score score su-score.stanford.edu score.stanford.edu
+10.3.1.11       stanford.arpa stanford
+10.4.0.11       su-sierra.arpa su-sierra sierra su-sierra.stanford.edu sierra.stanford.edu
+36.40.0.213     su-sierra.arpa su-sierra sierra su-sierra.stanford.edu sierra.stanford.edu
+36.10.0.13      su-sierra.arpa su-sierra sierra su-sierra.stanford.edu sierra.stanford.edu
+10.1.0.14       a.cs.cmu.edu cmu-cs-a.arpa cmu-cs-a cmu-10a cmua
+10.3.0.14       c.cs.cmu.edu cmu-cs-c.arpa cmu-cs-c cmu-20c cmuc
+10.0.0.15       rochester.arpa rochester ur-cayuga ur-electrolux
+192.5.53.209    rochester.arpa rochester ur-cayuga ur-electrolux
+192.5.37.209    rochester.arpa rochester ur-cayuga ur-electrolux
+10.2.0.20       dcec-arpa-tac.arpa dcec-arpa-tac
+10.3.0.20       edn-unix.arpa edn-unix
+10.5.0.20       dcec-psat.arpa dcec-psat
+10.0.0.22       gte-telenet.arpa gte-telenet
+10.2.0.23       usc-tac.arpa usc-tac
+10.0.0.25       seismo.css.gov seismo.arpa seismo css-seismo css.gov
+192.5.11.5      seismo.css.gov seismo.arpa seismo css-seismo css.gov
+192.12.25.5     seismo.css.gov seismo.arpa seismo css-seismo css.gov
+10.0.0.27       usc-isid.arpa usc-isid isid
+10.1.0.27       isi-png11.arpa isi-png11 isi-xgp11
+10.1.156.27     isi-png11.arpa isi-png11 isi-xgp11
+10.1.21.27      isi-mcon.arpa isi-mcon
+10.0.21.22      isi-mcon.arpa isi-mcon
+10.1.22.27      isi-speech11.arpa isi-speech11
+10.1.23.27      isi-wbc11.arpa isi-wbc11 wbc11
+10.0.23.22      isi-wbc11.arpa isi-wbc11 wbc11
+10.1.25.27      isi-maint11.arpa isi-maint11
+10.1.89.27      isi-setting.arpa isi-setting setting isi-sun2
+10.1.90.27      isi-loretta.arpa isi-loretta loretta isi-sun1
+10.1.91.27      isi-pallas-athene.arpa isi-pallas-athene pallas-athene isi-sun3
+10.1.97.27      isi-aikane.arpa isi-aikane aikane isi-perq1
+10.1.98.27      isi-czar.arpa isi-czar czar isi-perq2
+10.1.99.27      isi-mycroftxxx.arpa isi-mycroftxxx mycroftxxx isi-perq3
+10.1.124.27     isi-cmr.arpa isi-cmr
+10.1.125.27     isi-ihm.arpa isi-ihm sphinx
+10.1.254.27     isi-echo.arpa isi-echo
+10.2.0.27       isi-vaxa.arpa isi-vaxa vaxa
+10.1.33.27      isi-vaxa.arpa isi-vaxa vaxa
+128.9.0.33      isi-vaxa.arpa isi-vaxa vaxa
+10.0.0.28       arpa3-tac.arpa arpa3-tac
+10.0.0.31       cca-unix.arpa cca-unix cca
+10.1.0.31       cca-vms.arpa cca-vms
+10.2.0.31       cca-pli.arpa cca-pli
+10.3.0.31       cisl-service-multics.arpa cisl-service-multics mit-devmultics devmultics cisl cisl-multics cisl-service
+192.5.1.1       cisl-service-multics.arpa cisl-service-multics mit-devmultics devmultics cisl cisl-multics cisl-service
+10.4.0.31       cca-arp-tac.arpa cca-arp-tac
+10.1.0.32       parcvax.arpa parcvax parc-vaxc vaxc
+10.2.0.32       xerox.arpa xerox parc-gw parc
+10.3.0.32       kestrel.arpa kestrel kes sct sci sci-ics
+10.1.0.37       asc.purdue.edu purdue-asc.arpa purdue-asc purdue-205-gw
+10.3.0.37       a.cs.uiuc.edu uiuc.arpa uiuc uiucdcs illinois uofillinois illini
+192.5.69.1      a.cs.uiuc.edu uiuc.arpa uiuc uiucdcs illinois uofillinois illini
+10.1.0.38       bragg-sta1.arpa bragg-sta1
+10.2.0.38       bragg-arpa-tac.arpa bragg-arpa-tac
+10.0.0.44       mit-xx.arpa mit-xx xx.mit.edu xx.lcs.mit.edu
+10.2.0.44       mit-tstgw.arpa mit-tstgw tstgw.mit.edu tstgw.lcs.mit.edu
+18.10.0.41      mit-tstgw.arpa mit-tstgw tstgw.mit.edu tstgw.lcs.mit.edu
+10.3.0.44       mit-mc.arpa mit-mc mc mc.mit.edu mc.lcs.mit.edu
+10.0.0.46       collins-pr.arpa collins-pr
+10.1.0.46       collins-gw.arpa collins-gw
+10.2.0.46       collins-tac.arpa collins-tac
+10.4.0.46       a-lhi-col-02.arpa a-lhi-col-02 als02
+10.1.1.51       sri-sta6.arpa sri-sta6
+10.2.0.51       sri-prmh.arpa sri-prmh prmh
+192.12.16.101   sri-prmh.arpa sri-prmh prmh
+10.3.1.51       sri-sta2.arpa sri-sta2
+10.6.0.51       tsc-project.arpa tsc-project
+10.7.0.51       a-lhi-sri-03.arpa a-lhi-sri-03 als03
+10.0.0.52       usc-isic.arpa usc-isic isic
+10.1.0.52       isi-hobgoblin.arpa isi-hobgoblin hobgoblin
+128.9.0.42      isi-hobgoblin.arpa isi-hobgoblin hobgoblin
+10.2.0.52       ada-vax.arpa ada-vax isi-vaxb ajpo vaxb
+10.3.0.52       usc-isib.arpa usc-isib isib mosis
+10.0.0.54       cit-20.arpa cit-20 caltech
+10.1.0.54       cit-vax.arpa cit-vax zaphod
+192.5.7.2       cit-vax.arpa cit-vax zaphod
+192.12.18.1     cit-vax.arpa cit-vax zaphod
+192.12.19.1     cit-vax.arpa cit-vax zaphod
+10.2.0.54       acc-sb-unix.arpa acc-sb-unix acc-unix acc-salt salt
+10.3.0.54       jpl-vlsi.arpa jpl-vlsi jpl-vax
+10.3.1.54       jpl-robotics.arpa jpl-robotics
+10.0.0.56       sumex-aim.arpa sumex-aim aim sumex sumex.stanford.edu sumex-aim.stanford.edu
+36.45.0.87      sumex-aim.arpa sumex-aim aim sumex sumex.stanford.edu sumex-aim.stanford.edu
+10.2.0.56       aids-unix.arpa aids-unix aids-vax aids
+10.0.0.62       ngp.utexas.edu ut-ngp.arpa ut-ngp utexas-ngp ngp
+128.83.0.24     ngp.utexas.edu ut-ngp.arpa ut-ngp utexas-ngp ngp
+10.1.0.62       r20.utexas.edu utexas-20.arpa utexas-20 ut-r20 utexas r20
+128.83.0.30     r20.utexas.edu utexas-20.arpa utexas-20 ut-r20 utexas r20
+10.2.0.62       sally.utexas.edu ut-sally.arpa ut-sally sally
+128.83.0.11     sally.utexas.edu ut-sally.arpa ut-sally sally
+192.12.23.91    sally.utexas.edu ut-sally.arpa ut-sally sally
+10.3.0.62       mcc.arpa mcc mcc-ai mcc-ai.mcc.com
+10.0.0.63       bbn-test0-gw.arpa bbn-test0-gw
+10.1.0.63       bbn-arpa-tac.arpa bbn-arpa-tac
+10.4.0.63       bbn-psat-ig.arpa bbn-psat-ig
+10.6.0.63       a-lhi-bbn-01.arpa a-lhi-bbn-01 alb01
+10.2.0.77       mit-tac.arpa mit-tac
+10.3.0.77       mit-debugoz.arpa mit-debugoz
+10.0.0.78       ucbarpa.berkeley.edu ucb-arpa.arpa ucb-arpa ucbarpa
+128.32.0.4      ucbarpa.berkeley.edu ucb-arpa.arpa ucb-arpa ucbarpa
+10.2.0.78       ucbvax.berkeley.edu ucb-vax.arpa ucb-vax berkeley berkeley.arpa ucbvax berkeley.edu ucb-vax.berkeley.edu
+128.32.0.10     ucbvax.berkeley.edu ucb-vax.arpa ucb-vax berkeley berkeley.arpa ucbvax berkeley.edu ucb-vax.berkeley.edu
+10.0.0.79       tops20.dec.com dec-tops20.arpa dec-tops20 dec-2136 dec-chip
+192.5.6.1       tops20.dec.com dec-tops20.arpa dec-tops20 dec-2136 dec-chip
+10.1.0.79       marlboro.dec.com dec-marlboro.arpa dec-marlboro dec market
+10.2.0.79       hudson.dec.com dec-hudson.arpa dec-hudson
+10.1.0.80       sac-arpa-tac.arpa sac-arpa-tac
+10.6.0.80       sac-station.arpa sac-station
+10.0.0.82       bbn-unix.arpa bbn-unix bbncc bbnu unix.bbn.com
+8.1.0.4         bbn-unix.arpa bbn-unix bbncc bbnu unix.bbn.com
+10.1.0.82       bbn-vax.arpa bbn-vax bbnv vax.bbn.com
+128.11.1.1      bbn-vax.arpa bbn-vax bbnv vax.bbn.com
+8.1.0.8         bbn-vax.arpa bbn-vax bbnv vax.bbn.com
+10.5.0.82       arpanet-mc.arpa arpanet-mc anoc
+10.7.0.82       csnet-sh.arpa csnet-sh csnet-cic sh.cs.net
+192.1.7.31      csnet-sh.arpa csnet-sh csnet-cic sh.cs.net
+10.0.0.89       cs.columbia.edu columbia-20.arpa columbia-20 cucs20
+128.59.16.20    cs.columbia.edu columbia-20.arpa columbia-20 cucs20
+10.2.0.89       rockefeller.arpa rockefeller
+10.3.0.89       columbia.edu columbia.arpa columbia cu
+128.59.16.1     columbia.edu columbia.arpa columbia cu
+10.0.0.91       washington.arpa washington udub uw-ward ward
+192.5.8.24      washington.arpa washington udub uw-ward ward
+10.2.0.91       washington-tac.arpa washington-tac
+10.3.0.91       uw-vlsi.arpa uw-vlsi udub-vlsi
+192.5.8.5       uw-vlsi.arpa uw-vlsi udub-vlsi
+10.1.0.94       hi-multics.arpa hi-multics honey cno-multics
+10.2.0.94       umn-ucc-va.arpa umn-ucc-va
+192.12.47.1     umn-ucc-va.arpa umn-ucc-va
+10.3.0.94       madison.wisc.edu wisc-madison.arpa wisc-madison wisc-mad wilt uwmacc1
+192.12.54.17    madison.wisc.edu wisc-madison.arpa wisc-madison wisc-mad wilt uwmacc1
+10.0.0.96       louie.udel.edu udel-louie.arpa udel-louie louie udel-relay udel
+192.5.39.3      louie.udel.edu udel-louie.arpa udel-louie louie udel-relay udel
+10.1.0.96       wharton-10.arpa wharton-10 wharton
+10.2.0.96       huey.udel.edu udel-huey.arpa udel-huey huey udel-ee
+192.5.39.1      huey.udel.edu udel-huey.arpa udel-huey huey udel-ee
+10.3.0.96       cu-arpa.cs.cornell.edu cornell.arpa cornell cornell-arpa cu-arpa
+192.5.36.3      cu-arpa.cs.cornell.edu cornell.arpa cornell cornell-arpa cu-arpa
+192.5.51.3      cu-arpa.cs.cornell.edu cornell.arpa cornell cornell-arpa cu-arpa
+192.12.10.3     cu-arpa.cs.cornell.edu cornell.arpa cornell cornell-arpa cu-arpa
+10.2.0.98       purdue-x25.arpa purdue-x25
+10.2.0.99       vax-x25.arpa vax-x25
+10.3.0.99       bbn-x25-test3.arpa bbn-x25-test3
+10.4.0.99       bbn-x25-test4.arpa bbn-x25-test4
+10.5.0.99       test-host5-x25.arpa test-host5-x25
+10.2.0.107      sri-spam-test.arpa sri-spam-test
+10.3.0.107      sri-station.arpa sri-station
+10.1.0.111      mitre-gateway.arpa mitre-gateway mitre-gw
+10.2.0.111      mitre-lan.mitre.org mitre-lan.arpa mitre-lan
+128.29.0.11     mitre-lan.mitre.org mitre-lan.arpa mitre-lan
+10.0.0.119      radc-arpa-tac.arpa radc-arpa-tac
+10.2.0.119      radc-tops20.arpa radc-tops20 radc-20
+10.3.0.119      pli-radc2.arpa pli-radc2
+10.0.0.121      usc-oberon.arpa usc-oberon oberon usc-oberon.usc.edu
+192.5.10.0      usc-oberon.arpa usc-oberon oberon usc-oberon.usc.edu
+10.1.0.121      usc-eclc.arpa usc-eclc eclc usc-eclc.usc.edu
+10.2.0.121      usc-arpa-tac.arpa usc-arpa-tac
+10.0.0.126      tycho.arpa tycho
+14.0.0.4        vtest.cs.ucl.ac.uk ucl-vtest.arpa ucl-vtest
+14.0.0.6        uk-satnet.arpa uk-satnet
+14.0.0.16       dfvlr4-x25.arpa dfvlr4-x25
+14.0.0.18       dfvlr5-x25.arpa dfvlr5-x25
+18.26.0.1       mit-charmin.arpa mit-charmin charmin
+18.45.0.1       mit-lectroid.arpa mit-lectroid yoyodyne-gw mit-eighth-dimension
+18.58.0.1       athena.mit.edu mit-athena.arpa mit-athena athena
+18.62.0.1       mit-trillian.arpa mit-trillian trillian trillian.mit.edu
+18.27.0.2       mit-cezanne.arpa mit-cezanne cezanne
+18.45.0.2       mit-lord-john-whorfin.arpa mit-lord-john-whorfin lord-john-whorfin john-whorfin whorfin
+18.58.0.2       mit-zeus.arpa mit-zeus zeus
+18.71.0.2       mit-theseus.arpa mit-theseus theseus
+18.85.0.2       media-lab.arpa media-lab mit-media-lab mit-amt amt media-lab.mit.edu mit-media-lab.mit.edu
+18.87.0.2       euler.mit.edu mit-euler.arpa mit-euler
+18.26.0.3       mit-corncob.arpa mit-corncob mit-oval corncob oval
+18.45.0.3       mit-john-bigboote.arpa mit-john-bigboote john-bigboote bigboote
+18.58.0.3       mit-hera.arpa mit-hera hera
+18.71.0.3       mit-heracles.arpa mit-heracles heracles
+18.85.0.3       atrp.mit.edu mit-atrp.arpa mit-atrp mit-atrp.mit.edu atrp
+18.87.0.3       cauchy.mit.edu mit-cauchy.arpa mit-cauchy
+18.45.0.4       mit-john-smallberries.arpa mit-john-smallberries john-smallberries smallberries
+18.58.0.4       mit-demeter.arpa mit-demeter demeter
+18.71.0.4       mit-orpheus.arpa mit-orpheus orpheus
+18.87.0.4       abel.mit.edu mit-abel.arpa mit-abel
+18.45.0.5       mit-john-yaya.arpa mit-john-yaya john-yaya yaya
+18.58.0.5       mit-ares.arpa mit-ares ares
+18.71.0.5       mit-castor.arpa mit-castor castor
+18.87.0.5       stokes.mit.edu mit-stokes.arpa mit-stokes
+18.10.0.6       mit-sludge.arpa mit-sludge mit-sl sludge
+18.26.0.134     mit-sludge.arpa mit-sludge mit-sl sludge
+18.58.0.6       mit-poseidon.arpa mit-poseidon poseidon
+18.62.0.6       mit-eddie.arpa mit-eddie mit-eddie.mit.edu eddie.mit.edu
+18.71.0.6       mit-pollux.arpa mit-pollux pollux
+18.85.0.6       mit-ems.arpa mit-ems ems
+18.2.0.7        mit-bridge.arpa mit-bridge mit-br bridge
+18.10.0.5       mit-bridge.arpa mit-bridge mit-br bridge
+18.71.0.7       mit-jason.arpa mit-jason jason
+18.87.0.7       fermat.mit.edu mit-fermat.arpa mit-fermat
+18.9.0.8        mit-goofy.arpa mit-goofy goofy
+18.10.0.8       mit-csr.arpa mit-csr csr csr2 printer mit-ln ln
+18.26.0.8       mit-melkor.arpa mit-melkor melkor mel
+18.58.0.8       mit-persephone.arpa mit-persephone persephone phone
+18.10.0.9       mit-ai-lcs.arpa mit-ai-lcs ai-lcs mit-gross gross
+128.52.22.9     mit-ai-lcs.arpa mit-ai-lcs ai-lcs mit-gross gross
+18.58.0.10      mit-apollo.arpa mit-apollo apollo
+18.87.0.10      archimedes.mit.edu mit-archimedes.arpa mit-archimedes
+18.58.0.11      mit-artemis.arpa mit-artemis artemis arty
+18.71.0.11      mit-helen.arpa mit-helen helen
+18.87.0.11      newton.mit.edu mit-newton.arpa mit-newton
+18.58.0.12      mit-aphrodite.arpa mit-aphrodite aphrodite
+18.71.0.12      mit-paris.arpa mit-paris paris
+18.87.0.12      fourier.mit.edu mit-fourier.arpa mit-fourier
+18.58.0.13      mit-charon.arpa mit-charon charon sipbvax
+18.71.0.13      mit-hector.arpa mit-hector hector
+18.87.0.13      sailor.mit.edu mit-sailor.arpa mit-sailor
+18.58.0.14      mit-prometheus.arpa mit-prometheus prometheus prom
+18.71.0.14      mit-priam.arpa mit-priam priam
+18.58.0.15      mit-atlas.arpa mit-atlas atlas
+18.71.0.15      mit-odysseus.arpa mit-odysseus odysseus
+18.27.0.16      mit-tweety-pie.arpa mit-tweety-pie tweety-pie tweety
+18.71.0.16      mit-agamemnon.arpa mit-agamemnon agamemnon
+18.27.0.17      mit-bugs-bunny.arpa mit-bugs-bunny bugs-bunny bunny
+18.71.0.17      mit-menelaus.arpa mit-menelaus menelaus
+18.123.0.17     proteon.arpa proteon
+18.2.0.18       mit-alto-509.arpa mit-alto-509 alto-509
+18.71.0.18      mit-achilles.arpa mit-achilles achilles achilles.mit.edu
+18.71.0.19      mit-andromache.arpa mit-andromache andromache
+18.2.0.20       mit-alto-510.arpa mit-alto-510 alto-510
+18.27.0.20      mit-porky-pig.arpa mit-porky-pig porky porky-pig
+18.27.0.21      mit-yosemite-sam.arpa mit-yosemite-sam sam yosemite-sam
+18.71.0.21      mit-bitsy.arpa mit-bitsy bitsy bitsy.mit.edu
+18.27.0.23      mit-daffy-duck.arpa mit-daffy-duck daffy-duck daffy
+18.10.0.24      mit-nms.arpa mit-nms nms
+18.26.0.24      mit-baby-blue.arpa mit-baby-blue baby-blue baby
+18.26.0.25      mit-blue-thunder.arpa mit-blue-thunder blue-thunder thunder
+18.26.0.26      mit-blue-bayou.arpa mit-blue-bayou blue-bayou bayou
+18.26.0.27      mit-blue-suede-shoes.arpa mit-blue-suede-shoes blue-suede-shoes blue-suede
+18.26.0.28      mit-misty-blue.arpa mit-misty-blue misty-blue misty
+18.26.0.29      mit-car-wash-blues.arpa mit-car-wash-blues car-wash-blues car-wash
+18.26.0.30      mit-blue-jeans.arpa mit-blue-jeans blue-jeans jeans
+18.26.0.31      mit-blue-blood.arpa mit-blue-blood blue-blood blood
+18.2.0.32       mit-alto-524.arpa mit-alto-524 alto-524 guttag
+18.26.0.34      mit-stormwatch.arpa mit-stormwatch stormwatch
+18.26.0.35      mit-pluto.arpa mit-pluto pluto
+18.26.0.38      mit-zud.arpa mit-zud zud
+18.26.0.39      mit-coke.arpa mit-coke coke
+18.26.0.40      mit-dr-pepper.arpa mit-dr-pepper mit-dp dr-pepper dp
+18.26.0.41      mit-pepsi.arpa mit-pepsi pepsi
+18.26.0.42      mit-seltzer.arpa mit-seltzer seltzer
+18.26.0.44      mit-guano.arpa mit-guano guano
+18.2.0.56       mit-alto-214b.arpa mit-alto-214b alto-214b oa-alto
+18.27.0.56      mit-goldilocks.arpa mit-goldilocks goldy
+18.10.0.64      mit-ajax.arpa mit-ajax ajax
+18.10.0.65      mit-borax.arpa mit-borax borax mit-mrclean mrclean mit-borax.mit.edu borax.lcs.mit.edu mit-borax.lcs.mit.edu borax.mit.edu
+18.10.0.66      mit-comet.arpa mit-comet mit-dutch dutch comet mit-comet.mit.edu comet.mit.edu
+18.10.0.69      mit-bold.arpa mit-bold bold
+18.10.0.70      mit-fab.arpa mit-fab fab
+18.10.0.71      mit-prj.arpa mit-prj prj
+18.2.0.72       mit-alto-511.arpa mit-alto-511 alto-511
+18.10.0.72      mit-duz.arpa mit-duz duz
+18.10.0.73      mit-dash.arpa mit-dash dash
+18.10.0.74      mit-tide.arpa mit-tide tide
+18.10.0.75      mit-newtowne-variety.arpa mit-newtowne-variety mit-fla newt fla newtowne-variety
+18.10.0.76      mit-cls.arpa mit-cls cls
+18.10.0.77      mit-grape-nehi.arpa mit-grape-nehi grape-nehi c6
+18.10.0.78      mit-heineken.arpa mit-heineken heineken
+18.10.0.79      mit-oa.arpa mit-oa oa
+18.2.0.80       mit-muriel.arpa mit-muriel muriel
+18.10.0.81      mit-kirin.arpa mit-kirin kirin
+18.10.0.86      mit-milo.arpa mit-milo milo
+18.10.0.87      mit-opus.arpa mit-opus opus
+18.10.0.88      mit-rinso.arpa mit-rinso rinso
+18.10.0.89      mit-db.arpa mit-db mit-dbs dbs
+18.26.0.95      mit-vax.arpa mit-vax mit-vx vx
+18.2.0.96       mit-alto-508.arpa mit-alto-508 alto-508
+18.2.0.100      mit-alto-503.arpa mit-alto-503 alto-503
+18.2.0.128      mit-spooler.arpa mit-spooler spooler spool
+18.9.0.128      mit-pcgw.arpa mit-pcgw pcgw
+18.10.0.40      mit-pcgw.arpa mit-pcgw pcgw
+18.10.0.128     mit-lcs-hq.arpa mit-lcs-hq lcs-hq
+18.2.0.129      mit-np-alto.arpa mit-np-alto np-alto
+18.10.0.129     mit-dm.arpa mit-dm dm
+18.2.0.130      mit-alto-502.arpa mit-alto-502 alto-502
+18.2.0.134      mit-alto-828.arpa mit-alto-828 alto-828 medg
+18.26.0.136     mit-blue-apollo.arpa mit-blue-apollo blue-apollo
+18.105.0.9      mit-blue-apollo.arpa mit-blue-apollo blue-apollo
+18.26.0.145     mit-geek.arpa mit-geek geek
+18.26.0.146     mit-wimp.arpa mit-wimp wimp
+18.26.0.147     mit-nerd.arpa mit-nerd mit-gnurd nerd gnurd
+18.71.0.151     mit-strawb.arpa mit-strawb strawb strawb.mit.edu
+18.2.0.170      mit-alto-520.arpa mit-alto-520 alto-520
+18.58.0.180     infoods.mit.edu mit-infoods.arpa mit-infoods
+18.10.0.192     mit-blue-light.arpa mit-blue-light blue-light
+18.48.0.192     mit-cherry.arpa mit-cherry
+18.10.0.193     mit-blue-danube.arpa mit-blue-danube blue-danube danube
+18.48.0.193     mit-blue-spruce.arpa mit-blue-spruce blue-spruce spruce mit-bs bs
+18.10.0.194     mit-mother.arpa mit-mother mother
+18.48.0.194     mit-mahogany.arpa mit-mahogany mahogany ho
+18.10.0.195     mit-big-blue.arpa mit-big-blue mit-bigblue big-blue bigblue
+18.48.0.195     mit-live-oak.arpa mit-live-oak live-oak oak
+18.10.0.196     mit-sauron.arpa mit-sauron sauron
+18.48.0.196     mit-netleaf-hackberry.arpa mit-netleaf-hackberry hackberry hack netleaf-hackberry
+18.48.0.197     mit-jacaranda.arpa mit-jacaranda jacaranda jac
+18.48.0.198     mit-julgran.arpa mit-julgran julgran jul
+18.48.0.199     mit-pomegranate.arpa mit-pomegranate pomegranate pom
+18.26.0.206     mit-zermatt.arpa mit-zermatt zermatt
+18.48.0.216     mit-wild-blue-yonder.arpa mit-wild-blue-yonder wild-blue mit-wby wby wild-blue-yonder
+18.21.0.232     mit-caf.arpa mit-caf caf
+26.0.0.1        minet-obl-em.arpa minet-obl-em oblem minet-obl obl
+26.1.0.1        minet-obl-tac.arpa minet-obl-tac obltc
+26.0.0.2        eur-milnet-mc.arpa eur-milnet-mc emmc
+26.1.0.2        minet-vhn-tac.arpa minet-vhn-tac vhntc
+26.2.0.2        vaihingen-emh.arpa vaihingen-emh vhn-emh vhn minet-vhn-em minet-vhn-em.arpa
+26.3.0.2        dca-eur.arpa dca-eur
+26.4.0.2        amceur-1.arpa amceur-1
+26.6.0.2        patch.arpa patch patchnet
+26.0.0.3        nosc.arpa nosc nosc-bass bass nosc-cc bass.nosc.mil
+128.49.0.2      nosc.arpa nosc nosc-bass bass nosc-cc bass.nosc.mil
+128.54.0.2      nosc.arpa nosc nosc-bass bass nosc-cc bass.nosc.mil
+26.1.0.3        ntectsd.arpa ntectsd
+26.2.0.3        logicon.arpa logicon
+26.3.0.3        nprdc.arpa nprdc nprdc-aegean
+192.5.65.1      nprdc.arpa nprdc nprdc-aegean
+26.1.0.4        minet-hdl-tac.arpa minet-hdl-tac hdltc
+26.2.0.4        usareur-em.arpa usareur-em
+26.1.0.5        minet-brm-tac.arpa minet-brm-tac brmtc
+26.1.0.6        minet-rdm-tac.arpa minet-rdm-tac rmdtc
+26.0.0.7        minet-lon-em.arpa minet-lon-em lonem minet-lon lon
+26.1.0.7        minet-lon-tac.arpa minet-lon-tac lontc
+26.9.0.7        apds-ii-os023.arpa apds-ii-os023
+26.11.0.7       kem-eds.arpa kem-eds
+26.0.0.8        nrl-netdev.arpa nrl-netdev
+128.60.0.4      nrl-netdev.arpa nrl-netdev
+26.1.0.8        nrl-aic.arpa nrl-aic
+26.2.0.8        aspur-csc.arpa aspur-csc
+26.3.0.8        nrl.arpa nrl
+26.5.0.8        nardacwash-001.arpa nardacwash-001
+26.6.0.8        nrl-arctan.arpa nrl-arctan
+26.7.0.8        nrl-css.arpa nrl-css
+192.5.17.112    nrl-css.arpa nrl-css
+26.9.0.8        navelexnet-ward.arpa navelexnet-ward
+26.0.0.9        minet-sig-tac.arpa minet-sig-tac sigtc
+26.1.0.10       rota-mil-tac.arpa rota-mil-tac
+26.0.0.12       rand2-mil-tac.arpa rand2-mil-tac
+26.1.0.13       gunter-adam.arpa gunter-adam
+26.2.0.13       gunter-tac.arpa gunter-tac gunt
+26.3.0.13       gun-eds.arpa gun-eds
+26.5.0.13       phase-iv.arpa phase-iv
+26.0.0.15       apds-ii-os011.arpa apds-ii-os011 ramapdsii
+26.1.0.15       minet-ram-tac.arpa minet-ram-tac ramtc
+26.0.0.16       ames.arpa ames ames1
+192.12.49.1     ames.arpa ames ames1
+192.12.123.1    ames.arpa ames ames1
+26.1.0.16       ames-tac.arpa ames-tac
+26.3.0.16       ames-vmsb.arpa ames-vmsb ames-11
+26.4.0.16       ames-nas.arpa ames-nas amelia amelia-ec
+192.5.64.1      ames-nas.arpa ames-nas amelia amelia-ec
+26.5.0.16       ames-nasb.arpa ames-nasb orville ames-nas-hygw
+26.6.0.16       riacs.arpa riacs icarus riacs-icarus
+192.5.35.1      riacs.arpa riacs icarus riacs-icarus
+26.7.0.16       decwrl.dec.com decwrl.arpa decwrl dec-wrl decsrc dec-src decwsl dec-wsl
+128.45.0.1      decwrl.dec.com decwrl.arpa decwrl dec-wrl decsrc dec-src decwsl dec-wsl
+192.5.58.3      decwrl.dec.com decwrl.arpa decwrl dec-wrl decsrc dec-src decwsl dec-wsl
+26.0.0.17       mitre.arpa mitre
+128.29.255.0    mitre.arpa mitre
+26.2.0.17       mitre-tac.arpa mitre-tac
+26.3.0.17       his-fsd6.arpa his-fsd6
+26.5.0.17       ddn-pmo-mil-tac.arpa ddn-pmo-mil-tac
+26.7.0.17       his-fsd8.arpa his-fsd8
+26.11.0.17      nsi-mil-tac.arpa nsi-mil-tac
+26.0.0.18       radc-multics.arpa radc-multics radc
+26.2.0.18       radc-tac.arpa radc-tac radt
+26.5.0.18       radc-lonex.arpa radc-lonex lnx
+26.6.0.18       ge-crd.arpa ge-crd ge
+26.7.0.18       apds-ii-griff.arpa apds-ii-griff
+26.0.0.19       nbs-vms.arpa nbs-vms nbs-10 nbs
+192.12.119.4    nbs-vms.arpa nbs-vms nbs-10 nbs
+26.1.0.19       nbs-sdc.arpa nbs-sdc
+26.2.0.19       nbs-snad.arpa nbs-snad
+26.3.0.19       nbs-pl.arpa nbs-pl
+26.6.0.19       nbs-amrf.arpa nbs-amrf amrf
+26.0.0.21       lll-tis-b.arpa lll-tis-b tisstyx tis-styx styx lll-tisb
+192.12.17.2     lll-tis-b.arpa lll-tis-b tisstyx tis-styx styx lll-tisb
+26.1.0.21       lll-mfe.arpa lll-mfe mfe
+26.2.0.21       lll-zdivision.arpa lll-zdivision
+26.3.0.21       lll-crg.arpa lll-crg lll crg gluteus
+26.0.0.22       mcclellan1-mil-tac.arpa mcclellan1-mil-tac
+26.0.0.23       mcclellan2-mil-tac.arpa mcclellan2-mil-tac
+26.5.0.23       mcclellan-mdss.arpa mcclellan-mdss
+26.8.0.23       terpss-ttf1.arpa terpss-ttf1
+26.9.0.23       terpss-ttf2.arpa terpss-ttf2
+26.0.0.24       nadc.arpa nadc
+26.2.0.24       nspcc.arpa nspcc
+26.3.0.25       croughton-mil-tac.arpa croughton-mil-tac
+26.0.0.26       pentagon-tac.arpa pentagon-tac
+26.1.0.26       igmirs-daig.arpa igmirs-daig
+26.3.0.26       tcaccis-csc.arpa tcaccis-csc
+26.4.0.26       optimis-pent.arpa optimis-pent
+26.1.0.27       minet-hlh-tac.arpa minet-hlh-tac hlhtc
+26.0.0.29       brl.arpa brl
+26.1.0.29       apg-1.arpa apg-1
+26.2.0.29       brl-tac.arpa brl-tac
+26.4.0.29       apg-3.arpa apg-3
+26.6.0.29       apg-2.arpa apg-2
+26.8.0.29       apg-4.arpa apg-4
+26.0.0.30       brooks-afb-tac.arpa brooks-afb-tac afsc-hrl-tac
+26.1.0.30       afmpc-2.arpa afmpc-2
+26.2.0.30       mil-80-5bde.arpa mil-80-5bde
+26.7.0.31       terpss-nor.arpa terpss-nor
+26.0.0.33       nps.arpa nps
+26.2.0.33       nps-tac.arpa nps-tac
+26.3.0.33       fnoc-secure.arpa fnoc-secure fnwc-secure
+26.6.0.33       nps-cs.arpa nps-cs
+26.0.0.34       lbl.arpa lbl lbl-ws
+26.1.0.34       lbl-csam.arpa lbl-csam
+26.2.0.34       mcclellan.arpa mcclellan sacramento-unix
+26.0.0.35       nosc-secure2.arpa nosc-secure2 usc-isir1 isir1
+26.1.0.35       nosc-tecr.arpa nosc-tecr tecr
+26.2.0.35       accat-tac.arpa accat-tac nelc-tip
+26.3.0.35       nosc-secure3.arpa nosc-secure3
+26.4.0.35       nosc-f4.arpa nosc-f4
+26.6.0.35       nardac-sandiego.arpa nardac-sandiego
+26.7.0.35       splice-sandiego.arpa splice-sandiego
+26.8.0.35       terpss-tngcmd.arpa terpss-tngcmd
+26.1.0.36       hawaii-emh.arpa hawaii-emh
+26.3.0.36       hawaii2-tac.arpa hawaii2-tac
+26.4.0.36       navdaf-pearl.arpa navdaf-pearl
+26.1.0.37       viable-rdca-a.arpa viable-rdca-a
+26.0.0.39       edwards-vax.arpa edwards-vax evax
+26.1.0.39       edwards-2060.arpa edwards-2060
+26.3.0.39       edward-mil-tac.arpa edward-mil-tac
+26.0.0.40       bbn-mil-tac.arpa bbn-mil-tac
+26.1.0.41       micom-test.arpa micom-test
+26.2.0.41       micom-tac.arpa micom-tac
+26.3.0.41       ornl-msr.arpa ornl-msr
+26.5.0.41       usarec-2.arpa usarec-2 micom
+26.7.0.41       terpss-milln1.arpa terpss-milln1
+26.8.0.41       terpss-milln2.arpa terpss-milln2
+26.0.0.42       ramstein2-mil-tac.arpa ramstein2-mil-tac
+26.3.0.42       ramstein2-emh.arpa ramstein2-emh ram2-emh rsn ram-emc ram-emc.arpa
+26.9.0.42       lrc-eds.arpa lrc-eds
+26.10.0.42      ram-eds.arpa ram-eds
+26.11.0.42      sem-eds.arpa sem-eds
+26.0.0.43       office-1.arpa office-1 of1 office off
+26.1.0.43       office-15.arpa office-15 of15
+26.2.0.43       office-3.arpa office-3 of3
+26.3.0.43       office-7.arpa office-7 of7
+26.2.0.44       ntsc-74.arpa ntsc-74 twilight-zone
+26.3.0.44       orlando-mil-tac.arpa orlando-mil-tac
+26.6.0.44       sperry-system-11.arpa sperry-system-11 sperry11
+26.7.0.44       dec-vax-11-750.arpa dec-vax-11-750 vax1
+26.0.0.45       ardc-tac.arpa ardc-tac
+26.1.0.45       ardc.arpa ardc ardc-ms pica arradcom
+26.2.0.45       tcaccis-bay.arpa tcaccis-bay
+26.3.0.45       pica-qa.arpa pica-qa
+26.4.0.45       pica-lca.arpa pica-lca
+26.0.0.47       wpafb-afwp1.arpa wpafb-afwp1
+26.1.0.47       wpafb-afwal.arpa wpafb-afwal avsail wpafb-afal
+26.2.0.47       wpafb-tac.arpa wpafb-tac
+26.3.0.47       wpafb-info1.arpa wpafb-info1
+26.4.0.47       wpafb-jalcf.arpa wpafb-jalcf
+26.5.0.47       afit-ab.arpa afit-ab afit wpafb-afita
+26.6.0.47       wpafb-fdl.arpa wpafb-fdl
+26.7.0.47       b.cs.cmu.edu cmu-cs-b.arpa cmu-cs-b cmub
+26.8.0.47       lognet2.arpa lognet2
+26.0.0.48       dna-field-command.arpa dna-field-command dnafc
+26.1.0.48       afwl.arpa afwl
+26.2.0.48       afwl-tac.arpa afwl-tac
+26.6.0.49       minet-tc2-em.arpa minet-tc2-em tc2 tc2em minet-tc2
+26.0.0.50       amc-hq.arpa amc-hq darcom-hq
+26.1.0.50       ari-hq1.arpa ari-hq1
+26.2.0.50       darcom-tac.arpa darcom-tac
+26.6.0.50       usadhq2.arpa usadhq2 darcom2 amc2
+26.7.0.50       etl-ai.arpa etl-ai usaetl etl
+26.0.0.53       afsc-ad.arpa afsc-ad eglin
+26.3.0.53       afsc-ad-tac.arpa afsc-ad-tac eglin-tac
+26.4.0.53       ncsc.arpa ncsc ncsl
+26.5.0.53       martin.arpa martin mmc
+26.6.0.53       eglin-vax.arpa eglin-vax
+26.10.0.53      terpss-pens1.arpa terpss-pens1
+26.1.0.55       anl-mcs.arpa anl-mcs
+26.2.0.55       gswd-vms.arpa gswd-vms cc-vms dti
+26.3.0.55       mil-80-sher1.arpa mil-80-sher1
+26.7.0.55       sperblomn.arpa sperblomn
+26.0.0.57       dockmaster.arpa dockmaster ncsc-multics
+26.1.0.57       coins-gateway.arpa coins-gateway coins
+26.2.0.57       mimsy.umd.edu maryland.arpa maryland mimsy umd-csd umd8 umcp-cs merry-land
+128.8.0.8       mimsy.umd.edu maryland.arpa maryland mimsy umd-csd umd8 umcp-cs merry-land
+26.0.0.58       nyu.arpa nyu nyu-cmcl2 cmcl2
+192.5.15.129    nyu.arpa nyu nyu-cmcl2 cmcl2
+26.1.0.58       bnl.arpa bnl brookhaven
+192.12.15.1     bnl.arpa bnl brookhaven
+26.1.0.59       scott-tac.arpa scott-tac
+26.0.0.60       cecom-2.arpa cecom-2
+26.1.0.60       ftmonmouth1-mil-tac.arpa ftmonmouth1-mil-tac
+26.2.0.60       ftmonmouth2-mil-tac.arpa ftmonmouth2-mil-tac
+26.3.0.60       cecom-1.arpa cecom-1 ce cecom
+26.4.0.60       monmouth-eisn.arpa monmouth-eisn
+26.6.0.60       cecom-3.arpa cecom-3 joins-emhost1 usarec-1
+26.7.0.60       perdimms28.arpa perdimms28
+26.8.0.60       perddims26.arpa perddims26
+26.0.0.61       stl-host1.arpa stl-host1 stl1
+26.1.0.61       almsa-1.arpa almsa-1 almsa almsa-2
+26.2.0.61       stla-tac.arpa stla-tac stl-tip
+26.4.0.61       usarec-4.arpa usarec-4 stl-host3
+26.1.0.63       dava1.arpa dava1
+26.2.0.63       afsc-sd-tac.arpa afsc-sd-tac sd-tip
+26.0.0.64       igmirs-ftgillm.arpa igmirs-ftgillm ftgillem-csc igmirs-ftgillem-csc
+26.1.0.64       martin-b.arpa martin-b mmc-b
+26.2.0.64       robins-tac.arpa robins-tac wralc-tac
+26.3.0.64       robins-unix.arpa robins-unix
+26.4.0.64       igmirs-forscom.arpa igmirs-forscom forscom-ig
+26.5.0.64       tcaccis-ftstewart.arpa tcaccis-ftstewart
+26.8.0.64       mil-80-2bde.arpa mil-80-2bde
+26.0.0.65       afsc-sd.arpa afsc-sd afsd
+26.2.0.65       aerospace.arpa aerospace aero
+26.3.0.65       martin-ed.arpa martin-ed mmc-ed
+26.4.0.65       jpl-milvax.arpa jpl-milvax
+26.5.0.65       usc-ecl.arpa usc-ecl ecl usc-ecla ecla
+26.6.0.65       acc.arpa acc
+26.7.0.65       usc-eclb.arpa usc-eclb eclb
+26.1.0.66       afgl.arpa afgl
+26.2.0.66       afgl-tac.arpa afgl-tac
+26.3.0.66       mitre-bedford.arpa mitre-bedford mitre-b bedford
+26.6.0.66       radc-eastlonex.arpa radc-eastlonex
+26.8.0.66       esdvax.arpa esdvax si02
+26.0.0.67       afsc-hq.arpa afsc-hq hqafsc
+26.1.0.67       afsc-hq-tac.arpa afsc-hq-tac hqafsc-tac
+26.2.0.67       igmirs-cidc.arpa igmirs-cidc
+26.3.0.67       igmirs-darcom.arpa igmirs-darcom darcom-ig igmirs-darcom-ig
+26.4.0.67       cafrms.arpa cafrms
+26.7.0.67       mqg.arpa mqg
+26.10.0.67      darms-4.arpa darms-4
+26.12.0.67      hqafsc-vax.arpa hqafsc-vax
+26.0.0.68       mil-80-per1.arpa mil-80-per1 usa-mpc1
+26.1.0.68       viable-rdcw1.arpa viable-rdcw1
+26.2.0.68       viable-dpcb1.arpa viable-dpcb1
+26.11.0.68      radmis-onr.arpa radmis-onr
+26.0.0.69       usgs2-multics.arpa usgs2-multics denver
+26.1.0.69       usgs2-tac.arpa usgs2-tac
+26.2.0.69       ftcarson-ig.arpa ftcarson-ig
+26.0.0.70       usgs3-vms.arpa usgs3-vms menlo
+26.1.0.70       usgs3-tac.arpa usgs3-tac
+26.0.0.71       okc-unix.arpa okc-unix
+26.1.0.71       igmirs-sill-ig.arpa igmirs-sill-ig ftsill-ig
+26.2.0.71       tinker-mil-tac.arpa tinker-mil-tac
+26.3.0.71       satods.arpa satods
+26.0.0.72       ddn-shadow-mc.arpa ddn-shadow-mc
+26.2.0.72       ddn2.arpa ddn2 ddn-2 ddn
+26.5.0.72       ddnt.arpa ddnt intermetrics intermet
+26.0.0.73       sri-nic.arpa sri-nic nic
+10.0.0.51       sri-nic.arpa sri-nic nic
+26.1.0.73       sri-warf.arpa sri-warf warf tscf
+26.3.0.73       sri-mil-tac.arpa sri-mil-tac
+26.0.0.74       simtel20.arpa simtel20 sands-20 simtel-20
+26.1.0.74       wsmr.arpa wsmr wsmr01 wsmr-01 wsmra usarec usarec-5
+26.2.0.74       wsmr-tac.arpa wsmr-tac
+26.4.0.74       igmirs-ftbliss.arpa igmirs-ftbliss ftbliss-ig
+26.2.0.75       yuma-tac.arpa yuma-tac
+26.0.0.76       conus-milnetmc.arpa conus-milnetmc cmmc
+26.1.0.76       dca-ems.arpa dca-ems dcems
+26.2.0.76       hios-pent.arpa hios-pent hioslan
+26.2.0.77       zama-mil-tac.arpa zama-mil-tac
+26.3.0.77       zama-emh.arpa zama-emh zama
+26.0.0.80       tecnet-clemson.arpa tecnet-clemson
+26.1.0.80       bragg-mil-tac.arpa bragg-mil-tac
+26.0.0.81       nems.arpa nems
+26.1.0.81       dtix.arpa dtix nalcon
+26.2.0.81       david-tac.arpa david-tac
+26.3.0.81       dtrc.arpa dtrc nsrdcoa
+26.4.0.81       ilcn-wreed.arpa ilcn-wreed
+26.2.0.82       buckner-mil-tac.arpa buckner-mil-tac
+26.0.0.84       nswc-dl.arpa nswc-dl
+26.1.0.84       nswc-g.arpa nswc-g
+26.2.0.84       nswc-tac.arpa nswc-tac
+26.3.0.84       nswc-oas.arpa nswc-oas
+26.4.0.84       igmirs-tradoc.arpa igmirs-tradoc tradoc-ig
+26.5.0.84       aegis-dahlgren.arpa aegis-dahlgren
+26.0.0.85       nwc-141a.arpa nwc-141a nwc-387a
+26.1.0.85       nwc-3603.arpa nwc-3603 caep
+26.2.0.85       nwc-tac.arpa nwc-tac
+26.3.0.85       nwc-143b.arpa nwc-143b
+26.0.0.86       igmirs-ftcarson.arpa igmirs-ftcarson
+26.7.0.86       lowry-mil-tac.arpa lowry-mil-tac
+26.0.0.87       sandia-cad.arpa sandia-cad
+26.1.0.87       afotec.arpa afotec
+26.6.0.87       sandia-2.arpa sandia-2
+26.0.0.88       nlm-mcs.arpa nlm-mcs nlm mcs
+192.5.52.1      nlm-mcs.arpa nlm-mcs nlm mcs
+26.1.0.88       chevy-chase-i.arpa chevy-chase-i
+26.2.0.88       arinc-gate.arpa arinc-gate
+26.8.0.88       acc-columbia.arpa acc-columbia
+26.0.0.89       clark-mil-tac.arpa clark-mil-tac
+26.1.0.89       clark-emh.arpa clark-emh clark
+26.0.0.90       lanl.arpa lanl
+26.0.0.91       minet-cpo-em.arpa minet-cpo-em cpo cpoem minet-cpo
+26.1.0.91       minet-cpo-tac.arpa minet-cpo-tac cpotc
+26.2.0.91       agnano-mil-tac.arpa agnano-mil-tac
+26.0.0.92       ntecfrey.arpa ntecfrey tacdew
+26.1.0.92       nusc-ada.arpa nusc-ada
+26.2.0.92       nusc-npt.arpa nusc-npt
+26.3.0.92       nusc.arpa nusc
+26.4.0.92       navdaf-newport.arpa navdaf-newport
+26.5.0.92       nusc-npt-ri.arpa nusc-npt-ri
+26.6.0.92       navdaf-npt-ri.arpa navdaf-npt-ri
+26.8.0.92       terpss-nep1.arpa terpss-nep1
+26.0.0.93       office-8.arpa office-8 of8
+26.1.0.93       office-10.arpa office-10 of10
+26.2.0.93       office-2.arpa office-2 of2
+26.10.0.94      dmahtc.arpa dmahtc dma-gss
+26.1.0.95       s1-a.arpa s1-a s1 s1a s-1 s1-coprolite
+26.2.0.95       s1-b.arpa s1-b s1-angband angband
+128.15.0.2      s1-b.arpa s1-b s1-angband angband
+26.3.0.95       s1-c.arpa s1-c s1-mordor mordor
+128.15.0.3      s1-c.arpa s1-c s1-mordor mordor
+26.0.0.97       navelexnet-stin.arpa navelexnet-stin
+26.2.0.97       paxrv-nes.arpa paxrv-nes pax
+26.3.0.97       pax-rv-tac.arpa pax-rv-tac
+26.2.0.98       macdill-mil-tac.arpa macdill-mil-tac
+26.0.0.101      afmpc-1.arpa afmpc-1
+26.3.0.101      apds-ii-sds.arpa apds-ii-sds
+26.4.0.101      apds-ii-os115.arpa apds-ii-os115
+26.0.0.102      nswc-wo.arpa nswc-wo
+26.1.0.102      nardac-washington.arpa nardac-washington
+26.2.0.102      aplvax.arpa aplvax
+26.3.0.102      mil-80-1bde.arpa mil-80-1bde big-al
+26.4.0.102      whiteoak-mil-tac.arpa whiteoak-mil-tac
+26.8.0.102      nmpc2-wash.arpa nmpc2-wash
+26.1.0.103      usc-isie.arpa usc-isie isie
+26.2.0.103      usc-isif.arpa usc-isif isif ada-20 ada20
+26.3.0.103      usc-isi.arpa usc-isi usc-isia isia isi
+26.5.0.103      radc-bunker-ram.arpa radc-bunker-ram etn-wlv
+26.1.0.104      dcec-lsus2.arpa dcec-lsus2 dcec2
+26.2.0.104      dcec-mil-tac.arpa dcec-mil-tac
+26.3.0.104      csc-oa.arpa csc-oa
+26.4.0.104      dcec-lsus.arpa dcec-lsus dcec1
+26.1.0.105      sac1-mil-tac.arpa sac1-mil-tac
+26.5.0.105      apds-ii-os006.arpa apds-ii-os006
+26.6.0.105      apds-ii-os013.arpa apds-ii-os013
+26.7.0.105      sac2-mil-tac.arpa sac2-mil-tac
+26.8.0.105      mcdn-lab.arpa mcdn-lab
+26.1.0.106      arpa1-mil-tac.arpa arpa1-mil-tac
+26.2.0.106      arpa2-mil-tac.arpa arpa2-mil-tac
+26.3.0.106      arpa-png11.arpa arpa-png11 arpa-xgp11
+26.4.0.106      ddn1.arpa ddn1 ddn-1
+26.6.0.106      ipto.arpa ipto ipto-vax
+192.5.18.99     ipto.arpa ipto ipto-vax
+26.4.0.108      norfolk-miltac.arpa norfolk-miltac
+26.6.0.108      unic.arpa unic nrdcnrva
+26.2.0.109      norl-mil-tac.arpa norl-mil-tac
+26.3.0.109      nrdcnola-u1100.arpa nrdcnola-u1100 nrdcnola
+26.4.0.109      nardac-nola.arpa nardac-nola
+26.6.0.109      nardac-tower1.arpa nardac-tower1
+26.0.0.110      asmis-ftruck.arpa asmis-ftruck
+26.4.0.110      jax1-mil-tac.arpa jax1-mil-tac
+26.6.0.110      nardac-jax.arpa nardac-jax
+26.7.0.110      splice-tandem.arpa splice-tandem splice-jax
+26.8.0.110      terpss-mayp1.arpa terpss-mayp1
+26.9.0.110      navelexnet-chasn.arpa navelexnet-chasn
+26.11.0.110     terpss-orlan2.arpa terpss-orlan2
+26.13.0.110     terpss-charl2.arpa terpss-charl2
+26.0.0.112      stl-host2.arpa stl-host2
+26.1.0.112      igmirs-camp-ig.arpa igmirs-camp-ig
+26.0.0.113      anad.arpa anad anad01 anad02
+26.2.0.113      annis-mil-tac.arpa annis-mil-tac
+26.1.0.114      cda.arpa cda cda-pdp01
+26.2.0.114      ncad-mil-tac.arpa ncad-mil-tac
+26.4.0.114      lssa-db1.arpa lssa-db1
+26.5.0.114      ncad2-mil-tac.arpa ncad2-mil-tac
+26.2.0.115      tacom-tac.arpa tacom-tac
+26.0.0.116      frankfurt-mil-tac.arpa frankfurt-mil-tac
+26.1.0.116      igmirs-kaiserslautern.arpa igmirs-kaiserslautern
+26.2.0.116      igmirs-moehringer.arpa igmirs-moehringer vii-ig
+26.3.0.116      igmirs-frankfurt.arpa igmirs-frankfurt vcorps-ig
+26.4.0.116      igmirs-heidelburg.arpa igmirs-heidelburg usareur-ig
+26.9.0.116      seckenheim-emh.arpa seckenheim-emh secken
+26.0.0.117      korea-emh.arpa korea-emh
+26.2.0.117      korea-tac.arpa korea-tac
+26.0.0.118      scott2-mil-tac.arpa scott2-mil-tac sc2tc
+26.4.0.118      afcc-1.arpa afcc-1
+26.5.0.118      afcc-2.arpa afcc-2
+26.6.0.118      afcc-3.arpa afcc-3
+26.7.0.118      afcc-4.arpa afcc-4
+26.1.0.119      milnet-tjn-tac.arpa milnet-tjn-tac
+26.0.0.120      dugway-mil-tac.arpa dugway-mil-tac
+26.1.0.120      dpg-1.arpa dpg-1 dpg
+26.0.0.121      alameda-mil-tac.arpa alameda-mil-tac
+26.4.0.121      pera-css.arpa pera-css
+26.1.0.122      fth-1.arpa fth-1
+26.2.0.122      huac-mil-tac.arpa huac-mil-tac
+26.1.0.123      wpafb-gate.arpa wpafb-gate
+26.8.0.123      wpafb2-mil-tac.arpa wpafb2-mil-tac
+26.9.0.123      wp-eds.arpa wp-eds
+26.2.0.124      wpafb-info3.arpa wpafb-info3
+26.3.0.124      wpafb-ams1.arpa wpafb-ams1 ams1
+26.4.0.124      wpafb-info2.arpa wpafb-info2
+26.5.0.124      wpafb-info4.arpa wpafb-info4
+26.12.0.124     afalc-iis.arpa afalc-iis
+26.13.0.124     wpafb-sevax.arpa wpafb-sevax
+26.6.0.125      lvn-mil-tac.arpa lvn-mil-tac
+26.3.0.129      benharrison-mil-tac.arpa benharrison-mil-tac
+26.0.0.131      knox-mil-tac.arpa knox-mil-tac
+26.0.0.133      presidio-mil-tac.arpa presidio-mil-tac
+26.0.0.138      langley-mil-tac.arpa langley-mil-tac
+26.0.0.145      wheeler-mil-tac.arpa wheeler-mil-tac
+26.1.0.145      pac-milnet-mc.arpa pac-milnet-mc pmmc
+26.2.0.145      wheeler-emh.arpa wheeler-emh whlem
+28.0.0.19       isi-wb-echo.arpa isi-wb-echo
+28.0.0.35       ll-wb-echo.arpa ll-wb-echo
+28.0.0.51       dcec-wb-echo.arpa dcec-wb-echo
+28.0.0.67       sri-wb-echo.arpa sri-wb-echo
+28.0.0.83       radc-wb-echo.arpa radc-wb-echo
+28.0.0.99       ftmon-wb-echo.arpa ftmon-wb-echo
+28.0.0.115      fthua-wb-echo.arpa fthua-wb-echo
+28.0.0.131      macom-wb-echo.arpa macom-wb-echo
+28.0.0.147      cmu-wb-echo.arpa cmu-wb-echo
+28.0.0.163      bbn-wb-echo.arpa bbn-wb-echo
+35.1.1.1        gw.umich.edu umich1.arpa umich1
+35.1.1.2        hwbspc.umich.edu umich2.arpa umich2
+35.1.1.3        xyzzy.umich.edu umich3.arpa umich3
+35.1.1.4        merit-tn.umich.edu umich4.arpa umich4
+35.1.1.5        sysun.umich.edu umich5.arpa umich
+35.1.1.6        saturn.umich.edu umich6.arpa umich6
+35.1.1.7        mcr.umich.edu umich7.arpa umich7
+35.1.1.10       madvax.umich.edu umich10.arpa umich10
+35.1.1.17       wwv.umich.edu umich17.arpa umich17
+36.2.0.5        su-helens.arpa su-helens helens su-helens.stanford.edu helens.stanford.edu
+36.10.0.5       su-star.arpa su-star star su-star.stanford.edu star.stanford.edu
+36.8.0.8        su-pescadero.arpa su-pescadero pescadero su-pescadero.stanford.edu pescadero.stanford.edu
+36.2.0.9        su-fuji.arpa su-fuji fuji su-fuji.stanford.edu fuji.stanford.edu
+36.8.0.9        su-carmel.arpa su-carmel carmel su-carmel.stanford.edu carmel.stanford.edu
+36.36.0.212     su-carmel.arpa su-carmel carmel su-carmel.stanford.edu carmel.stanford.edu
+36.9.0.9        su-russell.arpa su-russell russell su-russell.stanford.edu russell.stanford.edu
+36.9.0.10       su-argus.arpa su-argus argus su-argus.stanford.edu argus.stanford.edu
+36.8.0.11       su-gregorio.arpa su-gregorio gregorio su-gregorio.stanford.edu gregorio.stanford.edu
+36.36.0.102     su-gregorio.arpa su-gregorio gregorio su-gregorio.stanford.edu gregorio.stanford.edu
+36.9.0.11       su-lindy.arpa su-lindy lindy su-lindy.stanford.edu lindy.stanford.edu
+36.9.0.12       su-forsythe.arpa su-forsythe forsythe su-forsythe.stanford.edu forsythe.stanford.edu
+36.51.0.12      su-cdrvma.arpa su-cdrvma cdrvma su-cdrvma.stanford.edu cdrvma.stanford.edu
+36.10.0.14      su-mojave.arpa su-mojave mojave su-mojave.stanford.edu mojave.stanford.edu
+36.22.0.20      su-amadeus.arpa su-amadeus amadeus su-amadeus.stanford.edu amadeus.stanford.edu
+36.8.0.47       su-labrea.arpa su-labrea labrea su-labrea.stanford.edu labrea.stanford.edu
+36.36.0.113     su-labrea.arpa su-labrea labrea su-labrea.stanford.edu labrea.stanford.edu
+36.8.0.48       su-navajo.arpa su-navajo navajo su-na-vax su-navajo.stanford.edu navajo.stanford.edu
+36.36.0.203     su-navajo.arpa su-navajo navajo su-na-vax su-navajo.stanford.edu navajo.stanford.edu
+36.8.0.53       su-sushi.arpa su-sushi sushi su-sushi.stanford.edu sushi.stanford.edu
+36.18.0.93      su-csli.arpa su-csli csli turing su-turing su-csli.stanford.edu csli.stanford.edu
+36.9.0.46       su-csli.arpa su-csli csli turing su-turing su-csli.stanford.edu csli.stanford.edu
+36.20.0.99      su-sonoma.arpa su-sonoma sonoma su-sonoma.stanford.edu sonoma.stanford.edu
+36.20.0.192     su-shasta.arpa su-shasta shasta su-shasta.stanford.edu shasta.stanford.edu
+36.14.0.1       su-shasta.arpa su-shasta shasta su-shasta.stanford.edu shasta.stanford.edu
+36.44.0.193     su-safe.arpa su-safe safe su-safe.stanford.edu safe.stanford.edu
+36.45.0.193     su-aimvax.arpa su-aimvax aimvax su-diablo diablo su-hnv su-aimvax.stanford.edu aimvax.stanford.edu
+36.47.0.193     su-ardvax.arpa su-ardvax ardvax su-ardvax.stanford.edu ardvax.stanford.edu
+36.40.0.200     su-dit.arpa su-dit dit su-dsn su-dsn.arpa dsn su-dit.stanford.edu dit.stanford.edu
+36.40.0.201     su-isl.arpa su-isl isl su-isl.stanford.edu isl.stanford.edu
+36.36.0.202     su-psych.arpa su-psych psych su-psych.stanford.edu psych.stanford.edu
+36.18.0.204     su-whitney.arpa su-whitney whitney su-robotics su-whitney.stanford.edu whitney.stanford.edu
+36.12.0.3       su-whitney.arpa su-whitney whitney su-robotics su-whitney.stanford.edu whitney.stanford.edu
+36.40.0.205     su-glacier.arpa su-glacier glacier su-icl su-glacier.stanford.edu glacier.stanford.edu
+36.19.0.209     su-gsb-why.arpa su-gsb-why why su-gsb-why.stanford.edu gsb-why.stanford.edu
+36.19.0.210     su-gsb-how.arpa su-gsb-how how su-gsb-how.stanford.edu gsb-how.stanford.edu
+36.18.0.215     su-coyote.arpa su-coyote coyote su-coyote.stanford.edu coyote.stanford.edu
+36.35.0.216     su-cascade.arpa su-cascade cascade su-cascade.stanford.edu cascade.stanford.edu
+128.16.9.0      sam.cs.ucl.ac.uk ucl-sam.arpa ucl-sam
+128.18.30.0     sri-ibm.arpa sri-ibm
+128.29.1.0      vlsi-a.mitre.org vlsi-a.arpa vlsi-a
+128.2.237.1     sei.cmu.edu cmu-sei.arpa cmu-sei
+128.4.0.1       dcn1.arpa dcn1 pogo
+10.0.0.111      dcn1.arpa dcn1 pogo
+128.5.0.1       ford1.arpa ford1 ford
+128.5.32.1      ford-wdl1.arpa ford-wdl1 wdl1
+128.5.33.1      ford-scf1.arpa ford-scf1 scf1
+128.5.34.1      ford-cos1.arpa ford-cos1 cos1
+128.5.35.1      ford-hou1.arpa ford-hou1 hou1
+128.5.37.1      ford-mac1.arpa ford-mac1 mac1
+128.7.0.1       dfvlr1.arpa dfvlr1 oberpfaffenhofen
+128.8.0.1       umd1.umd.edu umd1.arpa umd1
+128.8.133.1     eneevax.umd.edu eneevax.arpa eneevax umd-enee
+128.10.0.1      purdue.edu purdue.arpa purdue purdue-cs purdue-arthur arthur
+192.5.48.1      purdue.edu purdue.arpa purdue purdue-cs purdue-arthur arthur
+128.11.2.1      bbn-diamond.arpa bbn-diamond diamond
+128.16.5.1      ns1.cs.ucl.ac.uk ucl-ns1.arpa ucl-ns1
+128.16.9.1      probe.cs.ucl.ac.uk ucl-probe.arpa ucl-probe
+128.18.0.1      sri-med.arpa sri-med med
+128.18.10.1     sri-vax.arpa sri-vax sri-crvax crvax
+128.19.1.1      edn-host1.arpa edn-host1
+128.20.2.1      brl-tac1.arpa brl-tac1 tac1.brl.mil
+128.20.4.1      amsaa-vms.arpa amsaa-vms
+128.29.0.1      server1.mitre.org server1.arpa server1
+128.29.1.1      vlsi-b.mitre.org vlsi-b.arpa vlsi-b
+128.32.135.1    bach.berkeley.edu ucbbach.arpa ucbbach
+128.36.0.1      yale.arpa yale
+128.42.1.1      dione.rice.edu rice-dione.arpa rice-dione dione
+128.42.2.1      rice-goliath.arpa rice-goliath goliath ricecsvm
+128.42.3.1      rice-mimas.arpa rice-mimas mimas
+128.42.4.1      rice-zeta.arpa rice-zeta zeta
+128.43.0.1      dmc-crc.arpa dmc-crc dreo-crc
+128.44.0.1      wsmr03.arpa wsmr03 wsmr-03
+128.44.1.1      wsmr04.arpa wsmr04 wsmr-04
+128.44.2.1      wsmr05.arpa wsmr05 wsmr-05
+128.44.3.1      wsmr09.arpa wsmr09 wsmr-09
+128.46.135.1    newton.purdue.edu purdue-newton.arpa purdue-newton purdue-physics
+128.46.136.1    newton.purdue.edu purdue-newton.arpa purdue-newton purdue-physics
+128.49.0.1      nosc-bugs.arpa nosc-bugs bugs bugs.nosc.mil
+128.49.1.1      nosc-shark.arpa nosc-shark shark shark.nosc.mil
+128.49.2.1      nosc-frog.arpa nosc-frog frog frog.nosc.mil
+128.49.3.1      nosc-tetra.arpa nosc-tetra tetra tetra.nosc.mil
+128.49.4.1      nosc-orca.arpa nosc-orca orca orca.nosc.mil
+128.49.5.1      mplvax.arpa mplvax mplvax.nosc.mil
+128.54.0.1      sdcsvax.ucsd.edu sdcsvax.arpa sdcsvax ucsd
+128.54.132.1    carl.cme.ucsd.edu sdcarl.arpa sdcarl carl
+128.60.0.1      nrl1.arpa nrl1
+128.60.3.1      nrl-radar1.arpa nrl-radar1
+128.83.131.1    fusion.utexas.edu fusion.arpa fusion
+128.83.137.1    rdscom.utexas.edu rdscom.arpa rdscom
+128.2.251.2     faraday.ece.cmu.edu cmu-ee-faraday.arpa cmu-ee-faraday
+128.4.0.2       dcn2.arpa dcn2 boombah
+128.5.0.2       ford2.arpa ford2
+128.5.32.2      ford-wdl2.arpa ford-wdl2 wdl2
+128.5.34.2      ford-cos2.arpa ford-cos2 cos2
+128.5.37.2      ford-mac2.arpa ford-mac2 mac2
+128.6.4.2       red.rutgers.edu rutgers.arpa rutgers ru-red
+128.7.0.2       dfvlr2.arpa dfvlr2
+128.8.0.2       umd2.umd.edu umd2.arpa umd2 umd-univac univac
+128.8.132.2     lemuria.umd.edu lemuria.arpa lemuria umd-lemuria
+128.8.133.2     sphinx.umd.edu umd-sphinx.arpa umd-sphinx
+128.10.0.2      mordred.purdue.edu purdue-mordred.arpa purdue-mordred mordred
+192.5.48.2      mordred.purdue.edu purdue-mordred.arpa purdue-mordred mordred
+128.11.0.2      bbn-cvax.arpa bbn-cvax cvax cvax.bbn.com
+128.11.2.2      bbn-jade.arpa bbn-jade jade
+128.16.5.2      ns2.cs.ucl.ac.uk ucl-ns2.arpa ucl-ns2
+128.16.9.2      tg.cs.ucl.ac.uk ucl-tg.arpa ucl-tg
+14.0.0.5        tg.cs.ucl.ac.uk ucl-tg.arpa ucl-tg
+128.18.0.2      sri-coral.arpa sri-coral coral
+128.18.10.2     sri-ovax.arpa sri-ovax ovax
+128.20.2.2      brl-tac2.arpa brl-tac2 tac2.brl.mil
+128.20.4.2      brl-vat.arpa brl-vat vat vat.brl.mil
+128.29.0.2      server2.mitre.org server2.arpa server2
+128.29.1.2      vlsi-c.mitre.org vlsi-c.arpa vlsi-c
+128.36.0.2      yale-ring.arpa yale-ring
+192.12.81.1     yale-ring.arpa yale-ring
+128.39.2.2      oslo-vax.arpa oslo-vax oslo
+128.42.1.2      rice-rhea.arpa rice-rhea rhea
+128.42.3.2      rice-tethys.arpa rice-tethys tethys
+128.43.0.2      drea-xx.arpa drea-xx drea
+192.12.62.20    drea-xx.arpa drea-xx drea
+128.44.1.2      wsmr06.arpa wsmr06 wsmr-06
+128.44.2.2      wsmr07.arpa wsmr07 wsmr-07
+128.44.4.2      wsmr10.arpa wsmr10 wsmr-10
+128.46.135.2    galileo.purdue.edu purdue-galileo.arpa purdue-galileo
+128.49.2.2      nosc-turtle.arpa nosc-turtle turtle turtle.nosc.mil
+128.49.5.2      mpladm.arpa mpladm mpladm.nosc.mil
+128.54.132.2    carla.cme.ucsd.edu sdcarla.arpa sdcarla carla
+128.59.16.2     garfield.columbia.edu cu-garfield.arpa cu-garfield garfield
+128.60.0.2      nrl2.arpa nrl2
+128.60.3.2      nrl-radar2.arpa nrl-radar2
+128.83.131.2    physics.utexas.edu physics.arpa physics
+128.83.137.2    rdstest.utexas.edu rdstest.arpa rdstest
+128.2.251.3     maxwell.ece.cmu.edu cmu-ee-maxwell.arpa cmu-ee-maxwell
+128.4.0.3       dcn3.arpa dcn3 albert
+128.5.0.3       ford3.arpa ford3
+128.5.32.3      ford-wdl3.arpa ford-wdl3 wdl3
+128.5.37.3      ford-mac3.arpa ford-mac3 mac3
+128.6.4.3       green.rutgers.edu ru-green.arpa ru-green
+128.7.0.3       dfvlr3.arpa dfvlr3
+128.8.0.3       umd3.umd.edu umd3.arpa umd3
+128.8.133.3     fomalhaut.umd.edu umd-fomalhaut.arpa umd-fomalhaut
+128.11.0.3      bbn-clxx.arpa bbn-clxx clxx clxx.bbn.com
+10.0.0.5        bbn-clxx.arpa bbn-clxx clxx clxx.bbn.com
+128.16.9.3      cs.ucl.ac.uk ucl-cs.arpa ucl-cs
+14.0.0.9        cs.ucl.ac.uk ucl-cs.arpa ucl-cs
+128.18.0.3      sri-arabian.arpa sri-arabian arabian
+128.18.10.3     sri-unix.arpa sri-unix sri-prism prism
+128.20.0.3      brl-tbd.arpa brl-tbd tbd tbd.brl.mil
+128.20.2.3      brl-tac3.arpa brl-tac3 tac3.brl.mil
+128.26.32.3     sac-vax.arpa sac-vax sri-spud spud
+10.0.0.80       sac-vax.arpa sac-vax sri-spud spud
+128.32.134.3    east.berkeley.edu ucbeast.arpa ucbeast beast east
+128.32.135.3    bizet.berkeley.edu ucbbizet.arpa ucbbizet
+128.42.1.3      rice-janus.arpa rice-janus rice-vms rice-780
+128.42.3.3      rice-hyperion.arpa rice-hyperion hyperion hyp
+128.44.0.3      wsmr08.arpa wsmr08 wsmr-08
+128.44.1.3      wsmr02.arpa wsmr02 wsmr-02
+128.44.3.3      miser.arpa miser
+128.49.0.3      nosc-guppy.arpa nosc-guppy guppy guppy.nosc.mil
+128.49.5.3      steelhd.arpa steelhd steelhd.nosc.mil
+128.54.132.3    felix.cme.ucsd.edu sdfelix.arpa sdfelix
+128.59.16.3     heathcliff.columbia.edu cu-heathcliff.arpa cu-heathcliff heathcliff
+128.2.251.4     gauss.ece.cmu.edu cmu-ee-gauss.arpa cmu-ee-gauss
+128.4.0.4       dcn4.arpa dcn4 howland
+128.5.0.4       ford4.arpa ford4
+128.5.32.4      ford-wdl4.arpa ford-wdl4 wdl4
+128.5.37.4      ford-mac4.arpa ford-mac4 mac4
+128.6.4.4       blue.rutgers.edu ru-blue.arpa ru-blue
+128.7.0.4       dfvlr4.arpa dfvlr4
+128.8.133.4     munchkin.umd.edu umd-munchkin.arpa umd-munchkin
+128.18.0.4      sri-china.arpa sri-china china
+128.18.10.4     sri-stripe.arpa sri-stripe stripe
+128.20.0.4      brl-lfd.arpa brl-lfd lfd
+128.20.2.4      brl-tac4.arpa brl-tac4 tac4.brl.mil
+128.21.48.4     sri-rolm.arpa sri-rolm
+128.32.135.4    brahms.berkeley.edu ucbbrahms.arpa ucbbrahms
+128.32.137.4    cartan.berkeley.edu ucbcartan.arpa ucbcartan
+128.32.135.5    cartan.berkeley.edu ucbcartan.arpa ucbcartan
+128.36.0.4      yale-cheops.arpa yale-cheops cheops
+128.42.1.4      rice-iapetus.arpa rice-iapetus iapetus iap
+128.42.3.4      rice-phobos.arpa rice-phobos phobos
+128.49.0.4      nosc-marlin.arpa nosc-marlin marlin marlin.nosc.mil
+128.54.132.4    sluggo.cme.ucsd.edu sdsluggo.arpa sdsluggo sluggo
+128.59.16.4     tom.columbia.edu cu-tom.arpa cu-tom tom
+128.2.251.5     newton.ece.cmu.edu cmu-ee-newton.arpa cmu-ee-newton
+128.4.0.5       dcn5.arpa dcn5 hepzibah
+128.5.32.5      ford-wdl5.arpa ford-wdl5 wdl5
+128.5.37.5      ford-mac5.arpa ford-mac5 mac5
+128.7.0.5       dfvlr5.arpa dfvlr5 fgan
+128.8.0.5       umd5.umd.edu umd5.arpa umd5
+128.8.132.5     midgard.umd.edu midgard.arpa midgard umd-midgard
+128.18.10.5     sri-gizmo.arpa sri-gizmo gizmo
+128.20.0.5      hel-ace.arpa hel-ace ace
+192.12.65.10    hel-ace.arpa hel-ace ace
+128.25.32.5     braggfs.arpa braggfs
+128.32.0.5      cad.berkeley.edu ucbcad.arpa ucbcad
+128.42.1.5      rice-ceres.arpa rice-ceres ceres
+128.42.4.5      rice-cleo.arpa rice-cleo cleo
+128.49.0.5      nosc-cod.arpa nosc-cod cod cod.nosc.mil
+128.54.132.5    gumby.cme.ucsd.edu sdgumby.arpa sdgumby
+128.59.16.5     sylvester.columbia.edu cu-sylvester.arpa cu-sylvester sylvester
+128.2.251.6     henry.ece.cmu.edu cmu-ee-henry.arpa cmu-ee-henry
+128.4.0.6       dcn6.arpa dcn6 backroom
+128.5.32.6      ford-wdl6.arpa ford-wdl6 wdl6
+128.8.0.6       umd6.umd.edu umd6.arpa umd6
+128.18.0.6      sri-bozo.arpa sri-bozo bozo
+128.20.0.6      crdc.arpa crdc
+192.12.125.1    crdc.arpa crdc
+128.20.1.6      crdc-vax2.arpa crdc-vax2 crdc2
+192.12.125.2    crdc-vax2.arpa crdc-vax2 crdc2
+128.20.2.6      crdc-tac.arpa crdc-tac
+128.20.3.6      crdc-padea.arpa crdc-padea padea
+128.20.4.6      crdc-vax3.arpa crdc-vax3 crdc3
+192.12.125.3    crdc-vax3.arpa crdc-vax3 crdc3
+128.20.5.6      crdc-vax4.arpa crdc-vax4 crdc4
+128.32.0.6      ernie.berkeley.edu ucbernie.arpa ucbernie
+128.32.135.6    weyl.berkeley.edu ucbweyl.arpa ucbweyl
+128.42.1.6      rice-pallas.arpa rice-pallas pallas
+128.42.4.6      rice-gimel.arpa rice-gimel gimel
+128.49.0.6      nosc-perch.arpa nosc-perch perch perch.nosc.mil
+128.59.16.6     cheshire.columbia.edu cu-cheshire.arpa cu-cheshire cheshire
+128.84.253.6    amvax.tn.cornell.edu amvax.arpa amvax
+128.2.251.7     ohm.ece.cmu.edu cmu-ee-ohm.arpa cmu-ee-ohm
+128.4.0.7       dcn7.arpa dcn7 snavely
+128.8.0.7       sperry-test.umd.edu umd7.arpa umd7
+128.8.132.7     cvl.umd.edu cvl.arpa cvl umd4
+128.32.0.7      monet.berkeley.edu ucbmonet.arpa ucbmonet
+128.36.0.7      yale-apvax.arpa yale-apvax
+128.39.1.7      ntare1.arpa ntare1 ntare fuzzy
+128.42.1.7      rice-vesta.arpa rice-vesta vesta
+128.46.129.7    ec.purdue.edu purdue-ecn-ec.arpa purdue-ecn-ec ecn-ec
+128.49.0.7      nosc-trout.arpa nosc-trout trout trout.nosc.mil
+128.4.0.8       dcn8.arpa dcn8 porkypine
+128.5.0.8       ford-lab.arpa ford-lab ford8
+128.5.32.8      ford-wdl8.arpa ford-wdl8 wdl8
+128.36.0.8      yale-venus.arpa yale-venus
+128.42.1.8      rice-nexus.arpa rice-nexus nexus
+128.46.129.8    ma.purdue.edu purdue-ecn-ma.arpa purdue-ecn-ma ecn-ma
+128.49.0.8      nosc-eel.arpa nosc-eel eel eel.nosc.mil
+128.4.0.9       dcn9.arpa dcn9 churchy
+128.5.0.9       ford-vax.arpa ford-vax ford9
+128.5.32.9      ford-wdl9.arpa ford-wdl9 wdl9
+128.8.0.9       neotrantor.umd.edu neotrantor.arpa neotrantor delicass
+128.11.0.9      bbn-meta.arpa bbn-meta meta meta.bbn.com
+128.16.9.9      stc.arpa stc
+128.29.0.9      imagen-b.mitre.org imagen-b.arpa imagen-b
+128.32.0.9      esvax.berkeley.edu ucbesvax.arpa ucbesvax esvax
+128.36.0.9      yale-rubiks.arpa yale-rubiks
+128.39.1.9      nta-odin.arpa nta-odin ntaodin odin
+128.42.1.9      rice-eesun.arpa rice-eesun eesun
+128.49.0.9      nosc-peanuts.arpa nosc-peanuts peanuts peanuts.nosc.mil
+128.83.0.9      im4u.utexas.edu im4u.arpa im4u
+128.2.248.10    tarragon.psy.cmu.edu cmu-psy-tarragon.arpa cmu-psy-tarragon
+128.5.0.10      ford-res.arpa ford-res forda ford-20
+128.5.32.10     ford-wdl10.arpa ford-wdl10 wdl10
+128.8.0.10      umda.umd.edu umda.arpa umda
+128.18.0.10     sri-inagi.arpa sri-inagi inagi
+128.29.0.10     imagen-a.mitre.org imagen-a.arpa imagen-a
+128.36.0.10     yale-sugar.arpa yale-sugar
+128.42.1.10     rice-invader.arpa rice-invader invader mkdsun
+128.46.129.10   ca.purdue.edu purdue-ecn-ca.arpa purdue-ecn-ca ecn-ca
+128.83.0.10     eyezod.utexas.edu eyezod.arpa eyezod
+128.5.0.11      ford-ecc.arpa ford-ecc fordb
+128.8.0.11      umdb.umd.edu umdb.arpa umdb
+128.11.0.11     bbn-mentor.arpa bbn-mentor mentor yoyodyne mango mentor.bbn.com
+128.32.0.11     kim.berkeley.edu ucbkim.arpa ucbkim
+128.36.0.11     yale-ice.arpa yale-ice
+128.42.1.11     rice-enceladus.arpa rice-enceladus enceladus enc
+128.46.129.11   ga.purdue.edu purdue-ecn-ga.arpa purdue-ecn-ga ecn-ga
+128.49.0.11     nosc-whale.arpa nosc-whale whale whale.nosc.mil
+128.5.0.12      ford-srl.arpa ford-srl fordc
+128.8.0.12      umdc.umd.edu umdc.arpa umdc
+128.11.0.12     bbn-vulcan.arpa bbn-vulcan vulcan hephaestus vulcan.bbn.com
+128.32.0.12     calder.berkeley.edu ucbcalder.arpa ucbcalder
+128.36.0.12     yale-cube.arpa yale-cube
+128.42.1.12     rice-juno.arpa rice-juno juno
+128.46.129.12   ed.purdue.edu purdue-ecn-ed.arpa purdue-ecn-ed ecn-ed
+128.46.138.18   ed.purdue.edu purdue-ecn-ed.arpa purdue-ecn-ed ecn-ed
+128.83.0.12     ratliff.utexas.edu ut-ratliff.arpa ut-ratliff ratliff
+128.5.0.13      ford-ers.arpa ford-ers fordd dearborn
+128.8.0.13      umdd.umd.edu umdd.arpa umdd
+128.8.1.13      netwolf.umd.edu netwolf.arpa netwolf
+128.9.0.13      isi-telstar.arpa isi-telstar telstar
+128.11.0.13     bbn-cherry.arpa bbn-cherry cherry cherry.bbn.com
+128.32.0.13     dali.berkeley.edu ucbdali.arpa ucbdali
+128.36.0.13     yale-mtrans.arpa yale-mtrans
+128.42.1.13     rice-polaris.arpa rice-polaris polaris
+128.46.129.13   pb.purdue.edu purdue-ecn-pb.arpa purdue-ecn-pb ecn-pb purdue-cidmac
+128.49.0.13     nosc-grunion.arpa nosc-grunion grunion grunion.nosc.mil
+128.3.254.14    lbl-ux4.arpa lbl-ux4
+128.4.0.14      dcn-wwv.arpa dcn-wwv wwv
+128.5.0.14      ford-eed.arpa ford-eed forde dptc
+128.8.0.14      trantor.umd.edu trantor.arpa trantor umd umde
+128.8.1.14      sayshell.umd.edu sayshell.arpa sayshell
+128.9.0.14      isi-danny.arpa isi-danny
+128.11.0.14     bbn-kiwi.arpa bbn-kiwi kiwi kiwi.bbn.com
+128.32.0.14     matisse.berkeley.edu ucbmatisse.arpa ucbmatisse
+128.36.0.14     yale-ptrans.arpa yale-ptrans
+128.42.1.14     rice-themis.arpa rice-themis themis
+128.46.129.14   ka.purdue.edu purdue-ecn-ka.arpa purdue-ecn-ka ecn-ka
+128.46.131.14   ka.purdue.edu purdue-ecn-ka.arpa purdue-ecn-ka ecn-ka
+128.52.22.14    mit-prep.arpa mit-prep prep prep-vax prep.ai.mit.edu
+128.3.254.15    lbl-ux5.arpa lbl-ux5
+128.4.0.15      dcn-wwvb.arpa dcn-wwvb wwvb
+128.5.0.15      ford-foe.arpa ford-foe fordf dunton
+128.6.4.15      aim.rutgers.edu ru-aim.arpa ru-aim
+128.8.0.15      umdf.umd.edu umdf.arpa umdf umd-univac-test
+128.9.0.15      isi-nic.arpa isi-nic
+128.11.0.15     bbn-guava.arpa bbn-guava guava guava.bbn.com
+128.25.32.15    corps-fs1.arpa corps-fs1 corpsfs1
+128.32.0.15     medea.berkeley.edu ucbmedea.arpa ucbmedea medea
+128.36.0.15     yale-worm.arpa yale-worm
+128.42.1.15     rice-rn01.arpa rice-rn01 rn01
+128.46.129.15   ee.purdue.edu purdue-ecn-ee.arpa purdue-ecn-ee ecn-ee purdue-ecn ecn pur-ee purdue-ecn.arpa
+128.46.136.15   ee.purdue.edu purdue-ecn-ee.arpa purdue-ecn-ee ecn-ee purdue-ecn ecn pur-ee purdue-ecn.arpa
+128.46.137.15   ee.purdue.edu purdue-ecn-ee.arpa purdue-ecn-ee ecn-ee purdue-ecn ecn pur-ee purdue-ecn.arpa
+128.49.0.15     nosc-jaws2.arpa nosc-jaws2 jaws2 jaws2.nosc.mil
+128.2.250.16    cmu-cs-wb1.arpa cmu-cs-wb1 cmu-cs-wb-arrakis wb1.cs.cmu.edu
+128.3.254.16    lbl-ux6.arpa lbl-ux6
+128.4.0.16      dcn16.arpa dcn16 beauregard
+128.6.4.16      caip.rutgers.edu ru-caip.arpa ru-caip caip
+128.8.0.16      cincom.umd.edu cincom.arpa cincom umcincom
+128.8.128.16    gymble.umd.edu gymble.arpa gymble umd-gymble
+128.9.0.16      isi-wwaccc.arpa isi-wwaccc wwaccc
+128.15.0.16     s1-atlantis.arpa s1-atlantis atlantis
+128.36.0.16     yale-mbuild.arpa yale-mbuild
+128.42.1.16     rice-eos.arpa rice-eos eos
+128.46.129.16   cb.purdue.edu purdue-ecn-cb.arpa purdue-ecn-cb ecn-cb
+128.84.253.16   systems.cs.cornell.edu systems.arpa systems bullwinkle
+128.3.254.17    lbl-ux7.arpa lbl-ux7
+128.4.0.17      dcn17.arpa dcn17 bridgeport
+128.5.32.17     ford-wdl17.arpa ford-wdl17 wdl17
+128.8.128.17    amanda.cs.umd.edu amanda.arpa amanda umd-amanda
+128.15.0.17     s1-challenger.arpa s1-challenger challenger
+128.36.0.17     yale-comix.arpa yale-comix
+128.42.1.17     rice-chiron.arpa rice-chiron chiron
+128.46.129.17   mb.purdue.edu purdue-ecn-mb.arpa purdue-ecn-mb ecn-mb
+128.46.131.17   mb.purdue.edu purdue-ecn-mb.arpa purdue-ecn-mb ecn-mb
+128.4.0.18      dcn18.arpa dcn18 miggle
+128.5.32.18     ford-wdl18.arpa ford-wdl18 wdl18
+128.8.128.18    hatta.cs.umd.edu hatta.arpa hatta umd-hatta
+128.15.0.18     s1-discovery.arpa s1-discovery discovery
+128.36.0.18     yale-vlsivax.arpa yale-vlsivax
+128.42.1.18     rice-thule.arpa rice-thule thule
+128.46.129.18   ef.purdue.edu purdue-ecn-ef.arpa purdue-ecn-ef ecn-ef
+128.46.130.18   ef.purdue.edu purdue-ecn-ef.arpa purdue-ecn-ef ecn-ef
+128.83.0.18     hank.utexas.edu ut-hank.arpa ut-hank hank
+128.84.252.18   cornelld.tn.cornell.edu cornelld.arpa cornelld
+128.5.32.19     ford-wdl19.arpa ford-wdl19 wdl19
+128.8.128.19    haigha.cs.umd.edu haigha.arpa haigha umd-haigha
+128.15.0.19     s1-enterprise.arpa s1-enterprise enterprise
+128.32.0.19     ingres.berkeley.edu ucbingres.arpa ucbingres
+128.36.0.19     yale-zoo.arpa yale-zoo
+128.42.1.19     rice-aten.arpa rice-aten aten
+128.46.129.19   pc.purdue.edu purdue-ecn-pc.arpa purdue-ecn-pc ecn-pc
+128.46.134.19   pc.purdue.edu purdue-ecn-pc.arpa purdue-ecn-pc ecn-pc
+128.83.0.19     duffy.utexas.edu ut-duffy.arpa ut-duffy duffy
+128.2.253.20    vd.cc.cmu.edu cmu-cc-vd.arpa cmu-cc-vd
+128.5.32.20     ford-wdl20.arpa ford-wdl20 wdl20
+128.8.128.20    boojum.cs.umd.edu boojum.arpa boojum umd-boojum
+128.15.0.20     s1-pathfinder.arpa s1-pathfinder pathfinder
+128.32.0.20     oz.berkeley.edu ucboz.arpa ucboz
+128.42.1.20     rice-endymion.arpa rice-endymion endymion
+128.46.129.20   eg.purdue.edu purdue-ecn-eg.arpa purdue-ecn-eg ecn-eg
+128.49.0.20     nosc-mrlimpet.arpa nosc-mrlimpet mrlimpet.nosc.mil
+128.84.252.20   cornellc.tn.cornell.edu cornellc.arpa cornellc cornellc.ccs.cornell.edu
+128.3.254.21    lbl-g.arpa lbl-g
+128.5.32.21     ford-wdl21.arpa ford-wdl21 wdl21
+128.8.128.21    jubjub.cs.umd.edu jubjub.arpa jubjub umd-jubjub
+128.15.0.21     s1-constellation.arpa s1-constellation constellation
+128.42.1.21     rice-hektor.arpa rice-hektor hektor
+128.46.131.21   aa.purdue.edu purdue-ecn-aa.arpa purdue-ecn-aa ecn-aa
+128.49.0.21     nosc-newcod.arpa nosc-newcod newcod.nosc.mil
+128.83.0.21     ix1.utexas.edu ut-icv1.arpa ut-icv1
+128.2.250.22    sc.cs.cmu.edu cmu-cs-sc.arpa cmu-cs-sc
+128.3.254.22    lbl-h.arpa lbl-h
+128.5.32.22     ford-wdl22.arpa ford-wdl22 wdl22
+128.8.128.22    sdag.cs.umd.edu sdag.arpa sdag umd-sdag
+128.15.0.22     s1-voskhod.arpa s1-voskhod voskhod
+128.32.0.22     degas.berkeley.edu ucbdegas.arpa ucbdegas
+128.42.1.22     rice-cerberus.arpa rice-cerberus cerberus
+128.49.0.22     nosc-pippin.arpa nosc-pippin pippin.nosc.mil
+128.52.22.22    mit-htvax.arpa mit-htvax htvax mit-ht ht htvax.ai.mit.edu
+128.83.0.22     iv1.utexas.edu ut-icv2.arpa ut-icv2
+128.2.250.23    ft.cs.cmu.edu cmu-cs-ft.arpa cmu-cs-ft
+128.5.32.23     ford-wdl23.arpa ford-wdl23 wdl23
+128.8.128.23    markssun.cs.umd.edu umd-markssun.arpa umd-markssun markssun
+128.15.0.23     s1-endeavour.arpa s1-endeavour endeavour
+128.42.1.23     rice-proserpina.arpa rice-proserpina proserpina
+128.49.0.23     nosc-sushi.arpa nosc-sushi sushi.nosc.mil
+128.83.0.23     iv2.utexas.edu ut-icv3.arpa ut-icv3
+128.89.0.23     bbn-garnet.arpa bbn-garnet garnet
+128.5.32.24     ford-wdl24.arpa ford-wdl24 wdl24
+128.8.128.24    chessie.cs.umd.edu chessie.arpa chessie umd-chessie
+128.9.0.24      isi-accutest.arpa isi-accutest
+128.15.0.24     s1-intrepid.arpa s1-intrepid intrepid
+128.42.1.24     rice-astraea.arpa rice-astraea astraea
+128.46.129.24   gb.purdue.edu purdue-ecn-gb.arpa purdue-ecn-gb ecn-gb
+128.89.0.24     bbn-moonstone.arpa bbn-moonstone moonstone
+128.3.255.25    lbl-k.arpa lbl-k
+128.5.32.25     ford-wdl25.arpa ford-wdl25 wdl25
+128.8.128.25    jacksun.cs.umd.edu umd-jacksun.arpa umd-jacksun jacksun
+128.15.0.25     s1-zippy.arpa s1-zippy zippy
+128.25.32.25    corps-fs2.arpa corps-fs2 corpsfs2
+128.42.1.25     rice-ariadne.arpa rice-ariadne ariadne
+128.46.129.25   eh.purdue.edu purdue-ecn-eh.arpa purdue-ecn-eh ecn-eh
+128.83.0.25     tsp.utexas.edu ut-tsp.arpa ut-tsp
+128.89.0.25     bbn-quartz.arpa bbn-quartz quartz
+128.5.32.26     ford-wdl26.arpa ford-wdl26 wdl26
+128.8.128.26    snark.cs.umd.edu snark.arpa snark umd-snark
+128.15.0.26     s1-gutenberg.arpa s1-gutenberg gutenberg
+128.42.1.26     rice-hypatia.arpa rice-hypatia hypatia
+128.83.0.26     utadnx.utexas.edu ut-dnx.arpa ut-dnx
+128.89.0.26     bbn-silica.arpa bbn-silica silica
+128.5.32.27     ford-wdl27.arpa ford-wdl27 wdl27
+128.9.0.27      isi-plato.arpa isi-plato plato
+128.15.0.27     s1-voyager.arpa s1-voyager voyager
+128.42.1.27     rice-diomedes.arpa rice-diomedes diomedes
+128.83.0.27     uv.utexas.edu ut-uv.arpa ut-uv
+128.89.0.27     bbn-granite.arpa bbn-granite
+128.5.32.28     ford-wdl28.arpa ford-wdl28 wdl28
+128.8.128.28    gannonssun.cs.umd.edu umd-gannonssun.arpa umd-gannonssun gannonssun
+128.15.0.28     s1-viking.arpa s1-viking viking
+128.42.1.28     rice-euphrosene.arpa rice-euphrosene euphrosene
+128.83.0.28     iv3.utexas.edu ut-icv4.arpa ut-icv4
+128.89.0.28     bbn-basalt.arpa bbn-basalt basalt
+128.5.32.29     ford-wdl29.arpa ford-wdl29 wdl29
+128.8.128.29    vorpal.cs.umd.edu vorpal.arpa vorpal umd-vorpal
+128.15.0.29     s1-pioneer.arpa s1-pioneer pioneer
+128.42.1.29     rice-urania.arpa rice-urania urania
+128.83.0.29     ix2.utexas.edu ut-icv5.arpa ut-icv5
+128.89.0.29     bbn-pumice.arpa bbn-pumice pumice
+128.5.32.30     ford-wdl30.arpa ford-wdl30 wdl30
+128.8.128.30    echo.cs.umd.edu umd-echo.arpa umd-echo
+128.15.0.30     s1-ranger.arpa s1-ranger ranger
+128.42.1.30     rice-titan.arpa rice-titan titan
+128.46.129.30   ei.purdue.edu purdue-ecn-ei.arpa purdue-ecn-ei ecn-ei firebreather
+128.46.130.30   ei.purdue.edu purdue-ecn-ei.arpa purdue-ecn-ei ecn-ei firebreather
+128.89.0.30     bbn-slate.arpa bbn-slate slate
+128.5.32.31     ford-wdl31.arpa ford-wdl31 wdl31
+128.8.128.31    stewartssun.cs.umd.edu umd-stewartssun.arpa umd-stewartssun stewartssun
+128.15.0.31     s1-mariner.arpa s1-mariner mariner
+128.32.0.31     renoir.berkeley.edu ucbrenoir.arpa ucbrenoir
+128.42.1.31     rice-phoebe.arpa rice-phoebe phoebe
+128.46.130.31   malcolm.purdue.edu purdue-malcolm.arpa purdue-malcolm malcolm
+128.83.0.31     a20.utexas.edu ut-a20.arpa ut-a20 a20
+128.5.32.32     ford-wdl32.arpa ford-wdl32 wdl32
+128.8.128.32    aaron.cs.umd.edu umd-aaron.arpa umd-aaron aaron
+128.9.0.32      isi-venera.arpa isi-venera bobo venera isi-8600.arpa isi-8600
+128.15.0.32     s1-gallifrey.arpa s1-gallifrey gallifrey
+128.32.0.32     shadow.berkeley.edu ucbshadow.arpa ucbshadow shadow shadowvax
+128.42.1.32     rice-ra.arpa rice-ra ra
+128.46.130.32   zaphod.purdue.edu purdue-zaphod.arpa purdue-zaphod
+128.83.0.32     dinosaur.utexas.edu ut-dinosaur.arpa ut-dinosaur ut-2d
+128.5.32.33     ford-wdl33.arpa ford-wdl33 wdl33
+128.15.0.33     s1-iop1b.arpa s1-iop1b diplodocus
+128.32.131.33   mike.berkeley.edu ucbmike.arpa ucbmike
+128.46.130.33   trillian.purdue.edu purdue-trillian.arpa purdue-trillian
+128.5.32.34     ford-wdl34.arpa ford-wdl34 wdl34
+128.8.128.34    borogove.cs.umd.edu borogove.arpa borogove umd-borogove
+128.15.0.34     s1-iop2b.arpa s1-iop2b compsognathus
+128.46.130.34   dipl.purdue.edu purdue-dipl.arpa purdue-dipl dipl
+128.83.0.34     trac.utexas.edu trac.arpa trac
+128.5.32.35     ford-wdl35.arpa ford-wdl35 wdl35
+128.8.128.35    oldmark.cs.umd.edu oldmark.arpa oldmark umd-oldmark
+128.9.0.35      isi-vlsig.arpa isi-vlsig vlsig
+128.15.0.35     s1-protoceratops.arpa s1-protoceratops protoceratops
+128.46.134.35   vlsi.purdue.edu purdue-vlsi.arpa purdue-vlsi purvlsi
+128.83.0.35     agl.utexas.edu agl.arpa agl
+128.84.253.35   cornell-tc.tn.cornell.edu cornell-tc.arpa cornell-tc batcomputer.tn.cornell.edu
+128.5.32.36     ford-wdl36.arpa ford-wdl36 wdl36
+128.15.0.36     s1-stegosaurus.arpa s1-stegosaurus stegosaurus
+128.46.130.36   chemistry.purdue.edu purdue-chem.arpa purdue-chem purchem
+128.83.0.36     erc.utexas.edu erc.arpa erc
+128.2.253.37    te.cc.cmu.edu cmu-cc-te.arpa cmu-cc-te
+128.5.32.37     ford-wdl37.arpa ford-wdl37 wdl37
+128.8.128.37    burble.cs.umd.edu umd-burble.arpa umd-burble burble
+128.15.0.37     s1-triceratops.arpa s1-triceratops triceratops
+128.46.134.37   bmec.purdue.edu purdue-bmec.arpa purdue-bmec
+128.52.22.37    mit-hermes.arpa mit-hermes hermes mit-yak yak yak.ai.mit.edu hermes.ai.mit.edu
+128.5.32.38     ford-wdl38.arpa ford-wdl38 wdl38
+128.15.0.38     s1-iguanadon.arpa s1-iguanadon iguanadon
+128.46.130.38   ghg.purdue.edu purdue-ghg.arpa purdue-ghg ghg
+128.5.32.39     ford-wdl39.arpa ford-wdl39 wdl39
+128.8.128.39    manxome.cs.umd.edu manxome.arpa manxome umd-manxome
+128.15.0.39     s1-megalosaurus.arpa s1-megalosaurus megalosaurus
+128.46.130.39   gsp.purdue.edu purdue-gsp.arpa purdue-gsp gsp
+128.83.0.39     uta3081.utexas.edu ut-a3081.arpa ut-a3081 ut-ibm
+128.8.128.40    markshome.cs.umd.edu markshome.arpa markshome umd-markshome
+128.15.0.40     s1-brachiosaurus.arpa s1-brachiosaurus brachiosaurus
+128.83.0.40     astro.utexas.edu utastro.arpa utastro
+128.83.129.40   astro.utexas.edu utastro.arpa utastro
+128.9.0.41      isi-elvira.arpa isi-elvira elvira
+128.83.129.41   capella.utexas.edu capella.arpa capella
+128.8.128.42    tove.umd.edu tove.arpa tove umd-tove
+128.18.8.42     sri-thx1138.arpa sri-thx1138 thx1138 thx
+128.83.129.42   gauss.utexas.edu gauss.arpa gauss
+128.3.254.43    lbl-nmc.arpa lbl-nmc lbl-nmm
+128.9.0.43      isi-vlsie.arpa isi-vlsie vlsie isi-moe.arpa isi-moe moe
+128.3.254.44    lbl-pdm.arpa lbl-pdm
+128.9.0.44      isi-vlsih.arpa isi-vlsih vlsih
+128.3.254.45    lbl-igm.arpa lbl-igm
+128.9.0.45      isi-vlsif.arpa isi-vlsif vlsif isi-curly.arpa isi-curly curly
+128.52.22.45    mit-morrison.arpa mit-morrison morrison jm
+128.9.0.46      isi-shemp.arpa isi-shemp shemp
+128.9.0.47      isi-vlsid.arpa isi-vlsid vlsid
+128.9.0.48      isi-vlsic.arpa isi-vlsic vlsic
+128.9.0.49      isi-vlsia.arpa isi-vlsia vlsia
+128.9.0.50      isi-vlsib.arpa isi-vlsib vlsib
+128.18.0.50     ncna.arpa ncna sri-ncna
+128.83.0.50     kentarus.utexas.edu kentarus.arpa kentarus
+128.3.254.51    lbl-hiss.arpa lbl-hiss
+128.18.0.51     ncnb.arpa ncnb sri-ncnb
+128.83.0.51     tauceti.utexas.edu tauceti.arpa tauceti
+128.83.0.52     spica.utexas.edu spica.arpa spica
+128.52.22.53    mit-reagan.arpa mit-reagan reagan reagan.ai.mit.edu
+128.83.0.53     merope.utexas.edu merope.arpa merope
+128.83.0.54     deneb.utexas.edu deneb.arpa deneb
+128.83.0.55     thuban.utexas.edu thuban.arpa thuban
+128.83.0.56     mizar.utexas.edu mizar.arpa mizar
+128.83.0.58     markab.utexas.edu markab.arpa markab
+128.21.0.59     sri-station1.arpa sri-station1
+128.83.0.59     algedi.utexas.edu algedi.arpa algedi
+128.83.0.61     zotz.utexas.edu zotz.arpa zotz soats
+128.52.22.62    mit-gutenberg.arpa mit-gutenberg gut guten gutenberg.ai.mit.edu
+128.83.0.62     tzec.utexas.edu tzec.arpa tzec zake
+128.83.0.63     xul.utexas.edu xul.arpa xul shool
+128.83.0.64     yaxkin.utexas.edu yaxkin.arpa yaxkin yoshkeen
+128.83.0.65     mol.utexas.edu mol.arpa mol mole
+128.83.0.66     pax.utexas.edu kankin.arpa kankin kankin.utexas.edu conkeen
+128.21.0.67     sri-station2.arpa sri-station2
+128.83.0.67     zip.utexas.edu zip.arpa zip seep
+128.3.255.68    lbl-rtsg.arpa lbl-rtsg
+128.83.0.68     pop.utexas.edu pop.arpa pop pope
+128.83.0.69     muan.utexas.edu muan.arpa muan mwahn
+128.83.0.70     uo.utexas.edu uo.arpa uo woe
+128.83.0.71     bun.utexas.edu bun.arpa bun
+128.83.0.72     fun.utexas.edu fun.arpa fun
+128.83.0.73     nun.utexas.edu nun.arpa nun
+128.83.0.74     run.utexas.edu run.arpa run
+128.21.0.75     sri-station3.arpa sri-station3
+128.8.128.77    gyre.umd.edu gyre.arpa gyre umd-gyre
+128.83.0.78     albo.utexas.edu albo.arpa albo albopurpurea
+128.89.0.78     loki.arpa loki bbn-loki loki.bbn.com
+128.8.128.79    brillig.umd.edu umd-brillig.arpa umd-brillig
+128.83.0.79     nepal.utexas.edu nepal.arpa nepal nepalensis
+128.83.0.81     keynes.utexas.edu keynes.arpa keynes
+128.83.0.82     jjb.utexas.edu jjb.arpa jjb
+128.83.0.83     godel.utexas.edu godel.arpa godel
+128.83.0.84     escher.utexas.edu escher.arpa escher
+128.83.0.85     bach.utexas.edu bach.arpa bach
+128.83.0.86     dr.utexas.edu dr.arpa dr
+128.83.0.87     zoo.utexas.edu zoo.arpa zoo
+128.83.0.88     zoolu.utexas.edu zoolu.arpa zoolu
+128.9.0.92      isi-dawn.arpa isi-dawn dawn isi-sun5
+128.9.0.93      isi-rising.arpa isi-rising rising isi-sun4
+128.9.0.94      isi-helios.arpa isi-helios helios isi-sun6
+128.9.0.95      isi-babette.arpa isi-babette babette isi-sun7
+128.9.0.96      isi-fifi.arpa isi-fifi fifi isi-sun8
+128.3.254.99    lbl-adv2.arpa lbl-adv2
+128.9.0.100     isi-casner.arpa isi-casner casner slc isi-sun9
+128.18.0.100    sri-sol.arpa sri-sol
+128.45.0.100    decwse.arpa decwse
+128.83.0.100    van-maanen.utexas.edu van-maanen.arpa van-maanen
+128.9.0.101     isi-djwalden.arpa isi-djwalden djwalden isi-sun10
+128.18.0.101    sri-mercury.arpa sri-mercury
+128.45.0.101    granite.arpa granite
+128.3.254.102   lbl-acal2.arpa lbl-acal2
+128.9.0.102     isi-beebe.arpa isi-beebe beebe isi-sun11
+128.18.0.102    sri-venus.arpa sri-venus
+128.3.255.103   lbl-acal3.arpa lbl-acal3
+128.9.0.103     isi-haberman.arpa isi-haberman haberman isi-sun12
+128.3.255.104   lbl-acal4.arpa lbl-acal4
+128.9.0.104     isi-imagen.arpa isi-imagen
+128.18.0.104    sri-mars.arpa sri-mars mars
+128.3.255.105   lbl-acal5.arpa lbl-acal5
+128.18.0.105    sri-jupiter.arpa sri-jupiter jupiter
+128.18.0.106    sri-saturn.arpa sri-saturn
+128.18.0.107    sri-neptune.arpa sri-neptune
+128.26.0.107    sac-station-2.arpa sac-station-2
+128.18.0.108    sri-pluto.arpa sri-pluto
+128.18.0.109    sri-moon.arpa sri-moon moon
+128.18.0.110    sri-gemini.arpa sri-gemini gemini
+128.9.0.111     isi-vtms-01.arpa isi-vtms-01 vtms-01
+128.18.0.111    sri-leo.arpa sri-leo leo
+128.3.254.112   lbl-gen.arpa lbl-gen
+128.9.0.112     isi-spanky.arpa isi-spanky spanky
+128.18.0.112    sri-lanka.arpa sri-lanka
+128.9.0.113     isi-alfalfa.arpa isi-alfalfa alfalfa
+128.9.0.114     isi-darla.arpa isi-darla darla
+128.9.0.115     isi-buckwheat.arpa isi-buckwheat buckwheat
+128.26.0.115    sac-station-3.arpa sac-station-3
+128.9.0.116     isi-stymie.arpa isi-stymie stymie
+128.9.0.117     isi-farina.arpa isi-farina farina
+128.18.0.117    sri-pomponio.arpa sri-pomponio pomponio
+128.45.0.117    mozart.arpa mozart
+128.9.0.118     isi-pete.arpa isi-pete pete pete-the-pup
+128.9.0.119     isi-froggie.arpa isi-froggie froggie
+128.9.0.121     isi-wab2.arpa isi-wab2
+128.9.0.122     isi-randy.arpa isi-randy
+128.9.0.123     isi-rag2.arpa isi-rag2
+128.2.254.128   ius1.cs.cmu.edu cmu-cs-ius.arpa cmu-cs-ius cmu-cs-ius1
+128.9.0.128     isi-annette.arpa isi-annette annette
+128.59.32.128   cu20b.columbia.edu cu20b.arpa cu20b
+128.2.254.129   vlsi.cs.cmu.edu cmu-cs-vlsi.arpa cmu-cs-vlsi
+128.9.0.129     isi-gg.arpa isi-gg gg
+128.54.2.129    amos.ling.ucsd.edu sdamos.arpa sdamos amos
+128.2.254.130   ps1.cs.cmu.edu cmu-cs-ps1.arpa cmu-cs-ps1
+128.2.254.131   a.sei.cmu.edu cmu-sei-a.arpa cmu-sei-a cmu-cs-zog.arpa cmu-cs-zog
+128.9.0.131     isi-taraxacum.arpa isi-taraxacum isi-boom boom
+128.2.254.132   g.cs.cmu.edu cmu-cs-g.arpa cmu-cs-g
+128.2.254.133   cad.cs.cmu.edu cmu-cs-cad.arpa cmu-cs-cad
+128.2.254.134   a.psy.cmu.edu cmu-psy-a.arpa cmu-psy-a
+128.2.254.137   k.cs.cmu.edu cmu-cs-k.arpa cmu-cs-k
+128.2.254.138   fas.ri.cmu.edu cmu-ri-fas.arpa cmu-ri-fas
+128.2.254.139   spice.cs.cmu.edu cmu-cs-spice.arpa cmu-cs-spice
+128.2.254.140   gandalf.cs.cmu.edu cmu-cs-gandalf.arpa cmu-cs-gandalf
+128.9.0.140     isi-nova.arpa isi-nova nova isi-sun13
+128.2.254.141   leg.ri.cmu.edu cmu-ri-leg.arpa cmu-ri-leg
+128.9.0.141     isi-clara.arpa isi-clara clara isi-sun14
+128.62.1.141    mcc-db.arpa mcc-db mcc-db1 db.mcc.com
+192.12.59.1     mcc-db.arpa mcc-db mcc-db1 db.mcc.com
+192.12.23.99    mcc-db.arpa mcc-db mcc-db1 db.mcc.com
+128.9.0.142     isi-lila.arpa isi-lila lila isi-sun15
+128.62.1.142    mcc-db2.arpa mcc-db2 db2.mcc.com
+192.12.59.2     mcc-db2.arpa mcc-db2 db2.mcc.com
+128.2.254.143   isl1.ri.cmu.edu cmu-ri-isl1.arpa cmu-ri-isl1 cmu-ri-isl
+128.9.0.143     isi-indra.arpa isi-indra indra isi-sun16
+128.2.254.144   j.cs.cmu.edu cmu-cs-j.arpa cmu-cs-j
+128.9.0.144     isi-sun17.arpa isi-sun17 sun17
+128.2.254.145   speech1.cs.cmu.edu cmu-cs-speech.arpa cmu-cs-speech cmu-cs-speech1
+128.9.0.145     isi-sun18.arpa isi-sun18 sun18
+128.2.254.146   ps2.cs.cmu.edu cmu-cs-ps2.arpa cmu-cs-ps2
+128.2.254.147   sensor.ri.cmu.edu cmu-ri-sensor.arpa cmu-ri-sensor
+128.9.0.147     isi-derek.arpa isi-derek derek isi-sun20 sun20
+128.2.254.150   unh.cs.cmu.edu cmu-cs-unh.arpa cmu-cs-unh
+128.83.0.150    cypress.utexas.edu cypress.arpa cypress cypress-valley
+128.2.254.151   arm.ri.cmu.edu cmu-ri-arm.arpa cmu-ri-arm
+128.83.0.151    fall.utexas.edu fall.arpa fall fall-church
+128.2.254.152   isl2.ri.cmu.edu cmu-ri-isl2.arpa cmu-ri-isl2
+128.2.254.153   cfs.cs.cmu.edu cmu-cs-cfs.arpa cmu-cs-cfs
+128.2.254.154   isl3.ri.cmu.edu cmu-ri-isl3.arpa cmu-ri-isl3
+128.2.254.155   pt.cs.cmu.edu cmu-cs-pt.arpa cmu-cs-pt
+128.18.0.155    sri-nixon.arpa sri-nixon nixon
+128.2.254.156   h.cs.cmu.edu cmu-cs-h.arpa cmu-cs-h
+128.2.254.157   rover.ri.cmu.edu cmu-ri-rover.arpa cmu-ri-rover
+128.2.254.158   vi.ri.cmu.edu cmu-ri-vi.arpa cmu-ri-vi
+128.2.254.159   ps3.cs.cmu.edu cmu-cs-ps3.arpa cmu-cs-ps3
+128.83.0.174    corona.utexas.edu corona.arpa corona
+128.83.0.175    circus.utexas.edu circus.arpa circus
+128.2.254.176   ius2.cs.cmu.edu cmu-cs-ius2.arpa cmu-cs-ius2
+128.83.0.176    frisbee.utexas.edu frisbee.arpa frisbee
+128.2.254.177   cive.ri.cmu.edu cmu-ri-cive.arpa cmu-ri-cive
+128.83.0.177    saucer.utexas.edu saucer.arpa saucer
+128.2.254.178   ml.ri.cmu.edu cmu-ri-ml.arpa cmu-ri-ml
+128.83.0.178    orbit.utexas.edu orbit.arpa orbit
+128.2.254.179   speech2.cs.cmu.edu cmu-cs-speech2.arpa cmu-cs-speech2
+128.83.0.179    discus.utexas.edu discus.arpa discus
+128.2.254.180   q.cs.cmu.edu cmu-cs-q.arpa cmu-cs-q
+128.2.242.3     q.cs.cmu.edu cmu-cs-q.arpa cmu-cs-q
+128.83.0.180    lonestar.utexas.edu ut-lonestar.arpa ut-lonestar lonestar
+128.2.254.181   sam.cs.cmu.edu cmu-cs-sam.arpa cmu-cs-sam
+128.83.0.181    pearl.utexas.edu ut-pearl.arpa ut-pearl pearl
+128.2.254.182   theory.cs.cmu.edu cmu-cs-theory.arpa cmu-cs-theory
+128.83.0.182    shiner.utexas.edu ut-shiner.arpa ut-shiner shiner
+128.83.0.183    black-dallas.utexas.edu ut-black-dallas.arpa ut-black-dallas dallas
+128.2.254.184   maps.cs.cmu.edu cmu-cs-maps.arpa cmu-cs-maps
+128.83.0.184    alamo.utexas.edu ut-alamo.arpa ut-alamo alamo
+128.83.0.185    select.utexas.edu ut-southern-select.arpa ut-southern-select select
+128.83.0.186    scheppes.utexas.edu ut-scheppes.arpa ut-scheppes scheppes
+128.83.0.187    sancho-panza.utexas.edu ut-sancho-panza.arpa ut-sancho-panza sancho-panza
+128.62.1.192    mcc-pp.arpa mcc-pp mcc-pp1 pp.mcc.com
+192.12.59.201   mcc-pp.arpa mcc-pp mcc-pp1 pp.mcc.com
+128.6.4.194     topaz.rutgers.edu topaz.arpa topaz ru-topaz
+128.6.4.195     opal.arpa opal ru-opal opal.rutgers.edu
+128.3.254.196   lbl-csa1.arpa lbl-csa1 lbla
+128.3.254.197   lbl-csa2.arpa lbl-csa2
+128.83.0.197    spiked-t.utexas.edu spiked-triangle.arpa spiked-triangle
+128.3.254.198   lbl-csa3.arpa lbl-csa3
+128.83.0.198    tomahawk.utexas.edu tomahawk.arpa tomahawk
+128.3.254.199   lbl-csa4.arpa lbl-csa4
+128.83.0.199    three-wise.utexas.edu three-wise-men.arpa three-wise-men
+128.3.254.200   lbl-csa5.arpa lbl-csa5
+128.18.0.200    sri-tscb.arpa sri-tscb tscb
+128.83.0.200    alonzo.utexas.edu ut-alonzo.arpa ut-alonzo alonzo
+128.83.0.201    haskell.utexas.edu ut-haskell.arpa ut-haskell haskell
+128.83.0.202    barkley.utexas.edu ut-barkley.arpa ut-barkley barkley
+128.83.0.203    emil.utexas.edu ut-emil.arpa ut-emil emil
+128.83.0.204    gottlob.utexas.edu ut-gottlob.arpa ut-gottlob gottlob
+128.83.0.205    thoralf.utexas.edu ut-thoralf.arpa ut-thoralf thoralf
+128.83.0.206    isaac.utexas.edu ut-isaac.arpa ut-isaac isaac
+128.83.0.207    jacques.utexas.edu ut-jacques.arpa ut-jacques jacques
+128.83.0.220    carl.utexas.edu ut-carl.arpa ut-carl
+128.83.0.221    emmy.utexas.edu ut-emmy.arpa ut-emmy
+128.83.0.222    max.utexas.edu max.arpa max
+128.83.0.226    wineglass.utexas.edu wineglass-upside-down.arpa wineglass-upside-down
+128.83.0.227    lightning-t-t.utexas.edu lightning-turkey-track.arpa lightning-turkey-track
+128.83.0.228    chamber.utexas.edu chamber-2-corn-cobs.arpa chamber-2-corn-cobs
+128.83.0.229    four-prong.utexas.edu four-prong-antler.arpa four-prong-antler
+128.83.0.230    buzzard.utexas.edu buzzard-on-a-rail.arpa buzzard-on-a-rail
+128.83.0.231    double-door.utexas.edu double-door-key.arpa double-door-key
+128.83.0.232    broken-moon.utexas.edu broken-moon.arpa broken-moon
+128.83.0.233    tee-anchor.utexas.edu walking-tadpole.arpa walking-tadpole
+128.83.0.234    watermelon.utexas.edu watermelon-bar-cushaw.arpa watermelon-bar-cushaw
+128.83.0.235    open-a.utexas.edu open-a-triangle-l-bar.arpa open-a-triangle-l-bar
+128.83.0.236    z-spear.utexas.edu z-spear.arpa z-spear
+128.83.0.237    cork-screw.utexas.edu cork-screw.arpa cork-screw
+128.83.0.238    bar-button.utexas.edu bar-button-hook.arpa bar-button-hook
+128.83.0.239    drawing-knife.utexas.edu drawing-knife.arpa drawing-knife
+128.83.0.240    mustache-e.utexas.edu mustache-e.arpa mustache-e
+128.83.0.241    clover-cross.utexas.edu clover-cross.arpa clover-cross
+128.83.0.242    t-lazy-rafter.utexas.edu t-lazy-rafter.arpa t-lazy-rafter
+128.83.0.243    circle-2-bar.utexas.edu circle-2-bar-circle.arpa circle-2-bar-circle
+128.83.0.244    r-up-and-down.utexas.edu r-up-and-down.arpa r-up-and-down
+128.83.0.245    j-cross-j.utexas.edu j-cross-j-half-circle.arpa j-cross-j-half-circle
+128.83.0.246    running-sac.utexas.edu running-sac.arpa running-sac
+128.83.0.247    quien-sabe.utexas.edu quien-sabe.arpa quien-sabe
+128.83.0.248    j-lazy-j-j.utexas.edu j-lazy-j-j.arpa j-lazy-j-j
+128.83.0.249    japso.utexas.edu japso.arpa japso
+128.83.0.251    snake-in-moon.utexas.edu snake-in-moon.arpa snake-in-moon
+128.83.0.252    br-bar-circle.utexas.edu br-bar-circle-r.arpa br-bar-circle-r
+128.83.0.253    jug-in-shade.utexas.edu jug-in-shade.arpa jug-in-shade
+128.83.0.254    t-horse-shoe.utexas.edu tumbling-horse-shoe.arpa tumbling-horse-shoe
+192.5.1.0       cisl-development-multics.arpa cisl-development-multics
+192.4.8.1       mouton.arpa mouton
+192.5.2.1       rsch.wisc.edu wisc-rsch.arpa wisc-rsch rsch uwvax
+192.5.8.1       uw-beaver.arpa uw-beaver beaver theodore
+192.5.11.1      sun.css.gov css-sun.arpa css-sun wheat
+192.5.19.1      uci.edu uci-icsa.arpa uci-icsa uci uci-750a ucia uci-ics icsa.uci.edu a.uci.edu
+192.5.21.1      brl-bmd.arpa brl-bmd bmd70 bmd.brl.mil
+192.5.26.1      dtnsrdc3.arpa dtnsrdc3
+192.5.27.1      dtnsrdc1.arpa dtnsrdc1
+192.5.40.1      pucc-c.arpa pucc-c puccc
+192.5.49.1      ucsf-cgl.arpa ucsf-cgl ucsfcgl
+192.5.51.1      lasspvax.tn.cornell.edu lasspvax.arpa lasspvax
+192.5.56.1      tl-20b.arpa tl-20b tartan
+192.5.88.1      yale-ee-cesun1.arpa yale-ee-cesun1 cesun1
+128.36.0.5      yale-ee-cesun1.arpa yale-ee-cesun1 cesun1
+192.5.104.1     aquinas.think.com think-aquinas.arpa think-aquinas aquinas
+192.12.5.1      sri-darwin.arpa sri-darwin darwin
+192.12.9.1      cadre.dsl.pittsburgh.edu cadre.arpa cadre cadre-vax pittsburgh.edu
+192.12.13.1     hopkins-eecs-alpha.arpa hopkins-eecs-alpha alpha
+192.12.17.1     lll-tis-a.arpa lll-tis-a tislethe tis-lethe lethe lll-tis lll-tisa lll-tis.arpa
+192.12.31.1     usna.arpa usna usna-cad cad
+128.56.0.1      usna.arpa usna usna-cad cad
+26.7.0.102      usna.arpa usna usna-cad cad
+192.12.44.1     nrtc.arpa nrtc nrtc-gw nrtc.northrop.com
+192.12.62.1     drea-balrog.arpa drea-balrog balrog
+192.5.2.2       db.wisc.edu wisc-db.arpa wisc-db dbvax
+192.5.6.2       gallo.dec.com dec-gallo.arpa dec-gallo gallo
+192.5.8.2       uw-lumpy.arpa uw-lumpy lumpy clarence
+192.5.9.2       paero1.arpa paero1
+192.5.11.2      hugo.css.gov hugo.arpa hugo css-hugo hops
+192.5.18.2      ipto2.arpa ipto2
+192.5.19.2      icsb.uci.edu uci-icsb.arpa uci-icsb uci-750b ucib
+192.5.21.2      brl-vld.arpa brl-vld vld70 vld.brl.mil
+192.5.23.2      brl-vmb.arpa brl-vmb vmb vmb.brl.mil
+192.5.27.2      dtnsrdc2.arpa dtnsrdc2
+192.5.29.2      rsre.arpa rsre
+192.5.35.2      riacs-hydra.arpa riacs-hydra hydra
+192.5.38.2      sri-joyce.arpa sri-joyce joyce srijoyce
+192.5.39.2      dewey.udel.edu udel-dewey.arpa udel-dewey dewey
+192.5.40.2      pucc-d.arpa pucc-d puccd
+192.5.51.2      devvax.tn.cornell.edu devvax.arpa devvax
+192.5.52.2      nlm-vax.arpa nlm-vax
+192.5.53.2      ur-viceroy.arpa ur-viceroy
+192.5.56.2      tl-20a.arpa tl-20a
+192.5.58.2      purdue-asc-tn.arpa purdue-asc-tn
+192.5.65.2      nprdc-pacific.arpa nprdc-pacific
+192.5.69.2      b.cs.uiuc.edu uiucdcsb.arpa uiucdcsb uiuccsb
+192.5.88.2      yale-ee-cesun2.arpa yale-ee-cesun2 cesun2
+192.5.90.2      hu-chimera.arpa hu-chimera chimera
+192.5.104.2     botolph.think.com think-botolph.arpa think-botolph botolph
+192.12.9.2      prodigal.dsl.pittsburgh.edu cadre-sol.arpa cadre-sol prodigal
+192.12.13.2     hopkins-eecs-bravo.arpa hopkins-eecs-bravo hopkins bravo
+128.20.5.1      hopkins-eecs-bravo.arpa hopkins-eecs-bravo hopkins bravo
+192.12.15.2     bnl-bach.arpa bnl-bach
+192.12.19.2     cit-sys.arpa cit-sys
+192.12.31.2     usna-exp.arpa usna-exp exp
+192.12.33.2     sri-csl.arpa sri-csl csl sri-csla csla sri-csla.arpa
+192.12.47.2     umn-ucc-us.arpa umn-ucc-us
+192.12.49.2     orion.arpa orion ames-orion ames-p3
+192.12.50.2     ames-pluto.arpa ames-pluto
+192.12.62.2     drea-gorgon.arpa drea-gorgon gorgon
+192.12.68.2     ornl-mstest.arpa ornl-mstest
+192.12.119.2    icst-osi.arpa icst-osi
+192.12.123.2    ames-ceres.arpa ames-ceres
+192.5.6.3       ronco.dec.com dec-ronco.arpa dec-ronco
+192.5.7.3       cit-750.arpa cit-750 peewee
+192.12.18.2     cit-750.arpa cit-750 peewee
+192.5.8.3       uw-wally.arpa uw-wally wally
+192.5.9.3       aero2.arpa aero2 el-segundo
+192.5.11.3      sdccis.css.gov sdccis.arpa sdccis css-sdccis
+192.5.18.3      ipto3.arpa ipto3
+192.5.19.3      icsc.uci.edu uci-icsc.arpa uci-icsc uci-750c ucic
+192.5.23.3      brl-smoke.arpa brl-smoke smoke smk smoke.brl.mil
+192.5.35.3      ames-hjulian.arpa ames-hjulian hjulian
+192.5.38.3      sri-spam.arpa sri-spam spam
+192.5.40.3      pucc-e.arpa pucc-e pucce
+192.5.48.3      merlin.purdue.edu purdue-merlin.arpa purdue-merlin merlin
+128.10.0.6      merlin.purdue.edu purdue-merlin.arpa purdue-merlin merlin
+192.5.53.3      ur-archduke.arpa ur-archduke
+192.5.56.3      tl-vaxa.arpa tl-vaxa
+192.5.65.3      nprdc-suna.arpa nprdc-suna
+192.5.69.3      c.cs.uiuc.edu uiucdcsc.arpa uiucdcsc uiuccsc
+192.5.88.3      yale-ee-cesun3.arpa yale-ee-cesun3 cesun3
+192.5.90.3      hu-dasy.arpa hu-dasy
+192.5.104.3     christopher.think.com think-christopher.arpa think-christopher christopher
+192.10.41.3     scrc-yukon.arpa scrc-yukon yukon yukon.scrc.symbolics.com
+192.12.7.3      nyu-setl1.arpa nyu-setl1 setl1
+192.12.12.3     gosset.wisc.edu wisc-gosset.arpa wisc-gosset gosset
+192.12.15.3     bnl-pooh.arpa bnl-pooh pooh
+192.12.17.3     lll-tis-c.arpa lll-tis-c lll-tisc tis-anubis tisanubis anubis
+192.12.18.3     cit-4341.arpa cit-4341
+192.12.19.3     cit-hamlet.arpa cit-hamlet hamlet
+192.12.31.3     usna-ngs.arpa usna-ngs ngs
+192.12.33.3     sri-cslb.arpa sri-cslb cslb
+192.12.49.3     trident.arpa trident ames-trident
+192.12.68.3     ornl-ipsc.arpa ornl-ipsc
+192.12.123.3    ames-europa.arpa ames-europa
+192.5.6.4       latour.dec.com dec-latour.arpa dec-latour
+192.5.8.4       uw-june.arpa uw-june june
+192.5.11.4      carto.css.gov carto.arpa carto css-carto cisclon
+192.5.18.4      ipto4.arpa ipto4
+192.5.19.4      icsd.uci.edu uci-icsd.arpa uci-icsd uci-750d ucid
+192.5.21.4      brl-tgr.arpa brl-tgr tgr tgr.brl.mil
+192.5.23.4      brl-spark.arpa brl-spark spark spark.brl.mil
+192.5.25.4      brl-adb.arpa brl-adb adb adb.brl.mil
+192.5.35.4      riacs-pegasus.arpa riacs-pegasus
+192.5.36.4      pvax.cs.cornell.edu cornell-pvax.arpa cornell-pvax
+192.5.38.4      sri-imagen.arpa sri-imagen aitac-imagen
+192.5.39.4      micro.udel.edu udel-micro.arpa udel-micro udel-scrooge micro scrooge
+192.5.40.4      pucc-h.arpa pucc-h pucch
+192.5.65.4      nprdc-sunb.arpa nprdc-sunb
+192.5.88.4      yale-ee-cesun4.arpa yale-ee-cesun4 cesun4
+192.5.104.4     desiderius.think.com think-desiderius.arpa think-desiderius desiderius
+192.12.7.4      nyu-alaya.arpa nyu-alaya alaya
+192.12.10.4     imapvm.tn.cornell.edu imapvm.arpa imapvm
+192.12.15.4     bnl-iris.arpa bnl-iris iris
+192.12.18.4     cit-vlsi.arpa cit-vlsi
+192.12.19.4     cit-ssdp.arpa cit-ssdp
+192.12.33.4     sri-smelly.arpa sri-smelly smelly
+192.1.9.5       bbncc-knet.arpa bbncc-knet bbnknet
+192.5.2.5       pokey.wisc.edu wisc-pokey.arpa wisc-pokey pokey
+192.5.6.5       lafite.dec.com dec-lafite.arpa dec-lafite lafite
+192.5.9.5       aero3.arpa aero3
+192.5.15.5      nyu-cmcl1.arpa nyu-cmcl1 cmcl1
+192.5.18.5      ipto5.arpa ipto5
+192.5.19.5      icse.uci.edu uci-icse.arpa uci-icse uci-750e ucie
+192.5.25.5      brl-vim.arpa brl-vim vim vim.brl.mil
+192.5.35.5      riacs-daedalus.arpa riacs-daedalus daedalus
+192.5.36.5      gvax.cs.cornell.edu cornell-gvax.arpa cornell-gvax gvax
+192.5.40.5      pucc-i.arpa pucc-i pucci
+128.10.0.4      pucc-i.arpa pucc-i pucci
+192.5.48.5      pendragon.purdue.edu purdue-pendragon.arpa purdue-pendragon pendragon
+192.5.51.5      lnsvax.tn.cornell.edu lnsvax.arpa lnsvax
+192.5.65.5      nprdc-sunc.arpa nprdc-sunc
+192.5.88.5      yale-ee-cesun5.arpa yale-ee-cesun5 cesun5
+192.5.104.5     eligius.think.com think-eligius.arpa think-eligius eligius
+192.12.5.5      sri-unicorn.arpa sri-unicorn unicorn
+192.12.7.5      nyu-chakku.arpa nyu-chakku chakku
+192.12.10.5     maevax.tn.cornell.edu maevax.arpa maevax
+192.12.12.5     madsun.wisc.edu wisc-madsun.arpa wisc-madsun madsun
+192.12.18.5     cit-adel.arpa cit-adel cit-tingduck
+192.12.19.5     cit-hex.arpa cit-hex cithex
+192.12.30.5     hexsunfs.arpa hexsunfs
+192.12.33.5     sri-squirrel.arpa sri-squirrel squirrel
+192.12.50.5     ames-halley.arpa ames-halley halley hal
+192.12.123.5    ames-saturn.arpa ames-saturn
+192.5.6.6       cloyd.dec.com dec-cloyd.arpa dec-cloyd cloyd
+192.5.8.6       uw-eddie.arpa uw-eddie eddie
+192.5.11.6      tiu1.css.gov css-tiu1.arpa css-tiu1
+192.5.15.6      nyu-acf1.arpa nyu-acf1 acf1
+192.5.18.6      ipto6.arpa ipto6
+192.5.19.6      cip.uci.edu uci-cip.arpa uci-cip uci-cip1 ucic1
+192.5.21.6      brl-vgr.arpa brl-vgr vgr vgr.brl.mil
+128.20.1.1      brl-vgr.arpa brl-vgr vgr vgr.brl.mil
+192.5.23.6      brl-vgr.arpa brl-vgr vgr vgr.brl.mil
+192.5.24.4      brl-vgr.arpa brl-vgr vgr vgr.brl.mil
+192.5.36.6      gidney.cs.cornell.edu cornell-gidney.arpa cornell-gidney gidney
+192.5.40.6      pucc-j.arpa pucc-j puccj
+192.5.43.6      cu-felix.arpa cu-felix felix fel
+192.5.58.6      rice.edu rice.arpa rice
+192.5.65.6      nprdc-sund.arpa nprdc-sund
+192.5.104.6     faustinas.think.com think-faustinas.arpa think-faustinas faustinas
+192.12.5.6      sri-mendel.arpa sri-mendel mendel
+192.12.8.6      ardc-imd.arpa ardc-imd pica-imd
+192.12.15.6     bnl44.arpa bnl44
+192.12.30.6     hexsun0.arpa hexsun0
+192.12.33.6     sri-runt.arpa sri-runt runt
+192.12.50.6     ames-aero.arpa ames-aero ames-fae ames-ra
+192.5.2.7       crys.wisc.edu wisc-crys.arpa wisc-crys crystal wisconsin uwisc
+192.5.8.7       uw-bluechip.arpa uw-bluechip bluechip uw-larry larry
+192.5.11.7      tiu2.css.gov css-tiu2.arpa css-tiu2
+192.5.18.7      ipto7.arpa ipto7
+192.5.19.7      cip2.uci.edu uci-cip2.arpa uci-cip2 ucic2
+192.5.36.7      rocky.cs.cornell.edu cu-robotics.arpa cu-robotics rocky
+192.5.40.7      pucc-k.arpa pucc-k pucck
+192.5.48.7      blays.purdue.edu purdue-blays.arpa purdue-blays blays
+192.5.58.7      ibm-sj.arpa ibm-sj ibm-sjrlvm1 sjrl
+192.5.66.7      h-sc4.harvard.edu h-sc4.arpa h-sc4
+192.12.5.7      sri-tioga.arpa sri-tioga tioga
+192.12.7.7      nyu-acf8.arpa nyu-acf8 acf8
+192.12.8.7      ardc-1.arpa ardc-1 pica-1
+192.12.10.7     cheme.tn.cornell.edu cheme.arpa cheme
+192.12.30.7     hexsun1.arpa hexsun1
+192.12.33.7     sri-csls.arpa sri-csls csls
+192.12.123.7    ames-io.arpa ames-io
+192.5.2.8       stat.wisc.edu wisc-stat.arpa wisc-stat statistics stat
+192.5.7.8       cit-optics.arpa cit-optics optics
+192.5.8.8       uw-tahiti.arpa uw-tahiti tahiti
+192.5.11.8      janus.css.gov janus.arpa janus css-janus
+192.5.15.8      nyu-acf3.arpa nyu-acf3 acf3
+192.5.18.8      ipto8.arpa ipto8
+192.5.19.8      cip3.uci.edu uci-cip3.arpa uci-cip3 ucic3
+192.5.23.8      brl-sem.arpa brl-sem sem sem.brl.mil
+192.5.46.8      nta-vax.arpa nta-vax nta tundra
+192.5.48.8      guenevere.purdue.edu purdue-guenevere.arpa purdue-guenevere gwen
+128.10.0.10     guenevere.purdue.edu purdue-guenevere.arpa purdue-guenevere gwen
+192.5.66.8      h-sc7.harvard.edu h-sc7.arpa h-sc7
+192.5.104.8     hilarion.think.com think-hilarion.arpa think-hilarion hilarion
+192.12.7.8      nyu-ultra-vlsi1.arpa nyu-ultra-vlsi1 ultra-vlsi1
+192.12.8.8      ardc-2.arpa ardc-2 pica-2
+192.12.30.8     hexsun2.arpa hexsun2
+192.5.2.9       gumby.wisc.edu wisc-gumby.arpa wisc-gumby gumby
+192.5.8.9       uw-fiji.arpa uw-fiji fiji
+192.5.15.9      nyu-acf2.arpa nyu-acf2 nyu-ada acf2
+192.5.18.9      ipto9.arpa ipto9
+192.5.19.9      sun1.uci.edu uci-sun1.arpa uci-sun1 uci-ics-sun1 ucis1
+192.5.38.9      sri-aitacfs.arpa sri-aitacfs
+192.5.104.9     ignatius.think.com think-ignatius.arpa think-ignatius ignatius
+192.12.7.9      nyu-robust.arpa nyu-robust robust
+192.12.8.9      ardc-3.arpa ardc-3 pica-3
+192.12.25.9     s3sun.css.gov css-s3sun.arpa css-s3sun s3sun corn
+192.1.7.10      bbnv1.arpa bbnv1 v1.bbn.com
+192.5.2.10      dream.wisc.edu wisc-dream.arpa wisc-dream dream vlsi
+192.5.8.10      uw-bali.arpa uw-bali bali
+192.5.15.10     nyu-cims1.arpa nyu-cims1 cims1
+192.5.17.10     nrl-b43.arpa nrl-b43
+192.5.18.10     ipto10.arpa ipto10
+192.5.19.10     sun2.uci.edu uci-sun2.arpa uci-sun2 uci-ics-sun2 ucis2
+192.5.24.10     amsaa.arpa amsaa
+128.20.3.1      amsaa.arpa amsaa
+192.5.43.10     cu-betelgeuze.arpa cu-betelgeuze betelgeuze betalgeuze beta
+192.5.58.10     hplabs.arpa hplabs hp-saturn hplabsd
+192.5.66.10     h-sc8.harvard.edu h-sc8.arpa h-sc8
+192.5.104.10    jehosephat.think.com think-jehosephat.arpa think-jehosephat jehosephat
+192.12.7.10     nyu-robeson.arpa nyu-robeson robeson
+192.12.8.10     ardc-retap.arpa ardc-retap retap retap-fa
+192.12.18.10    cit-sol.arpa cit-sol sol
+192.12.25.10    raisun.css.gov css-raisun.arpa css-raisun raisun barley
+192.12.59.10    mccdb-einstein.arpa mccdb-einstein einstein db-einstein.mcc.com
+192.12.81.10    yale-ring-loop1.arpa yale-ring-loop1
+192.12.131.10   sacfs.arpa sacfs
+128.26.32.10    sacfs.arpa sacfs
+192.1.7.11      srn-vax.arpa srn-vax suran-vax suran suran.bbn.com
+192.5.2.11      pipe.wisc.edu wisc-pipe.arpa wisc-pipe pipe uwpipe
+192.5.8.11      uw-sumatra.arpa uw-sumatra sumatra
+192.5.15.11     nyu-lsp1.arpa nyu-lsp1 lsp1
+192.5.18.11     ipto11.arpa ipto11
+192.5.19.11     cip4.uci.edu uci-cip4.arpa uci-cip4 ucic4
+192.12.5.11     sri-huxley.arpa sri-huxley huxley
+192.12.7.11     nyu-robroy.arpa nyu-robroy robroy
+192.12.10.11    tesla.ee.cornell.edu tesla.arpa tesla
+192.12.18.11    cit-saturn.arpa cit-saturn saturn
+192.12.25.11    kobold.css.gov kobold.arpa kobold
+192.12.59.11    mccdb-diophantus.arpa mccdb-diophantus diophantus db-diophantus.mcc.com
+192.12.131.11   sac-1.arpa sac-1
+192.1.5.12      bbnv8.arpa bbnv8 v8.bbn.com
+192.4.8.12      bellcore.arpa bellcore
+192.5.8.12      uw-maui.arpa uw-maui maui
+192.5.18.12     ipto12.arpa ipto12
+192.5.19.12     cip5.uci.edu uci-cip5.arpa uci-cip5 ucic5
+192.5.43.12     cu-rigel.arpa cu-rigel rigel
+192.5.104.12    lioba.think.com think-lioba.arpa think-lioba lioba
+192.12.7.12     nyu-robin.arpa nyu-robin robin
+192.12.18.12    cit-neptune.arpa cit-neptune neptune
+192.12.25.12    mo.css.gov mo.arpa mo
+192.12.59.12    mccdb-fermat.arpa mccdb-fermat fermat db-fermat.mcc.com
+192.12.131.12   sac-2.arpa sac-2
+192.5.8.13      uw-ceylon.arpa uw-ceylon ceylon
+192.5.15.13     nyu-acf5.arpa nyu-acf5 acf5
+192.5.18.13     ipto13.arpa ipto13
+192.5.58.13     omnilax.arpa omnilax omnibus omni-lax
+192.5.66.13     h-ma1.arpa h-ma1
+192.5.104.13    mungo.think.com think-mungo.arpa think-mungo mungo
+192.12.5.13     sri-bishop.arpa sri-bishop bishop
+192.12.18.13    cit-mercury.arpa cit-mercury mercury
+192.12.22.13    eyebeam.utexas.edu ut-eyebeam.arpa ut-eyebeam eyebeam
+192.12.23.93    eyebeam.utexas.edu ut-eyebeam.arpa ut-eyebeam eyebeam
+192.12.59.13    mccdb-goedel.arpa mccdb-goedel goedel db-goedel.mcc.com
+192.12.131.13   sac-3.arpa sac-3
+192.5.8.14      uw-java.arpa uw-java java
+192.5.15.14     nyu-acf6.arpa nyu-acf6 acf6
+192.5.18.14     ipto14.arpa ipto14
+192.5.58.14     omninyc.arpa omninyc omni-nyc
+192.5.64.14     ames-prandtl.arpa ames-prandtl prandtl
+192.5.104.14    nymphodora.think.com think-nymphodora.arpa think-nymphodora nymphodora
+192.12.5.14     sri-goddard.arpa sri-goddard goddard
+192.12.18.14    cit-venus.arpa cit-venus venus
+192.12.22.14    lawnurd.utexas.edu ut-lawnurd.arpa ut-lawnurd lawnurd
+192.12.59.14    mccdb-carnap.arpa mccdb-carnap carnap db-carnap.mcc.com
+192.5.8.15      uw-kauai.arpa uw-kauai kauai
+192.5.15.15     nyu-acf7.arpa nyu-acf7 acf7
+192.5.18.15     ipto15.arpa ipto15
+192.5.58.15     byu-eng.arpa byu-eng byu-adam byuadam
+192.12.5.15     sri-ritter.arpa sri-ritter ritter
+192.12.12.15    brie.wisc.edu wisc-brie.arpa wisc-brie brie
+192.12.18.15    cit-io.arpa cit-io io
+192.12.22.15    vernon.utexas.edu ut-vernon.arpa ut-vernon vernon
+192.12.59.15    mccdb-galois.arpa mccdb-galois galois db-galois.mcc.com
+192.12.65.15    hel-icon.arpa hel-icon
+192.5.2.16      ai.wisc.edu wisc-ai.arpa wisc-ai uwai
+192.5.8.16      uw-timor.arpa uw-timor timor
+192.5.18.16     ipto16.arpa ipto16
+192.5.19.16     icsf.uci.edu uci-icsf.arpa uci-icsf
+192.5.23.16     brl-zap.arpa brl-zap zap.brl.mil
+192.5.69.16     p.cs.uiuc.edu uiucdcsp.arpa uiucdcsp uiuccsp
+192.5.104.16    polycarp.think.com think-polycarp.arpa think-polycarp polycarp
+192.12.5.16     sri-lassen.arpa sri-lassen lassen
+192.12.18.16    cit-callisto.arpa cit-callisto callisto
+192.12.22.16    shortbread.utexas.edu ut-shortbread.arpa ut-shortbread shortbread
+192.1.7.17      netman.arpa netman srn-nm netman.bbn.com
+192.5.8.17      uw-tulagi.arpa uw-tulagi tulagi
+192.5.18.17     ipto17.arpa ipto17
+192.5.19.17     icsg.uci.edu uci-icsg.arpa uci-icsg
+192.5.39.17     udel-che.arpa udel-che udel-chevax udel-donald chevax donald
+192.5.58.17     bellcore-cs-gw.arpa bellcore-cs-gw
+192.5.104.17    quentin.think.com think-quentin.arpa think-quentin quentin
+192.12.18.17    cit-europa.arpa cit-europa europa
+192.12.22.17    snuff.utexas.edu ut-snuff.arpa ut-snuff snuff
+192.5.8.18      uw-borneo.arpa uw-borneo borneo
+192.5.18.18     ipto18.arpa ipto18
+192.5.19.18     icsh.uci.edu uci-icsh.arpa uci-icsh
+192.5.22.18     brl-voc.arpa brl-voc voc voc.brl.mil
+128.20.3.2      brl-voc.arpa brl-voc voc voc.brl.mil
+192.5.104.18    rock.think.com think-rock.arpa think-rock rock
+192.10.41.18    scrc-pegasus.arpa scrc-pegasus pegasus.scrc.symbolics.com
+192.12.12.18    cheddar.wisc.edu wisc-cheddar.arpa wisc-cheddar cheddar
+192.12.18.18    cit-icarus.arpa cit-icarus
+192.5.8.19      uw-koro.arpa uw-koro koro
+192.5.18.19     ipto19.arpa ipto19
+192.5.22.19     brl-cyber.arpa brl-cyber mfa cyber.brl.mil
+192.5.38.19     sri-rio.arpa sri-rio rio sri-aitac9 aitac9
+192.5.58.19     ibm-scratchpad-ii.arpa ibm-scratchpad-ii spad2 algebra
+192.5.104.19    sebastian.think.com think-sebastian.arpa think-sebastian sebastian
+192.12.12.19    cream.wisc.edu wisc-cream.arpa wisc-cream cream
+192.12.18.19    cit-mars.arpa cit-mars
+192.5.8.20      uw-tasman.arpa uw-tasman tasman
+192.5.18.20     ipto20.arpa ipto20
+192.5.58.20     calipso.rice.edu rice-calipso.arpa rice-calipso calipso
+192.5.104.20    thorlac.think.com think-thorlac.arpa think-thorlac thorlac
+192.12.5.20     sri-warbucks.arpa sri-warbucks warbucks
+192.12.12.20    limburger.wisc.edu wisc-limburger.arpa wisc-limburger limburger
+192.12.18.20    cit-pluto.arpa cit-pluto
+192.12.59.20    mccdb-euclid.arpa mccdb-euclid euclid db-euclid.mcc.com
+192.12.65.20    hel-ios.arpa hel-ios
+192.12.139.20   jtels20.arpa jtels20
+192.5.8.21      uw-tanga.arpa uw-tanga tanga
+192.5.55.21     vlsi.ucla.edu ucla-vlsi.arpa ucla-vlsi
+192.5.104.21    ubaldo.think.com think-ubaldo.arpa think-ubaldo ubaldo
+192.10.41.21    scrc-riverside.arpa scrc-riverside riverside.scrc.symbolics.com
+192.12.5.21     sri-evolution.arpa sri-evolution evolution
+192.12.12.21    asiago.wisc.edu wisc-asiago.arpa wisc-asiago asiago
+192.12.18.21    cit-jove.arpa cit-jove jove
+192.12.59.21    mccdb-levi-civita.arpa mccdb-levi-civita levi-civita db-levi-civita.mcc.com
+192.12.139.21   jtels21.arpa jtels21
+192.5.8.22      uw-moala.arpa uw-moala moala
+192.5.12.22     utah-gr.arpa utah-gr
+192.5.104.22    valentine.think.com think-valentine.arpa think-valentine valentine
+192.12.5.22     sri-whitney.arpa sri-whitney
+192.12.12.22    colby.wisc.edu wisc-colby.arpa wisc-colby colby
+192.12.18.22    cit-ganymede.arpa cit-ganymede ganymede
+192.12.59.22    mccdb-whitehead.arpa mccdb-whitehead whitehead db-whitehead.mcc.com
+192.12.139.22   jtels22.arpa jtels22
+192.5.8.23      uw-oahu.arpa uw-oahu oahu
+192.5.12.23     utah-sp.arpa utah-sp
+192.5.104.23    wenceslas.think.com think-wenceslas.arpa think-wenceslas wenceslas
+192.12.5.23     sri-pincushion.arpa sri-pincushion pincushion
+192.12.12.23    gouda.wisc.edu wisc-gouda.arpa wisc-gouda gouda
+192.12.18.23    cit-leda.arpa cit-leda leda
+192.12.59.23    mccdb-copernicus.arpa mccdb-copernicus copernicus db-copernicus.mcc.com
+192.12.139.23   jtels23.arpa jtels23
+192.5.2.24      wiscvm.wisc.edu wiscvm.arpa wiscvm wisc-ibm
+192.5.12.24     utah-ug.arpa utah-ug
+192.5.104.24    xavier.think.com think-xavier.arpa think-xavier xavier
+192.12.5.24     sri-forester.arpa sri-forester forester
+192.12.12.24    velveeta.wisc.edu wisc-velveeta.arpa wisc-velveeta velveeta
+192.12.18.24    cit-ceres.arpa cit-ceres
+192.12.59.24    mccdb-laplace.arpa mccdb-laplace laplace db-laplace.mcc.com
+192.12.139.24   jtels24.arpa jtels24
+192.1.7.25      bbncc5.arpa bbncc5 bbncc5-vax cc5.bbn.com
+8.3.0.18        bbncc5.arpa bbncc5 bbncc5-vax cc5.bbn.com
+192.5.8.25      uw-iris.arpa uw-iris
+192.5.12.25     utah-orion.arpa utah-orion
+192.5.104.25    yon.think.com think-yon.arpa think-yon yon
+192.12.5.25     sri-kiowa.arpa sri-kiowa kiowa
+192.12.12.25    whiz.wisc.edu wisc-whiz.arpa wisc-whiz whiz
+192.12.18.25    cit-terra.arpa cit-terra terra earth
+192.12.59.25    mccdb-weierstrass.arpa mccdb-weierstrass weierstrass db-weierstrass.mcc.com
+192.12.65.25    hel-ix.arpa hel-ix helix
+192.12.139.25   jtels25.arpa jtels25
+192.1.7.26      bbn-labs-n.arpa bbn-labs-n bbn-nlp labs-n.bbn.com
+192.5.8.26      uw-rainier.arpa uw-rainier rainier
+192.5.12.26     utah-cbd.arpa utah-cbd
+192.12.5.26     sri-juniper.arpa sri-juniper juniper
+192.12.12.26    parmesan.wisc.edu wisc-parmesan.arpa wisc-parmesan parmesan
+192.12.18.26    cit-uranus.arpa cit-uranus uranus
+192.12.139.26   jtels26.arpa jtels26
+192.1.7.27      bbncc4.arpa bbncc4 bbncc4-vax cc4.bbn.com
+8.4.0.18        bbncc4.arpa bbncc4 bbncc4-vax cc4.bbn.com
+192.5.8.27      uw-quark.arpa uw-quark quark
+192.5.12.27     utah-muddy.arpa utah-muddy
+192.12.5.27     sri-kearsarge.arpa sri-kearsarge kearsarge
+192.12.12.27    rondele.wisc.edu wisc-rondele.arpa wisc-rondele rondele
+192.12.139.27   jtels27.arpa jtels27
+192.5.8.28      uw-meson.arpa uw-meson meson
+192.12.12.28    nacho.wisc.edu wisc-nacho.arpa wisc-nacho nacho
+192.12.139.28   jtels28.arpa jtels28
+192.1.7.29      bbncc6.arpa bbncc6 bbncc6-vax cc6.bbn.com
+192.5.8.29      uw-gluon.arpa uw-gluon gluon
+192.12.12.29    saga.wisc.edu wisc-saga.arpa wisc-saga saga
+192.12.139.29   jtels29.arpa jtels29
+192.1.7.30      lpr-netman.arpa lpr-netman srn-lpr-nm lpr-netman.bbn.com
+192.5.8.30      uw-muon.arpa uw-muon muon
+192.5.90.30     talcott.harvard.edu talcott.arpa talcott
+192.5.66.2      talcott.harvard.edu talcott.arpa talcott
+192.10.41.30    scrc-pern.arpa scrc-pern pern pern.scrc.symbolics.com
+192.12.5.30     sri-newcomb.arpa sri-newcomb newcomb
+192.12.12.30    romano.wisc.edu wisc-romano.arpa wisc-romano romano
+192.12.59.30    mccdb-euler.arpa mccdb-euler euler db-euler.mcc.com
+192.12.65.30    hel-icopter.arpa hel-icopter helicopter chopper
+192.12.81.30    yale-ring-loop3.arpa yale-ring-loop3
+192.12.139.30   jtels30.arpa jtels30
+192.5.8.31      uw-hawaii.arpa uw-hawaii hawaii
+192.5.90.31     wjh12.harvard.edu wjh12.arpa wjh12
+192.12.5.31     sri-olmstead.arpa sri-olmstead olmstead
+192.12.12.31    gruyere.wisc.edu wisc-gruyere.arpa wisc-gruyere gruyere
+192.12.59.31    mccdb-archimedes.arpa mccdb-archimedes archimedes db-archimedes.mcc.com
+192.12.139.31   jtels31.arpa jtels31
+192.5.8.32      uw-samar.arpa uw-samar samar
+192.5.23.32     brl-sad.arpa brl-sad sad
+192.5.90.32     pitirim.arpa pitirim
+192.12.5.32     sri-quail.arpa sri-quail quail
+192.12.12.32    swiss.wisc.edu wisc-swiss.arpa wisc-swiss swiss
+192.12.59.32    mccdb-specker.arpa mccdb-specker specker db-specker.mcc.com
+192.5.8.33      uw-bikini.arpa uw-bikini bikini
+192.5.23.33     brl-saw.arpa brl-saw saw
+192.12.5.33     sri-sonora.arpa sri-sonora sonora
+192.12.12.33    gjetost.wisc.edu wisc-gjetost.arpa wisc-gjetost gjetost
+192.12.31.33    usna-dfr.arpa usna-dfr dfr
+192.12.59.33    mccdb-church.arpa mccdb-church church db-church.mcc.com
+192.5.8.34      uw-ridge.arpa uw-ridge ridge
+192.5.14.34     randgr.arpa randgr rand-gr
+192.5.23.34     brl-sam.arpa brl-sam
+192.12.5.34     sri-vogelsang.arpa sri-vogelsang vogelsang
+192.12.12.34    amul.wisc.edu wisc-amul.arpa wisc-amul amul
+192.12.59.34    mccdb-moivre.arpa mccdb-moivre moivre db-moivre.mcc.com
+192.5.8.35      uw-lanai.arpa uw-lanai lanai
+192.5.23.35     brl-sax.arpa brl-sax sax
+192.12.5.35     sri-yosemite.arpa sri-yosemite yosemite
+192.12.12.35    curds.wisc.edu wisc-curds.arpa wisc-curds curds
+192.12.59.35    mccdb-ptolemy.arpa mccdb-ptolemy ptolemy db-ptolemy.mcc.com
+192.12.65.35    hel-pless.arpa hel-pless helpless
+192.5.8.36      uw-lisbeth.arpa uw-lisbeth lisbeth
+192.12.12.36    string.wisc.edu wisc-string.arpa wisc-string string
+192.12.59.36    mccdb-kleene.arpa mccdb-kleene kleene db-kleene.mcc.com
+192.1.7.37      bbn-prophet.arpa bbn-prophet bbnp2 prophet.bbn.com
+192.5.8.37      uw-fred.arpa uw-fred fred
+192.12.12.37    edam.wisc.edu wisc-edam.arpa wisc-edam edam
+192.5.8.38      uw-vlsi-test.arpa uw-vlsi-test vlsi-test
+192.12.12.38    kaese.wisc.edu wisc-kaese.arpa wisc-kaese kaese
+192.5.8.39      uw-orcas.arpa uw-orcas orcas
+192.12.12.39    chevre.wisc.edu wisc-chevre.arpa wisc-chevre chevre
+192.5.8.40      uw-blakely.arpa uw-blakely blakely
+192.5.10.40     zaphod.usc.edu usc-zaphod.arpa usc-zaphod
+192.5.90.40     tardis.harvard.edu tardis.arpa tardis
+192.5.66.12     tardis.harvard.edu tardis.arpa tardis
+192.12.12.40    lowfat.wisc.edu wisc-lowfat.arpa wisc-lowfat lowfat
+192.12.59.40    mccdb-eudoxus.arpa mccdb-eudoxus eudoxus db-eudoxus.mcc.com
+192.12.65.40    hel-ium.arpa hel-ium helium
+192.12.81.40    yale-ring-loop4.arpa yale-ring-loop4
+192.5.8.41      uw-lopez.arpa uw-lopez lopez
+192.5.10.41     mouse.usc.edu usc-mouse.arpa usc-mouse mouse
+192.12.12.41    feta.wisc.edu wisc-feta.arpa wisc-feta feta
+192.12.59.41    mccdb-pascal.arpa mccdb-pascal pascal db-pascal.mcc.com
+192.12.62.41    drea-phoenix.arpa drea-phoenix phoenix
+192.5.8.42      uw-waldron.arpa uw-waldron waldron
+192.5.10.42     forty2.usc.edu usc-forty2.arpa usc-forty2 forty2
+192.12.12.42    bleu.wisc.edu wisc-bleu.arpa wisc-bleu bleu
+192.12.59.42    mccdb-tarski.arpa mccdb-tarski tarski db-tarski.mcc.com
+192.12.62.42    drea-wraith.arpa drea-wraith wraith
+192.5.8.43      uw-sanjuan.arpa uw-sanjuan sanjuan
+192.5.10.43     ford.usc.edu usc-ford.arpa usc-ford
+192.12.12.43    goat.wisc.edu wisc-goat.arpa wisc-goat goat
+192.12.59.43    mccdb-zeno.arpa mccdb-zeno zeno db-zeno.mcc.com
+192.12.62.43    drea-griffin.arpa drea-griffin griffin
+192.5.8.44      uw-shaw.arpa uw-shaw shaw
+192.5.10.44     arthur.usc.edu usc-arthur.arpa usc-arthur
+192.12.12.44    monterey.wisc.edu wisc-monterey.arpa wisc-monterey monterey
+192.12.59.44    mccdb-frege.arpa mccdb-frege frege db-frege.mcc.com
+192.12.62.44    drea-pegasus.arpa drea-pegasus pegasus
+192.5.8.45      uw-krakatoa.arpa uw-krakatoa krakatoa
+192.12.12.45    cottage.wisc.edu wisc-cottage.arpa wisc-cottage cottage
+192.12.59.45    mccdb-bolyai.arpa mccdb-bolyai bolyai db-bolyai.mcc.com
+192.12.65.45    hel-ot.arpa hel-ot helot
+192.5.10.46     groghe.usc.edu usc-groghe.arpa usc-groghe groughe
+192.12.12.46    cojack.wisc.edu wisc-cojack.arpa wisc-cojack cojack
+192.12.59.46    mccdb-stifel.arpa mccdb-stifel stifel db-stifel.mcc.com
+192.5.10.47     horon.usc.edu usc-horon.arpa usc-horon horon
+192.12.12.47    ricotta.wisc.edu wisc-ricotta.arpa wisc-ricotta ricotta
+192.5.10.48     jaxom.usc.edu usc-jaxom.arpa usc-jaxom jaxom
+192.5.23.48     brl-sbfy.arpa brl-sbfy
+192.12.12.48    brick.wisc.edu wisc-brick.arpa wisc-brick brick
+192.5.10.49     kylara.usc.edu usc-kylara.arpa usc-kylara kylara
+192.5.23.49     brl-slmi.arpa brl-slmi
+192.5.12.50     utah-vlsi.arpa utah-vlsi
+192.5.18.50     ipto-pcip.arpa ipto-pcip
+192.5.23.50     brl-sym.arpa brl-sym
+192.12.49.50    ames-atlas.arpa ames-atlas
+192.12.59.50    mccdb-eratosthenes.arpa mccdb-eratosthenes eratosthenes db-eratosthenes.mcc.com
+192.12.65.50    hel-cos.arpa hel-cos helcos
+192.12.81.50    yale-ring-loop5.arpa yale-ring-loop5
+192.5.10.51     mirrim.usc.edu usc-mirrim.arpa usc-mirrim mirrim
+192.5.18.51     ipto-fax.arpa ipto-fax
+192.12.59.51    mccdb-ackermann.arpa mccdb-ackermann ackermann db-ackermann.mcc.com
+192.5.18.52     ipto-echo.arpa ipto-echo
+192.12.59.52    mccdb-hilbert.arpa mccdb-hilbert hilbert db-hilbert.mcc.com
+192.5.10.53     omdl.usc.edu usc-omdl.arpa usc-omdl omdl
+192.12.59.53    mccdb-suppes.arpa mccdb-suppes suppes db-suppes.mcc.com
+192.12.59.54    mccdb-zermelo.arpa mccdb-zermelo zermelo db-zermelo.mcc.com
+192.5.2.55      spool.wisc.edu wisc-spool.arpa wisc-spool loops needle
+192.12.12.1     spool.wisc.edu wisc-spool.arpa wisc-spool loops needle
+192.12.59.55    mccdb-tartaglia.arpa mccdb-tartaglia tartaglia db-tartaglia.mcc.com
+192.12.65.55    hel-sinki.arpa hel-sinki helsinki
+192.5.10.56     ramoth.usc.edu usc-ramoth.arpa usc-ramoth ramoth
+192.12.59.56    mccdb-viete.arpa mccdb-viete viete db-viete.mcc.com
+192.12.59.57    mccdb-legendre.arpa mccdb-legendre legendre db-legendre.mcc.com
+192.12.59.58    mccdb-quine.arpa mccdb-quine quine db-quine.mcc.com
+192.12.59.59    mccdb-monge.arpa mccdb-monge monge db-monge.mcc.com
+192.12.5.60     sri-kepler.arpa sri-kepler kepler
+192.12.59.60    mccdb-los.arpa mccdb-los los db-los.mcc.com
+192.12.65.60    hel-fire.arpa hel-fire helfire
+192.5.10.61     brand.usc.edu usc-brand.arpa usc-brand brand
+192.12.5.61     sri-candide.arpa sri-candide candide
+192.5.10.63     corwin.usc.edu usc-corwin.arpa usc-corwin corwin
+192.12.5.63     sri-marvin.arpa sri-marvin marvin
+192.5.10.64     dworkin.usc.edu usc-dworkin.arpa usc-dworkin dworkin
+192.5.10.65     eric.usc.edu usc-eric.arpa usc-eric eric
+192.12.31.65    usna-jaj.arpa usna-jaj jaj
+192.1.2.66      bbnf.arpa bbnf bbn-tenexf f.bbn.com bbnf.bbn.com
+8.4.0.12        bbnf.arpa bbnf bbn-tenexf f.bbn.com bbnf.bbn.com
+192.5.10.66     fiona.usc.edu usc-fiona.arpa usc-fiona fiona
+192.1.2.67      bbng.arpa bbng bbn-tenexg g.bbn.com
+8.2.0.18        bbng.arpa bbng bbn-tenexg g.bbn.com
+192.5.23.68     brl-sat.arpa brl-sat sat sat.brl.mil
+192.12.171.68   ardc-tmas.arpa ardc-tmas pica-tmas
+192.5.10.70     ganelon.usc.edu usc-ganelon.arpa usc-ganelon ganelon
+192.12.8.70     ardc-sleaf.arpa ardc-sleaf pica-sleaf
+192.12.8.71     ardc-sing.arpa ardc-sing pica-sing
+192.5.10.80     milton.usc.edu usc-milton.arpa usc-milton milton
+192.5.38.80     sri-aitac-aifs.arpa sri-aitac-aifs aitac-aifs aifs
+192.12.49.80    ames-maverick.arpa ames-maverick maverick
+192.5.10.81     homer.usc.edu usc-homer.arpa usc-homer homer
+192.12.49.81    ames-redeye.arpa ames-redeye redeye
+192.5.25.82     brl-aos.arpa brl-aos aos aos.brl.mil
+192.5.22.82     brl-aos.arpa brl-aos aos aos.brl.mil
+128.20.1.2      brl-aos.arpa brl-aos aos aos.brl.mil
+192.5.38.82     sri-aitac-ai1.arpa sri-aitac-ai1 sri-sigma sri-reggie sigma ai1
+192.5.17.83     nrl-radar.arpa nrl-radar
+192.5.53.83     ur-seneca.arpa ur-seneca ur-filter-queen rochester-u1
+192.5.37.83     ur-seneca.arpa ur-seneca ur-filter-queen rochester-u1
+192.5.17.84     nrl-acoustics.arpa nrl-acoustics nrl-5130
+192.5.17.85     nrl-csr.arpa nrl-csr
+192.5.17.86     nrl-ssd.arpa nrl-ssd
+192.5.17.87     nrl-a7.arpa nrl-a7
+192.12.59.90    mccdb-banach.arpa mccdb-banach banach db-banach.mcc.com
+192.10.41.92    scrc-vallecito.arpa scrc-vallecito vallecito vallecito.scrc.symbolics.com
+192.5.12.99     utah-vms.arpa utah-vms
+192.12.18.99    cit-ipsc.arpa cit-ipsc ipsc
+192.5.12.100    utah-arches.arpa utah-arches
+192.12.59.100   mccdb-laser1.arpa mccdb-laser1 db-laser1.mcc.com
+192.12.119.100  icst-ssi.arpa icst-ssi nbs-ssi cmr
+192.5.12.101    utah-yampa.arpa utah-yampa
+192.5.69.101    uxc.cso.uiuc.edu uiucuxc.arpa uiucuxc
+192.12.55.101   hazeltine.arpa hazeltine haz
+192.12.59.101   mccdb-laser2.arpa mccdb-laser2 db-laser2.mcc.com
+192.5.18.102    ipto-vax2.arpa ipto-vax2
+192.5.69.102    osiris.cso.uiuc.edu osiris.arpa osiris uiucuxb
+192.5.17.103    nrl-mms.arpa nrl-mms
+192.5.17.104    nrl-speech.arpa nrl-speech
+192.5.17.105    nrl-jade.arpa nrl-jade
+192.5.17.106    nrl-ruby.arpa nrl-ruby
+192.5.53.120    ur-antares.arpa ur-antares
+192.5.53.121    ur-betelgeuse.arpa ur-betelgeuse
+192.5.53.122    ur-capella.arpa ur-capella
+192.5.53.123    ur-deneb.arpa ur-deneb
+192.5.53.124    ur-elnath.arpa ur-elnath
+192.5.53.125    ur-fomalhaut.arpa ur-fomalhaut
+192.5.53.126    ur-genib.arpa ur-genib
+192.5.10.127    usc-cse.usc.edu usc-cse.arpa usc-cse
+192.5.12.127    utah-apollo.arpa utah-apollo utah-ap
+192.12.68.129   ornl-snap.arpa ornl-snap
+192.5.15.131    nyu-csd1.arpa nyu-csd1 csd1
+192.12.7.1      nyu-csd1.arpa nyu-csd1 csd1
+192.5.15.132    nyu-csd2.arpa nyu-csd2 csd2
+192.12.7.2      nyu-csd2.arpa nyu-csd2 csd2
+192.5.15.133    nyu-acf4.arpa nyu-acf4 acf4
+192.5.15.134    nyu-tut.arpa nyu-tut tut
+192.5.15.135    nyu-bay-ridge.arpa nyu-bay-ridge bay-ridge bay
+192.10.41.136   scrc-quabbin.arpa scrc-quabbin quabbin.scrc.symbolics.com
+192.5.15.138    nyu-medved.arpa nyu-medved medved
+192.5.15.139    nyu-beva-ridge.arpa nyu-beva-ridge beva-ridge beva
+192.5.15.143    nyu-celrey.arpa nyu-celrey celrey
+192.5.15.144    nyu-egress.arpa nyu-egress egress
+192.10.41.144   scrc-stony-brook.arpa scrc-stony-brook scrc symbolics stony-brook.scrc.symbolics.com
+192.12.119.150  icst-cmr.arpa icst-cmr
+192.5.53.170    ur-sol.arpa ur-sol
+192.5.104.193   zarathustra.think.com think-zarathustra.arpa think-zarathustra zarathustra
+192.12.59.200   mccpp-laser1.arpa mccpp-laser1 pp-laser1.mcc.com
+192.12.119.200  icst-se.arpa icst-se
+192.5.17.201    nrl-com.arpa nrl-com
+192.5.17.202    nrl-csa.arpa nrl-csa
+192.5.53.210    ur-keuka.arpa ur-keuka ur-kirby
+192.5.37.210    ur-keuka.arpa ur-keuka ur-kirby
+192.5.53.211    ur-canandaigua.arpa ur-canandaigua ur-hoover
+192.5.37.211    ur-canandaigua.arpa ur-canandaigua ur-hoover
+192.5.53.212    ur-skaneateles.arpa ur-skaneateles ur-eureka
+192.5.37.212    ur-skaneateles.arpa ur-skaneateles ur-eureka
+192.5.15.236    nyu-cl1.arpa nyu-cl1 cl1
+192.5.15.237    nyu-cl2.arpa nyu-cl2 cl2
+192.5.10.242    sloan.usc.edu usc-sloan.arpa usc-sloan sloan
+192.5.10.243    krogh.usc.edu usc-krogh.arpa usc-krogh krogh
+192.5.10.244    colson.usc.edu usc-colson.arpa usc-colson colson
+192.5.10.245    dean.usc.edu usc-dean.arpa usc-dean dean
+192.5.10.246    liddy.usc.edu usc-liddy.arpa usc-liddy liddy
+192.5.10.247    nixon.usc.edu usc-nixon.arpa usc-nixon
+192.5.10.254    usc-cseb.usc.edu usc-cseb.arpa usc-cseb
+192.5.15.254    nyu-csd3.arpa nyu-csd3 csd3
+4.0.0.5         rsre-service-gw.arpa rsre-service-gw rsre-sg rsre-gw	# gateway
+4.0.0.38        ntare-gateway.arpa ntare-gateway nta-gateway ndre-gateway tanum	# gateway
+4.0.0.60        ucl-gateway.arpa ucl-gateway goonhilly	# gateway
+192.5.28.7      ucl-gateway.arpa ucl-gateway goonhilly	# gateway
+4.0.0.72        dfvlr-gateway.arpa dfvlr-gateway	# gateway
+8.2.0.12        bbn-fiberb-gw.arpa bbn-fiberb-gw fiberb-gw.bbn.com	# gateway
+192.1.2.7       bbn-fiberb-gw.arpa bbn-fiberb-gw fiberb-gw.bbn.com	# gateway
+8.0.0.13        bbn-fiber-gateway.arpa bbn-fiber-gateway bbn-fiber fiber fiber-gateway.bbn.com	# gateway
+192.1.2.1       bbn-fiber-gateway.arpa bbn-fiber-gateway bbn-fiber fiber fiber-gateway.bbn.com	# gateway
+18.10.0.9       mit-ai-lcs-gw.arpa mit-ai-lcs-gw ai-lcs-gw	# gateway
+128.52.22.9     mit-ai-lcs-gw.arpa mit-ai-lcs-gw ai-lcs-gw	# gateway
+18.29.0.128     scrc-tacoma.arpa scrc-tacoma tacoma tacoma.scrc.symbolics.com	# gateway
+26.4.0.2        dfvlren-gw.arpa dfvlren-gw	# gateway
+128.7.0.0       dfvlren-gw.arpa dfvlren-gw	# gateway
+26.0.0.3        nosc-gw.arpa nosc-gw	# gateway
+26.3.0.3        nprdc-gw.arpa nprdc-gw	# gateway
+26.3.0.4        usarmypr-gw.arpa usarmypr-gw	# gateway
+26.7.0.8        nrl-css-gw.arpa nrl-css-gw	# gateway
+26.4.0.16       ames-nas-gw.arpa ames-nas-gw	# gateway
+26.6.0.16       riacs-gw.arpa riacs-gw	# gateway
+26.7.0.16       decwrl-gw.arpa decwrl-gw	# gateway
+26.1.0.17       huey-gw.arpa huey-gw	# gateway
+26.0.0.19       icst-gw.arpa icst-gw	# gateway
+26.0.0.21       lll-tis-gw.arpa lll-tis-gw	# gateway
+26.0.0.29       brl-gateway2.arpa brl-gateway2	# gateway
+26.3.0.29       brl-gateway.arpa brl-gateway	# gateway
+128.20.0.1      brl-gateway.arpa brl-gateway	# gateway
+26.1.0.40       bbn-minet-a-gw.arpa bbn-minet-a-gw minabbn	# gateway
+26.3.0.41       ornl-ms-gw.arpa ornl-ms-gw	# gateway
+26.2.0.57       maryland-gw.arpa maryland-gw	# gateway
+26.0.0.58       nyu-gw.arpa nyu-gw	# gateway
+26.1.0.58       bnl-gw.arpa bnl-gw	# gateway
+26.5.0.60       tactnet-gw.arpa tactnet-gw	# gateway
+26.8.0.65       aeronet-gw.arpa aeronet-gw	# gateway
+26.7.0.74       wsmr-net-gw.arpa wsmr-net-gw	# gateway
+26.3.0.75       yuma-gw.arpa yuma-gw	# gateway
+26.0.0.81       dtnsrdc-gw.arpa dtnsrdc-gw	# gateway
+26.3.0.81       nsrdcoa-gw.arpa nsrdcoa-gw	# gateway
+26.0.0.88       nlm-gw.arpa nlm-gw	# gateway
+26.2.0.95       s1-b-gw.arpa s1-b-gw	# gateway
+26.8.0.124      jtels-ben-gw.arpa jtels-ben-gw acoa	# gateway
+128.11.8.1      bbn-wb-gw.arpa bbn-wb-gw bbnwb bbn-wb-gwy wb-gw.bbn.com	# gateway
+8.5.0.12        bbn-wb-gw.arpa bbn-wb-gw bbnwb bbn-wb-gwy wb-gw.bbn.com	# gateway
+28.46.0.0       bbn-wb-gw.arpa bbn-wb-gw bbnwb bbn-wb-gwy wb-gw.bbn.com	# gateway
+128.10.0.2      purdue-cs-il-gw.arpa purdue-cs-il-gw	# gateway
+128.36.0.2      yale-ring-gw.arpa yale-ring-gw	# gateway
+128.10.0.4      pucc-net-a-gw.arpa pucc-net-a-gw	# gateway
+128.20.1.5      hel-gate.arpa hel-gate	# gateway
+128.36.0.5      yale-ee-gw.arpa yale-ee-gw	# gateway
+128.9.0.25      isi-wb-gw.arpa isi-wb-gw isi-wb-gwy isiwb	# gateway
+28.45.0.0       isi-wb-gw.arpa isi-wb-gw isi-wb-gwy isiwb	# gateway
+128.9.0.42      isi-uci-gw.arpa isi-uci-gw	# gateway
+128.2.254.192   cmu-cs-tl-gw.arpa cmu-cs-tl-gw	# gateway
+128.2.254.193   cmu-cs-cadre-gw.arpa cmu-cs-cadre-gw	# gateway
+192.1.2.4       bbn-rcce-gw.arpa bbn-rcce-gw rcce-gw.bbn.com	# gateway
+192.1.7.1       bbn-rcce-gw.arpa bbn-rcce-gw rcce-gw.bbn.com	# gateway
+192.1.2.6       bbn-fiber-test-gw.arpa bbn-fiber-test-gw fiber-test-gw.bbn.com	# gateway
+192.5.58.6      rice-gateway.arpa rice-gateway	# gateway
+192.5.21.7      brl-test-gw.arpa brl-test-gw	# gateway
+128.20.7.1      brl-test-gw.arpa brl-test-gw	# gateway
+192.5.29.10     rsre-exp-gw.arpa rsre-exp-gw	# gateway
+192.5.28.5      rsre-exp-gw.arpa rsre-exp-gw	# gateway
+192.5.58.20     rice2-gateway.arpa rice2-gateway	# gateway
+128.42.1.1      rice2-gateway.arpa rice2-gateway	# gateway
+192.5.2.55      wisc-ether-gw.wisc.edu wisc-ether-gw.arpa wisc-ether-gw	# gateway
+192.5.12.127    utah-ap-gw.arpa utah-ap-gw	# gateway

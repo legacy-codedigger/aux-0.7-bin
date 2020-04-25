@@ -1,0 +1,40 @@
+co_9600# B9600 # B9600 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #co_4800
+
+co_4800# B4800 # B4800 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #co_2400
+
+co_2400# B2400 # B2400 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #co_1200
+
+co_1200# B1200 # B1200 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #co_300
+
+co_300# B300 # B300 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #co_9600
+
+tt_9600# B9600 # B9600 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #tt_4800
+
+tt_4800# B4800 # B4800 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #tt_2400
+
+tt_2400# B2400 # B2400 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #tt_1200
+
+tt_1200# B1200 # B1200 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #tt_300
+
+tt_300# B300 # B300 SANE2 TAB3 # ~MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #tt_9600
+
+mo_9600# B9600 # B9600 HUPCL SANE2 TAB3 # MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #mo_4800
+
+mo_4800# B4800 # B4800 HUPCL SANE2 TAB3 # MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #mo_2400
+
+mo_2400# B2400 # B2400 HUPCL SANE2 TAB3 # MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #mo_1200
+
+mo_1200# B1200 # B1200 HUPCL SANE2 TAB3 # MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #mo_300
+
+mo_300# B300 # B300 HUPCL SANE2 TAB3 # MODEM ~DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #mo_9600
+
+at_9600# B9600 # B9600 SANE2 TAB3 # ~MODEM DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #at_4800
+
+at_4800# B4800 # B4800 SANE2 TAB3 # ~MODEM DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #at_2400
+
+at_2400# B2400 # B2400 SANE2 TAB3 # ~MODEM DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #at_1200
+
+at_1200# B1200 # B1200 SANE2 TAB3 # ~MODEM DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #at_300
+
+at_300# B300 # B300 SANE2 TAB3 # ~MODEM DTR ~FLOW #\r\n\nSystem V.2\r\n\nlogin: #at_9600
+

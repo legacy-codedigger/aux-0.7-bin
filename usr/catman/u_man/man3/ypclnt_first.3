@@ -1,0 +1,264 @@
+
+
+
+     yyyyppppccccllllnnnntttt((((3333NNNN))))						    yyyyppppccccllllnnnntttt((((3333NNNN))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  yp_bind, yp_get_default_domain, yp_unbind, yp_match,
+	  yp_first, ypclnt_first, yp_next, ypclnt_next - yellow	pages
+	  client interface
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  #include <rpcsvc/ypclnt.h>
+
+	  yyyypppp____bbbbiiiinnnndddd((((_i_n_d_o_m_a_i_n))));;;;
+	  cccchhhhaaaarrrr *_i_n_d_o_m_a_i_n;;;;
+
+	  yyyypppp____ggggeeeetttt____ddddeeeeffffaaaauuuulllltttt____ddddoooommmmaaaaiiiinnnn((((_o_u_t_d_o_m_a_i_n))));;;;
+	  cccchhhhaaaarrrr **_o_u_t_d_o_m_a_i_n;;;;
+
+	  vvvvooooiiiidddd yyyypppp____uuuunnnnbbbbiiiinnnndddd((((_i_n_d_o_m_a_i_n))))
+	  cccchhhhaaaarrrr *_i_n_d_o_m_a_i_n;;;;
+
+	  yyyypppp____mmmmaaaattttcccchhhh((((_i_n_d_o_m_a_i_n, _i_n_m_a_p, _i_n_k_e_y, _i_n_k_e_y_l_e_n, _o_u_t_v_a_l, _o_u_t_v_a_l_l_e_n))))
+	  cccchhhhaaaarrrr *_i_n_d_o_m_a_i_n;;;;
+	  cccchhhhaaaarrrr *_i_n_m_a_p;;;;
+	  cccchhhhaaaarrrr *_i_n_k_e_y;;;;
+	  iiiinnnntttt _i_n_k_e_y_l_e_n;;;;
+	  cccchhhhaaaarrrr **_o_u_t_v_a_l;;;;
+	  iiiinnnntttt *_o_u_t_v_a_l_l_e_n;;;;
+
+	  yyyypppp____ffffiiiirrrrsssstttt((((_i_n_d_o_m_a_i_n, _i_n_m_a_p, _i_n_k_e_y, _i_n_k_e_y_l_e_n, _o_u_t_v_a_l, _o_u_t_v_a_l_l_e_n))))
+
+	  yyyyppppccccllllnnnntttt____ffffiiiirrrrsssstttt((((_i_n_d_o_m_a_i_n, _i_n_m_a_p,	_i_n_k_e_y, _i_n_k_e_y_l_e_n, _o_u_t_v_a_l, _o_u_t_v_a_l_l_e_n))))
+	  cccchhhhaaaarrrr *_i_n_d_o_m_a_i_n;;;;
+	  cccchhhhaaaarrrr *_i_n_m_a_p;;;;
+	  cccchhhhaaaarrrr *_o_u_t_k_e_y;;;;
+	  iiiinnnntttt _o_u_t_k_e_y_l_e_n;;;;
+	  cccchhhhaaaarrrr **_o_u_t_v_a_l;;;;
+	  iiiinnnntttt *_o_u_t_v_a_l_l_e_n;;;;
+
+	  yyyypppp____nnnneeeexxxxtttt((((_i_n_d_o_m_a_i_n, _i_n_m_a_p, _i_n_k_e_y, _i_n_k_e_y_l_e_n, _o_u_t_k_e_y, _o_u_t_k_e_y_l_e_n, _o_u_t_v_a_l, _o_u_t_v_a_l_l_e_n))));;;;
+
+	  yyyyppppccccllllnnnntttt____nnnneeeexxxxtttt((((_i_n_d_o_m_a_i_n,	_i_n_m_a_p, _i_n_k_e_y, _i_n_k_e_y_l_e_n,	_o_u_t_k_e_y,	_o_u_t_k_e_y_l_e_n, _o_u_t_v_a_l, _o_u_t_v_a_l_l_e_n))));;;;
+	  cccchhhhaaaarrrr *_i_n_d_o_m_a_i_n;;;;
+	  cccchhhhaaaarrrr *_i_n_m_a_p;;;;
+	  cccchhhhaaaarrrr *_i_n_k_e_y;;;;
+	  iiiinnnntttt _i_n_k_e_y_l_e_n;;;;
+	  cccchhhhaaaarrrr **_o_u_t_k_e_y;;;;
+	  iiiinnnntttt *_o_u_t_k_e_y_l_e_n;;;;
+	  cccchhhhaaaarrrr **_o_u_t_v_a_l;;;;
+	  iiiinnnntttt *_o_u_t_v_a_l_l_e_n;;;;
+	  cccchhhhaaaarrrr ****yyyyppppeeeerrrrrrrr____ssssttttrrrriiiinnnngggg((((_c_o_d_e))))
+	  iiiinnnntttt _c_o_d_e;;;;
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  This package of functions is an interface to the yellow
+	  pages	(YP) network service.  The package can be loaded from
+
+
+
+     Page 1					   (last mod. 1/16/87)
+
+
+
+
+
+
+     yyyyppppccccllllnnnntttt((((3333NNNN))))						    yyyyppppccccllllnnnntttt((((3333NNNN))))
+
+
+
+	  the standard library,	////lllliiiibbbb////lllliiiibbbbcccc....aaaa.  In the synopsis above,
+	  all input parameters names begin with	iiiinnnn, while output
+	  parameters begin with	oooouuuutttt.  Output parameters	of type	cccchhhhaaaarrrr
+	  ******** should be addresses of uninitialized character pointers.
+	  Memory is allocated by the YP	client package using
+	  mmmmaaaalllllllloooocccc(3), and may be	freed if the user code has no
+	  continuing need for it.
+
+	  For all _o_u_t_k_e_ys and _o_u_t_v_a_ls, two extra bytes of memory are
+	  allocated at the end,	containing newline and NULL, but these
+	  two bytes are	not reflected in _o_u_t_k_e_y_l_e_n.
+
+	  Information is stored	in the yellow pages system as sets of
+	  key-value pairs, called _e_n_t_r_i_e_s, with	no imposed or assumed
+	  structure to the key or the value; both are counted binary
+	  objects.  A named set	of key-value pairs is called a YP _m_a_p,
+	  and is implemented as	a pair of ddddbbbbmmmm(3X) data base files.
+	  _m_a_ps are objects within named	_d_o_m_a_i_n_s, which are implemented
+	  by UNIXrO directories.	Although map names must	be unique
+	  within a domain, the same map	name may appear	in multiple
+	  domains.  As a map is	a named	set of key-value pairs,	so is
+	  a domain a named set of maps.	 Every map must	be referenced
+	  as an	object in some domain.	Both map names and domain
+	  names	are non-null printable ASCII strings.  Null-length
+	  domain and map names will be rejected	by the YP client
+	  interface, as	will null pointers.
+
+	  Network hosts, both servers and clients, have	a _d_e_f_a_u_l_t
+	  domain, which	is set at system startup by ddddoooommmmaaaaiiiinnnnnnnnaaaammmmeeee(1).
+	  The default domain may be fetched by calling
+	  yyyypppp____ggggeeeetttt____ddddeeeeffffaaaauuuulllltttt____ddddoooommmmaaaaiiiinnnn(((()))).  In general,	client processes
+	  should make no assumption concerning the domain parameter
+	  that is to be	passed in the calls to yyyypppp____mmmmaaaattttcccchhhh(((()))), yyyypppp____ffffiiiirrrrsssstttt(((()))),
+	  yyyyppppccccllllnnnntttt____ffffiiiirrrrsssstttt(((()))), yyyypppp____nnnneeeexxxxtttt(((()))), and yyyyppppccccllllnnnntttt____nnnneeeexxxxtttt(((()))),	but should,
+	  rather, use the domain name returned by
+	  yyyypppp____ggggeeeetttt____ddddeeeeffffaaaauuuulllltttt____ddddoooommmmaaaaiiiinnnn(((()))).
+
+	  All the functions in this package which are of type _i_n_t,
+	  return 0 if they succeed, and	a failure code ((((YYYYPPPPEEEERRRRRRRR_____x_x_x_x))))
+	  otherwise.  Failure codes are	described below	in the
+	  DIAGNOSTICS section.
+
+	  To use the YP	services, the client process must be ``bound''
+	  to a YP server that serves the appropriate domain.  A	client
+	  is bound to a	YP server when the client knows	the internet
+	  address of the server, the port on which the server is
+	  listening for	requests, and it has set up an RPC path	to
+	  that YP server.  Binding doesn't need	to be done explicitly
+	  by user code;	it will	be done	automatically when yyyypppp____mmmmaaaattttcccchhhh(((()))),
+	  yyyypppp____ffffiiiirrrrsssstttt(((()))), yyyyppppccccllllnnnntttt____ffffiiiirrrrsssstttt(((()))), yyyypppp____nnnneeeexxxxtttt(((()))), or yyyyppppccccllllnnnntttt____nnnneeeexxxxtttt(((()))) is
+	  called for a domain that is not bound. The binding may,
+	  however, be explicitly made by the client by a call to
+
+
+
+     Page 2					   (last mod. 1/16/87)
+
+
+
+
+
+
+     yyyyppppccccllllnnnntttt((((3333NNNN))))						    yyyyppppccccllllnnnntttt((((3333NNNN))))
+
+
+
+	  yyyypppp____bbbbiiiinnnndddd(((()))).  This is useful for processes that	make use of a
+	  backup strategy (e.g., a local file) in case YP services are
+	  not available.
+
+	  Binding allocates (uses up) one of the client	process'
+	  socket descriptors; each bound domain	costs one socket
+	  descriptor. If, however, yyyypppp____mmmmaaaattttcccchhhh(((()))), yyyypppp____ffffiiiirrrrsssstttt(((()))),
+	  yyyyppppccccllllnnnntttt____ffffiiiirrrrsssstttt(((()))), yyyypppp____nnnneeeexxxxtttt(((()))), or	yyyyppppccccllllnnnntttt____nnnneeeexxxxtttt(((()))) is called	naming
+	  a domain which is already bound, no further binding needs to
+	  be done.  No new resource will be allocated on a per-call
+	  basis.
+
+	  If an	RPC failure results upon use of	a bound	domain,	that
+	  domain will be unbound automatically by the YP client	code,
+	  and an indication of the RPC error will be returned.	At
+	  that point, the client process will retry forever until the
+	  operation succeeds, provided that yyyyppppbbbbiiiinnnndddd is running, and
+	  either a) the	client process can't bind to a server for the
+	  proper domain, or b) RPC requests to the server fail.
+
+	  yyyypppp____uuuunnnnbbbbiiiinnnndddd(((()))) is available at the client interface for
+	  processes that need to explicitly manage their socket
+	  descriptor resoures, and which need to access	maps in
+	  multiple domains.  The call to yyyypppp____uuuunnnnbbbbiiiinnnndddd(((()))) will free the
+	  socket allocated by the binding for the passed domain, and
+	  will tear down the RPC path to the YP	server process.
+
+	  yyyypppp____mmmmaaaattttcccchhhh returns the value associated	with the passed	key.
+	  The key passed as the	match value must be exact; no pattern
+	  matching is available.
+
+	  yyyypppp____ffffiiiirrrrsssstttt returns the first key-value pair from the named map
+	  in the named domain.	The concept of first (and, for that
+	  matter, of next) is particular to the	structure of the YP
+	  map data base	processing: there is no	relation in retrieval
+	  order	to either the lexical order within any original	(non-
+	  YP) data base, or to any obvious numerical sorting order on
+	  the keys, the	values,	or the key-value pairs.	 The only
+	  ordering guarantee made is that if the yyyypppp____ffffiiiirrrrsssstttt(((()))) function
+	  is called on a particular map, and then the yyyypppp____nnnneeeexxxxtttt(((())))
+	  function is repeatedly called	on the same map	until the call
+	  fails	with a reason of YYYYPPPPEEEERRRRRRRR____NNNNOOOOMMMMOOOORRRREEEE, every entry in the data
+	  base will be seen exactly once.  Further, if the same
+	  sequence of operations is performed on the same map, the
+	  entries will be seen in the same order.  yyyypppp____ffffiiiirrrrsssstttt(((()))) will not
+	  return any entry from	a map whose key	begins with the
+	  sequence ``YP_''; such symbols are assumed to	be private
+	  symbols used by the YP system.  In general, those entries
+	  are of no interest to	the client process.  If	the client
+	  process needs	to see them, yyyyppppccccllllnnnntttt____ffffiiiirrrrsssstttt(((()))) will do no
+	  filtering of YP private symbols.
+
+
+
+
+     Page 3					   (last mod. 1/16/87)
+
+
+
+
+
+
+     yyyyppppccccllllnnnntttt((((3333NNNN))))						    yyyyppppccccllllnnnntttt((((3333NNNN))))
+
+
+
+	  yyyypppp____nnnneeeexxxxtttt(((()))) returns the	next key-value pair in a named map.
+	  The input key	should be one returned from a call to
+	  yyyypppp____ffffiiiirrrrsssstttt(((()))) (to get the second	pair) or one returned from the
+	  _nth call to yyyypppp____nnnneeeexxxxtttt(((())))	(to get	the _nth	+ second pair).	 Any
+	  valid	key may	be used, and is	syntactically correct with
+	  respect to the retrieval, but	any key	save the two mentioned
+	  previously will yield	a result which is semantically
+	  meaningless.	Again, if the client process needs to see all
+	  of the entries in the	map, including the YP private symbols,
+	  yyyyppppccccllllnnnntttt____nnnneeeexxxxtttt(((())))	does no	filtering to eliminate those entries.
+
+	  yyyyppppeeeerrrrrrrr____ssssttttrrrriiiinnnngggg(((()))) returns a pointer to an error message string
+	  that is null-terminated but contains no period or newline.
+
+     FFFFIIIILLLLEEEESSSS
+	  ////uuuussssrrrr////iiiinnnncccclllluuuuddddeeee////rrrrppppccccssssvvvvcccc////yyyyppppccccllllnnnntttt....hhhh
+	  ////uuuussssrrrr////iiiinnnncccclllluuuuddddeeee////rrrrppppccccssssvvvvcccc////yyyypppp____pppprrrrooootttt....hhhh
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  yppasswd(1), dbm(3x),	makedbm(1M), ypfiles(1M), ypinit(1M),
+	  yppush(1M), ypserv(1M).
+
+     DDDDIIIIAAAAGGGGNNNNOOOOSSSSTTTTIIIICCCCSSSS
+	  All functions	except yyyypppp____uuuunnnnbbbbiiiinnnndddd(((()))) return 0 if the requested
+	  operation is successful, or one of the following errors if
+	  the operation	fails.
+
+	  #define YPERR_BADARGS	1  /* args to function are bad */
+	  #define YPERR_RPC	2  /* RPC failure - domain has been unbound */
+	  #define YPERR_DOMAIN	3  /* can't bind to server on this domain */
+	  #define YPERR_MAP	4  /* no such map in server's domain */
+	  #define YPERR_KEY	5  /* no such key in map */
+	  #define YPERR_YPERR	6  /* internal yp server or client error */
+	  #define YPERR_RESRC	7  /* resource allocation failure */
+	  #define YPERR_NOMORE	8  /* no more records in map database */
+	  #define YPERR_PMAP	9  /* can't communicate	with portmapper	*/
+	  #define YPERR_YPBIND	10 /* can't communicate	with ypbind */
+	  #define YPERR_YPSERV	11 /* can't communicate	with ypserv */
+	  #define YPERR_NODOM	12 /* local domain name	not set	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 4					   (last mod. 1/16/87)
+
+
+

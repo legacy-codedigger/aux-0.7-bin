@@ -1,0 +1,132 @@
+
+
+
+     ggggeeeettttddddiiiirrrreeeennnnttttrrrriiiieeeessss((((2222))))				      ggggeeeettttddddiiiirrrreeeennnnttttrrrriiiieeeessss((((2222))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  getdirentries	- gets directory entries in a filesystem
+	  independent format
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  #include <sys/types.h>
+	  #include <sys/dir.h>
+
+	  cc = getdirentries(_d,	_b_u_f, _n_b_y_t_e_s, _b_a_s_e_p)
+	  int cc, _d;
+	  char *_b_u_f;
+	  int _n_b_y_t_e_s;
+	  long *_b_a_s_e_p
+
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ggggeeeettttddddiiiirrrreeeennnnttttrrrriiiieeeessss	attempts to put	directory entries from the
+	  directory referenced by the descriptor _d into	the buffer
+	  pointed to by	_b_u_f, in	a filesystem independent format.  Up
+	  to _n_b_y_t_e_s of data will be transferred.  _n_b_y_t_e_s must be
+	  greater than the block size associated with the file,	see
+	  ssssttttaaaatttt((((2222)))).  Sizes less than this may cause errors on certain
+	  filesystems.
+
+	  The data in the buffer is a series of	ddddiiiirrrreeeecccctttt structures.
+	  The ddddiiiirrrreeeecccctttt structure is defined as
+
+	       struct direct {
+		      unsigned long	d_fileno;
+		      unsigned short	d_reclen;
+		      unsigned short	d_namlen;
+		      char		d_name[MAXNAMELEN + 1];
+	       };
+
+
+	  The dddd____ffffiiiilllleeeennnnoooo entry is	a number which is unique for each
+	  distinct file	in the filesystem.  Files that are linked by
+	  hard links (see lllliiiinnnnkkkk((((2222))))) have	the same dddd____ffffiiiilllleeeennnnoooo.  The
+	  dddd____rrrreeeecccclllleeeennnn entry is the	length,	in bytes, of the directory
+	  record.  The dddd____nnnnaaaammmmeeee and dddd____nnnnaaaammmmeeeelllleeeennnn entries specify the	actual
+	  file name and	its length.
+
+	  Upon return, the actual number of bytes transferred is
+	  returned.  The current position pointer associated with _d is
+	  set to point to the next block of entries.  The pointer is
+	  not necessarily incremented by the number of bytes returned
+	  by ggggeeeettttddddiiiirrrreeeennnnttttrrrriiiieeeessss.  If	the value returned is zero, the	end of
+	  the directory	has been reached.  The current position
+	  pointer may be set and retrieved by llllsssseeeeeeeekkkk((((2222)))).	 The _b_a_s_e_p
+	  entry	is a pointer to	a location into	which the current
+	  position of the buffer just transferred is placed.  It is
+	  not safe to set the current position pointer to any value
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+
+
+
+
+     ggggeeeettttddddiiiirrrreeeennnnttttrrrriiiieeeessss((((2222))))				      ggggeeeettttddddiiiirrrreeeennnnttttrrrriiiieeeessss((((2222))))
+
+
+
+	  other	than a value previously	returned by llllsssseeeeeeeekkkk((((2222)))) or	a
+	  value	previously returned in _b_a_s_e_p or	zero.
+
+     RRRREEEETTTTUUUURRRRNNNN VVVVAAAALLLLUUUUEEEE
+	  If successful, the number of bytes actually transferred is
+	  returned.  Otherwise,	a -1 is	returned and the global
+	  variable eeeerrrrrrrrnnnnoooo is set	to indicate the	error.
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  ooooppppeeeennnn(2), llllsssseeeeeeeekkkk(2).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 2					   (last mod. 1/14/87)
+
+
+

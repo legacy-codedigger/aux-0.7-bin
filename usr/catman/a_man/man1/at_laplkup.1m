@@ -1,0 +1,66 @@
+
+
+
+     aaaatttt____llllaaaapppp____llllkkkkuuuupppp((((1111MMMM))))				       aaaatttt____llllaaaapppp____llllkkkkuuuupppp((((1111MMMM))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  at_lap_lkup -	display	the lap	types registered on the	local
+	  node
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  aaaatttt____llllaaaapppp____llllkkkkuuuupppp [----ffff _n_e_t_w_o_r_k]
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  aaaatttt____llllaaaapppp____llllkkkkuuuupppp interrogates the AppleTalk LAP (Link Access
+	  Protocol) module to find what	LAP types have been registered
+	  by applications.  This is for	internal use only.
+
+	  Since	it is possible to have multiple	AppleTalk networks
+	  attached to a	system,	this utility needs to know the path in
+	  the file system to the desired network.  Using
+	       ----ffff _n_e_t_w_o_r_k
+	  will select the _n_e_t_w_o_r_k network.  For	example:
+	       ----ffff ////ddddeeeevvvv////aaaapppppppplllleeeettttaaaallllkkkk2222
+	  will choose the second AppleTalk network that	is attached to
+	  the system.  If ----ffff ---- is used,	then standard input will be
+	  used.
+
+	  If the ----ffff flag option	is not used, there is a	sequence of
+	  other	locations which	are looked at for the network path.
+	  First, if there is an	environmental variable ATNETWORK, its
+	  value	will be	used as	the path to the	desired	network.
+
+	  If no	ATNETWORK variable exists, then	the environmental
+	  variable ATDIR is used as a path to a	directory that should
+	  contain a file called	....aaaapppppppplllleeeettttaaaallllkkkkrrrrcccc.  The first line in that
+	  file is the path to the desired network.
+
+	  If no	ATDIR variable is found, the user's home directory is
+	  searched for the the ....aaaapppppppplllleeeettttaaaallllkkkkrrrrcccc file.
+
+	  If all of the	above attempts fail, then the default path is
+	  used,	////ddddeeeevvvv////aaaapppppppplllleeeettttaaaallllkkkk.
+
+
+     EEEEXXXXAAAAMMMMPPPPLLLLEEEE
+	  aaaatttt____llllaaaapppp____llllkkkkuuuupppp
+
+	  will print out the following:
+	  on ////ddddeeeevvvv////aaaapppppppplllleeeettttaaaallllkkkk
+	  type	 connectx   name
+	  1		     DDP
+	  2		     DDP extended
+
+
+
+
+
+
+
+
+     Page 1					  (last	mod. 12/12/86)
+
+
+

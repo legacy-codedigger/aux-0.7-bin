@@ -1,0 +1,66 @@
+
+
+
+     ddddiiiisssskkkkffffoooorrrrmmmmaaaatttt((((1111MMMM))))					ddddiiiisssskkkkffffoooorrrrmmmmaaaatttt((((1111MMMM))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  diskformat - format a	disk
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  ddddiiiisssskkkkffffoooorrrrmmmmaaaatttt [----ccccyyyyllll _f[----_t]] [----ddddeeeennnnssss #] [----hhhheeeeaaaadddd _f[----_t]] [----iiiillll #]
+	  [----ssssiiiizzzzeeee #] [----sssseeeecccc _f[----_t]] _d_e_v_i_c_e
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ddddiiiisssskkkkffffoooorrrrmmmmaaaatttt initializes a hard	or floppy disk and formats it
+	  according to your specifications.
+
+	  You can use the following flag options (you must specify
+	  _d_e_v_i_c_e):
+
+	  _d_e_v_i_c_e       device to format	(must be raw device)
+
+	  ----ccccyyyyllll _f[----_t]   format cylinders	_f to _t (default	_f).  A
+		       specification such as ####----	means "until the end".
+
+	  ----ddddeeeennnnssss	#      density
+
+	  ----hhhheeeeaaaadddd	_f[----_t]  format heads _f to _t (default _f).	 A
+		       specification such as ####----	means "until the end".
+
+	  ----iiiillll#	       interleave factor for the disk.
+
+	  ----sssseeeecccc _f[----_t]   format sectors _f	to _t (default _f).  A
+		       specification such as ####----	means "until the end".
+
+	  ----ssssiiiizzzzeeee	#      sector size in bytes
+
+     EEEEXXXXAAAAMMMMPPPPLLLLEEEE
+	  diskformat /dev/rfdc0	-dens 1	-size 128 -il 3
+
+	  Format the floppy disk on drive 0, single density, 128 bytes
+	  per sector with an interleave	factor of 3.  This format is
+	  the only truly portable floppy format.
+
+     FFFFIIIILLLLEEEESSSS
+	  ////bbbbiiiinnnn////ddddiiiisssskkkkffffoooorrrrmmmmaaaatttt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 1					   (last mod. 1/15/87)
+
+
+

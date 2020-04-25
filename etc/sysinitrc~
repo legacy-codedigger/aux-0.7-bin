@@ -1,0 +1,52 @@
+# 	@(#)sysinitrc.sh 
+# System Initialization Commands - executed once only, before INIT
+# starts up its' initial level (i.e., this precedes the `initdefault' level).
+/etc/line_sane
+echo "/etc/sysinitrc: system initialization"
+PATH=/etc:/bin:/usr/bin; export PATH
+HOME=/; export HOME
+TZ=PST8PDT; export TZ
+LOGDIR=/; export LOGDIR
+# **** Set date from the real time clock
+/etc/mactime
+echo "Today is: \c" ; date
+
+trap "" 2
+echo "Do you want to check the root file system? (y or n) [default:  n] \c"
+read reply
+case "$reply" in
+	 y|root)
+		fs="/dev/dsk/c0d0s0"
+		break
+		;;
+
+	n* )
+		break
+		;;
+
+	* )
+		break
+		;;
+esac
+if test x"$fs" != x; then
+	trap "echo Interrupt" 2
+	/etc/fsck -DB -q $fs
+	trap "" 2
+fi
+umask 022
+> /etc/mtab
+mount -f /
+#	The following should be modified for the local environment
+host=sycamore
+broadcast=89.0
+/bin/hostname $host
+/etc/chgnod $host
+#	The following are required only when you are networked to
+#	at least one other system
+#
+/bin/domainname apple 
+/etc/ifconfig  lo0 inet loop -trailers 1>/dev/syscon 2>&1
+/etc/ifconfig  ae0 inet $host -trailers 1>/dev/syscon 2>&1
+/etc/ifconfig ae0 broadcast $broadcast 1>/dev/syscon 2>&1
+/etc/ifconfig  ae0 1>/dev/syscon 2>&1
+/usr/etc/seekaddr.4.3

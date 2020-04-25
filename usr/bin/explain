@@ -1,0 +1,13 @@
+
+#! /bin/sh
+#
+#     @(#)explain.sh	    UniPlus+ V.2.1.2 (Berkeley 4.2)	86/12/10 
+#
+D=/usr/lib/explain.d
+while	echo 'phrase?'
+	read x
+do
+	case $x in
+	[a-z]*)	sed -n /"$x"'.*	/s/\(.*\)	\(.*\)/use "\2" for "\1"/p' $D
+	esac
+done

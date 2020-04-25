@@ -1,0 +1,132 @@
+
+
+
+     ggggeeeettttsssseeeerrrrvvvveeeennnntttt((((3333NNNN))))					ggggeeeettttsssseeeerrrrvvvveeeennnntttt((((3333NNNN))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  getservent, getservbyport, getservbyname, setservent,
+	  endservent - get service entry
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  #include <netdb.h>
+
+	  struct servent *getservent()
+
+	  struct servent *getservbyname(_n_a_m_e, _p_r_o_t_o)
+	  char *_n_a_m_e, *_p_r_o_t_o;
+
+	  struct servent *getservbyport(_p_o_r_t, _p_r_o_t_o)
+	  int _p_o_r_t; char *_p_r_o_t_o;
+
+	  setservent(_s_t_a_y_o_p_e_n)
+	  int _s_t_a_y_o_p_e_n
+
+	  endservent()
+
+	  cccccccc ............ ----llllnnnneeeetttt
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ggggeeeettttsssseeeerrrrvvvveeeennnntttt, ggggeeeettttsssseeeerrrrvvvvbbbbyyyynnnnaaaammmmeeee, and ggggeeeettttsssseeeerrrrvvvvbbbbyyyyppppoooorrrrtttt each return a
+	  pointer to an	object with the	following structure containing
+	  the broken-out fields	of a line in the network services data
+	  base,	////eeeettttcccc////sssseeeerrrrvvvviiiicccceeeessss.
+
+	  struct servent {
+	     char *s_name;     /* official name	of service */
+	     char **s_aliases; /* alias	list */
+	     long s_port;      /* port service resides at */
+	     char *s_proto;    /* protocol to use */
+	  };
+
+	  The members of this structure	are:
+
+	  ssss____nnnnaaaammmmeeee     The official name of the service.
+
+	  ssss____aaaalllliiiiaaaasssseeeessss  A zero terminated list of alternate names for the
+		     service.
+
+	  ssss____ppppoooorrrrtttt     The port number at	 which	the  service  resides.
+		     Port numbers are returned in network byte order.
+
+	  ssss____pppprrrroooottttoooo    The name of the protocol to use  when  contacting
+		     the service.
+
+	  ggggeeeettttsssseeeerrrrvvvveeeennnntttt reads the next line of the	file, opening the file
+	  if necessary.
+
+	  sssseeeettttsssseeeerrrrvvvveeeennnntttt opens and rewinds the file.  If the _s_t_a_y_o_p_e_n flag
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+
+
+
+
+     ggggeeeettttsssseeeerrrrvvvveeeennnntttt((((3333NNNN))))					ggggeeeettttsssseeeerrrrvvvveeeennnntttt((((3333NNNN))))
+
+
+
+	  is non-zero, the net data base will not be closed after each
+	  call to ggggeeeettttsssseeeerrrrvvvveeeennnntttt (either directly, or  indirectly  through
+	  one of the other ``getserv'' calls).
+
+	  eeeennnnddddsssseeeerrrrvvvveeeennnntttt closes the	file.
+
+	  ggggeeeettttsssseeeerrrrvvvvbbbbyyyynnnnaaaammmmeeee	and ggggeeeettttsssseeeerrrrvvvvbbbbyyyyppppoooorrrrtttt sequentially search from the
+	  beginning of the file	until a	matching protocol name or port
+	  number is found, or until EOF	is encountered.	 If a protocol
+	  name	is  also supplied (non-NULL), searches must also match
+	  the protocol.
+
+     FFFFIIIILLLLEEEESSSS
+	  ////eeeettttcccc////sssseeeerrrrvvvviiiicccceeeessss
+
+     LLLLIIIINNNNKKKKIIIINNNNGGGG
+	  This library is accessed by specifying  ----llllnnnneeeetttt	 as  the  last
+	  argument to the compile line,	e.g.:
+
+	    cccccccc ----oooo pppprrrroooogggg pppprrrroooogggg....cccc ----llllnnnneeeetttt
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  getprotoent(3N), services(4N).
+
+     DDDDIIIIAAAAGGGGNNNNOOOOSSSSTTTTIIIICCCCSSSS
+	  Null pointer (0) returned on EOF or error.
+
+     BBBBUUUUGGGGSSSS
+	  All information is contained in a static area	so it must  be
+	  copied  if it	is to be saved.	 Expecting port	numbers	to fit
+	  in a 32 bit quantity is probably naive.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 2					   (last mod. 1/14/87)
+
+
+

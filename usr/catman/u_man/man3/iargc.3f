@@ -1,0 +1,66 @@
+
+
+
+     iiiiaaaarrrrggggcccc((((3333FFFF))))						     iiiiaaaarrrrggggcccc((((3333FFFF))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  iargc
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  iiiinnnntttteeeeggggeeeerrrr iiii
+	  iiii ==== iiiiaaaarrrrggggcccc(((())))
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  The iargc function returns the number	of command line
+	  arguments passed to the program.  Thus, if a program were
+	  invoked via
+
+	       foo _a_r_g_1	_a_r_g_2 _a_r_g_3
+
+	  iargc() would	return ``3''.
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  getarg(3F).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+

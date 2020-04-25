@@ -1,0 +1,66 @@
+
+
+
+     ppppeeeerrrrrrrroooorrrr((((3333CCCC))))						    ppppeeeerrrrrrrroooorrrr((((3333CCCC))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  perror, errno, sys_errlist, sys_nerr - system	error messages
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  vvvvooooiiiidddd ppppeeeerrrrrrrroooorrrr ((((_s))))
+	  cccchhhhaaaarrrr ****_s;;;;
+
+	  eeeexxxxtttteeeerrrrnnnn iiiinnnntttt eeeerrrrrrrrnnnnoooo;;;;
+
+	  eeeexxxxtttteeeerrrrnnnn cccchhhhaaaarrrr ****ssssyyyyssss____eeeerrrrrrrrlllliiiisssstttt[[[[ ]]]];;;;
+
+	  eeeexxxxtttteeeerrrrnnnn iiiinnnntttt ssssyyyyssss____nnnneeeerrrrrrrr;;;;
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ppppeeeerrrrrrrroooorrrr produces a message on the standard error output,
+	  describing the last error encountered	during a call to a
+	  system or library function.  The argument string _s is
+	  printed first, then a	colon and a blank, then	the message
+	  and a	_n_e_w_l_i_n_e.  To be	of most	use, the argument string
+	  should include the name of the program that incurred the
+	  error.  The error number is taken from the external variable
+	  eeeerrrrrrrrnnnnoooo, which is set when errors occur	but not	cleared	when
+	  non-erroneous	calls are made.
+
+	  To simplify variant formatting of messages, the array	of
+	  message strings ssssyyyyssss____eeeerrrrrrrrlllliiiisssstttt is provided; eeeerrrrrrrrnnnnoooo can be	used
+	  as an	index in this table to get the message string without
+	  the _n_e_w_l_i_n_e.	ssssyyyyssss____nnnneeeerrrrrrrr is the	largest	message	number
+	  provided for in the table; it	should be checked because new
+	  error	codes may be added to the system before	they are added
+	  to the table.
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  intro(2).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+

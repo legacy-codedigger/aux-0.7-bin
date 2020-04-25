@@ -1,0 +1,66 @@
+
+
+
+     ggggeeeettttppppeeeeeeeerrrrnnnnaaaammmmeeee((((2222NNNN))))				       ggggeeeettttppppeeeeeeeerrrrnnnnaaaammmmeeee((((2222NNNN))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  getpeername -	get name of connected peer
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  getpeername(_s, _n_a_m_e, _n_a_m_e_l_e_n)
+	  int _s;
+	  struct sockaddr *_n_a_m_e;
+	  int *_n_a_m_e_l_e_n;
+
+	  cccccccc ............ ----llllnnnneeeetttt
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ggggeeeettttppppeeeeeeeerrrrnnnnaaaammmmeeee returns the name of the peer connected to	socket
+	  _s.  The _n_a_m_e_l_e_n parameter should be initialized to indicate
+	  the amount of	space pointed to by _n_a_m_e.  On return it
+	  contains the actual size of the name returned	(in bytes).
+
+     DDDDIIIIAAAAGGGGNNNNOOOOSSSSTTTTIIIICCCCSSSS
+	  A 0 is returned if the call succeeds,	-1 if it fails.
+
+     EEEERRRRRRRROOOORRRRSSSS
+	  The call succeeds unless:
+
+	  [[[[EEEEBBBBAAAADDDDFFFF]]]]	 The argument _s	is not a valid descriptor.
+
+	  [[[[EEEENNNNOOOOTTTTSSSSOOOOCCCCKKKK]]]]	 The argument _s	is a file, not a socket.
+
+	  [[[[EEEENNNNOOOOTTTTCCCCOOOONNNNNNNN]]]]	 The socket is not connected.
+
+	  [[[[EEEENNNNOOOOBBBBUUUUFFFFSSSS]]]]	 Insufficient resources	were available in the
+			 system	to perform the operation.
+
+	  [[[[EEEEFFFFAAAAUUUULLLLTTTT]]]]	 The _n_a_m_e parameter points to memory not in a
+			 valid part of the process address space.
+
+     LLLLIIIINNNNKKKKIIIINNNNGGGG
+	  This library is accessed by specifying ----llllnnnneeeetttt as the last
+	  argument to the compile line,	e.g.:
+
+	    cccccccc ----oooo pppprrrroooogggg pppprrrroooogggg....cccc ----llllnnnneeeetttt
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  bbbbiiiinnnndddd(2N), ssssoooocccckkkkeeeetttt(2N),	ggggeeeettttssssoooocccckkkknnnnaaaammmmeeee(2N).
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+

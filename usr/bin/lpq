@@ -1,0 +1,61 @@
+if (test ! $?)
+then
+   echo "Line printer information unavailable"
+   exit 1
+else
+   export PRINTER
+   USERS=""
+   PR_CLASS=""
+   LPINFO=""
+   WAIT=0
+   SCAN=NOSCAN
+	
+   for ARG
+   do
+      case $ARG in
+
+	-P*) if (test $ARG = "-P") then
+                PR_CLASS="$PR_CLASS $PRINTER"  # default printer
+             else
+                PR_CLASS="$PR_CLASS $ARG"      #$arg has target printer 
+	     fi
+             ;;	
+  
+        +*)  if (test $ARG != "+") then
+               WAIT=`echo $ARG |sed -e 's/+//g'`  #strip '+' and return num
+             fi
+             SCAN=SCAN
+             ;;
+
+        -l) echo "lpq: Bad option -l"
+            exit 1
+            ;;
+
+
+        *) num=`echo $ARG | sed -e 's/[0-9]//g'`  #job numbers can't be processed
+           if (test -z $num) then
+               echo "Unable to check job# $ARG"
+               exit 1
+           else
+               USERS="$USERS $ARG"
+           fi
+           ;;
+     esac
+
+  done
+
+  if (test $?) then       
+      if (test $SCAN != "NOSCAN") then
+        lpstat -o"$USERS $PR_CLASS" > lpinfo.$$
+        while (test -s lpinfo.$$ ) do
+	    clear
+            cat lpinfo.$$
+            sleep $WAIT 
+            lpstat -o"$USERS $PR_CLASS" > lpinfo.$$
+        done
+        rm lpinfo.$$
+     else
+         lpstat -o"$USERS $PR_CLASS" 
+     fi
+  fi
+fi

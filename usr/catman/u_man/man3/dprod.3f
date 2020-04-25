@@ -1,0 +1,66 @@
+
+
+
+     ddddpppprrrroooodddd((((3333FFFF))))						     ddddpppprrrroooodddd((((3333FFFF))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  dprod	- double precision product intrinsic function
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  rrrreeeeaaaallll _a_1,_a_2
+	  ddddoooouuuubbbblllleeee pppprrrreeeecccciiiissssiiiioooonnnn aaaa3333
+	  aaaa3333 ==== ddddpppprrrroooodddd ((((_a_1,,,,_a_2))))
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ddddpppprrrroooodddd	returns	the double precision product of	its real
+	  arguments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+

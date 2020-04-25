@@ -1,0 +1,25 @@
+:
+CB=c
+MAJOR=4
+UNITSHIFT=16
+UNIT=0
+mkdir /dev/rdisk
+mkdir /dev/disk
+while [ $UNIT -lt 7 ]
+  do
+    SLICE=0
+    while [ $SLICE -le 7 ]
+      do
+        NAME=c0d"$UNIT"s"$SLICE"
+        MINOR=`expr $UNIT \* $UNITSHIFT + $SLICE`
+        /bin/rm -f /dev/rdsk/$NAME /dev/dsk/$NAME
+        echo mknod /dev/rdsk/$NAME c $MAJOR $MINOR
+             mknod /dev/rdsk/$NAME c $MAJOR $MINOR
+        echo mknod /dev/dsk/$NAME  b $MAJOR $MINOR
+             mknod /dev/dsk/$NAME  b $MAJOR $MINOR
+        SLICE=`expr $SLICE + 1`
+      done
+    UNIT=`expr $UNIT + 1`
+  done
+sync
+exit 0

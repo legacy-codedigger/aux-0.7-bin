@@ -1,0 +1,1300 @@
+From harvard!ci-dandelion!josh Wed Mar 12 06:15:56 1986
+Received: by gcc-milo.ARPA (4.12/4.7)
+	id AA05196; Wed, 12 Mar 86 06:15:30 est
+Received: from talcott.ARPA (talcott) by harvard.HARVARD.EDU; Wed, 12 Mar 86 00:40:19 EST
+Received: by talcott.ARPA; Wed, 12 Mar 86 00:42:01 est
+Received: by orchid.CI (4.12/1.5d)
+	id AA02917; Tue, 11 Mar 86 19:49:51 est
+Date: Tue, 11 Mar 86 19:49:51 est
+From: harvard!ci-dandelion!josh (Josh Littlefield)
+Message-Id: <8603120049.AA02917@orchid.CI>
+To: talcott!harvard!gcc-milo!brad
+Subject: less -- part 1
+Status: R
+
+Here is the shar for the first half of less:
+
+--------------------------- C U T   H E R E --------------------------------
+
+# This is a shell archive.  Remove anything before this line,
+# then unpack it by saving it in a file and typing "sh file".
+#
+# Wrapped by ci-dandelion!josh on Tue Mar 11 19:17:41 EST 1986
+# Contents:  less/ less/Makefile less/ch.c less/funcs.h less/help.c
+#	less/input.c less/less.h less/less.l
+ 
+echo mkdir - less
+mkdir less
+chmod u=rwx,g=rwx,o=rx less
+ 
+echo x - less/Makefile
+sed 's/^@//' > "less/Makefile" <<'@//E*O*F less/Makefile//'
+# Makefile for "less"
+#
+# Invoked as:
+#	make all
+#   or	make install
+# Plain "make" is equivalent to "make all".
+#
+# If you add or delete functions, remake funcs.h by doing:
+#	make newfuncs
+# This depends on the coding convention of function headers looking like:
+#	" \t public <function-type> \n <function-name> ( ... ) "
+#
+# Also provided:
+#	make lint	# Runs "lint" on all the sources.
+#	make clean	# Removes "less" and the .o files.
+#	make clobber	# Pretty much the same as make "clean".
+
+
+##########################################################################
+# System-specific parameters
+##########################################################################
+
+# Define XENIX if running under XENIX 3.0
+XENIX = 0
+
+# VOID is 1 if your C compiler supports the "void" type,
+# 0 if it does not.
+VOID = 1
+
+# off_t is the type which lseek() returns.
+# It is also the type of lseek()'s second argument.
+off_t = long
+
+# TERMIO is 1 if your system has /usr/include/termio.h.
+# This is normally the case for System 5.
+# If TERMIO is 0 your system must have /usr/include/sgtty.h.
+# This is normally the case for BSD.
+TERMIO = 0
+
+# SIGSETMASK is 1 if your system has the sigsetmask() call.
+# This is normally the case only for BSD 4.2,
+# not for BSD 4.1 or System 5.
+SIGSETMASK = 1
+
+
+##########################################################################
+# Optional and semi-optional features
+##########################################################################
+
+# REGCMP is 1 if your system has the regcmp() function.
+# This is normally the case for System 5.
+# RECOMP is 1 if your system has the re_comp() function.
+# This is normally the case for BSD.
+# If neither is 1, pattern matching is supported, but without metacharacters.
+REGCMP = 0
+RECOMP = 1
+
+# SHELL_ESCAPE is 1 if you wish to allow shell escapes.
+# (This is possible only if your system supplies the system() function.)
+SHELL_ESCAPE = 0
+
+# EDITOR is 1 if you wish to allow editor invocation (the "v" command).
+# (This is possible only if your system supplies the system() function.)
+# EDIT_PGM is the name of the (default) editor to be invoked.
+EDITOR = 0
+EDIT_PGM = /usr/ucb/vi
+
+# ONLY_RETURN is 1 if you want RETURN to be the only input which
+# will continue past an error message.
+# Otherwise, any key will continue past an error message.
+ONLY_RETURN = 0
+
+
+##########################################################################
+# Compilation environment.
+##########################################################################
+
+# LIBS is the list of libraries needed.
+LIBS = -ltermcap
+
+# INSTALL_LESS is a list of the public versions of less.
+# INSTALL_MAN is a list of the public versions of the manual page.
+INSTALL_LESS =	/usr/local/less
+INSTALL_MAN =	/usr/man/manl/less.l
+
+# OPTIM is passed to the compiler and the loader.
+# It is normally "-O" but may be, for example, "-g".
+OPTIM = -O
+
+
+##########################################################################
+# Files
+##########################################################################
+
+SRC1 =	main.c option.c prim.c
+SRC2 =	ch.c position.c input.c output.c screen.c \
+	prompt.c line.c signal.c help.c ttyin.c command.c version.c
+SRC =	$(SRC1) $(SRC2)
+OBJ =	main.o option.o prim.o ch.o position.o input.o output.o screen.o \
+	prompt.o line.o signal.o help.o ttyin.o command.o version.o
+
+
+##########################################################################
+# Rules
+##########################################################################
+
+DEFS =	"-DTERMIO=$(TERMIO)" \
+	"-DSIGSETMASK=$(SIGSETMASK)" \
+	"-Doff_t=$(off_t)" "-DVOID=$(VOID)" \
+	"-DREGCMP=$(REGCMP)" "-DRECOMP=$(RECOMP)" \
+	"-DSHELL_ESCAPE=$(SHELL_ESCAPE)" \
+	"-DEDITOR=$(EDITOR)" "-DEDIT_PGM=\"$(EDIT_PGM)\"" \
+	"-DONLY_RETURN=$(ONLY_RETURN)" \
+	"-DXENIX=$(XENIX)"
+
+CFLAGS = $(OPTIM) $(DEFS)
+
+
+all: less
+
+less: $(OBJ)
+	cc $(OPTIM) -o less $(OBJ) $(LIBS)
+
+install: install_man install_less
+
+install_man: less.l
+	for f in $(INSTALL_MAN); do  rm -f $$f; cp less.l $$f;  done
+	touch install_man
+	
+install_less: less
+	for f in $(INSTALL_LESS); do  rm -f $$f; cp less $$f;  done
+	touch install_less
+
+$(OBJ): less.h funcs.h
+
+lint:
+	lint -hp $(DEFS) $(SRC)
+
+newfuncs:
+	mv funcs.h funcs.h.OLD
+	awk -f mkfuncs.awk $(SRC) >funcs.h
+
+clean:
+	rm -f $(OBJ) less
+
+clobber:
+	rm -f *.o less install_less install_man
+
+shar:
+	shar -v INSTALLATION less.l makefile.* *.h *.awk $(SRC1) > less.shar.a
+	shar -v $(SRC2) > less.shar.b
+@//E*O*F less/Makefile//
+chmod u=rw,g=rw,o=r less/Makefile
+ 
+echo x - less/ch.c
+sed 's/^@//' > "less/ch.c" <<'@//E*O*F less/ch.c//'
+/*
+ * Low level character input from the input file.
+ * We use these special purpose routines which optimize moving
+ * both forward and backward from the current read pointer.
+ */
+
+#include "less.h"
+
+public int file = -1;	/* File descriptor of the input file */
+
+/*
+ * Pool of buffers holding the most recently used blocks of the input file.
+ */
+#define BUFSIZ	1024
+static struct buf {
+	struct buf *next, *prev;
+	long block;
+	char data[BUFSIZ];
+};
+static struct buf *bufs = NULL;
+public int nbufs;
+
+/*
+ * The buffer pool is kept as a doubly-linked circular list,
+ * in order from most- to least-recently used.
+ * The circular list is anchored by buf_anchor.
+ */
+static struct {
+	struct buf *next, *prev;
+} buf_anchor;
+#define	END_OF_CHAIN	((struct buf *)&buf_anchor)
+#define	buf_head	buf_anchor.next
+#define	buf_tail	buf_anchor.prev
+
+/*
+ * If we fail to allocate enough memory for buffers, we try to limp
+ * along with a minimum number of buffers.  
+ */
+#define	DEF_NBUFS	2	/* Minimum number of buffers */
+
+extern int clean_data;
+extern int ispipe;
+
+/*
+ * Current position in file.
+ * Stored as a block number and an offset into the block.
+ */
+static long ch_block;
+static int ch_offset;
+
+/* 
+ * Length of file, needed if input is a pipe.
+ */
+static POSITION ch_fsize;
+
+/*
+ * Largest block number read if input is standard input (a pipe).
+ */
+static long last_piped_block;
+
+/*
+ * Get the character pointed to by the read pointer.
+ * ch_get() is a macro which is more efficient to call
+ * than fch_get (the function), in the usual case 
+ * that the block desired is at the head of the chain.
+ */
+#define	ch_get()   ((buf_head->block == ch_block) ? \
+			buf_head->data[ch_offset] : fch_get())
+	static int
+fch_get()
+{
+	register struct buf *bp;
+	register int n;
+	register int end;
+	POSITION pos;
+
+	/*
+	 * Look for a buffer holding the desired block.
+	 */
+	for (bp = buf_head;  bp != END_OF_CHAIN;  bp = bp->next)
+		if (bp->block == ch_block)
+			goto found;
+	/*
+	 * Block is not in a buffer.  
+	 * Take the least recently used buffer 
+	 * and read the desired block into it.
+	 */
+	bp = buf_tail;
+	bp->block = ch_block;
+	pos = ch_block * BUFSIZ;
+	if (ispipe)
+	{
+		/*
+		 * The block requested should be one more than
+		 * the last block read.
+		 */
+		if (ch_block != ++last_piped_block)
+		{
+			/* This "should not happen". */
+			char message[80];
+			sprintf(message, "Pipe error: last %ld, want %ld\n",
+				last_piped_block-1, ch_block);
+			error(message);
+			quit();
+		}
+	} else
+		lseek(file, pos, 0);
+
+	/*
+	 * Read the block.  This may take several reads if the input
+	 * is coming from standard input, due to the nature of pipes.
+	 */
+	end = 0;
+	while ((n = read(file, &bp->data[end], BUFSIZ-end)) > 0)
+		if ((end += n) >= BUFSIZ)
+			break;
+
+	if (n < 0)
+	{
+		error("read error");
+		quit();
+	}
+
+	/*
+	 * Set an EOF marker in the buffered data itself.
+	 * Then ensure the data is "clean": there are no 
+	 * extra EOF chars in the data and that the "meta"
+	 * bit (the 0200 bit) is reset in each char.
+	 */
+	if (end < BUFSIZ)
+	{
+		ch_fsize = pos + end;
+		bp->data[end] = EOF;
+	}
+
+	if (!clean_data)
+		while (--end >= 0)
+		{
+			bp->data[end] &= 0177;
+			if (bp->data[end] == EOF)
+				bp->data[end] = '@';
+		}
+
+    found:
+	/* if (buf_head != bp) {this is guaranteed by the ch_get macro} */
+	{
+		/*
+		 * Move the buffer to the head of the buffer chain.
+		 * This orders the buffer chain, most- to least-recently used.
+		 */
+		bp->next->prev = bp->prev;
+		bp->prev->next = bp->next;
+
+		bp->next = buf_head;
+		bp->prev = END_OF_CHAIN;
+		buf_head->prev = bp;
+		buf_head = bp;
+	}
+	return (bp->data[ch_offset]);
+}
+
+/*
+ * Determine if a specific block is currently in one of the buffers.
+ */
+	static int
+buffered(block)
+	long block;
+{
+	register struct buf *bp;
+
+	for (bp = buf_head;  bp != END_OF_CHAIN;  bp = bp->next)
+		if (bp->block == block)
+			return (1);
+	return (0);
+}
+
+/*
+ * Seek to a specified position in the file.
+ * Return 0 if successful, non-zero if can't seek there.
+ */
+	public int
+ch_seek(pos)
+	register POSITION pos;
+{
+	long new_block;
+
+	new_block = pos / BUFSIZ;
+	if (!ispipe || new_block == last_piped_block + 1 || buffered(new_block))
+	{
+		/*
+		 * Set read pointer.
+		 */
+		ch_block = new_block;
+		ch_offset = pos % BUFSIZ;
+		return (0);
+	}
+	return (1);
+}
+
+/*
+ * Seek to the end of the file.
+ */
+	public int
+ch_end_seek()
+{
+	if (ispipe)
+	{
+		/*
+		 * Do it the slow way: read till end of data.
+		 */
+		while (ch_forw_get() != EOF)
+			;
+	} else
+	{
+		(void) ch_seek((POSITION)(lseek(file, (off_t)0, 2)));
+	}
+	return (0);
+}
+
+/*
+ * Return the length of the file, if known.
+ */
+	public POSITION
+ch_length()
+{
+	if (ispipe)
+		return (ch_fsize);
+	return ((POSITION)(lseek(file, (off_t)0, 2)));
+}
+
+/*
+ * Return the current position in the file.
+ */
+	public POSITION
+ch_tell()
+{
+	return (ch_block * BUFSIZ + ch_offset);
+}
+
+/*
+ * Get the current char and post-increment the read pointer.
+ */
+	public int
+ch_forw_get()
+{
+	register int c;
+
+	c = ch_get();
+	if (c != EOF && ++ch_offset >= BUFSIZ)
+	{
+		ch_offset = 0;
+		ch_block ++;
+	}
+	return (c);
+}
+
+/*
+ * Pre-decrement the read pointer and get the new current char.
+ */
+	public int
+ch_back_get()
+{
+	register int c;
+
+	if (--ch_offset < 0)
+	{
+		if (ch_block <= 0 || (ispipe && !buffered(ch_block-1)))
+		{
+			ch_offset = 0;
+			return (EOF);
+		}
+		ch_offset = BUFSIZ - 1;
+		ch_block--;
+	}
+	c = ch_get();
+	return (c);
+}
+
+/*
+ * Initialize the buffer pool to all empty.
+ * Caller suggests that we use want_nbufs buffers.
+ */
+	public void
+ch_init(want_nbufs)
+	int want_nbufs;
+{
+	register struct buf *bp;
+	char *calloc();
+
+	if (nbufs < want_nbufs)
+	{
+		/*
+		 * We don't have enough buffers.  
+		 * Free what we have (if any) and allocate some new ones.
+		 */
+		if (bufs != NULL)
+			free((char *)bufs);
+		bufs = (struct buf *) calloc(want_nbufs, sizeof(struct buf));
+		nbufs = want_nbufs;
+		if (bufs == NULL)
+		{
+			/*
+			 * Couldn't get that many.
+			 * Try for a small default number of buffers.
+			 */
+			char message[80];
+			sprintf(message,
+			  "Cannot allocate %d buffers.  Using %d buffers.", 
+			  nbufs, DEF_NBUFS);
+			error(message);
+			bufs = (struct buf *) calloc(DEF_NBUFS, sizeof(struct buf));
+			nbufs = DEF_NBUFS;
+			if (bufs == NULL)
+			{
+				/*
+				 * Couldn't even get the smaller number of bufs.
+				 * Something is wrong here, don't continue.
+				 */
+				sprintf(message, 
+				"Cannot even allocate %d buffers!  Quitting.\n",
+				  DEF_NBUFS);
+				error(message);
+				quit();
+				/*NOTREACHED*/
+			}
+		}
+	}
+
+	/*
+	 * Initialize the buffers to empty.
+	 * Set up the circular list.
+	 */
+	for (bp = &bufs[0];  bp < &bufs[nbufs];  bp++)
+	{
+		bp->next = bp + 1;
+		bp->prev = bp - 1;
+		bp->block = (long)(-1);
+	}
+	bufs[0].prev = bufs[nbufs-1].next = END_OF_CHAIN;
+	buf_head = &bufs[0];
+	buf_tail = &bufs[nbufs-1];
+	last_piped_block = -1;
+	ch_fsize = NULL_POSITION;
+	(void) ch_seek((POSITION)0);
+}
+@//E*O*F less/ch.c//
+chmod u=rw,g=rw,o=r less/ch.c
+ 
+echo x - less/funcs.h
+sed 's/^@//' > "less/funcs.h" <<'@//E*O*F less/funcs.h//'
+	public void edit ();
+	public void next_file ();
+	public void prev_file ();
+	public void quit ();
+	public void init_option ();
+	public void toggle_option ();
+	public void scan_option ();
+	public void forward ();
+	public void backward ();
+	public void repaint ();
+	public void jump_forw ();
+	public void jump_back ();
+	public void jump_percent ();
+	public void jump_loc ();
+	public void init_mark ();
+	public void setmark ();
+	public void gomark ();
+	public void search ();
+	public int ch_seek ();
+	public int ch_end_seek ();
+	public POSITION ch_length ();
+	public POSITION ch_tell ();
+	public int ch_forw_get ();
+	public int ch_back_get ();
+	public void ch_init ();
+	public POSITION position ();
+	public void add_forw_pos ();
+	public void add_back_pos ();
+	public void pos_clear ();
+	public int onscreen ();
+	public POSITION forw_line ();
+	public POSITION back_line ();
+	public void put_line ();
+	public int control_char ();
+	public int carat_char ();
+	public void flush ();
+	public void dropout ();
+	public void putc ();
+	public void puts ();
+	public void error ();
+	public int error_width ();
+	public void raw_mode ();
+	public void get_term ();
+	public void init ();
+	public void deinit ();
+	public void home ();
+	public void add_line ();
+	public void lower_left ();
+	public void bell ();
+	public void vbell ();
+	public void clear ();
+	public void clear_eol ();
+	public void so_enter ();
+	public void so_exit ();
+	public void ul_enter ();
+	public void ul_exit ();
+	public void backspace ();
+	public void putbs ();
+	public char * eq_message ();
+	public char * pr_string ();
+	public void prewind ();
+	public int pappend ();
+	public POSITION forw_raw_line ();
+	public POSITION back_raw_line ();
+	public void init_signals ();
+	public void  psignals ();
+	public void lsystem ();
+	public void help ();
+	public void open_getc ();
+	public int getc ();
+	public void commands ();
+@//E*O*F less/funcs.h//
+chmod u=rw,g=rw,o=r less/funcs.h
+ 
+echo x - less/help.c
+sed 's/^@//' > "less/help.c" <<'@//E*O*F less/help.c//'
+#include  "less.h"
+
+/*
+ * Display some help.
+ * Help is in two pages.
+ */
+	static void
+help0()
+{
+	puts("f, SPACE       Forward one screen.\r\n");
+	puts("b              Backward one screen.\r\n");
+	puts("e, j, CR    *  Forward N lines, default 1.\r\n");
+	puts("y, k        *  Backward N lines, default 1.\r\n");
+	puts("d           *  Forward N lines, default 10 or last N to d or u command.\r\n");
+	puts("u           *  Backward N lines, default 10 or last N to d or u command.\r\n");
+	puts("r              Repaint screen.\r\n");
+	puts("g           *  Go to line N, default 1.\r\n");
+	puts("G           *  Like g, but default is last line in file.\r\n");
+	puts("=              Print current file name\r\n");
+	puts("/pattern    *  Search forward for N-th occurence of pattern.\r\n");
+	puts("?pattern    *  Search backward for N-th occurence of pattern.\r\n");
+	puts("n           *  Repeat previous search (for N-th occurence).\r\n");
+	puts("q              Exit.\r\n");
+	error("More help...");
+}
+
+	static void
+help1()
+{
+	char message[100];
+	extern char all_options[];
+
+	puts("R              Repaint screen, discarding buffered input.\r\n");
+	puts("p, %        *  Position to N percent into the file.\r\n");
+	puts("m<letter>      Mark the current position with <letter>.\r\n");
+	puts("'<letter>      Return to a previously marked position.\r\n");
+	sprintf(message, 
+	     "-X             Toggle a flag (X may be one of \"%s\").\r\n", 
+				all_options);
+	puts(message);
+	puts("E [file]       Examine a new file.\r\n");
+	puts("N              Examine the next file (from the command line).\r\n");
+	puts("P              Examine the previous file (from the command line).\r\n");
+	puts("V              Print version number.\r\n");
+#if SHELL_ESCAPE
+	puts("!command       Passes the command to a shell to be executed.\r\n");
+#endif
+#if EDITOR
+	sprintf(message,
+	     "v              Edit the current file with $EDITOR (default %s).\r\n",
+				EDIT_PGM);
+	puts(message);
+#endif
+	error("");
+}
+
+	public void
+help()
+{
+	register int i;
+
+	for (i = 0;  i < 2;  i++)
+	{
+		clear();
+		puts("Commands marked with * may be preceeded by a number, N.\r\n\r\n");
+
+		switch (i)
+		{
+		case 0:		help0();	break;
+		case 1:		help1();	break;
+		}
+	}
+}
+@//E*O*F less/help.c//
+chmod u=rw,g=r,o=r less/help.c
+ 
+echo x - less/input.c
+sed 's/^@//' > "less/input.c" <<'@//E*O*F less/input.c//'
+/*
+ * High level routines dealing with getting lines of input 
+ * from the file being viewed.
+ *
+ * When we speak of "lines" here, we mean PRINTABLE lines;
+ * lines processed with respect to the screen width.
+ * We use the term "raw line" to refer to lines simply
+ * delimited by newlines; not processed with respect to screen width.
+ */
+
+#include "less.h"
+
+extern int do_bs;
+extern int squeeze;
+extern char *line;
+
+/*
+ * Get the next line.
+ * A "current" position is passed and a "new" position is returned.
+ * The current position is the position of the first character of
+ * a line.  The new position is the position of the first character
+ * of the NEXT line.  The line obtained is the line starting at curr_pos.
+ */
+	public POSITION
+forw_line(curr_pos)
+	POSITION curr_pos;
+{
+	POSITION new_pos;
+	register int c;
+
+	if (curr_pos == NULL_POSITION || ch_seek(curr_pos))
+		return (NULL_POSITION);
+
+	c = ch_forw_get();
+	if (c == EOF)
+		return (NULL_POSITION);
+
+	prewind();
+	for (;;)
+	{
+		if (c == '\n' || c == EOF)
+		{
+			/*
+			 * End of the line.
+			 */
+			new_pos = ch_tell();
+			break;
+		}
+
+		/*
+		 * Append the char to the line and get the next char.
+		 */
+		if (pappend(c))
+		{
+			/*
+			 * The char won't fit in the line; the line
+			 * is too long to print in the screen width.
+			 * End the line here.
+			 */
+			new_pos = ch_tell() - 1;
+			break;
+		}
+		c = ch_forw_get();
+	}
+	(void) pappend('\0');
+
+	if (squeeze && *line == '\0')
+	{
+		/*
+		 * This line is blank.
+		 * Skip down to the last contiguous blank line
+		 * and pretend it is the one which we are returning.
+		 */
+		while ((c = ch_forw_get()) == '\n')
+			;
+		if (c != EOF)
+			(void) ch_back_get();
+		new_pos = ch_tell();
+	}
+
+	return (new_pos);
+}
+
+/*
+ * Get the previous line.
+ * A "current" position is passed and a "new" position is returned.
+ * The current position is the position of the first character of
+ * a line.  The new position is the position of the first character
+ * of the PREVIOUS line.  The line obtained is the one starting at new_pos.
+ */
+	public POSITION
+back_line(curr_pos)
+	POSITION curr_pos;
+{
+	POSITION new_pos, begin_new_pos;
+	int c;
+
+	if (curr_pos == NULL_POSITION || curr_pos <= (POSITION)0 ||
+		ch_seek(curr_pos-1))
+		return (NULL_POSITION);
+
+	if (squeeze)
+	{
+		/*
+		 * Find out if the "current" line was blank.
+		 */
+		(void) ch_forw_get();	/* Skip the newline */
+		c = ch_forw_get();	/* First char of "current" line */
+		(void) ch_back_get();	/* Restore our position */
+		(void) ch_back_get();
+
+		if (c == '\n')
+		{
+			/*
+			 * The "current" line was blank.
+			 * Skip over any preceeding blank lines,
+			 * since we skipped them in forw_line().
+			 */
+			while ((c = ch_back_get()) == '\n')
+				;
+			if (c == EOF)
+				return (NULL_POSITION);
+			(void) ch_forw_get();
+		}
+	}
+
+	/*
+	 * Scan backwards until we hit the beginning of the line.
+	 */
+	for (;;)
+	{
+		c = ch_back_get();
+		if (c == '\n')
+		{
+			/*
+			 * This is the newline ending the previous line.
+			 * We have hit the beginning of the line.
+			 */
+			new_pos = ch_tell() + 1;
+			break;
+		}
+		if (c == EOF)
+		{
+			/*
+			 * We have hit the beginning of the file.
+			 * This must be the first line in the file.
+			 * This must, of course, be the beginning of the line.
+			 */
+			new_pos = (POSITION)0;
+			break;
+		}
+	}
+
+	/*
+	 * Now scan forwards from the beginning of this line.
+	 * We keep discarding "printable lines" (based on screen width)
+	 * until we reach the curr_pos.
+	 *
+	 * {{ This algorithm is pretty inefficient if the lines
+	 *    are much longer than the screen width, 
+	 *    but I don't know of any better way. }}
+	 */
+	if (ch_seek(new_pos))
+		return (NULL_POSITION);
+    loop:
+	begin_new_pos = new_pos;
+	prewind();
+
+	do
+	{
+		c = ch_forw_get();
+		new_pos++;
+		if (c == '\n')
+			break;
+		if (pappend(c))
+		{
+			/*
+			 * Got a full printable line, but we haven't
+			 * reached our curr_pos yet.  Discard the line
+			 * and start a new one.
+			 */
+			(void) pappend('\0');
+			(void) ch_back_get();
+			new_pos--;
+			goto loop;
+		}
+	} while (new_pos < curr_pos);
+
+	(void) pappend('\0');
+
+	return (begin_new_pos);
+}
+@//E*O*F less/input.c//
+chmod u=rw,g=rw,o=r less/input.c
+ 
+echo x - less/less.h
+sed 's/^@//' > "less/less.h" <<'@//E*O*F less/less.h//'
+/*
+ * Standard include file for "less".
+ */
+
+/*
+ * Language details.
+ */
+#if !VOID
+#define	void  int
+#endif
+#define	public		/* PUBLIC FUNCTION */
+
+/*
+ * Special types and constants.
+ */
+typedef long		POSITION;
+/*
+ * {{ Warning: if POSITION is changed to other than "long",
+ *    you may have to change some of the printfs which use "%ld"
+ *    to print a variable of type POSITION. }}
+ */
+
+#define	END_POSITION	((POSITION)(-2))
+#define	NULL_POSITION	((POSITION)(-1))
+
+#define	EOF		(0)
+#define	NULL		(0)
+
+/* How quiet should we be? */
+#define	NOT_QUIET	0	/* Ring bell at eof and for errors */
+#define	LITTLE_QUIET	1	/* Ring bell only for errors */
+#define	VERY_QUIET	2	/* Never ring bell */
+
+/* How should we prompt? */
+#define	PR_SHORT	0	/* Prompt with colon */
+#define	PR_MEDIUM	1	/* Prompt with message */
+#define	PR_LONG		2	/* Prompt with longer message */
+
+/* How should we handle backspaces? */
+#define	BS_UNDERLINE	0	/* Underlining converted to underline mode */
+#define	BS_NORMAL	1	/* \b treated as normal char; actually output */
+#define	BS_CONTROL	2	/* \b treated as control char; prints as ^H */
+
+/* Flag to eq_message() telling what to put in the message */
+#define	MNAME		001	/* File name */
+#define	MOF		002	/* "file x of y" */
+#define	MBYTE		004	/* "byte x/y" */
+#define	MPCT		010	/* Percentage into the file */
+
+/* Special chars used to tell put_line() to do something special */
+#define	UL_CHAR		'\201'	/* Enter underline mode */
+#define	UE_CHAR		'\202'	/* Exit underline mode */
+
+#define	CONTROL(c)		((c)&037)
+#define META(c)			(((c)& ~0x20) | 0x80)
+#define ESCAPE			(27)
+#define	SIGNAL(sig,func)	signal(sig,func)
+
+off_t lseek();
+
+#include "funcs.h"
+@//E*O*F less/less.h//
+chmod u=rw,g=r,o=r less/less.h
+ 
+echo x - less/less.l
+sed 's/^@//' > "less/less.l" <<'@//E*O*F less/less.l//'
+@.TH LESS l
+@.SH NAME
+less \- opposite of more
+@.SH SYNOPSIS
+@.B "less [-cdepstwmMqQuU] [-h\fIn\fB] [-b[fp]\fIn\fB] [-x\fIn\fB] [+\fIcmd\fB] [\fIname\fB] ..."
+@.SH DESCRIPTION
+@.I Less
+is a program similar to 
+@.I more
+(1), but which allows backwards movement
+in the file as well as forward movement.
+Also,
+@.I less
+does not have to read the entire input file before starting,
+so with large input files it starts up faster than text editors like
+@.I vi
+(1).
+@.I Less
+uses termcap, so it can run on a variety of terminals.
+There is even limited support for hardcopy terminals.
+(On a hardcopy terminal, lines which should be printed at the top
+of the screen are prefixed with an up-arrow.)
+@.PP
+Commands are based on both
+@.I more
+and
+@.I vi.
+Commands may be preceeded by a decimal number, 
+called N in the descriptions below.
+The number is used by some commands, as indicated.
+
+@.SH COMMANDS
+@.IP h
+Help: display a summary of these commands.
+If you forget all the other commands, remember this one.
+@.PP
+@.IP SPACE
+Scroll forward N lines, default one screen.
+If N is more than the screen size, only one screenful is displayed.
+@.PP
+@.IP f
+Same as SPACE.
+@.PP
+@.IP b
+Scroll backward N lines, default one screen.
+If N is more than the screen size, only one screenful is displayed.
+@.PP
+@.IP RETURN
+Scroll forward N lines, default 1.
+If N is more than the screen size, the entire N lines are displayed.
+@.PP
+@.IP e
+Same as RETURN.
+@.PP
+@.IP j
+Also the same as RETURN.
+@.PP
+@.IP y
+Scroll backward N lines, default 1.
+If N is more than the screen size, the entire N lines are displayed.
+@.IP k
+Same as y.
+@.PP
+@.IP d
+Scroll forward N lines, default 10.
+If N is specified, it becomes the new default for all d and u commands.
+@.PP
+@.IP u
+Scroll backward N lines, default 10.
+If N is specified, it becomes the new default for all d and u commands.
+@.PP
+@.IP r
+Repaint the screen.
+@.PP
+@.IP R
+Repaint the screen, discarding any buffered input.
+Useful if the file is changing while it is being viewed.
+@.PP
+@.IP g
+Go to line N in the file, default 1 (beginning of file).
+(Warning: this may be slow if N is large.)
+@.PP
+@.IP G
+Go to line N in the file, default the end of the file.
+(Warning: this may be slow if standard input, 
+rather than a file, is being read.)
+@.PP
+@.IP p
+Go to a position N percent into the file.
+N should be between 0 and 100.
+(This is possible if standard input is being read,
+but only if
+@.I less
+has already read to the end of the file.
+It is always fast, but not always useful.)
+@.PP
+@.IP %
+Same as p.
+@.PP
+@.IP m
+Followed by any lowercase letter, marks the current position with that letter.
+@.PP
+@.IP "'"
+Followed by any lowercase letter, returns to the position which
+was previously marked with that letter.
+All marks are lost when a new file is examined.
+@.PP
+@.IP /pattern
+Search forward in the file for the N-th occurence of the pattern.
+N defaults to 1.
+The pattern is a regular expression, as recognized by
+@.I ed.
+The search starts at the second line displayed
+(but see the -t option, which changes this).
+@.PP
+@.IP ?pattern
+Search backward in the file for the N-th occurence of the pattern.
+The search starts at the line immediately before the top line displayed.
+@.PP
+@.IP n
+Repeat previous search, for N-th occurence of the last pattern.
+@.PP
+@.IP E [filename]
+Examine a new file.
+If the filename is missing, the "current" file (see the N and P commands
+below) from the list of files in the command line is re-examined.
+@.PP
+@.IP N
+Examine the next file (from the list of files given in the command line).
+If a number N is specified (not to be confused with the command N),
+the N-th next file is examined.
+@.PP
+@.IP P
+Examine the previous file.
+If a number N is specified, the N-th previous file is examined.
+@.PP
+@.IP =
+Prints the name of the file being viewed
+and the byte offset of the bottom line being displayed.
+If possible, it also prints the length of the file
+and the percent of the file above the last displayed line.
+@.PP
+@.IP \-
+Followed by one of the command line option letters (see below),
+this will toggle the setting of that option
+and print a message describing the new setting.
+@.PP
+@.IP V
+Prints the version number of 
+@.I less 
+being run.
+@.PP
+@.IP q
+Exits
+@.I less.
+@.PP
+The following 
+two 
+commands may or may not be valid, depending on your particular installation.
+@.PP
+@.IP v
+Invokes an editor to edit the current file being viewed.
+The editor is taken from the environment variable EDITOR,
+or defaults to "vi".
+@.PP
+@.IP "! shell-command"
+Invokes a shell to run the shell-command given.
+@.PP
+@.SH OPTIONS
+Command line options are described below.
+Options are also taken from the environment variable "LESS".
+(The environment variable is parsed before the command line,
+so command line options override the LESS environment variable.
+Options may be changed while
+@.I less 
+is running via the "\-" command.)
+For example, if you like 
+more-style prompting, to avoid typing "less -m ..." each time 
+@.I less 
+is invoked, you might tell 
+@.I csh:
+@.sp
+setenv LESS m
+@.sp
+or if you use 
+@.I sh:
+@.sp
+LESS=m; export LESS
+@.IP -s
+The -s flag causes
+consecutive blank lines to be squeezed into a single blank line.
+This is useful when viewing
+@.I nroff
+output.
+@.IP -t
+Normally, forward searches start just after
+the top displayed line (that is, at the second displayed line).
+Thus forward searches include the currently displayed screen.
+The -t command line option causes forward searches to start 
+just after the bottom line displayed,
+thus skipping the currently displayed screen.
+@.IP -m
+Normally,
+@.I less
+prompts with a colon.
+The -m command line option causes 
+@.I less
+to prompt verbosely like 
+@.I more,
+printing the file name and percent into the file.
+@.IP -M
+The -M command line option causes 
+@.I less
+to prompt even more verbosely than 
+@.I more.
+@.IP -q
+Normally, if an attempt is made to scroll past the end of the file
+or before the beginning of the file, the terminal bell is rung to
+indicate this fact.
+The -q command line option tells
+@.I less
+not to ring the bell at such times.
+If the terminal has a "visual bell", it is used instead.
+@.IP -Q
+Even if -q is given, 
+@.I less 
+will ring the bell on certain other errors,
+such as typing an invalid character.
+The -Q command line option tells
+@.I less
+to be quiet all the time; that is, never ring the terminal bell.
+If the terminal has a "visual bell", it is used instead.
+@.IP -e
+Normally the only way to exit less is via the "q" command.
+The -e command line option tells less to automatically exit
+the second time it reaches end-of-file.
+@.IP -u
+If the -u command line option is given, 
+backspaces are treated as printable characters;
+that is, they are sent to the terminal when they appear in the input.
+@.IP -U
+If the -U command line option is given,
+backspaces are printed as the two character sequence "^H".
+If neither -u nor -U is given,
+backspaces which appear adjacent to an underscore character
+are treated specially:
+the underlined text is displayed 
+using the terminal's hardware underlining capability.
+@.IP -w
+Normally,
+@.I less
+uses a tilde character to represent lines past the end of the file.
+The -w option causes blank lines to be used instead.
+@.IP -d
+Normally,
+@.I less
+will complain if the terminal is dumb; that is, lacks some important capability,
+such as the ability to clear the screen or scroll backwards.
+The -d flag suppresses this complaint 
+(but does not otherwise change the behavior of the program on a dumb terminal).
+@.IP -p
+Normally, 
+@.I less 
+will repaint the screen by scrolling from the bottom of the screen.
+If the -p flag is set, when
+@.I less 
+needs to change the entire display, it will clear the screen
+and paint from the top line down.
+@.IP -h
+Normally,
+@.I less
+will scroll backwards when backwards movement is necessary.
+The -h option specifies a maximum number of lines to scroll backwards.
+If it is necessary to move backwards more than this many lines,
+the screen is repainted in a forward direction.
+(If the terminal does not have the ability to scroll
+backwards, -h0 is implied.)
+@.IP -x
+The -x\fIn\fR command line option sets tab stops every \fIn\fR positions.
+The default for \fIn\fR is 8.
+@.IP -b
+The -b\fIn\fR command line option tells
+@.I less
+to use a non-standard buffer size.
+There are two standard (default) buffer sizes,
+one is used when a file is being read and the other
+when a pipe (standard input) is being read.
+The current defaults are 5 buffers for files and 12 for pipes.
+(Buffers are 1024 bytes.)
+The number \fIn\fR specifies a different number of buffers to use.
+The -b may be followed by "f", in which case only 
+the file default is changed, or by "p" in which case only the 
+pipe default is changed.  Otherwise, both are changed.
+@.IP -c
+Normally, when data is read by
+@.I less,
+it is scanned to ensure that bit 7 (the high order bit) is turned off in
+each byte read, and to ensure that there are no null (zero) bytes in
+the data (null bytes are turned into "@" characters).
+If the data is known to be "clean",
+the -c command line option will tell 
+@.I less
+to skip this checking, causing an imperceptible speed improvement.
+(However, if the data is not "clean", unpredicatable results may occur.)
+@.IP +
+If a command line option begins with \fB+\fR,
+the remainder of that option is taken to be an initial command to
+@.I less.
+For example, +G tells
+@.I less
+to start at the end of the file rather than the beginning,
+and +/xyz tells it to start at the first occurence of "xyz" in the file.
+As a special case, +<number> acts like +<number>g; 
+that is, it starts the display at the specified line number
+(however, see the caveat under the "g" command above).
+If the option starts with \fB++\fR, the initial command applies to
+every file being viewed, not just the first one.
+
+@.SH BUGS
+When used on standard input (rather than a file), you can move
+backwards only a finite amount, corresponding to that portion
+of the file which is still buffered.
+@//E*O*F less/less.l//
+chmod u=rw,g=rw,o=r less/less.l
+ 
+echo Inspecting for damage in transit...
+temp=/tmp/shar$$; dtemp=/tmp/.shar$$
+trap "rm -f $temp $dtemp; exit" 0 1 2 3 15
+cat > $temp <<\!!!
+     151     627    4428 Makefile
+     345    1106    6841 ch.c
+      71     286    1872 funcs.h
+      73     284    2216 help.c
+     192     677    4079 input.c
+      61     283    1667 less.h
+     322    1796    9811 less.l
+    1215    5059   30914 total
+!!!
+wc  less/Makefile less/ch.c less/funcs.h less/help.c less/input.c less/less.h less/less.l | sed 's=[^ ]*/==' | diff -b $temp - >$dtemp
+if [ -s $dtemp ]
+then echo "Ouch [diff of wc output]:" ; cat $dtemp
+else echo "No problems found."
+fi
+exit 0
+
+

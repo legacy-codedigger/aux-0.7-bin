@@ -1,0 +1,10 @@
+ftp	tcp	/usr/etc/in.ftpd
+telnet	tcp	/usr/etc/in.telnetd
+shell	tcp	/etc/in.remshd
+login	tcp	/etc/in.rlogind
+exec	tcp	/usr/etc/in.rexecd
+tftp	udp	/usr/etc/in.tftpd
+talk	udp	/usr/etc/in.talkd
+rpc	udp	/usr/etc/rpc.rstatd	100001	1-2
+rpc	udp	/usr/etc/rpc.rwalld	100008	1
+rpc	udp	/usr/etc/rpc.mountd	100005	1

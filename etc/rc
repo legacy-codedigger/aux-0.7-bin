@@ -1,0 +1,38 @@
+
+# top line left blank for csh ; don't delete it!
+#	@(#)rc.sh	UniPlus V.2.1.4	(ATT 1.12)
+
+TZ=PST8PDT
+export TZ
+
+#	Push line discipline/set the device so it will print
+/etc/line_sane 1
+
+set `who -r`
+if [ $7 = 2 ]
+then
+	# put mounts here (/usr, etc.)
+	/etc/mount -at 5.2
+	/usr/lib/ex3.9preserve -
+	rm -f /tmp/*
+	rm -f /usr/spool/uucp/LCK*
+	rm -f /usr/spool/lp/SCHEDLOCK
+	rm -f /usr/adm/acct/nite/lock*
+	mv /usr/adm/sulog /usr/adm/OLDsulog
+#	mv /usr/lib/cron/log /usr/lib/cron/OLDlog
+	if [ ! -f /etc/wtmp ]
+	then
+		>/etc/wtmp
+		chmod 644 /etc/wtmp
+		chgrp adm /etc/wtmp
+		chown adm /etc/wtmp
+	fi
+#	Accounting turned off for initial release
+#	/bin/su adm -c /usr/lib/acct/startup
+#	echo process accounting started
+fi
+# Enable these lines for dial-out UUCP lines - change the tty port
+# to match the one you select as the dial-out port.
+#	chmod 666 /dev/tty0
+#	chown daemon /dev/tty0
+#	chgrp daemon /dev/tty0

@@ -1,0 +1,38 @@
+
+#	@(#)profile.sh	UniPlus V.2.1.2	(Motorola 2.1)
+
+trap "" 1 2 3
+TZ=PST8PDT
+readonly LOGNAME
+MAILCHECK=60
+MAILPATH=/usr/mail/$LOGNAME
+export LOGNAME TZ MAILCHECK MAILPATH
+PATH=:/bin:/usr/bin:/usr/ucb
+export PATH
+umask 022
+case "$0" in
+-sh | -rsh | -ksh )
+	trap : 1 2 3
+	cat /etc/motd
+	trap "" 1 2 3
+	if mail -e
+	then
+		echo "you have mail"
+	fi
+#	Removed for milestone 3 release
+#	if [ $LOGNAME != root ]
+#	then
+#		news -n
+#	fi
+	;;
+-su)
+	:
+	;;
+esac
+trap 1 2 3
+stty erase '^?' kill '^u' intr '^c' ixon
+case "$0" in
+-ksh )
+	stty susp '^z'
+	;;
+esac

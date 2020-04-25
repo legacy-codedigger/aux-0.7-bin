@@ -1,0 +1,1 @@
+dd if=/dev/dsk/c0d0s0 of=/dev/dsk/c0d2s0 bs=200000

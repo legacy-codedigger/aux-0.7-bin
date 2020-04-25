@@ -1,0 +1,67 @@
+
+if (test ! $?)
+then
+   echo "lpr: Unable to send job"
+   exit 1
+else
+   export PRINTER
+   PR_CLASS=""
+   USE_PR=""
+   PR_FLAGS=""
+	
+   for ARG
+   do
+      case $ARG in
+
+	-P*) if (test $ARG = "-P") then
+                PR_CLASS="$PR_CLASS $PRINTER"  # default printer
+             else
+                PR_CLASS="$PR_CLASS $ARG"      #$arg has target printer 
+	     fi
+             ;;	
+  
+        -p) USE_PR="pr"   
+            ;;
+
+        -m) FLAGS="$FLAGS -m"
+            ;;
+
+        -#*) if (test $ARG != "-#") then
+	       COPIES=`echo $ARG | sed -e 's/-#//g'`
+	       FLAGS="$FLAGS -n${COPIES}"
+             fi
+             ;;
+	     
+	-T) shift
+            FLAGS="$FLAGS -t${ARG}"   
+	    ;;
+
+        
+        -w) if (test $ARG != "-w") then
+               PR_FLAGS="$PR_FLAGS $ARG"
+            fi
+            ;;
+
+        -[ltindgvcfrhsCJs]) echo "lpr: Bad option $ARG"
+            exit 1
+            ;;
+      
+        -1234) echo "lpr: Bad option -1234 <font>"
+            exit 1
+            ;;
+        
+         *) FILES="$FILES $ARG"
+            ;;
+     esac
+
+  done
+
+  if (test $?) then       
+      if (test -z $USE_PR) then
+          $USE_PR $PR_FLAGS $FILES | lp $FLAGS
+      else
+         lp $FLAGS $FILES
+      fi
+      exit 0
+  fi
+fi

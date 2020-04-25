@@ -1,0 +1,33 @@
+
+#	@(#)bcheckrc.sh	UniPlus V.2.1.4	(Motorola 2.1.1.1)
+
+# ***** This file has those commands necessary to check the file
+# system, date, and anything else that should be done before mounting
+# the file systems.
+
+# Push line discipline/set tty sane
+/etc/line_sane
+
+trap "" 2
+TZ=PST8PDT
+export TZ
+
+# ***** Auto check, if necessary
+
+while :
+do
+	echo "Do you want to check the file systems? (y or n) \c"
+	read reply
+	case "$reply" in
+		y* ) ;;
+
+		n* ) break;;
+
+		* ) echo "Invalid input. Try again."
+			continue ;;
+	esac
+	trap "echo Interrupt" 2
+	/etc/fsck -p2 -DB
+	trap "" 2
+	break
+done

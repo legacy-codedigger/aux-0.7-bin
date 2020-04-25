@@ -1,0 +1,1679 @@
+From harvard!ci-dandelion!josh Thu Mar 13 13:23:06 1986
+Received: by gcc-milo.ARPA (4.12/4.7)
+	id AA13860; Thu, 13 Mar 86 13:22:00 est
+Received: from talcott.ARPA (talcott) by harvard.HARVARD.EDU; Thu, 13 Mar 86 12:48:12 EST
+Received: by talcott.ARPA; Thu, 13 Mar 86 12:52:09 est
+Received: by orchid.CI (4.12/1.5d)
+	id AA06900; Wed, 12 Mar 86 14:36:26 est
+Date: Wed, 12 Mar 86 14:36:26 est
+From: harvard!ci-dandelion!josh (Josh Littlefield)
+Message-Id: <8603121936.AA06900@orchid.CI>
+To: talcott!harvard!gcc-milo!brad (Brad Parker)
+In-Reply-To: Brad Parker's message of Wed, 12 Mar 86 08:40:50 est
+Subject: Re: is there part III ?
+Status: R
+
+There is now.
+
+Here is "less" part 3.  Notice that this part contains all the files whose
+names contain the letter 'o'.
+
+By the way, the atpl resource certainly satisfied whatever telnet and tftp
+were looking for.  Thanks.
+
+------------------------------ C U T   H E R E -------------------------------
+# This is a shell archive.  Remove anything before this line,
+# then unpack it by saving it in a file and typing "sh file".
+#
+# Wrapped by orchid!josh on Wed Mar 12 14:31:59 EST 1986
+# Contents:  less/INSTALLATION less/command.c less/option.c less/output.c
+#	less/position.c less/position.h less/prompt.c less/version.c
+ 
+echo x - less/INSTALLATION
+sed 's/^@//' > "less/INSTALLATION" <<'@//E*O*F less/INSTALLATION//'
+This is the distribution of "less", a paginator similar to "more" or "pg".
+The manual page is in less.l.
+
+INSTALLATION:
+
+1. Move the distributed source to its own directory and 
+   unpack it by running "sh" on the distribution file,
+   if you have not already done so.
+
+2. If your system is System V:
+	cp makefile.sys5 makefile
+   If your system is Berkeley 4.2bsd:
+	cp makefile.bsd42 makefile
+   If your system is Berkeley 4.1bsd:
+	cp makefile.bsd41 makefile
+   If your system is Xenix 3.0:
+	cp makefile.xen makefile
+   Otherwise, edit the makefile to make the 
+   system parameters match your system.
+
+   These features are selectable at compile time:
+	shell escapes (SHELL_ESCAPE)
+	editor invocation (EDITOR)
+	alternate error message handling (ONLY_RETURN)
+   If you want to have any of these features, 
+   edit the makefile appropriately.
+   (If you do not include either SHELL_ESCAPE or EDITOR,
+    you may wish to edit the manual page "less.l" to remove
+    the references to the "!" and/or "v" commands.)
+
+3. Type "make" and watch the fun.
+
+4. If the make succeeds, it will generate a program "less"
+   in your current directory.  Test the generated program.
+
+5. When satisfied that it works, if you wish to install it
+   in a public place, edit the makefile so that INSTALL_LESS
+   and INSTALL_MAN are the proper filenames.
+   Then type "make install".
+
+If you have any problems building or running "less", 
+you may mail to the author via USENET at:
+	...!tektronix!reed!nsc-pdc!mark
+  or	...!ihnp4!nsc!nsc-pdc!mark
+
+Note to hackers: comments noting possible improvements are enclosed
+in double curly brackets {{ like this }}.
+@//E*O*F less/INSTALLATION//
+chmod u=rw,g=rw,o=r less/INSTALLATION
+ 
+echo x - less/command.c
+sed 's/^@//' > "less/command.c" <<'@//E*O*F less/command.c//'
+/*
+ * User-level command processor.
+ */
+
+#include "less.h"
+#include "position.h"
+#include <setjmp.h>
+
+extern jmp_buf main_loop;
+extern int erase_char, kill_char;
+extern int pr_type;
+extern int sigs;
+extern int ispipe;
+extern int quit_at_eof;
+extern int hit_eof;
+extern int sc_width, sc_height;
+extern char *first_cmd;
+extern char version[];
+extern char current_file[];
+extern char *editor;
+
+static char cmdbuf[90];		/* Buffer for holding a multi-char command */
+static char *cp;		/* Pointer into cmdbuf */
+static int cmd_col;		/* Current column of the multi-char command */
+static char mcc;		/* The multi-char command letter (e.g. '/') */
+static char last_mcc;		/* The previous mcc */
+
+/*
+ * Reset command buffer (to empty).
+ */
+cmd_reset()
+{
+	cp = cmdbuf;
+}
+
+/*
+ * Backspace in command buffer.
+ */
+	static int
+cmd_erase()
+{
+	if (cp == cmdbuf)
+		/*
+		 * Backspace past beginning of the string:
+		 * this usually means abort the command.
+		 */
+		return (1);
+
+	if (control_char(*--cp))
+	{
+		/*
+		 * Erase an extra character, for the carat.
+		 */
+		backspace();
+		cmd_col--;
+	}
+	backspace();
+	cmd_col--;
+	return (0);
+}
+
+/*
+ * Set up the display to start a new multi-character command.
+ */
+start_mcc()
+{
+	lower_left();
+	clear_eol();
+	putc(mcc);
+	cmd_col = 1;
+}
+
+/*
+ * Process a single character of a multi-character command, such as
+ * a number, or the pattern of a search command.
+ */
+	static int
+cmd_char(c)
+	int c;
+{
+	if (c == erase_char)
+	{
+		if (cmd_erase())
+			return (1);
+	} else if (c == kill_char)
+	{
+		/* {{ Could do this faster, but who cares? }} */
+		while (cmd_erase() == 0)
+			;
+	} else
+	{
+		/*
+		 * Append the character to the string,
+		 * if there is room in the buffer and on the screen.
+		 */
+		if (cp < &cmdbuf[sizeof(cmdbuf)-1] && cmd_col < sc_width-3)
+		{
+			*cp++ = c;
+			if (control_char(c))
+			{
+				putc('^');
+				cmd_col++;
+				c = carat_char(c);
+			}
+			putc(c);
+			cmd_col++;
+		} else
+			bell();
+	}
+	return (0);
+}
+
+/*
+ * Return the number currently in the command buffer.
+ */
+	static int
+cmd_int()
+{
+	*cp = '\0';
+	cp = cmdbuf;
+	return (atoi(cmdbuf));
+}
+
+/*
+ * Move the cursor to lower left before executing a command.
+ * This looks nicer if the command takes a long time before
+ * updating the screen.
+ */
+	static void
+cmd_exec()
+{
+	lower_left();
+	flush();
+}
+
+/*
+ * Display the appropriate prompt.
+ */
+	static void
+prompt()
+{
+	register char *p;
+
+	if (first_cmd != NULL && *first_cmd != '\0')
+		/*
+		 * No prompt necessary if commands are from first_cmd
+		 * rather than from the user.
+		 */
+		return;
+
+	/*
+	 * Select the proper prompt and display it.
+	 */
+	p = pr_string();
+	if (p == NULL)
+		putc(':');
+	else
+	{
+		so_enter();
+		puts(p);
+		so_exit();
+	}
+}
+
+/*
+ * Get command character.
+ * The character normally comes from the keyboard,
+ * but may come from the "first_cmd" string.
+ */
+	static int
+getcc()
+{
+	if (first_cmd == NULL)
+		return (getc());
+
+	if (*first_cmd == '\0')
+	{
+		/*
+		 * Reached end of first_cmd input.
+		 */
+		first_cmd = NULL;
+		if (cp > cmdbuf && position(TOP) == NULL_POSITION)
+		{
+			/*
+			 * Command is incomplete, so try to complete it.
+			 * There are only two cases:
+			 * 1. We have "/string" but no newline.  Add the \n.
+			 * 2. We have a number but no command.  Treat as #g.
+			 * (This is all pretty hokey.)
+			 */
+			if (mcc != ':')
+				return ('\n'); 
+			else
+				return ('g');
+		}
+		return (getc());
+	}
+	return (*first_cmd++);
+}
+
+/*
+ * Main command processor.
+ * Accept and execute commands until a quit command, then return.
+ */
+	public void
+commands()
+{
+	register int c;
+	register int n;
+	register int scroll = 10;
+
+	mcc = last_mcc = 0;
+
+	setjmp(main_loop);
+	for (;;)
+	{
+		/*
+		 * Display prompt and accept a character.
+		 */
+		psignals();	/* See if any signals need processing */
+
+		if (quit_at_eof && hit_eof > 1)
+			/*
+			 * After hitting end-of-file for the second time,
+			 * automatically advance to the next file.
+			 * If there are no more files, quit.
+			 */
+			next_file(1);
+
+		cmd_reset();
+		lower_left();
+		clear_eol();
+		prompt();
+		c = getcc();
+
+	again:
+		if (sigs)
+			continue;
+
+		if (mcc)
+		{
+			/*
+			 * We are in a multi-character command.  
+			 * All chars until newline go into the command buffer.
+			 * (Note that mcc == ':' is a special case that
+			 *  means a number is being entered.)
+			 */
+			if (mcc != ':' && (c == '\n' || c == '\r'))
+			{
+				/*
+				 * Execute the command.
+				 */
+				*cp = '\0';
+				cmd_exec();
+				if (mcc == 'E')
+				{
+					char *p;
+					/*
+					 * Ignore leading spaces 
+					 * in the filename.
+					 */
+					for (p = cmdbuf;  *p == ' ';  p++) ;
+					edit(p);
+#if SHELL_ESCAPE
+				} else if (mcc == '!')
+				{
+					lsystem(cmdbuf);
+					error("!done");
+					first_cmd = "r";	/* Repaint */
+#endif
+				} else {
+					search(mcc, cmdbuf, n);
+				}
+				mcc = 0;
+			} else
+			{
+				if (mcc == ':' && (c < '0' || c > '9') &&
+					c != erase_char && c != kill_char)
+				{
+					/*
+					 * This is not part of the number
+					 * we were entering.  Process
+					 * it as a regular character.
+					 */
+					mcc = 0;
+					goto again;
+				}
+
+				/*
+				 * Append the char to the command buffer.
+				 */
+				if (cmd_char(c))
+				{
+					/* Abort the multi-char command. */
+					mcc = 0;
+					continue;
+				}
+				c = getcc();
+				goto again;
+			}
+		} else switch (c)
+		{
+		case '0': case '1': case '2': case '3': case '4':
+		case '5': case '6': case '7': case '8': case '9':
+			/*
+			 * First digit of a number.
+			 */
+			mcc = ':';
+			start_mcc();
+			goto again;
+
+		case 'f':
+		case ' ':
+		case CONTROL('F'):
+		case CONTROL('V'):
+			/*
+			 * Forward one screen.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = sc_height - 1;
+			forward(n, 1);
+			break;
+
+		case 'b':
+		case CONTROL('B'):
+		case META('V'):
+			/*
+			 * Backward one screen.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = sc_height - 1;
+			backward(n, 1);
+			break;
+
+		case 'e':
+		case 'j':
+		case '\r':
+		case '\n':
+		case CONTROL('E'):
+			/*
+			 * Forward N (default 1) line.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = 1;
+			forward(n, 0);
+			break;
+
+		case 'y':
+		case 'k':
+		case CONTROL('K'):
+		case CONTROL('Y'):
+			/*
+			 * Backward N (default 1) line.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = 1;
+			backward(n, 0);
+			break;
+
+		case 'd':
+		case CONTROL('D'):
+			/*
+			 * Forward N lines 
+			 * (default same as last 'd' or 'u' command).
+			 */
+			n = cmd_int();
+			if (n > 0)
+				scroll = n;
+			forward(scroll, 0);
+			break;
+
+		case 'u':
+		case CONTROL('U'):
+			/*
+			 * Forward N lines 
+			 * (default same as last 'd' or 'u' command).
+			 */
+			n = cmd_int();
+			if (n > 0)
+				scroll = n;
+			backward(scroll, 0);
+			break;
+
+		case 'R':
+			/*
+			 * Flush buffers, then repaint screen.
+			 */
+			ch_init(0);
+			/* Fall thru */
+		case 'r':
+		case CONTROL('L'):
+			/*
+			 * Repaint screen.
+			 */
+			repaint();
+			break;
+
+		case 'g':
+			/*
+			 * Go to line N, default beginning of file.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = 1;
+			cmd_exec();
+			jump_back(n);
+			break;
+
+		case 'p':
+		case '%':
+			/*
+			 * Go to a specified percentage into the file.
+			 */
+			n = cmd_int();
+			if (n < 0)
+				n = 0;
+			if (n > 100)
+				n = 100;
+			cmd_exec();
+			jump_percent(n);
+			break;
+
+		case 'G':
+			/*
+			 * Go to line N, default end of file.
+			 */
+			n = cmd_int();
+			cmd_exec();
+			if (n <= 0)
+				jump_forw();
+			else
+				jump_back(n);
+			break;
+
+		case '=':
+		case CONTROL('G'):
+			/*
+			 * Print file name, etc.
+			 */
+			error(eq_message());
+			break;
+			
+		case 'V':
+			/*
+			 * Print version number, without the "@(#)".
+			 */
+			error(version+4);
+			break;
+
+		case 'q':
+			/*
+			 * Exit.
+			 */
+			return;
+
+		case CONTROL('S'):
+		case CONTROL('R'):
+		case '/':
+		case '?':
+			/*
+			 * Search for a pattern.
+			 * Accept chars of the pattern until \n.
+			 */
+			if (c == CONTROL('S')) c = '/';	/* fake it out */
+			if (c == CONTROL('R')) c = '?';	/* fake it out */
+			n = cmd_int();
+			if (n <= 0)
+				n = 1;
+			mcc = last_mcc = c;
+			start_mcc();
+			c = getcc();
+			goto again;
+
+		case 'n':
+			/*
+			 * Repeat previous search.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = 1;
+			mcc = last_mcc;
+			start_mcc();
+			cmd_exec();
+			search(mcc, (char *)NULL, n);
+			mcc = 0;
+			break;
+
+		case 'h':
+			/*
+			 * Help.
+			 */
+			help();
+			repaint();
+			break;
+
+		case 'E':
+			/*
+			 * Edit a new file.  Get the filename.
+			 */
+			cmd_reset();
+			mcc = 'E';
+			start_mcc();
+			puts("dit: ");	/* This looks nicer */
+			cmd_col += 5;
+			c = getcc();
+			goto again;
+			
+#if SHELL_ESCAPE
+		case '!':
+			/*
+			 * Shell escape.
+			 */
+			cmd_reset();
+			mcc = '!';
+			start_mcc();
+			c = getcc();
+			goto again;
+#endif
+
+#if EDITOR
+		case 'v':
+			if (ispipe)
+			{
+				error("Cannot edit standard input");
+				break;
+			}
+			sprintf(cmdbuf, "%s %s", editor, current_file);
+			lsystem(cmdbuf);
+			first_cmd = "R";
+			break;
+#endif
+
+		case 'N':
+			/*
+			 * Examine next file.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = 1;
+			next_file(n);
+			break;
+
+		case 'P':
+			/*
+			 * Examine previous file.
+			 */
+			n = cmd_int();
+			if (n <= 0)
+				n = 1;
+			prev_file(n);
+			break;
+
+		case '-':
+			/*
+			 * Toggle a flag setting.
+			 */
+			mcc = '-';
+			start_mcc();
+			c = getcc();
+			mcc = 0;
+			if (c == erase_char || c == kill_char)
+				break;
+			toggle_option(c);
+			break;
+
+		case ESCAPE:
+			/*
+			 * Escape
+			 */
+			lower_left ();
+			clear_eol ();
+			puts ("ESC-");
+			c = getcc ();
+			if (c == 'v' || c == 'V') {
+			    /*
+			     * Backward one screen.
+			     */
+			    n = cmd_int();
+			    if (n <= 0)
+				n = sc_height - 1;
+			    backward(n, 1);
+			} else 
+			    bell ();
+
+			break;
+
+		case NULL:
+			/*
+			 * Null - set next mark.
+			 */
+
+			break;
+
+		case CONTROL('X'):
+			/*
+			 * ^X prefix
+			 */
+			lower_left ();
+			clear_eol ();
+			puts ("^X-");
+			c = getcc ();
+			if (c == CONTROL('X')) {	/* exchange mark */
+			    setmark ('z');
+			    gomark ('y');
+			} else
+			    bell ();
+
+			break;
+
+		case 'm':
+			/*
+			 * Set a mark.
+			 */
+			lower_left();
+			clear_eol();
+			puts("mark: ");
+			c = getcc();
+			if (c == erase_char || c == kill_char)
+				break;
+			setmark(c);
+			break;
+
+		case '\'':
+			/*
+			 * Go to a mark.
+			 */
+			lower_left();
+			clear_eol();
+			puts("goto mark: ");
+			c = getcc();
+			if (c == erase_char || c == kill_char)
+				break;
+			gomark(c);
+			break;
+
+		default:
+			bell();
+			break;
+		}
+	}
+}
+@//E*O*F less/command.c//
+chmod u=rw,g=r,o=r less/command.c
+ 
+echo x - less/option.c
+sed 's/^@//' > "less/option.c" <<'@//E*O*F less/option.c//'
+/*
+ * Process command line options.
+ * Each option is a single letter which controls a program variable.
+ * The options have defaults which may be changed via
+ * the command line option, or toggled via the "-" command.
+ */
+
+#include "less.h"
+
+#define	toupper(c)	((c)-'a'+'A')
+
+/*
+ * Types of options.
+ */
+#define	BOOL		01	/* Boolean option: 0 or 1 */
+#define	TRIPLE		02	/* Triple-valued option: 0, 1 or 2 */
+#define	NUMBER		04	/* Numeric option */
+#define	NO_TOGGLE	0100	/* Option cannot be toggled with "-" cmd */
+
+/*
+ * Variables controlled by command line options.
+ */
+public int p_nbufs, f_nbufs;	/* Number of buffers.  There are two values,
+				   one used for input from a pipe and 
+				   the other for input from a file. */
+public int clean_data;		/* Can we assume the data is "clean"? 
+				   (That is, free of nulls, etc) */
+public int quiet;		/* Should we suppress the audible bell? */
+public int top_search;		/* Should forward searches start at the top 
+				   of the screen? (alternative is bottom) */
+public int top_scroll;		/* Repaint screen from top?
+				   (alternative is scroll from bottom) */
+public int pr_type;		/* Type of prompt (short, medium, long) */
+public int bs_mode;		/* How to process backspaces */
+public int know_dumb;		/* Don't complain about dumb terminals */
+public int quit_at_eof;		/* Quit after hitting end of file twice */
+public int squeeze;		/* Squeeze multiple blank lines into one */
+public int tabstop;		/* Tab settings */
+public int back_scroll;		/* Repaint screen on backwards movement */
+public int twiddle;		/* Display "~" for lines after EOF */
+
+extern int nbufs;
+extern char *first_cmd;
+extern char *every_first_cmd;
+
+#define	DEF_F_NBUFS	5	/* Default for f_nbufs */
+#define	DEF_P_NBUFS	12	/* Default for p_nbufs */
+
+static struct option
+{
+	char oletter;		/* The controlling letter (a-z) */
+	char otype;		/* Type of the option */
+	int odefault;		/* Default value */
+	int *ovar;		/* Pointer to the associated variable */
+	char *odesc[3];		/* Description of each value */
+} option[] =
+{
+	{ 'c', BOOL, 0, &clean_data,
+		{ "Don't assume data is clean",
+		  "Assume data is clean",
+		  NULL
+		}
+	},
+	{ 'd', BOOL|NO_TOGGLE, 0, &know_dumb,
+		{ NULL, NULL, NULL}
+	},
+	{ 'e', BOOL, 0, &quit_at_eof,
+		{ "Don't quit at end-of-file",
+		  "Quit at end-of-file",
+		  NULL
+		}
+	},
+	{ 'h', NUMBER, -1, &back_scroll,
+		{ "Backwards scroll limit is %d lines",
+		  NULL, NULL
+		}
+	},
+	{ 'p', BOOL, 0, &top_scroll,
+		{ "Repaint by scrolling from bottom of screen",
+		  "Repaint by painting from top of screen",
+		  NULL
+		}
+	},
+	{ 'x', NUMBER, 8, &tabstop,
+		{ "Tab stops every %d spaces", 
+		  NULL, NULL 
+		}
+	},
+	{ 's', BOOL, 0, &squeeze,
+		{ "Don't squeeze multiple blank lines",
+		  "Squeeze multiple blank lines",
+		  NULL
+		}
+	},
+	{ 't', BOOL, 1, &top_search,
+		{ "Forward search starts from bottom of screen",
+		  "Forward search starts from top of screen",
+		  NULL
+		}
+	},
+	{ 'w', BOOL, 1, &twiddle,
+		{ "Display nothing for lines after end-of-file",
+		  "Display ~ for lines after end-of-file",
+		  NULL
+		}
+	},
+	{ 'm', TRIPLE, 0, &pr_type,
+		{ "Prompt with a colon",
+		  "Prompt with a message",
+		  "Prompt with a verbose message"
+		}
+	},
+	{ 'q', TRIPLE, 0, &quiet,
+		{ "Ring the bell for errors AND at eof/bof",
+		  "Ring the bell for errors but not at eof/bof",
+		  "Never ring the bell"
+		}
+	},
+	{ 'u', TRIPLE, 0, &bs_mode,
+		{ "Underlined text displayed in underline mode",
+		  "All backspaces cause overstrike",
+		  "Backspaces print as ^H"
+		}
+	},
+	{ '\0' }
+};
+
+public char all_options[64];	/* List of all valid options */
+
+/*
+ * Initialize each option to its default value.
+ */
+	public void
+init_option()
+{
+	register struct option *o;
+	register char *p;
+
+	/*
+	 * First do special cases, not in option table.
+	 */
+	first_cmd = every_first_cmd = NULL;
+	f_nbufs = DEF_F_NBUFS;		/* -bf */
+	p_nbufs = DEF_P_NBUFS;		/* -bp */
+
+	p = all_options;
+	*p++ = 'b';
+
+	for (o = option;  o->oletter != '\0';  o++)
+	{
+		/*
+		 * Set each variable to its default.
+		 * Also make a list of all options, in "all_options".
+		 */
+		*(o->ovar) = o->odefault;
+		*p++ = o->oletter;
+		if (o->otype & TRIPLE)
+			*p++ = toupper(o->oletter);
+	}
+	*p = '\0';
+}
+
+/*
+ * Toggle command line flags from within the program.
+ * Used by the "-" command.
+ */
+	public void
+toggle_option(c)
+	int c;
+{
+	register struct option *o;
+	char message[100];
+	char buf[5];
+
+	/*
+	 * First check for special cases not handled by the option table.
+	 */
+	switch (c)
+	{
+	case 'b':
+		sprintf(message, "%d buffers", nbufs);
+		error(message);
+		return;
+	}
+
+
+	for (o = option;  o->oletter != '\0';  o++)
+	{
+		if ((o->otype & BOOL) && (o->oletter == c) &&
+			(o->otype & NO_TOGGLE) == 0)
+		{
+			/*
+			 * Boolean option: 
+			 * just toggle it.
+			 */
+			*(o->ovar) = ! *(o->ovar);
+			error(o->odesc[*(o->ovar)]);
+			return;
+		} else if ((o->otype & TRIPLE) && (o->oletter == c) &&
+			(o->otype & NO_TOGGLE) == 0)
+		{
+			/*
+			 * Triple-valued option with lower case letter:
+			 * make it 1 unless already 1, then make it 0.
+			 */
+			*(o->ovar) = (*(o->ovar) == 1) ? 0 : 1;
+			error(o->odesc[*(o->ovar)]);
+			return;
+		} else if ((o->otype & TRIPLE) && (toupper(o->oletter) == c) &&
+			(o->otype & NO_TOGGLE) == 0)
+		{
+			/*
+			 * Triple-valued option with upper case letter:
+			 * make it 2 unless already 2, then make it 0.
+			 */
+			*(o->ovar) = (*(o->ovar) == 2) ? 0 : 2;
+			error(o->odesc[*(o->ovar)]);
+			return;
+		} else if ((o->otype & NUMBER) && (o->oletter == c) &&
+			(o->otype & NO_TOGGLE) == 0)
+		{
+			sprintf(message, o->odesc[0], *(o->ovar));
+			error(message);
+			return;
+		}
+	}
+
+	if (control_char(c))
+		sprintf(buf, "^%c", carat_char(c));
+	else
+		sprintf(buf, "%c", c);
+	sprintf(message, "\"-%s\": no such flag.  Use one of \"%s\"", 
+		buf, all_options);
+	error(message);
+}
+
+/*
+ * Scan an argument (either from command line or from LESS environment 
+ * variable) and process it.
+ */
+	public void
+scan_option(s)
+	char *s;
+{
+	register struct option *o;
+	register int c;
+
+	if (s == NULL)
+		return;
+
+    next:
+	if (*s == '\0')
+		return;
+	switch (c = *s++)
+	{
+	case '-':
+	case ' ':
+	case '\t':
+		goto next;
+	case '+':
+		if (*s == '+')
+			every_first_cmd = ++s;
+		first_cmd = s;
+		return;
+	case 'b':
+		switch (*s)
+		{
+		case 'f':
+			s++;
+			f_nbufs = getnum(&s, 'b');
+			break;
+		case 'p':
+			s++;
+			p_nbufs = getnum(&s, 'b');
+			break;
+		default:
+			f_nbufs = p_nbufs = getnum(&s, 'b');
+			break;
+		}
+		goto next;
+	}
+
+	for (o = option;  o->oletter != '\0';  o++)
+	{
+		if ((o->otype & BOOL) && (o->oletter == c))
+		{
+			*(o->ovar) = ! o->odefault;
+			goto next;
+		} else if ((o->otype & TRIPLE) && (o->oletter == c))
+		{
+			*(o->ovar) = (o->odefault == 1) ? 0 : 1;
+			goto next;
+		} else if ((o->otype & TRIPLE) && (toupper(o->oletter) == c))
+		{
+			*(o->ovar) = (o->odefault == 2) ? 0 : 2;
+			goto next;
+		} else if ((o->otype & NUMBER) && (o->oletter == c))
+		{
+			*(o->ovar) = getnum(&s, c);
+			goto next;
+		}
+	}
+
+	printf("\"-%c\": invalid flag\n", c);
+	exit(1);
+}
+
+/*
+ * Translate a string into a number.
+ * Like atoi(), but takes a pointer to a char *, and updates
+ * the char * to point after the translated number.
+ */
+	static int
+getnum(sp, c)
+	char **sp;
+	int c;
+{
+	register char *s;
+	register int n;
+
+	s = *sp;
+	if (*s < '0' || *s > '9')
+	{
+		printf("number is required after -%c\n", c);
+		exit(1);
+	}
+
+	n = 0;
+	while (*s >= '0' && *s <= '9')
+		n = 10 * n + *s++ - '0';
+	*sp = s;
+	return (n);
+}
+@//E*O*F less/option.c//
+chmod u=rw,g=rw,o=r less/option.c
+ 
+echo x - less/output.c
+sed 's/^@//' > "less/output.c" <<'@//E*O*F less/output.c//'
+/*
+ * High level routines dealing with the output to the screen.
+ */
+
+#include "less.h"
+
+extern int sigs;
+extern int sc_width, sc_height;
+extern int ul_width, ue_width;
+extern int so_width, se_width;
+extern int tabstop;
+extern int twiddle;
+extern char *line;
+extern char *first_cmd;
+
+/*
+ * Display the line which is in the line buffer.
+ */
+	public void
+put_line()
+{
+	register char *p;
+	register int c;
+	register int column;
+	extern int auto_wrap, ignaw;
+
+	if (sigs)
+		/*
+		 * Don't output if a signal is pending.
+		 */
+		return;
+
+	if (line == NULL)
+		line = (twiddle) ? "~" : "";
+
+	column = 0;
+	for (p = line;  *p != '\0';  p++)
+	{
+		switch (c = *p)
+		{
+		case UL_CHAR:
+			ul_enter();
+			column += ul_width;
+			break;
+		case UE_CHAR:
+			ul_exit();
+			column += ue_width;
+			break;
+		case '\t':
+			do
+			{
+				putc(' ');
+				column++;
+			} while ((column % tabstop) != 0);
+			break;
+		case '\b':
+			putbs();
+			column--;
+			break;
+		default:
+			if (c & 0200)
+			{
+				putc('^');
+				putc(c & 0177);
+				column += 2;
+			} else
+			{
+				putc(c);
+				column++;
+			}
+		}
+	}
+	if (column < sc_width || !auto_wrap || ignaw) {
+		putc('\r'); putc ('\n');
+	}
+}
+
+/*
+ * Is a given character a "control" character?
+ * {{ ASCII DEPENDENT }}
+ */
+	public int
+control_char(c)
+	int c;
+{
+	return (c < ' ' || c == '\177');
+}
+
+/*
+ * Return the printable character used to identify a control character
+ * (printed after a carat; e.g. '\3' => "^C").
+ * {{ ASCII DEPENDENT }}
+ */
+	public int
+carat_char(c)
+	int c;
+{
+	return ((c == '\177') ? '?' : (c | 0100));
+}
+
+
+static char obuf[1024];
+static char *ob = obuf;
+
+/*
+ * Flush buffered output.
+ */
+	public void
+flush()
+{
+	write(1, obuf, ob-obuf);
+	ob = obuf;
+}
+
+/*
+ * Discard buffered output.
+ */
+	public void
+dropout()
+{
+	ob = obuf;
+}
+
+/*
+ * Output a character.
+ */
+	public void
+putc(c)
+	int c;
+{
+	if (ob >= &obuf[sizeof(obuf)])
+		flush();
+	*ob++ = c;
+}
+
+/*
+ * Output a string.
+ */
+	public void
+puts(s)
+	register char *s;
+{
+	while (*s != '\0')
+		putc(*s++);
+}
+
+/*
+ * Output a message in the lower left corner of the screen
+ * and wait for carriage return.
+ */
+
+static char return_to_continue[] = "  (press RETURN)";
+
+	public void
+error(s)
+	char *s;
+{
+	register int c;
+	static char buf[2];
+
+	lower_left();
+	clear_eol();
+	so_enter();
+	puts(s);
+	puts(return_to_continue);
+	so_exit();
+
+#if ONLY_RETURN
+	while ((c = getc()) != '\n' && c != '\r')
+		bell();
+#else
+	c = getc();
+	if (c != '\n' && c != '\r' && c != ' ')
+	{
+		buf[0] = c;
+		first_cmd = buf;
+	}
+#endif
+
+	if (strlen(s) > sc_width)
+		repaint();
+}
+
+	public int
+error_width()
+{
+	/*
+	 * Don't use the last position, because some terminals
+	 * will scroll if you write in the last char of the last line.
+	 */
+	return (sc_width - 
+		(sizeof(return_to_continue) + so_width + se_width + 1));
+}
+@//E*O*F less/output.c//
+chmod u=rw,g=r,o=r less/output.c
+ 
+echo x - less/position.c
+sed 's/^@//' > "less/position.c" <<'@//E*O*F less/position.c//'
+/*
+ * Routines dealing with the "position" table.
+ * This is a table which tells the position (in the input file) of the
+ * first char on each currently displayed line.
+ *
+ * {{ The position table is scrolled by moving all the entries.
+ *    Would be better to have a circular table 
+ *    and just change a couple of pointers. }}
+ */
+
+#include "less.h"
+#include "position.h"
+
+#define	NPOS	100		/* {{ sc_height must be less than NPOS }} */
+static POSITION table[NPOS];	/* The position table */
+
+extern int sc_width, sc_height;
+
+/*
+ * Return the position of one of:
+ *	the top (first) line on the screen
+ *	the second line on the screen
+ *	the bottom line on the screen
+ *	the line after the bottom line on the screen
+ */
+	public POSITION
+position(where)
+	int where;
+{
+	switch (where)
+	{
+	case BOTTOM:
+		where = sc_height - 2;
+		break;
+	case BOTTOM_PLUS_ONE:
+		where = sc_height - 1;
+		break;
+	}
+	return (table[where]);
+}
+
+/*
+ * Add a new file position to the bottom of the position table.
+ */
+	public void
+add_forw_pos(pos)
+	POSITION pos;
+{
+	register int i;
+
+	/*
+	 * Scroll the position table up.
+	 */
+	for (i = 1;  i < sc_height;  i++)
+		table[i-1] = table[i];
+	table[sc_height - 1] = pos;
+}
+
+/*
+ * Add a new file position to the top of the position table.
+ */
+	public void
+add_back_pos(pos)
+	POSITION pos;
+{
+	register int i;
+
+	/*
+	 * Scroll the position table down.
+	 */
+	for (i = sc_height - 1;  i > 0;  i--)
+		table[i] = table[i-1];
+	table[0] = pos;
+}
+
+/*
+ * Initialize the position table, done whenever we clear the screen.
+ */
+	public void
+pos_clear()
+{
+	register int i;
+
+	for (i = 0;  i < sc_height;  i++)
+		table[i] = NULL_POSITION;
+}
+
+/*
+ * See if the byte at a specified position is currently on the screen.
+ * Check the position table to see if the position falls within its range.
+ * Return the position table entry if found, -1 if not.
+ */
+	public int
+onscreen(pos)
+	POSITION pos;
+{
+	register int i;
+
+	if (pos < table[0])
+		return (-1);
+	for (i = 1;  i < sc_height;  i++)
+		if (pos < table[i])
+			return (i-1);
+	return (-1);
+}
+@//E*O*F less/position.c//
+chmod u=rw,g=rw,o=r less/position.c
+ 
+echo x - less/position.h
+sed 's/^@//' > "less/position.h" <<'@//E*O*F less/position.h//'
+/*
+ * Include file for interfacing to position.c modules.
+ */
+#define	TOP		0
+#define	TOP_PLUS_ONE	1
+#define	BOTTOM		-1
+#define	BOTTOM_PLUS_ONE	-2
+@//E*O*F less/position.h//
+chmod u=rw,g=rw,o=r less/position.h
+ 
+echo x - less/prompt.c
+sed 's/^@//' > "less/prompt.c" <<'@//E*O*F less/prompt.c//'
+/*
+ * Prompting and other messages.
+ * There are three flavors of prompts, SHORT, MEDIUM and LONG,
+ * selected by the -m/-M options.
+ * A prompt is either a colon or a message composed of various
+ * pieces, such as the name of the file being viewed, the percentage
+ * into the file, etc.
+ */
+
+#include "less.h"
+#include "position.h"
+
+extern int pr_type;
+extern int ispipe;
+extern int hit_eof;
+extern int new_file;
+extern int sc_width;
+extern char current_file[];
+extern int ac;
+extern char **av;
+extern int curr_ac;
+
+static char message[500];
+
+/*
+ * Append the name of the current file (to the message buffer).
+ */
+	static void
+ap_filename()
+{
+	if (!ispipe)
+		sprintf(message + strlen(message), 
+			"%s", current_file);
+}
+
+/*
+ * Append the "file N of M" message.
+ */
+	static void
+ap_of()
+{
+	if (ac > 1)
+		sprintf(message + strlen(message), 
+			" (file %d of %d)", curr_ac+1, ac);
+}
+
+/*
+ * Append the byte offset into the current file.
+ */
+	static void
+ap_byte()
+{
+	POSITION pos, len;
+
+	pos = position(BOTTOM_PLUS_ONE);
+	if (pos != NULL_POSITION)
+	{
+		sprintf(message + strlen(message), 
+			" byte %ld", pos);
+		len = ch_length();
+		if (len > 0)
+			sprintf(message + strlen(message), 
+				"/%ld", len);
+	}
+}
+
+/*
+ * Append the percentage into the current file.
+ * If we cannot find the percentage and must_print is true,
+ * the use the byte offset.
+ */
+	static void
+ap_percent(must_print)
+{
+	POSITION pos,len;
+
+	pos = position(BOTTOM_PLUS_ONE);
+	len = ch_length();
+	if (len > 0 && pos != NULL_POSITION)
+		sprintf(message + strlen(message),
+			" (%ld%%)", (100 * pos) / len);
+	else if (must_print)
+		ap_byte();
+}
+
+/*
+ * Append the end-of-file message.
+ */
+	static void
+ap_eof()
+{
+	strcat(message, " END");
+	if (curr_ac + 1 < ac)
+		sprintf(message + strlen(message),
+			" - Next: %s", av[curr_ac+1]);
+}
+
+/*
+ * Return a message suitable for printing by the "=" command.
+ */
+	public char *
+eq_message()
+{
+	message[0] = '\0';
+	ap_filename();
+	ap_of();
+	ap_byte();
+	ap_percent(0);
+	/*
+	 * Truncate to the screen width.
+	 * {{ This isn't very nice. }}
+	 */
+	message[error_width()] = '\0';
+	return (message);
+}
+
+/*
+ * Return a prompt.
+ * This depends on the prompt type (SHORT, MEDIUM, LONG), etc.
+ * If we can't come up with an appropriate prompt, return NULL
+ * and the caller will prompt with a colon.
+ */
+	public char *
+pr_string()
+{
+	message[0] = '\0';
+	switch (pr_type)
+	{
+	case PR_SHORT:
+		if (new_file)
+		{
+			ap_filename();
+			ap_of();
+		}
+		if (hit_eof)
+			ap_eof();
+		break;
+	case PR_MEDIUM:
+		if (new_file)
+		{
+			ap_filename();
+			ap_of();
+		}
+		if (hit_eof)
+			ap_eof();
+		else
+			ap_percent(1);
+		break;
+	case PR_LONG:
+		ap_filename();
+		if (new_file)
+			ap_of();
+		ap_byte();
+		if (hit_eof)
+			ap_eof();
+		else
+			ap_percent(0);
+		break;
+	}
+	new_file = 0;
+	if (message[0] == '\0')
+		return (NULL);
+	/*
+	 * Truncate to the screen width.
+	 * {{ This isn't very nice. }}
+	 */
+	message[sc_width-2] = '\0';
+	return (message);
+}
+@//E*O*F less/prompt.c//
+chmod u=rw,g=rw,o=r less/prompt.c
+ 
+echo x - less/version.c
+sed 's/^@//' > "less/version.c" <<'@//E*O*F less/version.c//'
+/*
+ *		less
+ *	Copyright (c) 1984,1985  Mark Nudelman
+ *
+ *	This program may be freely used and/or modified, 
+ *	with the following provisions:
+ *	1. This notice and the above copyright notice must remain intact.
+ *	2. Neither this program, nor any modification of it,
+ *	   may not be sold for profit without written consent of the author.
+ *
+ *	-----------------------------------------------------------------
+ *
+ *	This program is a paginator similar to "more", 
+ *	but allows you to move both forward and backward in the file.  
+ *	Commands are based on "more" and "vi".
+ *
+ *	----------------------- CHANGES ---------------------------------
+ *
+ *	    Allowed use on standard input		1/29/84   markn
+ *	    Added E, N, P commands			2/1/84    markn
+ *	    Added '=' command, 'stop' signal handling	4/17/84   markn
+ *	    Added line folding				4/20/84   markn
+ *	v2: Fixed '=' command to use BOTTOM_PLUS_ONE, 
+ *	    instead of TOP, added 'p' & 'v' commands	4/27/84   markn
+ *	v3: Added -m and -t options, '-' command	5/3/84    markn
+ *	v4: Added LESS environment variable		5/3/84    markn
+ *	v5: New comments, fixed '-' command slightly	5/3/84    markn
+ *	v6: Added -Q, visual bell			5/15/84   markn
+ *	v7: Fixed jump_back(n) bug: n should count real
+ *	    lines, not folded lines.  Also allow number
+ *	    on G command.				5/24/84   markn
+ *	v8: Re-do -q and -Q commands			5/30/84   markn
+ *	v9: Added "+<cmd>" argument			9/25/84   markn
+ *	v10: Fixed bug in -b<n> argument processing	10/10/84  markn
+ *	v11: Made error() ring bell if \n not entered.	10/18/84  markn
+ *	-----------------------------------------------------------------
+ *	v12: Reorganized signal handling and made
+ *	     portable to 4.2bsd.			2/13/85   mark
+ *	v13: Reword error message for '-' command.	2/16/85   mark
+ *	v14: Added -bf and -bp variants of -b.		2/22/85   mark
+ *	v15: Miscellaneous changes.			2/25/85   mark
+ *	v16: Added -u flag for backspace processing.	3/13/85   mark
+ *	v17: Added j and k commands, 
+ *		changed -t default.			4/13/85   mark
+ *	v18: Rewrote signal handling code.		4/20/85   mark
+ *	v19: Got rid of "verbose" eq_message().		5/2/85    mark
+ *	     Made search() scroll in some cases.
+ *	v20: Fixed screen.c ioctls for System V.	5/21/85   mark
+ *	v21: Fixed some first_cmd bugs.			5/23/85   mark
+ *	v22: Added support for no RECOMP nor REGCMP.	5/24/85   mark
+ *	v23: Miscellanous changes and prettying up.	5/25/85   mark
+ *      v24: Added ti,te terminal init & de-init       6/3/85 Mike Kersenbrock
+ *	v25: Added -U flag, standout mode underlining.	6/8/85    mark
+ *	v26: Added -M flag.				6/9/85    mark
+ *	     Use underline termcap (us) if it exists.
+ *	v27: Renamed some variables to make unique in	6/15/85   mark
+ *	     6 chars.  Minor fix to -m.
+ *	v28: Fixed right margin bug.			6/28/85   mark
+ *	v29: Incorporated M.Rose's changes to signal.c	6/28/85   mark
+ *	v30: Fixed stupid bug in argument processing.	6/29/85   mark
+ *	v31: Added -p flag, changed repaint algorithm.  7/15/85   mark
+ *	     Added kludge for magic cookie terminals.
+ *	v32: Added cat_file if output not a tty.	7/16/85   mark
+ *	v33: Added -e flag and EDITOR.			7/23/85   mark
+ *	v34: Added -s flag.				7/26/85   mark
+ *	v35: Rewrote option handling; added option.c.	7/27/85   mark
+ *	v36: Fixed -e flag to work if not last file.	7/29/85   mark
+ *	v37: Added -x flag.				8/10/85   mark
+ *	v38: Changed prompting; created prompt.c.	8/19/85   mark
+ *	v39: (Not -p) does not initially clear screen.	8/24/85   mark
+ *	v40: Added "skipping" indicator in forw().	8/26/85   mark
+ *	v41: ONLY_RETURN, control char commands,	9/17/85   mark
+ *	     faster search, other minor fixes.
+ *	v42: Added ++ command line syntax;		9/25/85   mark
+ *	     ch_fsize for pipes.
+ *	v43: Added -h flag, changed prim.c algorithms.	10/15/85  mark
+ *	v44: Made END print in all cases of eof;	10/16/85  mark
+ *	     ignore SIGTTOU after receiving SIGTSTP.
+ *	v45: Never print backspaces unless -u.		10/16/85  mark
+ *	v46: Backwards scroll in jump_loc.		10/24/85  mark
+ *	v47: Fixed bug in edit(): *first_cmd==0		10/30/85  mark
+ *	v48: Use TIOCSETN instead of TIOCSETP.		11/16/85  mark
+ *	     Added marks (m and ' commands).
+ *	-----------------------------------------------------------------
+ */
+
+char version[] = "@(#) less  version 48";
+@//E*O*F less/version.c//
+chmod u=rw,g=rw,o=r less/version.c
+ 
+echo Inspecting for damage in transit...
+temp=/tmp/shar$$; dtemp=/tmp/.shar$$
+trap "rm -f $temp $dtemp; exit" 0 1 2 3 15
+cat > $temp <<\!!!
+      47     250    1634 INSTALLATION
+     645    1625   10320 command.c
+     333    1216    7405 option.c
+     193     465    2764 output.c
+     105     365    2040 position.c
+       7      22     146 position.h
+     169     447    2929 prompt.c
+      87     663    4301 version.c
+    1586    5053   31539 total
+!!!
+wc  less/INSTALLATION less/command.c less/option.c less/output.c less/position.c less/position.h less/prompt.c less/version.c | sed 's=[^ ]*/==' | diff -b $temp - >$dtemp
+if [ -s $dtemp ]
+then echo "Ouch [diff of wc output]:" ; cat $dtemp
+else echo "No problems found."
+fi
+exit 0
+
+

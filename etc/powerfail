@@ -1,0 +1,12 @@
+
+#	@(#)powerfail.sh	UniPlus V.2.1.3	(Motorola 2.1)
+# Push line discipline/set tty sane
+/etc/line_sane 1
+echo "POWER FAIL RC"
+
+# **** Insert powerfail commands here
+# Normally you would check the run state if you have states other
+# than zero and execute the commands necessary to reload devices.
+echo "Check all the disks and breakers"
+#	/etc/dzbload /dev/kmc0
+uname

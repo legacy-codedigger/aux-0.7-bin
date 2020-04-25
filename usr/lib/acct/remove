@@ -1,0 +1,5 @@
+
+#	@(#)remove.sh	UniPlus V.2.1.3	(ATT 1.2)
+rm -f /usr/adm/acct/sum/wtmp*
+rm -f /usr/adm/acct/sum/pacct*
+rm -f /usr/adm/acct/nite/lock*

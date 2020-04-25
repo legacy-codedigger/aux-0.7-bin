@@ -1,0 +1,14 @@
+# makefile to build sample applications
+
+sample:		sample.o
+		ld /usr/lib/maccrt0.o -o sample sample.o \
+		/usr/lib/low.o -lmac -lc /usr/lib/low.ld
+sample.o:	sample.c
+		cc ${CFLAGS} -I/usr/include/mac -DUNIX -c sample.c
+
+qdsamp:		qdsamp.o
+		ld /usr/lib/maccrt0.o -o qdsamp qdsamp.o \
+		/usr/lib/low.o -lmac -lc /usr/lib/low.ld
+qdsamp.o:	qdsamp.c
+		cc ${CFLAGS} -I/usr/include/mac -c qdsamp.c
+

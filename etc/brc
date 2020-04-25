@@ -1,0 +1,7 @@
+
+#	@(#)brc.sh	UniPlus V.2.1.4	(Motorola 2.1)
+
+# Push line discipline/set tty sane
+/etc/line_sane
+
+# This file may be used for multi-user boot-up commands.

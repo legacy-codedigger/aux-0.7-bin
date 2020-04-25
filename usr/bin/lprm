@@ -1,0 +1,42 @@
+
+if (test ! $?)
+then
+   echo "lprm: Unable to remove request from queue"
+else
+   export PRINTER
+   JOBNO=
+   PR_CLASS=
+	
+   for ARG
+   do
+      case $ARG in
+
+	-P*) if (test $ARG = "-P") then
+                echo "lprm: syntax error"
+                exit 1
+             else
+                ARG=`echo $ARG | sed -e 's/-P//g'`
+                PR_CLASS="$PR_CLASS $ARG"      #ARG has target printer 
+	     fi
+             ;;	
+
+        -) JOBNO="\*"
+           ;;
+  
+
+        *) if (test $ARG = `logname`) then
+              echo "lprm: illegal option"
+              exit 1
+           else
+              JOBNO="$JOBNO $ARG"
+           fi
+           ;;
+     esac
+
+  done
+
+  if (test $?) then
+     cancel "$JOBNO $PR_CLASS"
+  exit 0
+  fi  
+fi

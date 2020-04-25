@@ -1,0 +1,17 @@
+root:YSVWQCrHZ99f.:0:0::/:/bin/csh
+rootcsh::0:0::/:/bin/csh
+rootksh::0:0::/:/bin/ksh
+daemon:xxxxxxxxxxxxx:1:1::/:
+bin:xxxxxxxxxxxxx:2:2::/bin:
+sys:xxxxxxxxxxxxx:3:3::/bin:
+adm:xxxxxxxxxxxxx:4:4::/usr/adm:
+uucp::5:5:UUCP admin:/usr/lib/uucp:
+nuucp::5:5:UUCP admin:/usr/spool/uucppublic:/usr/lib/uucp/uushell
+lp:xxxxxxxxxxxxx:7:7:lp:/usr/spool/lp:
+holly:GSNDZRS19RO/g:8:1:Holly Knight:/usr/holly:/bin/csh
+ftp:xxxxxxxxxxxxx:10:2:ftp:/usr/spool/ftp:
+who::22:0:who command:/bin:/bin/who
+nobody:xxxxxxxxxxxxx:60001:60001:NFS generic user:/tmp:/bin/noshell
+start::100:100:Initial login:/usr/start:/bin/sh
+startcsh::101:100:Initial Cshell login:/usr/startcsh:/bin/csh
+startksh::102:100:Initial Kshell login:/usr/startksh:/bin/ksh

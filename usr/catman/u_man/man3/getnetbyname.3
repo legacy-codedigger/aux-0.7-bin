@@ -1,0 +1,132 @@
+
+
+
+     ggggeeeettttnnnneeeetttteeeennnntttt((((3333NNNN))))					 ggggeeeettttnnnneeeetttteeeennnntttt((((3333NNNN))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  getnetent, getnetbyaddr, getnetbyname, setnetent, endnetent
+	  - get	network	entry
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  #include <netdb.h>
+
+	  struct netent	*getnetent()
+
+	  struct netent	*getnetbyname(_n_a_m_e)
+	  char *_n_a_m_e;
+
+	  struct netent	*getnetbyaddr(_n_e_t)
+	  long _n_e_t;
+
+	  setnetent(_s_t_a_y_o_p_e_n)
+	  int _s_t_a_y_o_p_e_n
+
+	  endnetent()
+
+	  cccccccc ............ ----llllnnnneeeetttt
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ggggeeeettttnnnneeeetttteeeennnntttt, ggggeeeettttnnnneeeettttbbbbyyyynnnnaaaammmmeeee, and ggggeeeettttnnnneeeettttbbbbyyyyaaaaddddddddrrrr each return	a
+	  pointer to an	object with the	following structure containing
+	  the broken-out fields	of a line in the network data base,
+	  ////eeeettttcccc////nnnneeeettttwwwwoooorrrrkkkkssss.
+
+	  struct netent	{
+		 char	*n_name;     /*	official name of net */
+		 char	**n_aliases; /*	alias list */
+		 int	n_addrtype;  /*	net number type	*/
+		 long	n_net;	     /*	net number */
+	  };
+
+	  The members of this structure	are:
+
+	  nnnn____nnnnaaaammmmeeee      The official name	of the network.
+
+	  nnnn____aaaalllliiiiaaaasssseeeessss   A	zero terminated	list of	 alternate  names  for
+		      the network.
+
+	  nnnn____aaaaddddddddrrrrttttyyyyppppeeee  The  type	 of  the  network   number   returned;
+		      currently	only AAAAFFFF____IIIINNNNEEEETTTT.
+
+	  nnnn____nnnneeeetttt	      The  network  number.    Network	 numbers   are
+		      returned in machine byte order.
+
+	  ggggeeeettttnnnneeeetttteeeennnntttt reads the next line	of the file, opening the  file
+	  if necessary.
+
+	  sssseeeettttnnnneeeetttteeeennnntttt opens and rewinds the file.	 If the	_s_t_a_y_o_p_e_n  flag
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+
+
+
+
+     ggggeeeettttnnnneeeetttteeeennnntttt((((3333NNNN))))					 ggggeeeettttnnnneeeetttteeeennnntttt((((3333NNNN))))
+
+
+
+	  is non-zero, the net data base will not be closed after each
+	  call to ggggeeeettttnnnneeeetttteeeennnntttt (either directly,  or  indirectly  through
+	  one of the other ``getnet'' calls).
+
+	  eeeennnnddddnnnneeeetttteeeennnntttt closes the file.
+
+	  ggggeeeettttnnnneeeettttbbbbyyyynnnnaaaammmmeeee and ggggeeeettttnnnneeeettttbbbbyyyyaaaaddddddddrrrr	sequentially search  from  the
+	  beginning  of	 the  file  until  a  matching net name	or net
+	  address is found, or	until  EOF  is	encountered.   Network
+	  numbers are supplied in host order.
+
+     FFFFIIIILLLLEEEESSSS
+	  ////eeeettttcccc////nnnneeeettttwwwwoooorrrrkkkkssss
+
+     LLLLIIIINNNNKKKKIIIINNNNGGGG
+	  This library is accessed by specifying  ----llllnnnneeeetttt	 as  the  last
+	  argument to the compile line,	e.g.:
+
+	    cccccccc ----oooo pppprrrroooogggg pppprrrroooogggg....cccc ----llllnnnneeeetttt
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  networks(4N)
+
+     DDDDIIIIAAAAGGGGNNNNOOOOSSSSTTTTIIIICCCCSSSS
+	  Null pointer (0) returned on EOF or error.
+
+     BBBBUUUUGGGGSSSS
+	  All information is contained in a static area	so it must  be
+	  copied  if it	is to be saved.	 Only Internet network numbers
+	  are currently	understood.  Expecting network numbers to  fit
+	  in no	more than 32 bits is probably naive.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 2					   (last mod. 1/14/87)
+
+
+

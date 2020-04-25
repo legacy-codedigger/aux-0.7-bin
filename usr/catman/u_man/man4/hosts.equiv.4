@@ -1,0 +1,132 @@
+
+
+
+     hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv((((4444))))					hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv((((4444))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  hosts.equiv -	list of	trusted	hosts
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv resides in directory ////eeeettttcccc	and contains a list of
+	  trusted hosts.  When an rrrrllllooooggggiiiinnnn(1) or rrrreeeemmmmsssshhhh(1)	request	from
+	  such a host is made, and the initiator of the	request	is in
+	  ////eeeettttcccc////ppppaaaasssssssswwwwdddd, then no further validity	checking is done.
+	  That is, rrrrllllooooggggiiiinnnn does not prompt for a	password, and rrrreeeemmmmsssshhhh
+	  completes successfully.  So a	remote user is
+	  ``equivalenced'' to a	local user with	the same user ID when
+	  the remote user is in	hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv.
+
+	  The format of	hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv is a list of names,	as in this
+	  example:
+
+		host1
+		host2
+		+@group1
+		-@group2
+
+	  A line consisting of a simple	host name means	that anyone
+	  logging in from that host is trusted.	 A line	consisting of
+	  ++++@@@@ggggrrrroooouuuupppp means	that all members of that network group are
+	  trusted.  A line consisting of ----@@@@ggggrrrroooouuuupppp means that members of
+	  that group are not trusted.  Programs	scan hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv
+	  linearly, and	stop at	the first hit (either positive for
+	  hostname and +@ entries, or negative for -@ entries).	 A
+	  line consisting of a single +	means that everyone is
+	  trusted.
+
+	  The ....rrrrhhhhoooossssttttssss file has the same	format as hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv.	When
+	  user _x executes rrrrllllooooggggiiiinnnn or rrrreeeemmmmsssshhhh, the ....rrrrhhhhoooossssttttssss file from _X's
+	  home directory is conceptually concatenated onto the end of
+	  hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv for permission checking.	However, -@ entries
+	  are not sticky.  If a	user is	excluded by a minus entry from
+	  hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv but included in ....rrrrhhhhoooossssttttssss, then that user is
+	  considered trusted.  In the special case when	the user is
+	  root,	then only the ////....rrrrhhhhoooossssttttssss file is checked.
+
+	  It is	also possible to have two entries (separated by	a
+	  single space)	on a line of these files.  In this case, if
+	  the remote user is equivalenced by the first entry, then
+	  that user is allowed to log in as any	member of the second
+	  entry.  Thus
+
+		sundown	john
+
+	  allows anyone	from ssssuuuunnnnddddoooowwwwnnnn to	log in as jjjjoooohhhhnnnn,	and
+
+		+@group1 +@group2
+
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+
+
+
+
+     hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv((((4444))))					hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv((((4444))))
+
+
+
+	  allows any member of _n_e_t_g_r_o_u_p_1 to log	in as a	member of
+	  _n_e_t_g_r_o_u_p_2.
+
+     FFFFIIIILLLLEEEESSSS
+	  ////eeeettttcccc////hhhhoooossssttttssss....eeeeqqqquuuuiiiivvvv
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  rlogin(1), remsh(1), netgroup(4).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 2					   (last mod. 1/14/87)
+
+
+

@@ -1,0 +1,132 @@
+
+
+
+     ggggeeeettttssssoooocccckkkkoooopppptttt((((2222NNNN))))					ggggeeeettttssssoooocccckkkkoooopppptttt((((2222NNNN))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  getsockopt, setsockopt - get and set options on sockets
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  ####iiiinnnncccclllluuuuddddeeee <<<<ssssyyyyssss////ttttyyyyppppeeeessss....hhhh>>>>
+	  ####iiiinnnncccclllluuuuddddeeee <<<<ssssyyyyssss////ssssoooocccckkkkeeeetttt....hhhh>>>>
+
+	  ggggeeeettttssssoooocccckkkkoooopppptttt((((_s,	_l_e_v_e_l, _o_p_t_n_a_m_e,	_o_p_t_v_a_l,	_o_p_t_l_e_n)
+	  iiiinnnntttt _s, _l_e_v_e_l,	_o_p_t_n_a_m_e;
+	  cccchhhhaaaarrrr ****_o_p_t_v_a_l;
+	  iiiinnnntttt ****_o_p_t_l_e_n;
+
+	  sssseeeettttssssoooocccckkkkoooopppptttt((((_s,	_l_e_v_e_l, _o_p_t_n_a_m_e,	_o_p_t_v_a_l,	_o_p_t_l_e_n)
+	  iiiinnnntttt _s, _l_e_v_e_l,	_o_p_t_n_a_m_e;
+	  cccchhhhaaaarrrr ****_o_p_t_v_a_l;
+	  iiiinnnntttt ****_o_p_t_l_e_n;
+
+	  cccccccc ............ ----llllnnnneeeetttt
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  ggggeeeettttssssoooocccckkkkoooopppptttt and sssseeeettttssssoooocccckkkkoooopppptttt manipulate _o_p_t_i_o_n_s associated with
+	  a socket.  Options may exist at multiple protocol levels;
+	  they are always present at the uppermost ``socket'' level.
+
+	  When manipulating socket options the level at	which the
+	  option resides and the name of the option must be specified.
+	  To manipulate	options	at the ``socket'' level, _l_e_v_e_l is
+	  specified as SSSSOOOOLLLL____SSSSOOOOCCCCKKKKEEEETTTT.  To manipulate options at any other
+	  level	the protocol number of the appropriate protcol
+	  controlling the option is supplied.  For example, to
+	  indicate an option is	to be interpreted by the TCP protocol,
+	  _l_e_v_e_l	should be set to the protocol number of	TCP; see
+	  ggggeeeettttpppprrrroooottttooooeeeennnntttt(3N).
+
+	  The parameters _o_p_t_v_a_l	and _o_p_t_l_e_n are used to access option
+	  values for sssseeeettttssssoooocccckkkkoooopppptttt.  For ggggeeeettttssssoooocccckkkkoooopppptttt they identify a
+	  buffer in which the value of the requested options(s)	are to
+	  be returned.	For ggggeeeettttssssoooocccckkkkoooopppptttt,,,,	_o_p_t_l_e_n is a value-result
+	  parameter, initially containing the size of the buffer
+	  pointed to by	_o_p_t_v_a_l , and modified on return	to indicate
+	  the actual size of the value returned.  If no	option value
+	  is to	be supplied or returned, _o_p_t_v_a_l	may be supplied	as 0.
+
+	  _o_p_t_n_a_m_e and any specified options are	passed uninterpreted
+	  to the appropriate protocol module for interpretation.  The
+	  include file <<<<ssssyyyyssss////ssssoooocccckkkkeeeetttt....hhhh>>>> contains definitions for
+	  ``socket'' level options; see	ssssoooocccckkkkeeeetttt(2N).  Options at	other
+	  protocol levels vary in format and name, consult the
+	  appropriate entries in (5P).
+
+     RRRREEEETTTTUUUURRRRNNNN VVVVAAAALLLLUUUUEEEE
+	  A 0 is returned if the call succeeds,	-1 if it fails.
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+
+
+
+
+     ggggeeeettttssssoooocccckkkkoooopppptttt((((2222NNNN))))					ggggeeeettttssssoooocccckkkkoooopppptttt((((2222NNNN))))
+
+
+
+     EEEERRRRRRRROOOORRRRSSSS
+	  The call succeeds unless:
+
+
+	  [[[[EEEEBBBBAAAADDDDFFFF]]]]	 The argument _s	is not a valid descriptor.
+
+	  [[[[EEEENNNNOOOOTTTTSSSSOOOOCCCCKKKK]]]]	 The argument _s	is a file, not a socket.
+
+	  [[[[EEEENNNNOOOOPPPPRRRROOOOTTTTOOOOOOOOPPPPTTTT]]]]	 The option is unknown.
+
+	  [[[[EEEEFFFFAAAAUUUULLLLTTTT]]]]	 The options are not in	a valid	part of	the
+			 process address space.
+
+     LLLLIIIINNNNKKKKIIIINNNNGGGG
+	  This library is accessed by specifying ----llllnnnneeeetttt as the last
+	  argument to the compile line,	e.g.:
+
+	    cccccccc ----oooo pppprrrroooogggg pppprrrroooogggg....cccc ----llllnnnneeeetttt
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+	  socket(2N), getprotoent(3N).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 2					   (last mod. 1/14/87)
+
+
+

@@ -1,0 +1,198 @@
+
+
+
+     aaaauuuuttttooooccccoooonnnnffffiiiigggg((((1111MMMM))))					aaaauuuuttttooooccccoooonnnnffffiiiigggg((((1111MMMM))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  autoconfig - build a new up-to-date kernel
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  ////eeeettttcccc////aaaauuuuttttooooccccoooonnnnffffiiiigggg [----VVVV] [----vvvv] [----kkkk] [----uuuu] [----IIII] [----aaaa]	[----iiii _f_i_l_e] [----
+	  oooo _f_i_l_e] [----DDDD _o_p_t_i_o_n_s]]]] [----mmmm _d_i_r_e_c_t_o_r_y]]]] [----bbbb _d_i_r_e_c_t_o_r_y] [----
+	  llll _l_i_n_k_e_r] [----SSSS	_f_i_l_e] [----ssss _d_i_r_e_c_t_o_r_y] [----dddd _d_i_r_e_c_t_o_r_y] [----
+	  LLLL _l_o_a_d_f_i_l_e] [----MMMM _f_i_l_e]]]]
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  aaaauuuuttttooooccccoooonnnnffffiiiigggg is	a utility which	is run to add software to the
+	  operating system when	new devices are	added.	It responds to
+	  the following	flag options:
+
+
+	  ----VVVV   Print the current version number	of ////eeeettttcccc////aaaauuuuttttooooccccoooonnnnffffiiiigggg.
+
+
+	  ----IIII   Call device specific initialization routines for	all
+	       modules included	in the new kernel.
+
+
+	  ----vvvv   Verbose:	give a step-by-step account of the
+	       autoconfiguration process.
+
+
+	  ----kkkk   Patch the current running kernel	(currently not
+	       implemented).
+
+
+	  ----uuuu   Build a ////uuuunnnniiiixxxx file as output (also set by ----aaaa).
+
+
+	  ----aaaa   Do the default autoconfig function if required (check
+	       to see if the running kernel requires
+	       autoconfiguration).  Build a kernel as output. Call
+	       driver specific initialization routines.	(-Iu).
+
+
+	  -i _f_i_l_e
+	       Change the default input	file. The default is ////nnnneeeewwwwuuuunnnniiiixxxx
+
+
+	  -o _f_i_l_e
+	       Change the default output file.	By default this	is
+	       ////uuuunnnniiiixxxx
+
+
+	  -D _o_p_t_i_o_n_s
+	       Set/reset autoconfig debug flag options
+
+
+
+
+
+     Page 1					   (last mod. 1/15/87)
+
+
+
+
+
+
+     aaaauuuuttttooooccccoooonnnnffffiiiigggg((((1111MMMM))))					aaaauuuuttttooooccccoooonnnnffffiiiigggg((((1111MMMM))))
+
+
+
+	  -m _d_i_r_e_c_t_o_r_y
+	       Change the default directory used for searching for
+	       script files. The default is ////eeeettttcccc////mmmmaaaasssstttteeeerrrr....dddd.
+
+
+	  -b _d_i_r_e_c_t_o_r_y
+	       Change the default directory used for searching for
+	       driver object files. The	default	is ////eeeettttcccc////bbbbooooooootttt....dddd.
+
+
+	  -S _f_i_l_e
+	       Put in the file a list of startup programs (from	the
+	       directory specified by ----ssss).
+
+
+	  -s _d_i_r_e_c_t_o_r_y
+	       Change the default directory used to search for startup
+	       programs. The default is	////eeeettttcccc////ssssttttaaaarrrrttttuuuupppp....dddd.
+
+
+	  -d _d_i_r_e_c_t_o_r_y
+	       Change the default directory used to search for
+	       initialization programs.	The default is ////eeeettttcccc////ddddeeeevvvviiiinnnniiiitttt....dddd.
+
+
+	  -l _l_i_n_k_e_r
+	       Change the default linker (for cross environments). The
+	       default is lllldddd.
+
+
+	  -L _l_o_a_d_f_i_l_e
+	       If this flag option is specified, aaaauuuuttttooooccccoooonnnnffffiiiigggg does not
+	       search the slots	for devices.  Instead it reads records
+	       from the	ASCII file ``_l_o_a_d_f_i_l_e.'' Each record has three
+	       fields in the following order:
+
+	  5    a slot number
+	       a board name, and
+	       a version number
+
+	  Autoconfiguration continues as if these devices are in the
+	  system.
+
+	  -M _f_i_l_e
+	       Creates an ////eeeettttcccc////mmmmaaaasssstttteeeerrrr file for the use of eeeerrrrrrrrpppptttt
+
+     FFFFIIIILLLLEEEESSSS
+	  ////eeeettttcccc////aaaauuuuttttooooccccoooonnnnffffiiiigggg
+	  ////nnnneeeewwwwuuuunnnniiiixxxx
+	  ////uuuunnnniiiixxxx
+
+     SSSSEEEEEEEE AAAALLLLSSSSOOOO
+
+
+
+     PPPPaaaaggggeeee 2222					   ((((llllaaaasssstttt mmmmoooodddd.... 1111////11115555////88887777))))
+
+
+
+
+
+
+     aaaauuuuttttooooccccoooonnnnffffiiiigggg((((1111MMMM))))					aaaauuuuttttooooccccoooonnnnffffiiiigggg((((1111MMMM))))
+
+
+
+	  ld(1).
+	  _M_a_n_u_a_l _f_o_r _D_r_i_v_e_r _W_r_i_t_e_r_s.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 3					   (last mod. 1/15/87)
+
+
+

@@ -1,0 +1,6 @@
+setenv TZ PST8PDT
+cat /etc/motd
+set mail=(60 /usr/mail/$LOGNAME)
+stty susp '^Z' kill '^u' erase '^?' intr '^c' ixon
+umask 022
+set path=(. /bin /usr/bin /usr/ucb)

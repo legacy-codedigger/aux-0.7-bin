@@ -1,0 +1,16 @@
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c main.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c option.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c prim.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c ch.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c position.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c input.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c output.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c screen.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c prompt.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c line.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c signal.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c help.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c ttyin.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c command.c
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c version.c
+cc -O -o less main.o option.o prim.o ch.o position.o input.o output.o screen.o  prompt.o line.o signal.o help.o ttyin.o command.o version.o -ltermcap

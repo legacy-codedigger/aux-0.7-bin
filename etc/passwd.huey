@@ -1,0 +1,14 @@
+root:4HKKHo/DG3igQ:0:0::/:/bin/csh
+daemon:xxxxxxxxxxxxx:1:1::/:
+bin:xxxxxxxxxxxxx:2:2::/bin:
+sys:xxxxxxxxxxxxx:3:3::/bin:
+adm:xxxxxxxxxxxxx:4:4::/usr/adm:
+uucp::5:5:UUCP admin:/usr/lib/uucp:
+nuucp::5:5:UUCP admin:/usr/spool/uucppublic:/usr/lib/uucp/uushell
+lp:xxxxxxxxxxxxx:7:7:lp:/usr/spool/lp:
+holly:lLoTSq8z2Qmuw:8:8:Holly Knight:/usr/holly:/bin/csh
+ftp:xxxxxxxxxxxxx:9:2:ftp:/usr/spool/ftp:
+who::22:0:who command:/bin:/bin/who
+nobody:xxxxxxxxxxxxx:60001:60001:NFS generic user:/tmp:/bin/noshell
+sync::1:1::/:/bin/sync
++::0:0:::

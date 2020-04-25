@@ -1,0 +1,768 @@
+300, 300s (1)		- handle special functions of DASI 300 and 300s terminals
+4014 (1)		- paginator for the Tektronix 4014 terminal
+450 (1)			- handle special functions of the DASI 450 terminal
+a.out (4)		- common assembler and link editor output
+a64l, l64a (3C)		- convert between long integer and base-64 ASCII string
+abort (3C)		- generate an IOT fault
+abort (3F)		- terminate FORTRAN program
+abs (3C)		- return integer absolute value
+abs, iabs, dabs, cabs, zabs (3F)    - FORTRAN absolute value
+accept (1M)		- allow LP requests
+accept (2N)		- accept a connection on a socket
+access (2)		- determine accessibility of a file
+acct (2)		- enable or disable process accounting
+acct (4)		- per-process accounting file format
+acctcms (1M)		- command summary from per-process accounting records
+acctcom (1M)		- search and print process accounting file(s)
+acctcon1, acctcon2 (1M) - connect-time accounting
+acctdisk, acctdusg, accton, acctwtmp (1M)   - overview of accounting and miscellaneous accounting commands
+acctmerg (1M)		- merge or add total accounting files
+acctprc1, acctprc2 (1M) - process accounting
+acos, dacos (3F)	- FORTRAN arccosine intrinsic function
+adb (1)			- debugger
+addbib (1)		- create or extend bibliographic database
+admin (1)		- create and administer SCCS files
+aimag, dimag (3F)	- FORTRAN imaginary part of complex argument
+aint, dint (3F)		- FORTRAN integer part intrinsic function
+alarm (2)		- set a process's alarm clock
+aliases (7N)		- aliases file for delivermail
+aliens (6)		- the alien invaders attack the earth
+altblk (4)		- alternate block information for bad block handling
+and, or, xor, not, lshift, rshift (3F)	- FORTRAN bitwise boolean functions
+anint, dnint, nint, idnint (3F) - FORTRAN nearest integer functions
+aouthdr.h (4)		- a.out header for common object files
+appletalk (1M)		- a general purpose AppleTalk I/O driver utility
+appletalk (7)		- general AppleTalk socket interface
+apply (1)		- apply a command to a set of arguments
+apropos (1)		- locate commands by keyword lookup
+ar (1)			- archive and library maintainer for portable archives
+ar (4)			-  common archive file format
+arithmetic (6)		- provide drill in number facts
+arp (5P)		- Address Resolution Protocol
+as (1)			- common assembler
+asa (1)			- interpret ASA carriage control characters
+ascii (5)		- map of ASCII character set
+asin, dasin (3F)	- FORTRAN arcsine intrinsic function
+assert (3X)		- verify program assertion
+at, batch (1)		- execute commands at a later time
+at_cho_prn (1)		- choose a user's default printer on the network
+at_lap_lkup (1M)	- display the LAP types registered on the local node
+at_nbpd (1M)		- AppleTalk's Name Binding Protocol Daemon
+at_nbpd (1M)		- Name Binding Protocol Daemon
+at_nvelkup (1)		- look up NVE's
+at_nvereg (1M)		- register an NVE on an \*(At network
+at_nveshow (1)		- display all NVE's registered at this node
+at_rtmpd (1M)		- AppleTalk's Routing Table Maintenance Protocol Daemon
+atan, datan (3F)	- FORTRAN arctangent intrinsic function
+atan2, datan2 (3F)	- FORTRAN arctangent intrinsic function
+atof (3C)		- convert ASCII string to floating-point number
+autoconfig (1M)		- build a new up-to-date kernel
+autorobots (6)		- escape from the automatic robots
+awk (1)			- pattern scanning and processing language
+back (6)		- the game of backgammon
+banner (1)		- make posters
+banner7 (1)		- print large banner on printer
+basename, dirname (1)	- deliver portions of pathnames
+bc (1)			- arbitrary-precision arithmetic language
+bcd (6)			- convert to antique media
+bcopy (1M)		- interactive block copy
+bcopy, bcmp, bzero, ffs (3) - bit and byte string operations
+bdiff (1)		- big diff
+bfs (1)			- big file scanner
+biff (1)		- be notified if mail arrives and who it is from
+bind (2N)		- bind a name to a socket
+bj (6)			- the game of black jack
+blt, blt512 (3C)	- block transfer data
+boot (8)		- startup procedures
+brc, bcheckrc, rc, powerfail (1M)   - system initialization shell scripts
+brk, sbrk (2)		- change data segment space allocation
+bs (1)			- a compiler/interpreter for modest-sized programs
+bsearch (3C)		- binary search a sorted table
+cal (1)			- print calendar
+calendar (1)		- reminder service
+cat (1)			- concatenate and print files
+cb (1)			- C program beautifier
+cc (1)			- C compiler
+cd (1)			- change working directory
+cdc (1)			- change the delta commentary of an SCCS delta
+cflow (1)		- generate C flowgraph
+chargefee, ckpacct, dodisk, lastlogin, monacct, nulladm, prctmp, prdaily, prtacct, runacct, shutacct, startup, turnacct (1M) - shell procedures for accounting
+chase (6)		- try to escape the killer robots
+chdir (2)		- change working directory
+checknr (1)		- check nroff/troff files
+chfn (1)		- change finger entry
+chgnod (1M)		- change current \*U system nodename
+chmod (1)		- change mode
+chmod (2)		- change mode of file
+chown (2)		- change owner and group of a file
+chown, chgrp (1)	- change owner or group
+chroot (1M)		- change root directory for a command
+chroot (2)		- change root directory
+chsh (1)		- change default login shell
+clear (1)		- clear terminal screen
+clock (3C)		- report CPU time used
+close (2)		- close a file descriptor
+clri (1M)		- clear i-node
+cmp (1)			- compare two files
+col (1)			- filter reverse line-feeds
+colcrt (1)		- filter nroff output for CRT previewing
+colrm (1)		- remove columns from a file
+comb (1)		- combine SCCS deltas
+comm (1)		- select or reject lines common to two sorted files
+compact, uncompact, ccat (1)	- compress and uncompress files, and cat them
+conjg, dconjg (3F)	- FORTRAN complex conjugate intrinsic function
+connect (2N)		- initiate a connection on a socket
+console (7)	        - keyboard/screen driver
+conv (1)		- object file converter
+core (4)		- format of core image file
+cos, dcos, ccos (3F)	- FORTRAN cosine intrinsic function
+cosh, dcosh (3F)	- FORTRAN hyperbolic cosine intrinsic function
+cp (1)			- copy files
+cpio (1)		- copy file archives in and out
+cpio (4)		- format of cpio archive
+cpp (1)			- the C language preprocessor
+cpset (1M)		- install object files in binary directories
+craps (6)		- the game of craps
+crash (8)		- what to do when the system crashes
+creat (2)		- create a new file or rewrite an existing one
+cribbage (6)		- the card game cribbage
+cron (1M)		- clock daemon
+crontab (1)		- user crontab utility
+crypt (1)		- encode/decode
+crypt, setkey, encrypt (3C) - generate DES encryption
+csh (1)			-  a shell (command interpreter) with C-like syntax
+csplit (1)		- context split
+ct (1c)			- spawn getty to a remote terminal
+ctags (1)		- maintain a tags file for a C program
+ctermid (3S)		- generate filename for terminal
+ctime, localtime, gmtime, asctime, tzset (3C)	- convert date and time to string
+ctrace (1)		- C program debugger
+cu (1C)			- call another UNIX\(rg system
+curses (3X)		- CRT screen handling and optimization package
+cuserid (3S)		- get character login name of the user
+cut (1)			- cut out selected fields of each line of a file
+cw, checkcw (1)		- prepare constant-width text for otroff
+cxref (1)		- generate C program cross-reference
+date (1)		- print and set the date
+dbminit, fetch, store, delete, firstkey, nextkey (3X)	- data base subroutines
+dc (1)			- desk calculator
+dcopy (1M)		- copy file systems for optimal access time
+dd (1)			- convert and copy a file
+delta (1)		- make a delta (change) to an SCCS file
+deroff (1)		- remove nroff/troff, tbl, and eqn constructs
+dev_kill (1M)		- remove special devices from directories
+devnm (1M)		- device name
+df (1M)			- report number of free disk blocks
+dial (3C)		- establish an out-going terminal line connection
+diction, explain (1)	- print wordy sentences; thesaurus for diction
+diff (1)		- differential file and directory comparator
+diff3 (1)		- 3-way differential file comparison
+diffmk (1)		- mark differences between files
+dim, ddim, idim (3F)	- positive difference intrinsic functions
+dir (4)			- format of System V directories
+dircmp (1)		- directory comparison
+dis (1)			-  disassembler
+diskformat (1M)		- format a disk
+disktune (1M)		- tune floppy disk settling time parameters
+diskusg (1M)		- generate disk accounting data by user ID
+domainname (1)		- set or display name of current domain system
+dprod (3F)		- double precision product intrinsic function
+drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48, seed48, lcong48 (3C) - generate uniformly distributed pseudo-random numbers
+du (1)			- summarize disk usage
+dump (1)		- dump selected parts of an object file
+dump (1M)		- incremental file system dump
+dump (4)		- incremental dump format
+dup (3)			- duplicate a descriptor
+dup2 (3N)		- duplicate a descriptor
+echo (1)		- echo arguments 
+ecvt, fcvt, gcvat (3C)	- convert floating-point number to string
+ed, red (1)		- text editor
+efl (1)			- Extended FORTRAN Language
+eject (1)		- eject diskette from drive
+enable, disable (1)	- enable/disable LP printers
+end, etext, edata (3C)	- last locations in program
+env (1)			- set environment for command execution
+environ (5)		- user environment
+eqn, neqn, checkeq (1)	- format mathematical text 
+eqnchar (5)		- special character definitions for eqn and neqn
+erf, erfc (3M)		- error function and complementary error function
+errdead (1M)		- extract error records from dump
+errdemon (1M)		- error-logging daemon
+errfile (4)		- error-log file format
+error (7)		- error-logging interface
+errpt (1M)		- process a report of logged errors
+errstop (1M)		- terminate the error-logging daemon
+ex, edit (1)		- text editor
+execl, execv, execle, execve,  execlp, execvp (2)   - execute a file
+exit, _exit (2)		- terminate process
+exp, dexp, cexp (3F)	- FORTRAN exponential intrinsic function
+exp, log, log10, pow, sqrt (3M) - exponential, logarithm, power, square root functions
+expand, unexpand (1)	- expand tabs to spaces, and vice versa
+exports (4)		- NFS file systems being exported
+expr (1)		- evaluate arguments as an expression
+exterr (1)		- turn on/off the extended errors in the specified device
+f77 (1)			- FORTRAN 77 compiler
+factor (1)		- factor a number
+fclose, fflush (3S)	- close or flush a stream
+fcntl (2)		- file control
+fcntl (5)		- file control options
+fd (7)			- floppy disk drive interface
+ferror, feof, clearerr, fileno (3S) - stream status inquiries
+ff (1M)			- list file names and statistics for a file system
+file (1)		- determine file type
+file system (4)		- format of a System V system volume
+filehdr (4)		- file header for common object files
+filesave, tapesave (1M) - daily/weekly \*U file system backup
+finc (1M)		- fast incremental backup 
+find (1)		- find files
+finger (1)		- user information lookup program
+fish (6)		- play ``Go Fish''
+floor, ceil, fmod, fabs (3M)	- floor, ceiling, remainder, absolute value functions
+fmt (1)			- simple text formatter
+fold (1)		- fold long lines for finite-width output device
+fopen, freopen, fdopen (3S) - open a stream
+fork (2)		- create a new process
+fortune (6)		- print a random, hopefully interesting, adage
+fpr (1)			- print FORTRAN file
+fread, fwrite (3S)	- binary input/output
+frec (1M)		- recover files from a backup tape
+freq (1)		- report on character frequencies in a file
+frexp, ldexp, modf (3C) - manipulate parts of floating-point numbers
+from (1)		- who is my mail from?
+fsck (1M)		- file system consistency check and interactive repair
+fsdb (1M)		- file system debugger
+fseek, rewind, ftell (3S)   - reposition a file pointer in a stream
+fsirand (1M)		- install random inode generation numbers
+fsmount (2)		- mount file system
+fspec (4)		- format specification in text files
+fsplit (1)		- split f77, ratfor, or efl files
+fstab (4)		- static information about filesystems
+fsync (2)		- synchronize a file's in-core state with that on disk
+ftok (3C)		- standard interprocess communication package
+ftp (1N)		- ARPANET file transfer program
+ftpd (1M)		- DARPA Internet File Transfer Protocol server
+ftw (3C)		- walk a file tree
+fuser (1M)		- identify processes using a file or file structure
+fwtmp, wtmpfix (1M)	- manipulate connect accounting records
+gamma (3M)		- log gamma function
+get (1)			- get a version of an SCCS file
+getarg (3F)		- return FORTRAN command-line argument
+getc, getchar, fgetc, getw (3S) - get character or word from a stream
+getcwd (3C)		- get pathname of current working directory
+getdirentries (2)	- gets directory entries in a filesystem independent format
+getdomainname, setdomainname (2)    - get/set name of current domain
+getdtablesize (2)	- get descriptor table size
+getenv (3C)		- return value for environment name
+getenv (3F)		- return FORTRAN environment variable
+getgrent, getgrgid, getgrnam, setgrent, endgrent, fgetgrent (3C)    - obtain group file entry from a group file
+getgroups (2)		- get group access list
+gethostent, gethostbyaddr, gethostbyname, sethostent, endhostent (3N)	- get network host entry
+gethostid, sethostid (2N)   - get/set unique identifier of current host
+gethostname, sethostname (2N)	- get/set name of current host
+getitimer, setitimer (2)    - get/set value of interval timer
+getlogin (3C)		- get login name
+getnetent, getnetbyaddr, getnetbyname, setnetent, endnetent (3N)    - get network entry
+getnetgrent, setnetgrent, endnetgrent, innetgr (3N) - get network group entry
+getopt (1)		- parse command options
+getopt (3C)		- get option letter from argument vector
+getpass (3C)		- read a password
+getpeername (2N)	- get name of connected peer
+getpid, getpgrp, getppid (2)	- get process, process group, and parent process IDs
+getprotoent, getprotobynumber, getprotobyname, setprotoent, endprotoent (3N)	- get protocol entry
+getpw (3C)		- get name from UID
+getpwent, getpwuid, getpwnam, setpwent, endpwent, fgetpwent (3C)    - get password file entry
+gets, fgets (3S)	- get a string from a stream
+getservent, getservbyport, getservbyname, setservent, endservent (3N)	- get service entry
+getsockname (2N)	- get socket name
+getsockopt, setsockopt (2N) - get and set options on sockets
+gettimeofday, settimeofday (2)	- get/set date and time
+getty (1M)		- set terminal type, modes, speed, and line discipline
+gettydefs (4)		- speed and terminal settings used by getty
+getuid, geteuid, getgid, getegid (2)	- get real user, effective user, real group, and effective group IDs
+getutent, getutid, getutline, pututline, setutent, endutent, utmpname (3C)  - access utmp file entry
+graph (1G)		- draw a graph
+greek (1)		- select terminal filter
+greek (5)		- graphics for the extended TTY type-box
+grep, egrep, fgrep (1)	- search a file for a pattern
+group (4)		- group file
+groups (1)		- show group memberships
+hangman (6)		- guess the word
+hd (7)			- SCSI hard disk interface
+head (1)		- give first few lines
+help (1)		- ask for help in using SCCS
+hex (1)			- translates object files
+hostid (1N)		- set or print identifier of current host system
+hostname (1N)		- set or print name of current host system
+hosts (4)		- host name data base
+hosts.equiv (4)		- list of trusted hosts
+hsearch, hcreate, hdestroy (3C) - manage hash search tables 
+htonl, htons, ntohl, ntohs (3N) - convert values between host and network byte order
+hyphen (1)		- find hyphenated words
+hypot (3M)		- Euclidean distance function
+iargc(3F)		
+id (1)			- print user and group IDs and names
+ifconfig (1M)		- configure network interface parameters
+indent (1)		- indent and format C program source
+index (3F)		- return location of FORTRAN substring
+inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof, inet_netof (3N)	- Internet address manipulation routines
+init, telinit (1M)	- process control initialization
+initgroups (3)		- initialize group access list
+inittab (4)		- script for the init process
+inode (4)		- format of a System V inode
+insque, remque (3N)	- insert/remove element from a queue
+install (1M)		- install commands
+int, ifix, idint, real, float, sngl, dble, cmplx, dcmplx, ichar, char (3F)  - explicit FORTRAN type conversion
+intro (1)		- introduction to commands and application programs
+intro (1M)		- introduction to system maintenance commands and application programs
+intro (2)		- introduction to system calls and error numbers
+intro (3)		- introduction to subroutines and libraries
+intro (4)		- introduction to file formats
+intro (5)		- introduction to miscellaneous facilities.
+intro (6)		- introduction to games
+intro (7)		- introduction to special files
+intro (8)		- introduction to system maintenance procedures
+ioctl (2)		- control device
+ip (5P)			- Internet Protocol
+ipcrm (1)		- remove a message queue, semaphore set or shared memory ID
+ipcs (1)		- report inter-process communication facilities status
+irand, srand, rand (3F) - FORTRAN uniform random-number generator
+isalpha, isupper, islower, isdigit, isxdigit, isalnum, isspace, ispunct, isprint, isgraph, iscntrl, isascii (3C) - classify characters
+issue (4)		- issue identification file
+iw2 (1)			- \*(I2 print filter
+j0, j1, jn, y0, y1, yn (3M) - Bessel functions
+join (1)		- relational database operator
+kconfig (1M)		- change a kernel's parameters for tuning
+kill (1)		- terminate a process
+kill (2)		- send a signal to a process or a group of processes
+killall (1M)		- kill all active processes
+killpg (3N)		- send signal to a process group
+ksh, rsh (1)		- shell, the standard/restricted command programming language
+l3tol, ltol3 (3C)	- convert between 3-byte integers and long integers
+last (1)		- indicate last logins of users and teletypes
+lav (1)			- print load average statistics
+ld (1)			- link editor for common object files
+ldahread (3X)		- read the archive header of a member of an archive file 
+ldclose, ldaclose (3X)	- close a common object file 
+ldfcn (4)		- common object file access routines
+ldfhread (3X)		- read the file header of a common object file
+ldgetname (3X)		- retrieve symbol name for object file symbol table entry
+ldlread, ldlinit, ldlitem (3X)	- manipulate line number entries of a common object file function
+ldlseek, ldnlseek (3X)	- seek to line number entries of a section of a common object file
+ldohseek (3X)		- seek to the optional file header of a common object file
+ldopen, ldaopen (3X)	- open a common object file for reading
+ldrseek, ldnrseek (3X)	- seek to relocation entries of a section of a common object file
+ldshread, ldnshread (3X)    - read an indexed\/named section header of a common object file
+ldsseek, ldnsseek (3X)	- seek to an indexed\/named section of a common object file
+ldtbindex (3X)		- compute the index of a symbol table entry of a common object file
+ldtbread (3X)		- read an indexed symbol table entry of a common object file
+ldtbseek (3X)		- seek to the symbol table of a common object file
+leave (1)		- remind you when you have to leave
+len (3F)		- return length of FORTRAN string
+lex (1)			- generate programs for simple lexical tasks
+lge, lgt, lle, llt (3F) - string comparision intrinsic functions
+life (6)		- play the game of life
+line (1)		- read one line
+line_push (3)		- routine used to push streams line disciplines
+line_sane (1M)		- push streams line disciplines
+linenum (4)		- line number entries in a common object file
+link (2)		- link to a file
+lint (1)		- a C program checker
+listen (2N)		- listen for connections on a socket
+ln (1)			- make links
+lo (5)			- software loopback network interface
+lockf (3C)		- record locking on files
+locking (2)		- provide exclusive file regions for reading or writing
+log, alog, dlog, clog (3F)  - FORTRAN natural logarithm intrinsic function
+log10, alog10, dlog10 (3F)  - FORTRAN common logarithm intrinsic function
+login (1)		- sign on
+logname (1)		- get login name
+logname (3X)		- return login name of user
+lorder (1)		- find ordering relation for an object library
+lp, cancel (1)		- send/cancel requests to an line printer
+lpadmin (1M)		- configure the LP spooling system
+lpq (1)			- spool queue examination program
+lpr (1)			- off line print
+lprm (1)		- remove jobs from the line printer spooling queue
+lpsched, lpshut, lpmove (1M)	- start/stop the LP request scheduler and move requests
+lpstat (1)		- print LP status information
+ls (1)			- list contents of directory
+lsearch, lfind (3C)	- linear search and update
+lseek (2)		- move read/write file pointer
+m4 (1)			- macro processor
+m68k, pdp11, u3b, u3b5, vax (1) - provide truth value about processor type
+macref (1)		- produce cross-reference listing of macro files
+mactime (1M)		- set the system time/real time chip
+mail, rmail (1)		- send mail to users or read mail
+mailx (1)		- interactive message processing system
+make (1)		- maintain, update, and regenerate groups of programs
+makedbm (1M)		- make a yellow pages dbm file
+makekey (1)		- generate encryption key
+malloc, free, realloc, calloc (3C)  - main memory allocator
+malloc, free, realloc, calloc, mallopt, mallinfo (3X)	- fast main memory allocator
+man (1)			- print entries in this manual
+man (5)			- macros for formatting manual pages
+master (4)		- master device information table
+math (5)		- math functions and constants
+matherr (3M)		- error-handling function
+max, max0, amax0, max1, amax1, dmax1 (3F)   - FORTRAN maximum-value functions
+maze (6)		- generate a maze
+mclock (3F)		- return FORTRAN time accounting
+mem, kmem (7)		- core memory
+memccpy, memchr, memcmp, memcpy, memset (3C)	- memory operations
+mesg (1)		- permit or deny messages
+min, min0, amin0, min1, amin1, dmin1 (3F)   - FORTRAN minimum-value functions
+mkdir (1)		- make a directory
+mkdir (2)		- make a directory file
+mkfs (1M)		- construct a file system
+mkfs1b (1M)		- construct a file system
+mklost+found (1M)	- make a lost+found directory for fsck
+mknod (1M)		- build special file
+mknod (2)		- make a directory, or a special or ordinary file
+mkstr (1)		- create an error message file by massaging C source
+mktemp (3C)		- make a unique filename
+mm (5)			- the mm macro package for formatting documents
+mm, osdd, checkmm (1)	- print/check documents formatted with the mm macros
+mmt, mvt (1)		- typeset documents, view graphs, and slides
+mod, amod, dmod (3F)	- FORTRAN remaindering intrinsic functions
+module_dump (1M)	- dumps out information from UNIX\(rg kernels
+monitor (3C)		- prepare execution profile
+moo (6)			- guessing game
+more (1)		- file perusal filter for crt viewing
+mosd (5)		- the OSDD adapter macro package for formatting documents
+mount (3)		- mount a file system
+mount, umount (1M)	- mount and dismount filesystems
+mountd (1M)		- NFS mount request server
+mouse (7)		- mouse driver
+mptx (5)		- the macro package for formatting a permuted index
+ms (5)			- text formatting macros
+msgctl (2)		- message control operations
+msgget (2)		- get message queue
+msgop (2)		- message operations
+mtab (4)		- mounted file system table
+mv (1)			- move or rename files
+mv (5)			- a troff macro package for typesetting view graphs and slides
+ncheck (1M)		- generate names from i-numbers
+netgroup (4)		- list of network groups
+netstat (1N)		- show network status
+networking (5N)		- introduction to networking facilities
+networks (4N)		- network name data base
+newaliases (1)		- rebuild the data base for the mail aliases file
+newform (1)		- change the format of a text file
+newgrp (1)		- log in to a new group
+news (1)		- print news items
+nfs_getfh (2)		- get a file handle
+nfsd, biod (1M)		- NFS daemons
+nfsstat (1M)		- Network File System statistics
+nfssvc, async_daemon(2) - NFS daemons
+nice (1)		- run a command at low priority
+nice (2)		- change priority of a process
+nl (1)			- line numbering filter
+nlist (3C)		- get entries from name list
+nm (1)			- print name list of common object file
+nohup (1)		- run a command immune to hangups (ksh and sh only)
+nroff (1)		- format text
+null (7)		- the null file
+number (6)		- convert Arabic numerals to English
+nvram (7)		- non-volatile memory/time of day clock interface
+od (1)			- octal dump
+open (2)		- open for reading or writing
+opendir, readdir, telldir, seekdir, rewinddir, closedir (3) - directory operations
+pack, pcat, unpack (1)	- compress and expand files
+pagesize (1)		- print system page size
+passwd (1)		- change login password
+passwd (4)		- password file
+paste (1)		- merge same lines of several files or subsequent lines of one file
+pause (2)		- suspend process until signal
+perror, errno, sys_errlist, sys_nerr (3C)   - system error messages
+pg (1)			- file perusal filter for soft-copy terminals
+phys (2)		- allow a process to access physical addresses
+pic (1)			- troff preprocessor for drawing simple pictures
+pipe (2)		- create an interprocess channel
+plock (2)		- lock process, text, or data in memory
+plot (3X)		- graphics interface subroutines
+plot (4)		- graphics interface
+pnch (4)		- file format for card images
+popen, pclose (3S)	- initiate pipe to/from a process
+portmap (1M)		- DARPA port to RPC program number mapper
+pr (1)			- print files
+printenv (1)		- print the current environment
+printf, fprintf, sprintf (3S)	- print formatted output
+prof (1)		- display profile data
+prof (5)		- profile within a function
+profil (2)		- execution time profile
+profile (4)		- setting up an environment at login time
+protocols (4N)		- protocol name data base
+prs (1)			- print an SCCS file
+ps (1)			- report process status
+pstat (1M)		- print system facts
+ptrace (2)		- process trace
+ptx (1)			- permuted index
+pty (5)			- pseudo terminal driver
+put (1C)		- puts a file onto a remote machine
+putc, putchar, fputc, putw (3S) - put character or word on a stream
+putenv (3C)		- change or add value to environment 
+putpwent (3C)		- write password file entry
+puts, fputs (3S)	- put a string on a stream
+pwck, grpck (1M)	- password/group file checkers
+pwd (1)			- print working directory name
+qsort (3C)		- quicker sort
+quiz (6)		- test your knowledge
+rain (6)		- animated raindrops display
+rand, srand (3C)	- simple random-number generator
+ratfor (1)		- rational FORTRAN dialect
+rcmd, rresvport, ruserok (3N)	- routines for returning a stream to a remote command
+rcp (1N)		- remote file copy
+rcvhex (1)		- translates Motorola S-records from downloading into a file
+read, readv (2)		- read from file
+readlink (2)		- read value of a symbolic link
+reboot (1M)		- reboot the system
+reboot (2)		- reboot the system
+recv, recvfrom, recvmsg (2N)	- receive a message from a socket
+refer (1)		- find and insert literature references in documents
+regcmp (1)		- regular expression compile
+regcmp, regex (3X)	- compile and execute a regular expression
+regexp (5)		- regular expression compile and match routines .if t .ta 12 .in n .ta 20
+reject (1M)		- prevent LP requests
+reloc (4)		- relocation information for a common object file
+remsh (1N)		- remote shell
+remshd (1M)		- remote shell server
+rename (2)		- change the name of a file
+reset (1)		- reset the teletype bits to a sensible state
+restore (1M)		- incremental file system restore
+rev (1)			- reverse lines of a file
+rexec (3N)		- return stream to a remote command
+rexecd (1M)		- remote execution server
+rlogin (1N)		- remote login
+rlogind (1M)		- remote login server
+rm, rmdir  (1)		- remove files or directories
+rmdel (1)		- remove a delta from an SCCS file
+rmdir (2)		- remove a directory file
+rmtab (4)		- remotely mounted file system table
+robots (6)		- escape from the robots
+roffbib (1)		- run off bibliographic database
+route (1M)		- manually manipulate the routing tables
+routed (1M)		- network routing daemon
+rpcinfo (1M)		- report RPC information
+rstatd (1M)		- kernel statistics server
+rstrtunix (1M)		- reboot the UNIX system; set system options
+runacct (1M)		- run daily accounting
+ruptime (1N)		- show host status of local machines
+rwall (1)		- write to all users over a network running B-NET software
+rwalld (1M)		- network rwall server
+rwho (1N)		- who's logged in on local machines
+rwhod (1M)		- system status server
+sa1, sa2, sadc (1M)	- system activity report package
+sact (1)		- print current SCCS file editing activity
+sag (1G)		- system activity graph
+sar (1)			- system activity reporter
+scanf, fscanf, sscanf (3S)  - convert formatted input
+sccs (1)		- front end for the SCCS subsystem
+sccsdiff (1)		- compare two versions of an SCCS file
+sccsfile (4)		- format of SCCS file
+scnhdr (4)		- section header for a common object file
+script (1)		- make typescript of terminal session
+sdb (1)			- symbolic debugger
+sdiff (1)		- side-by-side difference program
+sed (1)			- stream editor
+select (2N)		- synchronous I/O multiplexing
+semctl (2)		- semaphore control operations
+semget (2)		- get set of semaphores
+semop (2)		- semaphore operations
+send, sendto, sendmsg (2N)  - send a message from a socket
+serial (7)		- the on-board serial ports
+services (4N)		- service name data base
+set42sig (2)	        - BSD signal interface
+setbuf, setvbuf (3S)	- assign buffering to a stream
+setcompat, getcompat (2)    - set or get process compatibility mode
+setgroups (2)		- set group access list
+setjmp, longjmp (3C)	- non-local goto
+setmntent, getmntent, addmntent, endmntent, hasmntopt (3)   - get filesystem descriptor file entry
+setpgrp (2)		- set process group ID
+setregid (2)		- set real and effective group ID
+setreuid (2)		- set real and effective user ID's
+setuid, setgid (2)	- set user and group IDs
+setuid, setgid (3)	- set user and group IDs
+sh, rsh (1)		- shell, the standard/restricted command programming language
+shl (1)			- shell layer manager
+shmctl (2)		- shared memory control operations
+shmget (2)		- get shared memory segment
+shmop (2)		- shared memory operations
+showmount (1M)		- show all remote mounts
+shutdown (1M)		- terminate all processing
+shutdown (2N)		- shut down part of a full-duplex connection
+sigblock (2)		- block signals
+sign, isign, dsign (3F) - FORTRAN transfer-of-sign intrinsic function
+signal (3)		- specify what to do upon receipt of a signal
+signal (3F)		- specify FORTRAN action on receipt of a system signal
+sigpause (2)		- atomically release blocked signals and wait for interrupt
+sigsetmask (2)		- set current signal mask
+sigstack (2)		- set and/or get signal stack context
+sigvec (2)		- software signal facilities
+sin, cos, tan, asin, acos, atan, atan2 (3M) - trigonometric functions
+sin, dsin, csin (3F)	- FORTRAN sine intrinsic function
+sinh, cosh, tanh (3M)	- hyperbolic functions
+sinh, dsinh (3F)	- FORTRAN hyperbolic sine intrinsic function
+size (1)		- print section sizes of common object files
+sleep (1)		- suspend execution for an interval
+sleep (3C)		- suspend execution for interval
+sno (1)			- SNOBOL interpreter
+socket (2N)		- create an endpoint for communication
+soelim (1)		- eliminate \&.so's from nroff input
+sort (1)		- sort and/or merge files
+sortbib (1)		- sort bibliographic database
+spell, hashmake, spellin, hashcheck (1) - find spelling errors
+spline(1G)		- interpolate smooth curve
+split (1)		- split a file into pieces
+sputl, sgetl (3X)	- access long integer data in a machine independent fashion
+sqrt, dsqrt, csqrt (3F) - FORTRAN square root intrinsic function
+ssignal, gsignal (3C)	- software signals
+ssp (1)			- make output single spaced
+stat (5)		- data returned by stat system call
+stat, fstat (2)		- get file status
+statfs (2)		- get file system statistics
+stdio (3S)		- standard buffered input/output package
+stime (2)		- set time
+strcat, strncat, strcmp, strncmp, strcpy, strncpy, strlen, strchr, strrchr, strpbrk, strspn, strcspn, strtok (3C) - string operations
+streams (7)		- ioctl interface
+strings (1)		- find the printable strings in an object, or other binary file
+strip (1)		- strip symbol and line number information from an object file
+strtod, atof (3C)	- convert string to double-precision number
+strtol, atol, atoi (3C) - convert string to integer
+stty (1)		- set the options for a terminal
+style  (1)		-  analyze surface characteristics of a document
+su (1)			- become super-user or another user
+sum (1)			- print checksum and block count of a file
+sumdir (1)		- sum and count characters in the files in the given directories
+swab (3C)		- swap bytes
+swap (1M)		- swap administrative interface
+sxt (7)			- pseudo-device driver
+symlink (2)		- make symbolic link to a file
+syms (4)		- common object file symbol table format
+sync (1M)		- update the super block
+sync (2)		- update super-block
+sysline (1)		- display system status on status line of a terminal
+system (3F)		- issue a shell command from FORTRAN
+system (3S)		- issue a shell command 
+tabs (1)		- set tabs on a terminal
+tail (1)		- deliver the last part of a file
+take (1C)		- takes a file from a remote machine
+talk (1N)		- talk to another user
+tan, dtan (3F)		- FORTRAN tangent intrinsic function
+tanh, dtanh (3F)	- FORTRAN hyperbolic tangent intrinsic function
+tar (1)			- tape file archiver
+tbl (1)			- format tables for nroff or troff
+tc, otc (1)		- phototypesetter simulator
+tcp (5P)		- Internet Transmission Control Protocol
+tee (1)			- pipe fitting
+telnet (1N)		- user interface to the TELNET protocol
+telnetd (1M)		- DARPA TELNET protocol server
+term (4)		- format of compiled term file.
+term (5)		- conventional names for terminals
+termcap (5)		- terminal capability data base
+terminfo (4)		- terminal capability data base
+termio (7)		- general terminal interface
+test (1)		- condition evaluation command
+tftpd (1M)		- DARPA Trivial File Transfer Protocol server
+tgetent, tgetnum, tgetflag, tgetstr, tgoto, tputs (3X)	- terminal independent operation routines
+tic (1M)		- terminfo compiler
+time (1)		- time a command
+time (2)		- get time
+times (2)		- get process and child process times
+timex (1)		- time a command; report process data and system activity
+tip, cu (1C)		- connect to a remote system
+tmpfile (3S)		- create a temporary file
+tmpnam, tempnam (3S)	- create a name for a temporary file
+touch (1)		- update access and modification times of a file
+toupper, tolower, _toupper, _tolower, toascii (3C)  - translate characters
+tp (1)			- manipulate tape archive
+tplot (1G)		- graphics filters
+tput (1)		- query terminfo database
+tr (1)			- translate characters
+trek (6)		- trekkie game
+trpt (1M)		- transliterate protocol trace
+true, false (1)		- provide truth values
+truncate (2)		- truncate a file to a specified length
+tsearch, tfind, tdelete, twalk (3C) - manage binary search trees
+tset, reset (1)		- set or reset the teletype bits to a sensible state
+tsort (1)		- topological sort
+ttt, cubic (6)		- tic-tac-toe
+tty (1)			- get the terminal's name
+tty (7)			- controlling terminal interface
+tty_add, tty_kill (1M)	- modify the /etc/inittab file
+ttyname, isatty (3C)	- find name of a terminal
+ttyslot (3C)		- find the slot in the utmp file of the current user
+ttytype (4)		- data base of terminal types by port
+twinkle (6)		- twinkle stars on the screen
+types (5)		- primitive system data types
+udp (5P)		- Internet User Datagram Protocol
+ul (1)			- do underlining
+ulimit (2)		- get and set user limits
+umask (1)		- set file-creation mode mask
+umask (2)		- set and get file creation mask
+umount (2)		- unmount a file system
+uname (1)		- print name of current UNIX\(rg system
+uname (2)		- get name of current system
+unget (1)		- undo a previous get of an SCCS file
+ungetc (3S)		- push character back into input stream
+uniq (1)		- report repeated lines in a file
+units (1)		- conversion program
+unlink (2)		- remove directory entry
+unmount (2)		- remove a file system
+updater (1)		- update files between two machines
+updater (1M)		- update files between two machines
+uptime (1)		- show how long system has been up
+users (1)		- compact list of users who are on the system
+ustat (2)		- get file system statistics
+utime (2)		- set file access and modification times
+utmp, wtmp (4)		- utmp and wtmp entry formats
+uuclean (1M)		- uucp spool directory clean-up
+uucp, uulog, uuname (1C)    - UNIX\(rg system to UNIX system copy
+uuencode, uudecode (1C) - encode/decode a binary file for transmission via mail
+uusend (1C)		- send a file to a remote host
+uustat (1C)		- uucp status inquiry and job control
+uusub (1M)		- monitor uucp network
+uuto, uupick (1C)	- public UNIX\(rg-to-UNIX system file copy
+uux (1C)		- UNIX\(rg-to-UNIX system command execution
+uvar (2)		- returns system-specific configuration information
+val (1)			- validate SCCS file
+values (5)		- machine-dependent values
+varargs (5)		- handle variable argument list
+vc (1)			- version control
+vchk (1M)		- version checkup
+version (1)		- reports version number of files
+vi, view, vedit (1)	- screen-oriented (visual) display editor 
+vipw (1M)		- edit the password file
+volcopy, labelit (1M)	- copy file systems with label checking
+vprintf, vfprintf, vsprintf (3S)    - print formatted output of a varargs argument list
+vprintf, vfprintf, vsprintf (3X)    - print formatted output of a varargs argument list
+w (1)			- who is on and what they are doing
+wait (2)		- wait for child process to stop or terminate
+wait3 (2N)		- wait for child process to stop or terminate
+wall (1M)		- write to all users
+wc (1)			- word count
+what (1)		- identify SCCS files
+whatis (1)		- describe what a command is
+whereis (1)		- locate source, binary, and/or manual for program
+which (1)		- locate a program file including aliases and paths (csh only)
+who (1)			- who is on the system
+whoami (1)		- print effective current user ID
+whodo (1M)		- who is doing what
+worm (6)		- play the growing worm game
+worms  (6)		-  animate worms on a display terminal
+write (1)		- write to another user
+write, writev (2)	- write on a file
+wump (6)		- the game of hunt-the-wumpus
+xargs (1)		- construct argument list(s) and execute command 
+xstr (1)		- extract strings from C programs to implement shared strings
+yacc (1)		- yet another compiler-compiler
+yes (1)			- be repetitively affirmative
+yp_bind, yp_get_default_domain, yp_unbind, yp_match, yp_first, ypclnt_first, yp_next, ypclnt_next (3N) - yellow pages client interface
+ypcat (1)		- print values in a YP data base
+ypfiles (4)		- yellow pages database and directory structure
+ypinit (1M)		- build and install yellow pages database
+ypmake (1M)		- rebuild yellow pages database
+yppasswd (1)		- change login password in yellow pages
+yppasswdd (1M)		- server for modifying yellow pages password file
+yppush, yppull, yppoll (1M) - yellow pages administration utilities
+ypserv (1M)		- yellow pages server and binder processes
+ypwhich (1M)		- which machines are the YP server and master?

@@ -1,0 +1,1 @@
+cc -O "-DTERMIO=1"  "-DSIGSETMASK=0"  "-Doff_t=long" "-DVOID=1"  "-DREGCMP=1" "-DRECOMP=0"  "-DSHELL_ESCAPE=0"  "-DEDITOR=0" "-DEDIT_PGM=\"/usr/ucb/vi\""  "-DONLY_RETURN=0"  "-DXENIX=0" -c prim.c

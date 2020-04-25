@@ -1,0 +1,22 @@
+sy::sysinit:/etc/sysinitrc </dev/syscon >/dev/syscon 2>&1	#System Init
+is:s:initdefault:				#First Init State
+bl::bootwait:/etc/bcheckrc </dev/syscon >/dev/syscon 2>&1	#Bootlog
+bc::bootwait:/etc/brc </dev/syscon >/dev/syscon 2>&1		#Bootrun command
+rc::wait:/etc/rc 1>/dev/syscon 2>&1	#System initialization - runcom
+sl::wait:(rm -f /dev/syscon;ln /dev/systty /dev/syscon;) 1>/dev/systty 2>&1
+pf::powerfail:/etc/powerfail 1>/dev/syscon 2>&1 #Power fail routines
+er:2:off:/usr/lib/errdemon
+cr:2:off:/etc/cron </dev/syscon >/dev/syscon 2>&1
+lp:2:off:/usr/lib/lpsched >/dev/syscon 2>&1	# Set to respawn for lp
+co::respawn:/etc/getty console co_9600		#Console Port
+nfs0:2:wait:/etc/portmap		# set to "wait" for networking
+nfs1:2:off:/usr/etc/ypserv
+nfs2:2:off:/etc/ypbind			# should be "once"; off now since no server
+nfs3:2:wait:/etc/nfsd 4
+nfs4:2:wait:/etc/biod 4		# set to "wait" for NFS 
+nfs8:2:once:/etc/mount -at nfs > /dev/syscon 2>&1
+net4:2:off:/etc/in.routed
+net5:2:once:/usr/etc/in.rwhod
+net9:2:respawn:/etc/inetd		# set to "respawn" for networking
+00::off:/etc/getty tty0 at_9600		#Port tty0
+01::off:/etc/getty tty1 at_9600		#Port tty1

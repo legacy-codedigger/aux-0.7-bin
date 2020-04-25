@@ -1,0 +1,66 @@
+
+
+
+     ggggeeeettttnnnneeeettttggggrrrreeeennnntttt((((3333NNNN))))				       ggggeeeettttnnnneeeettttggggrrrreeeennnntttt((((3333NNNN))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  getnetgrent, setnetgrent, endnetgrent, innetgr - get network
+	  group	entry
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  innetgr(_n_e_t_g_r_o_u_p, _m_a_c_h_i_n_e, _u_s_e_r, _d_o_m_a_i_n)
+	  char *_n_e_t_g_r_o_u_p, *_m_a_c_h_i_n_e, *_u_s_e_r, *_d_o_m_a_i_n;
+	  setnetgrent(_n_e_t_g_r_o_u_p)
+	  char *_n_e_t_g_r_o_u_p
+	  endnetgrent()
+	  getnetgrent(_m_a_c_h_i_n_e_p,	_u_s_e_r_p, _d_o_m_a_i_n_p)
+	  char **_m_a_c_h_i_n_e_p, **_u_s_e_r_p, **_d_o_m_a_i_n_p;
+
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  Inngetgr returns 1 or	0, depending on	whether	netgroup
+	  contains the machine,	user, domain triple as a member.  Any
+	  of the three strings machine,	user, or domain	can be NULL,
+	  in which case	it signifies a wild card.
+
+	  getnetgrent returns the next member of a network group.
+	  After	the call, _m_a_c_h_i_n_e_p will	contain	a pointer to a string
+	  containing the name of the machine part of the network group
+	  member, and similarly	for _u_s_e_r_p and _d_o_m_a_i_n_p.	getnetgrent
+	  will malloc space for	the name. This space is	released when
+	  a endnetgrent	call is	made.  getnetgrent returns 1 if	it
+	  succeeding in	obtaining another member of the	network	group,
+	  0 if it has reached the end of the group.
+
+	  sssseeeettttnnnneeeettttggggrrrreeeennnntttt establishes the network group from which
+	  ggggeeeettttnnnneeeettttggggrrrreeeennnntttt will obtain members, and also restarts calls to
+	  ggggeeeettttnnnneeeettttggggrrrreeeennnntttt from the beginning of the	list.  If the previous
+	  sssseeeettttnnnneeeettttggggrrrreeeennnntttt call was to a different network group, a
+	  eeeennnnddddnnnneeeettttggggrrrreeeennnntttt call is implied.	eeeennnnddddnnnneeeettttggggrrrreeeennnntttt frees the space
+	  allocated during the ggggeeeettttnnnneeeettttggggrrrreeeennnntttt calls.
+
+     FFFFIIIILLLLEEEESSSS
+	  ////eeeettttcccc////nnnneeeettttggggrrrroooouuuupppp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+

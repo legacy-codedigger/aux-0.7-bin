@@ -1,0 +1,11 @@
+root:4HKKHo/DG3igQ:0:0::/:/bin/csh
+philsu::0:0::/:/bin/csh
+daemon:xxxxxxxxxxxxx:1:1::/:
+bin:xxxxxxxxxxxxx:2:2::/bin:
+sys:xxxxxxxxxxxxx:3:3::/bin:
+adm:xxxxxxxxxxxxx:4:4::/usr/adm:
+holly:.DhxL2fe01f5s:8:10:Holly Knight:/usr/holly:/bin/csh
+who::22:0:who command:/bin:/bin/who
+nobody:xxxxxxxxxxxxx:60001:60001:NFS generic user:/tmp:/bin/noshell
+sync::1:1::/:/bin/sync
++::0:0:::

@@ -1,0 +1,66 @@
+
+
+
+     ssssttttrrrrccccmmmmpppp((((3333FFFF))))						    ssssttttrrrrccccmmmmpppp((((3333FFFF))))
+
+
+
+     NNNNAAAAMMMMEEEE
+	  lge, lgt, lle, llt - string comparision intrinsic functions
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+	  character*N _a_1, _a_2
+	  logical   l
+
+	  l = lge (_a_1,_a_2)
+	  l = lgt (_a_1,_a_2)
+	  l = lle (_a_1,_a_2)
+	  l = llt (_a_1,_a_2)
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+	  These	functions return TTTTRRRRUUUUEEEE if the inequality	holds and
+	  FFFFAAAALLLLSSSSEEEE	otherwise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Page 1					   (last mod. 1/14/87)
+
+
+
